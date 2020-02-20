@@ -1,0 +1,42 @@
+/* 
+    Document   : markerStyle
+    Created on : Aug 6, 2014, 9:50:14 AM
+    Author     : MelakaA
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+#image {   
+    position: relative;
+ 
+}
+#image img {
+    position: absolute;
+    
+}
+
+.sameImge {   
+    position: relative;
+ 
+}
+.sameImge img {
+    position: absolute;
+    
+}
+
+
+#sameImge {   
+    position: relative;
+ 
+}
+#sameImge img {
+    position: absolute;
+    
+}
+
+
+#hotspot-instructions{
+    width: 800px;
+    border: 1px solid #0044cc;
+}
+

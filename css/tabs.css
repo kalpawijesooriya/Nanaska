@@ -1,0 +1,374 @@
+/* view exam new render partial form  */
+
+/*#req_res{
+    margin-left: 165px;
+}*/
+
+.view-exam-wrapper{
+    margin-top: 20px;
+    /*    margin-left: 90px;*/
+    padding-bottom: 10px;
+    /*    float: left;*/
+    height: 280px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+
+}
+
+.view-exam-inner{
+    width:3900px;
+    /*    margin-left: 30px;*/
+}
+
+.view-exam-inner2{
+    width:3900px;
+    /*    margin-left: 30px;*/
+}
+
+.view-exam-item{
+    width: 315px;
+    height:215px;
+    display: inline-block;
+    float: left;
+    padding: 10px;
+    border: solid 1px;
+    border-color: #BDBDBD;
+    margin-left: 10px;
+}
+
+.view-exam-item:hover{
+    border-color: #045FB4;
+}
+
+#view-exam-subject-heading{
+    /*    margin-left: 60px;*/
+    width: 900px;
+    color: #173565;     
+}
+#purchase_details{
+    width: 900px;   
+}
+
+#view-exam-purchase{
+    margin-left: 60px;
+}
+
+#view-exam-purchase-btn{
+    padding-left: 5px;
+}
+
+#purchasebulk_heading{
+    color:#0080FF;
+}
+
+#view-exam-purchasebulk-heading{    
+    float: left;
+}
+
+#view-exam-noofpapers{
+    float: left;
+    margin-right: 10px;
+}
+
+
+#view-exam-image{
+    float: left;
+    padding-right: 5px;
+    height: 100%;
+}
+
+#view-exam-descriptions{
+    margin-left: 110px;
+    width: 230px;
+    height: 100%;
+}
+
+#view-exam-cart-btn{
+    float: left;
+}
+
+#view-exam-viewexam-btn{
+    margin-left: 100px;
+}
+
+.add-to-cart-btn-color{
+    color:#262626;
+}
+
+/*.view-exam-purchase-details{
+    margin-left: 60px;
+}*/
+
+#view-exam-cart-view-buttons{
+    margin-top: 13px;
+}
+
+#view-exam-cart-view-buttons2{
+    margin-top: 28px;
+}
+
+
+/*  END */
+
+
+
+/* view each available exam   */
+
+
+.view-each-avail-exam-image{
+    float: left;
+    width: 300px;
+    height: 238px;
+    padding:1px;
+    border:1px solid #021a40;
+}
+
+.view-each-avail-exam-heading-course{
+    float: left;
+    padding-left: 80px;
+}
+
+.view-each-avail-exam-heading-level{
+    margin-left: 400px;
+}
+
+.view-each-avail-exam-description{
+    width: 400px;
+    height:auto;
+    /*    margin-right:200px;*/
+    margin-left:400px;
+    border: 1px solid;
+    padding: 10px;
+}
+
+.content-wrapper{
+    margin: 0 45px;   
+}
+
+
+.font_heading_products {
+    font-size: 16px;
+    font-family: Georgia,Arial;
+    font-style: italic;
+    color: #58585a;
+}
+
+.exam-image{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+.caption {
+    position: relative;
+    display: block;
+}
+
+.ppp{
+    width:10px;
+}
+
+.drop{
+    width: 50%;  
+}
+
+#currency_id{
+    width: 85px;
+
+}
+
+.price_para{
+    margin-bottom: 2px;
+}
+
+.time_exam{
+    margin-top: 2px;
+}
+
+
+
+/*.view-each-avail-exam-description:hover{
+    border-color: #045FB4;
+}*/
+
+.view-each-avail-exam-button{
+    margin-right: 150px;
+    float:right;
+
+}
+
+/*  END */
+
+/* view exam   */
+
+
+.level-names a{
+    text-decoration: none;
+}
+
+.link-background{
+    text-decoration:none;
+    color: #262626;
+
+    /*    border: 1px solid #0080FF;*/
+
+}
+
+.myClickState {
+    border: 2px solid #62c462;
+}
+
+p.linkback{
+    text-decoration:none;
+    padding: 10px;
+    border: 1px solid #BDBDBD;
+    background-color: #173565;
+    color: #FFFFFF;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+    border-radius: 4px;
+
+}
+
+p.linkback{
+    /*border: 2px solid #BDBDBD;*/
+}
+
+
+#course-description{
+/*    margin-left: 230px;*/
+}
+
+
+.tab-back{
+    background-color: #173565;
+    color: #FFFFFF;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+    text-decoration:none;
+}
+
+.ajaxlinkx{
+    text-decoration: none;
+}
+
+
+.error-messages-exam{
+    margin-left: 25px;
+}
+
+.error-messages-exam2{
+    margin-left: 8px;
+}
+
+.error-messages-exam3{
+    margin-left: 235px;
+}
+
+.form-exam-details {
+    margin-left: 235px;
+}
+
+.hidden-for-phone {
+    display: block;
+}
+
+.hidden-for-desktop{
+    display: none;
+}
+
+.exam-view {
+    margin-left: 222px;
+}
+
+.highlight {
+    background-color: #e5e5e5;
+}
+
+.container-error {
+    margin-bottom: 209px;
+}
+
+@media only screen and (max-width : 700px) {
+    // View exams page styles
+    /*    #view-exam-subject-heading {
+            margin-left: 0px;
+        }*/
+
+    /*    #view-exam-purchase-details {
+            margin-left: 0px;
+        }*/
+
+    #view-exam-purchasebulk-heading {
+        margin-left: 0px;
+    }
+
+    #view-exam-noofpapers input {
+        float: left;
+        margin-left: 0px;
+    }
+
+    /*    div.view-exam-wrapper {
+            margin-left: -4px;
+        }*/
+
+    form hr {
+        margin-left: -1px;
+    }
+
+    #view-exam-image img {
+        height: 201px;
+        width: 120px;
+        border: 1px solid #BDBDBD;
+    }
+
+    .hidden-for-phone {
+        display: none;
+    }
+
+    .hidden-for-desktop{
+        display: block;
+    }
+
+    .form-exam-details {
+        margin-left: 0px;
+    }
+
+    .view-exam-wrapper{
+        height: 260px;
+    }
+
+    .exam-view {
+        margin-left: 0;
+    }
+
+    .content-wrapper{
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+}
+
+/*@media only screen and (max-width : 768px) {
+    .container-error {
+        margin-bottom: 437px;
+    }
+}
+
+@media only screen and (min-width : 769px) and (max-width : 800px) {
+    .container-error {
+        margin-bottom: 681px;
+    }
+}
+
+@media only screen and (min-width : 801px) and (max-width : 980px) {
+    .container-error {
+        margin-bottom: 816px;
+    }
+}
+
+@media only screen and (min-width : 981px) and (max-width : 1920px) {
+    .container-error {
+        margin-bottom: 437px;
+    }
+}*/

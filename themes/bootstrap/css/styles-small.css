@@ -1,0 +1,72 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 9, 2014, 10:46:20 AM
+    Author     : root
+*/
+
+/* Force table to not be like tables anymore */
+#table-shopping-cart table, 
+#table-shopping-cart thead, 
+#table-shopping-cart tbody, 
+#table-shopping-cart th, 
+#table-shopping-cart td, 
+#table-shopping-cart tr { 
+    display: block; 
+}
+
+/* Hide table headers (but not display: none;, for accessibility) */
+#table-shopping-cart thead tr { 
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+#table-shopping-cart tr { border: 1px solid #ccc; }
+
+#table-shopping-cart td { 
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee; 
+    position: relative;
+    padding-left: 50%; 
+    white-space: normal;
+    text-align:left;
+}
+
+#table-shopping-cart td:before { 
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%; 
+    padding-right: 10px; 
+    white-space: nowrap;
+    text-align:left;
+    font-weight: bold;
+}
+
+/*
+Label the data
+*/
+#table-shopping-cart td:before { content: attr(data-title); }
+
+#img_logo {
+    width: 70%;
+}
+
+#header_main {
+    width: 100%;
+}
+
+#header-spacing {
+    margin-top: 20px;
+}
+
+#wrapper-total-price {
+    margin-right: 0px;
+}
