@@ -4909,3 +4909,19 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/learncima/index.php?r=login
 ---
+2020/02/21 16:37:57 [error] [php] move_uploaded_file(C:\wamp64\www\nanaska-backend\protected/../uploads/testimonials/776-Screenshot (10).png): failed to open stream: No such file or directory (C:\Users\Kalpa Wijesooriya\yii\framework\web\CUploadedFile.php:201)
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CInlineAction.php(49): TestimonialsController->actionCreate()
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(134): TestimonialsController->runAction()
+#3 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#5 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CInlineFilter.php(58): TestimonialsController->filterAccessControl()
+#6 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#7 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(291): CFilterChain->run()
+#8 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(265): TestimonialsController->runActionWithFilters()
+#9 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): TestimonialsController->run()
+#10 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#12 C:\wamp64\www\nanaska-backend\index.php(14): CWebApplication->run()
+REQUEST_URI=/nanaska-backend/index.php?r=admin/testimonials/create

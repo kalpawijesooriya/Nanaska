@@ -104,21 +104,19 @@ class TestimonialsController extends Controller
 
 		if(isset($_POST['Testimonials']))
 		{
-            $_POST['Testimonials']['image_uri'] = $model->image_url;
+            $_POST['Testimonials']['image_url'] = $model->image_url;
 			$model->attributes=$_POST['Testimonials'];
-            $uploadedFile=CUploadedFile::getInstance($model,'image_uri');
+            $uploadedFile=CUploadedFile::getInstance($model,'image_url');
 
 
 			if($model->save()){
 
                 if(!empty($uploadedFile))  // check if uploaded file is set or not
                 {
-                    $uploadedFile->saveAs(Yii::app()->basePath.'/../uploads/testimonials/'.$model->image_url);
-                    //$this->redirect(array('view','id'=>$model->testimonials_id));
+                    $uploadedFile->saveAs(Yii::app()->basePath.'/..'.$model->image_url);
+                    $this->redirect(array('view','id'=>$model->testimonials_id));
                     echo "done";
                 }
-
-
             }
 
 		}
@@ -135,8 +133,17 @@ class TestimonialsController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-		$this->loadModel($id)->delete();
 
+        $model=$this->loadModel($id);
+
+	    $this->loadModel($id)->delete();
+
+        $file = Yii::app()->basePath.'/..'.$model->image_url;
+
+        if (file_exists($file)) {
+
+            unlink($file);
+        }
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
 			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));

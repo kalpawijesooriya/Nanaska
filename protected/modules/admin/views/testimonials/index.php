@@ -1,5 +1,6 @@
 <?php
-if(Yii::app()->user->loadUser()->user_type == "SUPERADMIN" || Yii::app()->user->isUserAllowed("testimonials") == 1)
+
+if(Yii::app()->user->loadUser()->user_type == "SUPERADMIN" || Yii::app()->user->isUserAllowed("testimonials_management") == 1)
 {
 
     $this->breadcrumbs=array(
