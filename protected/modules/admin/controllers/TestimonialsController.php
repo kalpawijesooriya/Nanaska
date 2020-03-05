@@ -76,7 +76,7 @@ class TestimonialsController extends Controller
 
             $uploadedFile=CUploadedFile::getInstance($model,'image_url');
             $fileName = "{$rnd}-{$uploadedFile}";  // random number + file name
-            $model->image_url = '/uploads/testimonials/'.$fileName;
+            $model->image_url = 'uploads/testimonials/'.$fileName;
 
 
 			if($model->save())

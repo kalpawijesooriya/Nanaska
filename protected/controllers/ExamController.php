@@ -31,7 +31,7 @@ class ExamController extends Controller {
                     'ViewNextQuestions', 'ViewPreviousQuestions', 'viewDropdownQuestions', 'viewTimer', 'examStatus', 'destroySession',
                     'viewUnansweredQuestions', 'viewMarkedQuestions', 'viewQuestion', 'viewExamSummaryNotLoggedIn', 'loadCourseLevels',
                     'examView', 'examError', 'setFlagedQuestion', 'startEssayExam', 'viewNextEssayQuestion', 'viewPreviousEssayQuestions',
-                    'viewStartEssayQuestion', 'essayExamStatus', 'viewEssayUnansweredQuestions', 'getSession',
+                    'viewStartEssayQuestion', 'essayExamStatus', 'viewEssayUnansweredQuestions', 'getSession','Ajax','GetCourses',
                     'viewEssayQuestion', 'viewEssayMarkedQuestions', 'endEssayExam', 'viewDropdownEssayQuestions', 'viewExamSumm', 'questionExhibit', 'questionReference'),
                 'users' => array('*'),
             ),
@@ -46,6 +46,7 @@ class ExamController extends Controller {
             array('deny', // deny all users
                 'users' => array('*'),
             ),
+
         );
     }
 
@@ -2708,5 +2709,37 @@ class ExamController extends Controller {
             'redirect_url' => $redirect_url
         ));
     }
+    public function actionAjax()
+    {
+        if (isset($_POST['data'])) {
+            $course_id =$_POST['data'];
+            $data = Yii::app()->db->createCommand()
+                ->select('*')
+                ->from('level')
+                ->where('course_id=:course_id', array(':course_id' => $course_id))
+                ->queryAll();
+            $myJSON=json_encode($data);
 
+            echo($myJSON);
+
+        }else
+            echo"dddd";
+    }
+
+    public function actionGetCourses()
+    {
+        if (isset($_POST['data'])) {
+            $level_id =$_POST['data'];
+            $data = Yii::app()->db->createCommand()
+                ->select('*')
+                ->from('subject')
+                ->where('level_id=:level_id', array(':level_id' => $level_id))
+                ->queryAll();
+            $myJSON=json_encode($data);
+
+            echo($myJSON);
+
+        }else
+            echo"Error";
+    }
 }

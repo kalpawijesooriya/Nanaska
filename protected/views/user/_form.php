@@ -2,7 +2,34 @@
     .astrix{
         color: red;
     }
+    .textInput{
+   height: 30px !important;
+    }
 </style>
+
+<div class="breadcrumb-banner-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="breadcrumb-text">
+                    <h1 class="text-center">Registeration</h1>
+                    <div class="breadcrumb-bar">
+                        <ul class="breadcrumb text-center">
+                            <li><a href="index.html">Home</a></li>
+                            <li>Register</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
 <?php
 $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
     'id' => 'user-form',
@@ -12,62 +39,64 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
         'validateOnSubmit' => true,
     ),
     'htmlOptions' => array(
-        'class' => 'form-horizontal form-control',
+        'class' => 'form-horizontal',
         'role' => 'form'
     )
-        ));
+));
 ?>
 <div class="container">
 
     <div class="span2"></div>
     <div class="span8">
-        <h3 class="master_heading">Student Registration</h3>
-        <p class="note">Fields with <span class="required">*</span> are required.</p>
-        <br />
+        <br/><br/>
+
 
         <?php //echo $form->errorSummary($model);  ?>
+        <h2 class="text-center">Student Registration</h2>
+        <br/>
 
         <div class="well transparent">
+
             <h4 class="bold"> Personal <span class="light">Details</span> </h4> <br/>
             <div class="border-seperated">
                 <div class="control-group">
 
                     <?php echo $form->labelEx($model, 'first_name', array('class' => 'col-sm-2 control-label')); ?>
-                    <div class="controls"><?php echo $form->textField($model, 'first_name', array('size' => 60, 'maxlength' => 100, 'placeholder' => 'First Name', 'class' => 'span5')); ?>
+                    <div class="controls"><?php echo $form->textField($model, 'first_name', array('size' => 60, 'maxlength' => 100, 'placeholder' => 'First Name', 'class' => 'form-control textInput')); ?>
                         <?php echo $form->error($model, 'first_name'); ?></div>
                 </div>
 
                 <div class="control-group">
                     <?php echo $form->labelEx($model, 'last_name', array('class' => 'col-sm-2 control-label')); ?>
-                    <div class="controls"><?php echo $form->textField($model, 'last_name', array('size' => 60, 'maxlength' => 100, 'placeholder' => 'Last Name', 'class' => 'span5')); ?>
+                    <div class="controls"><?php echo $form->textField($model, 'last_name', array('size' => 60, 'maxlength' => 100, 'placeholder' => 'Last Name', 'class' => 'form-control textInput')); ?>
                         <?php echo $form->error($model, 'last_name'); ?></div>
                 </div>
 
                 <div class="control-group">
                     <?php echo $form->labelEx($model, 'phone_number', array('class' => 'col-sm-2 control-label')); ?>
-                    <div class="controls"><?php echo $form->textField($model, 'phone_number', array('placeholder' => 'Phone Number', 'onkeypress' => 'return restrictInput(this,event,digitsOnly);', 'class' => 'span5')); ?>
+                    <div class="controls"><?php echo $form->textField($model, 'phone_number', array('placeholder' => 'Phone Number', 'onkeypress' => 'return restrictInput(this,event,digitsOnly);', 'class' => 'form-control textInput')); ?>
                         <?php echo $form->error($model, 'phone_number'); ?></div>
                 </div>
 
                 <div class="control-group">
                     <?php echo $form->labelEx($model, 'address', array('class' => 'col-sm-2 control-label')); ?>
-                    <div class="controls"><?php echo $form->textField($model, 'address', array('size' => 60, 'maxlength' => 100, 'placeholder' => 'Address', 'class' => 'span5')); ?>
+                    <div class="controls"><?php echo $form->textField($model, 'address', array('size' => 60, 'maxlength' => 100, 'placeholder' => 'Address', 'class' => 'form-control textInput')); ?>
                         <?php echo $form->error($model, 'address'); ?></div>
                 </div>
 
                 <div class="control-group">
                     <?php echo $form->labelEx($model, 'country_id', array('class' => 'col-sm-2 control-label')); ?>
-                    <div class="controls"><?php echo $form->dropDownList($model, 'country_id', Country::model()->getCountries(), array('empty' => 'Select Country', 'class' => 'span5'));
-                    ?>
+                    <div class="controls"><?php echo $form->dropDownList($model, 'country_id', Country::model()->getCountries(), array('empty' => 'Select Country', 'class' => 'form-control textInput'));
+                        ?>
                         <?php echo $form->error($model, 'country_id'); ?></div>
                 </div>
 
                 <div class="control-group">
                     <?php echo $form->labelEx($model, 'email', array('class' => 'col-sm-2 control-label')); ?>
-                    <div class="controls"><?php echo $form->textField($model, 'email', array('size' => 60, 'maxlength' => 100, 'placeholder' => 'E-mail', 'class' => 'span5')); ?>
+                    <div class="controls"><?php echo $form->textField($model, 'email', array('size' => 60, 'maxlength' => 100, 'placeholder' => 'E-mail', 'class' => 'form-control textInput')); ?>
                         <?php echo $form->error($model, 'email'); ?></div>
                 </div>
-            </div>  
+            </div>
         </div>
 
 
@@ -78,17 +107,17 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
                     <?php
                     echo '<label for="inputEmail3" class="col-sm-2 control-label">Course <span class="astrix">*</span></label>';
 
-                    echo '<div class="controls">' . CHtml::activeDropDownList($model, 'course_id', CHtml::listData(Course::model()->findAll(), 'course_id', 'course_name'), array(
-                        'prompt' => 'Select Course',
-                        'class' => 'form-control span5',
-                        'ajax' => array(
-                            'type' => 'POST', //request type
-                            'url' => CController::createUrl('Level/getlevels'),
-                            'update' => '#User_level_id',
+                    echo '<div class="controls">' . CHtml::activeDropDownList($model, 'course_id', CHtml::listData(Course::model()->findAll(), 'course_id', 'course_name textInput'), array(
+                            'prompt' => 'Select Course',
+                            'class' => 'form-control span5',
+                            'ajax' => array(
+                                'type' => 'POST', //request type
+                                'url' => CController::createUrl('Level/getlevels'),
+                                'update' => '#User_level_id',
                             )));
                     echo $form->error($model, 'course_id');
                     echo '</div>';
-                    ?> 
+                    ?>
                 </div>
 
                 <div class="control-group">
@@ -96,22 +125,22 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
                     echo '<label for="inputEmail3" class="col-sm-2 control-label">Level <span class="astrix">*</span></label>';
 
                     echo '<div class="controls">' . CHtml::activeDropDownList($model, 'level_id', array(), array(
-                        'empty' => 'Select Level',
-                        'class' => 'form-control span5'
-                    ));
-                    ?>         
+                            'empty' => 'Select Level',
+                            'class' => 'form-control span5'
+                        ));
+                    ?>
                     <?php
                     echo $form->error($model, 'level_id');
                     echo '</div>';
                     ?>
 
-                </div>  
+                </div>
 
                 <div class="control-group">
                     <?php echo '<label for="inputEmail3" class="col-sm-2 control-label">Session <span class="astrix">*</span></label>'; ?>
-<!--                    <p class="col-sm-2 control-label" style="display:inline">Session<span class="astrix">*</span></p>-->
+                    <!--                    <p class="col-sm-2 control-label" style="display:inline">Session<span class="astrix">*</span></p>-->
                     <div class="controls"><?php echo $form->dropDownList($model, 'sitting_id', Sitting::model()->getSittings(), array('empty' => 'Select Session', 'class' => 'span5'));
-                    ?>
+                        ?>
                         <?php echo $form->error($model, 'sitting_id'); ?></div>
                 </div>
 
@@ -120,37 +149,37 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
                 <?php echo $form->hiddenField($model, 'status', array('size' => 60, 'maxlength' => 100, 'value' => 'ACTIVE')); ?>
                 <?php echo $form->error($model, 'status'); ?>
                                 </div>
-                
+
                                 <div>
                 <?php //echo $form->labelEx($model,'user_type'); ?>
                 <?php echo $form->hiddenField($model, 'user_type', array('size' => 10, 'maxlength' => 10, 'value' => 'STUDENT')); ?>
                 <?php echo $form->error($model, 'user_type'); ?>
                                 </div>-->
             </div>
-            
+
             <div class="control-group">
-            <div class="controls">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-               <?php if(CCaptcha::checkRequirements()): ?>
+                <div class="controls">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <?php if(CCaptcha::checkRequirements()): ?>
 
-                <?php //echo $form->labelEx($model,'verifyCode'); ?>
+                        <?php //echo $form->labelEx($model,'verifyCode'); ?>
 
-                <?php $this->widget('CCaptcha'); ?>
-                <?php echo $form->textField($model,'verifyCode'); ?>
+                        <?php $this->widget('CCaptcha'); ?>
+                        <?php echo $form->textField($model,'verifyCode',array('class'=> 'form-control textInput','style'=>'width:200px;')); ?>
 
-                <div>Please enter the letters as they are shown in the image above.
-                <br/>Letters are not case-sensitive.</div>
-                <?php echo $form->error($model,'verifyCode'); ?>
-                
-                <?php endif; ?>
+                        <div>Please enter the letters as they are shown in the image above.
+                            <br/>Letters are not case-sensitive.</div>
+                        <?php echo $form->error($model,'verifyCode'); ?>
+
+                    <?php endif; ?>
+                </div>
             </div>
-        </div>
         </div>
 
         <div class="control-group">
-            <div class="controls">
+            <div class="controls text-left">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <button type="submit" class="button button-news" id="changebutton">Send Contact Info</button>
+                <button type="submit" class="btn btn btn-primary" id="changebutton">Send Contact Info</button>
             </div>
         </div>
 
@@ -166,28 +195,33 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 
                 <div class="control-group">
                     <?php echo $form->labelEx($model, 'password', array('class' => 'col-sm-2 control-label')); ?>
-                    <div class="controls"><?php echo $form->passwordField($model, 'password', array('size' => 32, 'maxlength' => 32, 'placeholder' => 'Password', 'class' => 'span5')); ?>
+                    <div class="controls"><?php echo $form->passwordField($model, 'password', array('size' => 32, 'maxlength' => 32, 'placeholder' => 'Password', 'class' => 'form-control textInput')); ?>
                         <?php echo $form->error($model, 'password'); ?></div>
                 </div>
                 <div class="control-group">
                     <p class="col-sm-2 control-label" style="display:inline">Repeat Password<span class="astrix">*</span></p>
-                    <div class="controls"><?php echo $form->passwordField($model, 'repeatpassword', array('size' => 32, 'maxlength' => 32, 'placeholder' => 'Repeat Password', 'class' => 'span5')); ?>
+                    <div class="controls"><?php echo $form->passwordField($model, 'repeatpassword', array('size' => 32, 'maxlength' => 32, 'placeholder' => 'Repeat Password', 'class' => 'form-control textInput')); ?>
                         <?php echo $form->error($model, 'repeatpassword'); ?></div>
                 </div>
             </div>
         </div>
 
         <div class="control-group">
-            <div class="controls">
+            <div class="controls" style="margin-bottom: 10%">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <button type="submit" class="button button-news" id="register_for_exams">Register for exams</button>
+                <button type="submit" class="btn btn btn-primary text-center" id="register_for_exams">Register for exams</button>
             </div>
         </div>
 
     </div>
 </div>
-<?php $this->endWidget(); ?>
+<br/>
+<br/>
 
+<?php $this->endWidget(); ?>
+<br/>
+
+<br/>
 <script type="text/javascript">
 
     var digitsOnly = /[+1234567890]/g;
@@ -231,25 +265,25 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 
 
 </script>
-
+<script src="<?php echo Yii::app()->request->baseUrl; ?>/themes/bootstrap/js/vendor/jquery-1.12.4.min.js"></script>
 <script type="text/javascript">
 
     $(document).ready(function(){
-        //hide following ids for send contact info 
+        //hide following ids for send contact info
         $("#register_for_exams").hide();
         $(".login").hide();
         $("#User_password").val("123456");
         $("#User_repeatpassword").val("123456");
-      
+
         $(".logincheck").change(function() {
             if(this.checked)
             {
                 $("#changebutton").hide();
-                $(".login").show('slow');                
+                $(".login").show('slow');
                 $("#User_password").val("");
                 $("#User_repeatpassword").val("");
                 $("#register_for_exams").show();
-            
+
             }
             else
             {
@@ -259,12 +293,10 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
                 $(".login").hide();
                 $("#User_password").val("123");
                 $("#User_repeatpassword").val("123");
-           
             }
-        
+
         });
-              
+
 
     });
-
 </script>

@@ -30,7 +30,7 @@
 
     <div class="control-group">
 		<?php echo $form->labelEx($model,'testimonials_description'); ?>
-		<?php echo $form->textField($model,'testimonials_description',array('size'=>60,'maxlength'=>255,'placeholder'=>'Testimonial Description','class'=>'width274')); ?>
+        <?php echo $form->textArea($model,'testimonials_description',array('size'=>60,'maxlength'=>255,'placeholder'=>'Testimonial Description','class'=>'width274')); ?>
 		<?php echo $form->error($model,'testimonials_description'); ?>
 	</div>
 

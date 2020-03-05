@@ -6,7 +6,7 @@ class TestimonialsController extends Controller
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
-	public $layout='//layouts/column2';
+	public $layout = '/layouts/column2';
 
 	/**
 	 * @return array action filters
@@ -15,7 +15,7 @@ class TestimonialsController extends Controller
 	{
 		return array(
 			'accessControl', // perform access control for CRUD operations
-			'postOnly + delete', // we only allow deletion via POST request
+
 		);
 	}
 
@@ -28,8 +28,9 @@ class TestimonialsController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
-				'users'=>array('*'),
+				'actions'=>array('index', 'view', 'create', 'update', 'admin'),
+				'users'=>array('@'),
+                'expression' => '$user->loadUser()->user_type == "LECTURER" || $user->loadUser()->user_type == "SUPERADMIN"',
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
 				'actions'=>array('create','update'),
@@ -69,15 +70,28 @@ class TestimonialsController extends Controller
 
 		if(isset($_POST['Testimonials']))
 		{
-			$model->attributes=$_POST['Testimonials'];
+
+            $model->attributes=$_POST['Testimonials'];
+            $rnd = rand(0,9999);  // generate random number between 0-9999
+
+            $uploadedFile=CUploadedFile::getInstance($model,'image_url');
+            $fileName = "{$rnd}-{$uploadedFile}";  // random number + file name
+            $model->image_url = '/uploads/testimonials/'.$fileName;
+
+
 			if($model->save())
-				$this->redirect(array('view','id'=>$model->testimonials_id));
+            {
+                $uploadedFile->saveAs(Yii::app()->basePath.'/../uploads/testimonials/'.$fileName);
+                $this->redirect(array('view','id'=>$model->testimonials_id));
+            }
+
 		}
 
 		$this->render('create',array(
 			'model'=>$model,
 		));
 	}
+
 
 	/**
 	 * Updates a particular model.
@@ -88,14 +102,23 @@ class TestimonialsController extends Controller
 	{
 		$model=$this->loadModel($id);
 
-		// Uncomment the following line if AJAX validation is needed
-		// $this->performAjaxValidation($model);
-
 		if(isset($_POST['Testimonials']))
 		{
+            $_POST['Testimonials']['image_url'] = $model->image_url;
 			$model->attributes=$_POST['Testimonials'];
-			if($model->save())
-				$this->redirect(array('view','id'=>$model->testimonials_id));
+            $uploadedFile=CUploadedFile::getInstance($model,'image_url');
+
+
+			if($model->save()){
+
+                if(!empty($uploadedFile))  // check if uploaded file is set or not
+                {
+                    $uploadedFile->saveAs(Yii::app()->basePath.'/..'.$model->image_url);
+                    $this->redirect(array('view','id'=>$model->testimonials_id));
+                    echo "done";
+                }
+            }
+
 		}
 
 		$this->render('update',array(
@@ -110,8 +133,17 @@ class TestimonialsController extends Controller
 	 */
 	public function actionDelete($id)
 	{
-		$this->loadModel($id)->delete();
 
+        $model=$this->loadModel($id);
+
+	    $this->loadModel($id)->delete();
+
+        $file = Yii::app()->basePath.'/..'.$model->image_url;
+
+        if (file_exists($file)) {
+
+            unlink($file);
+        }
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))
 			$this->redirect(isset($_POST['returnUrl']) ? $_POST['returnUrl'] : array('admin'));

@@ -99,4 +99,13 @@ class Testimonials extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+
+    public function getTestimonials() {
+        $data = Yii::app()->db->createCommand()
+            ->select('*')
+            ->from('testimonials')
+            ->queryAll();
+
+        return $data;
+    }
 }

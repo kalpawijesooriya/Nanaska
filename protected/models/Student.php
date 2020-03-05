@@ -98,7 +98,7 @@ class Student extends CActiveRecord {
         ));
     }
 
-    public function getLevelNameUpdate($user_Id) {
+    public static function getLevelNameUpdate($user_Id) {
 
         $data = Yii::app()->db->createCommand()
                 ->select('level_id')
@@ -108,7 +108,7 @@ class Student extends CActiveRecord {
         return $data[0]['level_id'];
     }
 
-    public function getSittingIdUpdate($user_Id) {
+    public static function getSittingIdUpdate($user_Id) {
 
         $data = Yii::app()->db->createCommand()
                 ->select('sitting_id')

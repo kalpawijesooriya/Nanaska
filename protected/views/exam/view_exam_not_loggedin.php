@@ -1,13 +1,22 @@
 
-<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->baseUrl; ?>/css/tabs.css" />
 
-<script type="text/javascript">  
+<script src="<?php echo Yii::app()->request->baseUrl; ?>/themes/bootstrap/js/vendor/jquery-1.12.4.min.js"></script>
+<script type="text/javascript">
     function hideFunction(){
         $('.course-description').hide();
     }
-        
-</script>
 
+</script>
+<style>
+    .courses{
+        margin-right: 5%;
+    }
+    button{
+        padding-left: 5%;
+        padding-right: 5%;
+        width:250px;
+    }
+</style>
 <?php
 $courses = $courseModel;
 $levels = $courseLevelModel;
@@ -16,138 +25,161 @@ foreach ($courses as $course) {
     $list_data[$course->course_id] = $course->course_name;
 }
 ?>
-
-<div class="row-fluid">
-    <div class="container footer-stable">
-
-        <ul class="nav nav-tabs hidden-for-phone">
-            <?php
-            foreach ($courses as $key => $course) {
-                if ($key === 0) {
-                    echo '<li class="active" ><a href="#' . $course->course_id . '"  data-toggle="tab" id="ttt">' . $course->course_name . '</a></li>';
-                } else {
-                    echo '<li><a href="#' . $course->course_id . '"  data-toggle="tab" id="ttt">' . $course->course_name . '</a></li>';
-                }
-            }
-            ?>
-        </ul>
-
-        <div class="tab-content hidden-for-phone">
-            <?php
-            foreach ($courses as $key => $course) {
-
-                if ($key === 0) {
-                    echo '<div class="tab-pane active" id="' . $course->course_id . '">';
-                    // echo $course->course_id;
-                } else {
-                    echo '<div class="tab-pane" id="' . $course->course_id . '">';
-                    //echo $course->course_id;
-                }
-                echo '<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">';
-                echo '<div class="level-names style="style="float:left; height: auto;">';
-                //echo '<ul class="nav" style="margin-top: 40px ">';
-
-                echo '<ul class="levels-nav level-ul">';
-                foreach ($levels as $course_id => $courseLevels) {
-                    if ($course->course_id == $course_id) {
-                        foreach ($courseLevels as $courseLevel) {
-                            //echo '<li><a href="#' . $courseLevel->level_id . '">' . $courseLevel->level_name . '</a></li> <br />';
-                            echo CHtml::ajaxLink('<li>' . $courseLevel->level_name . '</li>', Yii::app()->createUrl('Exam/viewDetailsForNotLoggedin'), array(
-                                'type' => 'POST',
-                                //'dataType' => 'json',
-                                'data' => array('levelId' => $courseLevel->level_id),
-                                'update' => '.req_res',
-//                                 'success' => 'function(data){
-//                                     if(data[0].status=="success"){
-//                                     document.getElementById("subject_heading").innerHtml("Hello");
-//                                    }
-//                                     }',
-                                    ), array('class' => 'link-background ')
-                            );
-                        }
-                    }
-                }
-                echo '</ul>';
-                echo '</div>';
-                echo '</div>';
-                echo '</div>';
-            }
-            ?>
-
-
-            <div class="req_res">
-                <?php
-                if (!empty($courses)) {
-                    ?>
-                    <div class='span1'></div><div class='span4'><br /><br /><div class='master_heading'>Instructions</div><p>Please select a level to try a sample exam.</p><p>Please <?php echo CHtml::link('create an account', array('user/create')); ?>  or <?php echo CHtml::link('login', array('site/login')); ?> to buy exams.</p></div> </div>
-                <?php
-            } else {
-                ?>
-                <div class='span1'></div><div class='span4'><br /><br /><p>Sorry, this content is not currently available.</p><p>Please <?php echo CHtml::link('create an account', array('user/create')); ?>  or <?php echo CHtml::link('login', array('site/login')); ?> to buy exams.</p></div> </div>
-            <?php
+<div class="btn-group text-center">
+    <button type="button" class="btn btn-default dropdown-toggle dr-breakout-btn text-center" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Select Course <span class="caret text-center"></span>
+    </button>
+    <ul class="dropdown-menu dr-breakout text-center">
+        <?php
+        foreach ($courses as $key => $course)
+        {
+            echo ' <li class="button text-center"><a href="#" onclick="showFoo('.$course->course_id .')" >' . $course->course_name . '</a></li>';
         }
         ?>
-
-
-    </div>
-
+    </ul>
 </div>
 
-<div class="hidden-for-desktop">
-    <?php
-    echo CHtml::dropDownList('course-list', '', $list_data, array(
-        'prompt' => 'Select Course',
-        'ajax' => array(
-            'type' => 'POST',
-            'url' => Yii::app()->createUrl('exam/loadCourseLevels'), //or $this->createUrl('loadcities') if '$this' extends CController
-            'update' => '#level-list', //or 'success' => 'function(data){...handle the data in the way you want...}',
-            'data' => array('course_id' => 'js:this.value'),
-            )));
-    ?>
-
-    <br /><br />
-
-    <?php
-    $level_list = array();
-
-    echo CHtml::dropDownList('level-list', '', array(), array('prompt' => 'Select Level',
-        'ajax' => array(
-            'type' => 'POST',
-            'url' => Yii::app()->createUrl('exam/viewDetailsForNotLoggedin'), //or $this->createUrl('loadcities') if '$this' extends CController
-            'update' => '.req_res', //or 'success' => 'function(data){...handle the data in the way you want...}',
-            'data' => array('levelId' => 'js:this.value'),
-            )));
-    ?>
-
-    <div class="req_res">
-
-    </div>
-</div>
+<div class="course-area section-padding bg-white" id="courses">
 
 </div>
+<br><br><br>
+<script type="text/javascript">
+    $(window).on('load', function() {
+        showFoo(1)
+    });
+    function showFoo(id) {
+        $.ajax({
+            type: 'POST',
+            async:false,
+            url: '<?php echo Yii::app()->createUrl('exam/Ajax'); ?>',
+            data:{data:id},
+            success:function(data){
 
-<?php
-if (isset($courseLevels)) {
-    if (count($courseLevels) == 0) {
-        echo ' <br/><br/><br/><br/><br/><br/><br/><br/><br /><br />';
-    } else {
-        echo ' <br/><br/><br/><br/><br/><br/><br/><br/>';
+                appendCourses(data);
+            },
+            error: function(data) { // if error occured
+                alert("Error occured.please try again");
+
+            },
+
+
+        });
+
     }
-}
-?>
 
-<script type="text/javascript">
-    $('.level-ul li').click(function () {
-        $('.highlight').removeClass('highlight');
-        $(this).addClass('highlight');
+    function appendCourses(data) {
+        $("#courses").html("");
+        var datas = $.parseJSON(data);
+        if(datas.length==0){
+            $( "#courses" ).append( "<p class='text-center'>Sorry!, No Levels available for this course </P>");
+        }
+        datas.forEach(function(item){
 
-    });
+           // console.log(item.level_name)
+            $( "#courses" ).append( "<div class=\"container\">\n" +
+                "                        <div class=\"row\">\n" +
+                "                            <div class=\"col-md-12\">\n" +
+                "                                <div class=\"section-title-wrapper\">\n" +
+                "                                    <div class=\"section-title\">\n" +
+                "                                      <h3>"+item.level_name+"</h3>\n" +
+                "                                    </div>\n" +
+                "                                </div>\n" +
+                "                            </div>\n" +
+                "                        </div>\n" +
+                "                        <div class=\"row text-center\">" );
+                 loadCourses(item.level_id)
+            $( "#courses" ).append( "  </div>\n" +
+                "                    </div>\n");
+        });
+
+    }
+    function loadCourses(level_id) {
+        $.ajax({
+            type: 'POST',
+            async:false,
+            url: '<?php echo Yii::app()->createUrl('exam/GetCourses'); ?>',
+            data:{data:level_id},
+            success:function(data){
+                $.parseJSON(data).forEach(function(item){
+                    $( "#courses" ).append( " <div class=\"col-md-3 hidden-sm\">\n" +
+                        "                                <div class=\"single-item\">\n" +
+                        "                                    <div class=\"single-item-image overlay-effect\">\n" +
+                        "                                        <br>\n" +
+                        "                                    </div>\n" +
+                        "                                    <div class=\"single-item-text\">\n" +
+                        "                                        <h5><a href=\"#\">"+item.subject_name+"</a></h5>\n" +
+                        "                                     <br>                 \n" +
+                        "                                     <div class=\"alert alert-info\" role=\"alert\">   \n" +
+                        "                                        <p>No Exams for the subject </p>\n" +
+                        "                                      </div>              \n" +
+                        "                                    </div>\n" +
+                        "\n" +
+                        "                                </div>\n" +
+                        "                            </div>");
+                });
+
+
+                console.log($.parseJSON(data));
+            },
+            error: function(data) {
+
+                console.log("Error occured.please try again")
+            },
+
+
+        });
+
+    }
 </script>
+<style>
+    @media (min-width: 700px) {
+        .dr-breakout-btn {
+            display: none;
+        }
+        .dr-breakout {
+            display: inline;
+            background: transparent;
+            box-shadow:none;
+            border:none;
+            position: relative;
+            margin:0;
+        }
+        .dr-breakout li {
+            align-content: center;
+            display:inline;
+        }
+        .dr-breakout li a {
+            display: inline-block;
+            padding: 6px 12px;
+            margin-bottom: 0;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.42857143;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            -ms-touch-action: manipulation;
+            touch-action: manipulation;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background-image: none;
+            color: #fff;
+            background-color: #507281;
+            width:250px; ;
+            margin-right: 10%;
+            border-radius: 30px;
+        }
+    }
 
+    body {
+        background-color:#83a5b4;
+    }
+    .btn-group {
 
-<script type="text/javascript">
-    $('#level-link').on('click', function(e){       
-        e.preventDefault();
-        $(this).toggleClass('myClickState');
-    });
-</script>
+        alignment: center;
+        margin: 50px 20%;
+    }
+</style>
