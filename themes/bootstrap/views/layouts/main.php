@@ -82,7 +82,7 @@
     <!-- Modernizr JS
     ============================================ -->
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/themes/bootstrap/js/vendor/modernizr-2.8.3.min.js"></script>
-
+    <script src="<?php echo Yii::app()->request->baseUrl; ?>/themes/bootstrap/js/vendor/jquery-1.12.4.min.js"></script>
     <?php Yii::app()->bootstrap->register(); ?>
 
     <script>
@@ -107,7 +107,49 @@
         var google_conversion_id = 962159633;
         var google_custom_params = window.google_tag_params;
         var google_remarketing_only = true;
+
         /* ]]> */
+        $(document).ready(function(){
+            $( "#subscribeForm" ).submit(function( event ) {
+
+                event.preventDefault();
+
+                $.ajax({
+                    type: 'POST',
+                    url: '<?php echo Yii::app()->createUrl('User/sendMaterialMail'); ?>',
+                    dataType:'json',
+                    data : {'mail' : $('#news_text_box').val()},
+                    beforeSend:function(){
+                    $("#loading").removeClass("loading_front");},
+                    complete:function(){
+                        $("#loading").removeClass("loading_front");},
+                    success:function(data){
+                        var google_conversion_id = 962159633;
+                        var google_conversion_language = "en";
+                        var google_conversion_format = "3";
+                        var google_conversion_color = "ffffff";
+                        var google_conversion_label = "4OI5CIPOhVkQkcjlygM";
+                        var google_remarketing_only = false;
+
+                        $.getScript( "http://www.googleadservices.com/pagead/conversion.js" );
+
+                         alert(data.msg);
+                        document.getElementById("news_text_box").value="";
+
+                        console.log($.parseJSON(data));
+                    },
+                    error: function(data) {
+
+                        console.log("Error occured.please try again")
+                    },
+
+
+                });
+            });
+        });
+
+
+
     </script>
 
     <noscript>
@@ -116,6 +158,12 @@
                  src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/962159633/?value=0&amp;guid=ON&amp;script=0"/>
         </div>
     </noscript>
+
+    <style>
+        #news_text_box{
+            border-radius: 0px;
+        }
+    </style>
 </head>
 
 
@@ -133,13 +181,40 @@
                             </div>
                             <div class="col-lg-5 col-md-6 col-sm-6 col-xs-12">
                                 <div class="header-top-right">
-                                    <div class="content"><a href="#"><i class="zmdi zmdi-account"></i>Log in / Register</a>
-                                        <ul class="account-dropdown">
-                                            <li> <?php echo CHtml::link('Login', array('site/login')); ?></li>
+                                    <?php
+                                      if (Yii::app()->user->isGuest) {
+                                          echo '<div class="content"><a href="#"><i class="zmdi zmdi-account"></i>Log in / Register</a>
+                                                  <ul class="account-dropdown">
+                                                   <li>'.CHtml::link("Login", array("site/login")).'</li>
+                                                   <li><a href="register.html">Register</a></li>
+                                                  </ul>
+                                                </div>';
+                                      }else {
+                                         if (Yii::app()->user->loadUser()->user_type == "SUPERADMIN") {
 
-                                            <li><a href="register.html">Register</a></li>
-                                        </ul>
-                                    </div>
+                                             echo '<div class="content"><a href="?r=admin"><i class="zmdi zmdi-view-dashboard"></i> Dashboard</a></div>';
+                                         }
+                                         else if (Yii::app()->user->loadUser()->user_type == "LECTURER") {
+                                             echo '<div class="content"><a href="?r=admin"><i class="zmdi zmdi-view-dashboard"></i> Dashboard</a></div>';
+                                             echo '<div class="content"><a href="?r=user/detailLecturer"><i class="zmdi zmdi-account-o"></i> My Profile</a></div>';
+
+                                         }else {
+                                             if (isset(Yii::app()->user->loadUser()->user_id)) {
+                                                 $status = Student::model()->getStudentStatusTypeByUserId(Yii::app()->user->loadUser()->user_id);
+
+                                                 if ($status == 1) {
+                                                     echo '<div class="content"><a href="?r=user/detailLecturer"><i class="zmdi zmdi-account-o"></i> My Profile</a></div>';
+                                                 }
+                                             } else {
+                                                 echo '<div class="content"><a href="?r=user/detailLecturer"><i class="zmdi zmdi-account-o"></i> My Profile</a></div>';
+                                             }
+                                             echo '<li><a href="?r=site/logout"><button class="button button-login" type="button"><i class="icon-lock icon-white"></i> Log Out (' . Yii::app()->user->name . ')</button></a></li>';
+                                         }
+
+                                      }
+
+                                      ?>
+
 
                                     <div class="content"><a href="cart.html"><i class="zmdi zmdi-shopping-basket"></i> Chechout</a></div>
                                 </div>
@@ -207,8 +282,8 @@
                                     <div class="search">
                                         <div class="search-form">
                                             <form id="search-form" action="#">
-                                                <input type="search" placeholder="Search here..." name="search" />
-                                                <button type="submit">
+                                                <input type="search" placeholder="Search here..." name="search" id="" />
+                                                <button type="submit" id="subscribe">
                                                     <span><i class="fa fa-search"></i></span>
                                                 </button>
                                             </form>
@@ -288,40 +363,15 @@
                         </div>
                         <div class="col-md-7 col-sm-7">
                             <div class="newsletter-form angle">
-                                <form action="#" class="footer-newsletter fix">
+                                <form  class="footer-newsletter fix" id="subscribeForm">
                                     <div class="subscribe-form">
-                                        <input id="news_text_box" type="email"  name="email" placeholder="Enter your email address...">
-                                        <button type="submit">SUBSCRIBE</button>
-                                        <?php
-                                        echo CHtml::ajaxButton('SUBSCRIBE', array('User/sendMaterialMail'), array(
-                                            'type' => 'POST',
-                                            'dataType' => 'json',
-                                            'data' => array('mail' => 'js:news_text_box.value'),
-                                            'beforeSend' => 'function(){
-                                                    $("#loading").addClass("loading_front");}',
-                                                                                'complete' => 'function(){
-                                                     $("#loading").removeClass("loading_front");}',
-                                            'success' => 'js:function(data){
-                                    var google_conversion_id = 962159633;
-                                    var google_conversion_language = "en";
-                                    var google_conversion_format = "3";
-                                    var google_conversion_color = "ffffff";
-                                    var google_conversion_label = "4OI5CIPOhVkQkcjlygM";
-                                    var google_remarketing_only = false;
-
-                                    $.getScript( "http://www.googleadservices.com/pagead/conversion.js" );
-
-                                    bootbox.alert(data.msg);
-                                    document.getElementById("news_text_box").value="";
-                                }'
-                                        ), array(
-                                            'class' => 'button button-signin',
-                                            'id' => 'material_submit' . rand(0, 99),
-                                        ));
-                                        ?>
-
+                                        <input type="email" name="email" placeholder="Enter your email address..." id="news_text_box">
+                                        <button type="submit" id="submitButton" >SUBSCRIBE</button>
                                     </div>
-                                </form>
+                                  </form>
+                                <div class="span1" style="margin-left: -10px;">
+                                    <div id="loading" style="width: 32px; height: 32px;"></div>
+                                </div>
                                 <!-- mailchimp-alerts Start -->
                                 <div class="mailchimp-alerts text-centre fix pull-right">
                                     <div class="mailchimp-submitting"></div><!-- mailchimp-submitting end -->
@@ -498,6 +548,7 @@
     function redirect() {
         location.href = "index.php?r=user/create";
     }
+
 
 
 

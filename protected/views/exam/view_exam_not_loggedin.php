@@ -34,19 +34,24 @@ foreach ($courses as $course) {
         foreach ($courses as $key => $course)
         {
             echo ' <li class="button text-center"><a href="#" onclick="showFoo('.$course->course_id .')" >' . $course->course_name . '</a></li>';
+            if ($key===0){
+                echo '<script>
+                       $(window).on(\'load\', function() {
+                            showFoo('.$course->course_id .')
+                        });
+                      </script>';
+            }
         }
         ?>
     </ul>
 </div>
 
-<div class="course-area section-padding bg-white" id="courses">
+<div class="course-area section-padding bg-white" id="courses" style="margin: auto;">
 
 </div>
 <br><br><br>
 <script type="text/javascript">
-    $(window).on('load', function() {
-        showFoo(1)
-    });
+
     function showFoo(id) {
         $.ajax({
             type: 'POST',
@@ -71,8 +76,9 @@ foreach ($courses as $course) {
         $("#courses").html("");
         var datas = $.parseJSON(data);
         if(datas.length==0){
-            $( "#courses" ).append( "<p class='text-center'>Sorry!, No Levels available for this course </P>");
+            $( "#courses" ).append( "<p class='text-center'>Sorry! No Levels available for this course </P>");
         }
+        else
         datas.forEach(function(item){
 
            // console.log(item.level_name)
@@ -86,8 +92,8 @@ foreach ($courses as $course) {
                 "                                </div>\n" +
                 "                            </div>\n" +
                 "                        </div>\n" +
-                "                        <div class=\"row text-center\">" );
-                 loadCourses(item.level_id)
+                "                        <div class=\"row\" style=\"margin: auto;\">" );
+                                             loadCourses(item.level_id)
             $( "#courses" ).append( "  </div>\n" +
                 "                    </div>\n");
         });
@@ -101,7 +107,8 @@ foreach ($courses as $course) {
             data:{data:level_id},
             success:function(data){
                 $.parseJSON(data).forEach(function(item){
-                    $( "#courses" ).append( " <div class=\"col-md-3 hidden-sm\">\n" +
+
+                    $( "#courses" ).append( " <div class=\"col-md-3 hidden-sm-4\">\n" +
                         "                                <div class=\"single-item\">\n" +
                         "                                    <div class=\"single-item-image overlay-effect\">\n" +
                         "                                        <br>\n" +

@@ -154,17 +154,7 @@ $this->breadcrumbs = array(
                 <?php echo CHtml::link('<i class="icon-zoom-in text-large"></i><span class="shortcut-label">Log Per 60 min</span>', array('/admin/examAudit/viewLogPer60Mins/'), array('class' => 'shortcutadmin')); ?>
             </div> <!-- /shortcuts -->	
         </div>
-        
-        
-        
-        
-        
-        
-<!--        <div class="span3">
-            <div class="shortcutsadmin">
-                <?php //echo CHtml::link('<i class="icon-zoom-in text-large"></i><span class="shortcut-label">Question Statistics</span>', array('/admin/question/QuestionStatistics/'), array('class' => 'shortcutadmin')); ?>
-            </div>  /shortcuts 	
-        </div>-->
+
     </div>
 
 
