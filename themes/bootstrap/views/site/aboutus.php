@@ -82,12 +82,7 @@
                             <h3><a href="#">Louis Smith</a></h3>
                             <h4>Teacher</h4>
                             <p>There are many variaons of passa of Lorem Ipsuable, amrn in sofby injected humour, amr</p>
-                            <div class="social-links">
-                                <a href="#"><i class="zmdi zmdi-facebook"></i></a>
-                                <a href="#"><i class="zmdi zmdi-twitter"></i></a>
-                                <a href="#"><i class="zmdi zmdi-google-old"></i></a>
-                                <a href="#"><i class="zmdi zmdi-instagram"></i></a>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -100,12 +95,7 @@
                             <h3><a href="#">Louis Smith</a></h3>
                             <h4>Teacher</h4>
                             <p>There are many variaons of passa of Lorem Ipsuable, amrn in sofby injected humour, amr</p>
-                            <div class="social-links">
-                                <a href="#"><i class="zmdi zmdi-facebook"></i></a>
-                                <a href="#"><i class="zmdi zmdi-twitter"></i></a>
-                                <a href="#"><i class="zmdi zmdi-google-old"></i></a>
-                                <a href="#"><i class="zmdi zmdi-instagram"></i></a>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -118,12 +108,7 @@
                             <h3><a href="#">Louis Smith</a></h3>
                             <h4>Teacher</h4>
                             <p>There are many variaons of passa of Lorem Ipsuable, amrn in sofby injected humour, amr</p>
-                            <div class="social-links">
-                                <a href="#"><i class="zmdi zmdi-facebook"></i></a>
-                                <a href="#"><i class="zmdi zmdi-twitter"></i></a>
-                                <a href="#"><i class="zmdi zmdi-google-old"></i></a>
-                                <a href="#"><i class="zmdi zmdi-instagram"></i></a>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -136,12 +121,7 @@
                             <h3><a href="#">Louis Smith</a></h3>
                             <h4>Teacher</h4>
                             <p>There are many variaons of passa of Lorem Ipsuable, amrn in sofby injected humour, amr</p>
-                            <div class="social-links">
-                                <a href="#"><i class="zmdi zmdi-facebook"></i></a>
-                                <a href="#"><i class="zmdi zmdi-twitter"></i></a>
-                                <a href="#"><i class="zmdi zmdi-google-old"></i></a>
-                                <a href="#"><i class="zmdi zmdi-instagram"></i></a>
-                            </div>
+
                         </div>
                     </div>
                 </div>

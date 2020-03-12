@@ -221,8 +221,23 @@
 
                                     <div class="content"><a href="?r=shoppingcart/viewcart" class="notification"><i class="zmdi zmdi-shopping-basket"></i> Chechout<span class="badge" id="quantityWidget">
                                             <?php
+
                                             $totalProductQty = Util::getShoppingCartQuantity();
-                                            echo $totalProductQty;
+                                            if ($totalProductQty==0)
+                                            {
+                                                echo '<script>
+                                              document.getElementById("quantityWidget").style.visibility = "hidden";
+                                                 
+                                                  </script>';
+
+                                            }else{
+                                                echo '<script>
+                                        document.getElementById("quantityWidget").style.visibility = "visible";
+                                         
+                                                  </script>';
+                                                echo $totalProductQty;
+                                            }
+
                                             ?>
                                         </span></a></div>
                                 </div>

@@ -286,8 +286,10 @@ Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/sty
                             if (data.status === "success") {
                                 jQuery("#item_" + shoppingCartExamId).slideUp("slow");
                                 jQuery("#quantityWidget").text(data.shopping_cart_qty);
+
                                 if (data.shopping_cart_qty == 0) {
                                     $('#empty-cart-message').show();
+                                    document.getElementById("quantityWidget").style.visibility = "hidden";
                                 }
                                 jQuery("#total_price").html('<strong>' + data.total_price + '</strong>');
                                 $('input[name="amount"]').val(data.total_price_pay);

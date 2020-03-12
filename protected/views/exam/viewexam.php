@@ -222,6 +222,7 @@ foreach ($courses as $course) {
                 console.log(data)
                 data= $.parseJSON(data)
                 $("#quantityWidget").text(data.shopping_cart_qty);
+                document.getElementById("quantityWidget").style.visibility = "visible";
                 cartAnimation(data.response);
             },
             error: function(data) {
