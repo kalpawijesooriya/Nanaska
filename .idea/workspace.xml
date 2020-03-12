@@ -2,36 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf1bd393-a461-4e46-a754-d5537cf3d11f" name="Default" comment="Done :Complete the Testimonials feature in backend&#10;* Upload/edit/delete testimonials and name Dev- https://ellipsisjira.atlassian.ne&#10;* Upload/edit/delete testimonials and name UI dev - https://ellipsisjira.atlassian.net/browse/NWR-14&#10;t/browse/NWR-13&#10; * Testimonials list Dev - https://ellipsisjira.atlassian.net/browse/NWR-17&#10; * Testimonials list UI - https://ellipsisjira.atlassian.net/browse/NWR-18 &#10; * Upload profile image dev - https://ellipsisjira.atlassian.net/browse/NWR-16">
-      <change afterPath="$PROJECT_DIR$/protected/views/exam/new_ExamView.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/bootstrap/css/toastr.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/bootstrap/test/bootstrap.bundle.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/bootstrap/test/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/bootstrap/test/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/bootstrap/test/jquery-3.3.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/bootstrap/test/jquery-confirm.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/bootstrap/test/jquery-confirm.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/bootstrap/test/jquery-ui.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/protected/controllers/ExamController.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/controllers/ExamController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/protected/runtime/application.log" beforeDir="false" afterPath="$PROJECT_DIR$/protected/runtime/application.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/protected/runtime/session-1.1.22.db" beforeDir="false" afterPath="$PROJECT_DIR$/protected/runtime/session-1.1.22.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/protected/views/exam/viewexam.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/exam/viewexam.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/protected/views/exam/viewexamnew.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/exam/viewexamnew.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/protected/views/shoppingcart/shoppingCart.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/shoppingcart/shoppingCart.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/protected/views/user/_edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/user/_edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/protected/views/user/_form.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/user/_form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/protected/views/user/_scheduledExams.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/user/_scheduledExams.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/protected/views/user/detail.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/user/detail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/protected/views/user/detail_lecturer.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/user/detail_lecturer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/protected/views/user/forgotpassword.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/user/forgotpassword.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/protected/views/user/passwordsent.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/user/passwordsent.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/protected/views/user/resetPassword.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/user/resetPassword.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/protected/views/user/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/user/update.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/protected/views/user/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/user/view.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bootstrap/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/bootstrap/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bootstrap/views/layouts/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/themes/bootstrap/views/layouts/main.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bootstrap/views/site/aboutus.php" beforeDir="false" afterPath="$PROJECT_DIR$/themes/bootstrap/views/site/aboutus.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bootstrap/views/site/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/themes/bootstrap/views/site/login.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,7 +126,7 @@
       <workItem from="1583900120730" duration="4508000" />
       <workItem from="1583905334138" duration="3939000" />
       <workItem from="1583911063128" duration="18339000" />
-      <workItem from="1583986318553" duration="9369000" />
+      <workItem from="1583986318553" duration="9862000" />
     </task>
     <servers />
   </component>
