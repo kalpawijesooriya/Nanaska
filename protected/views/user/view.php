@@ -17,6 +17,7 @@
 
     <div class="span8"> 
         <h3 class="master_heading">Account Settings</h3>
+        <br>
         <div class="well well-no-background">
         
             <form class="form-horizontal">
@@ -76,3 +77,4 @@
     ?>
 
 </div>
+<br><br><br>

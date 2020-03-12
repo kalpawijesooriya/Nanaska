@@ -1,37 +1,6 @@
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/toastr.css" />
-<script src="<?php echo Yii::app()->theme->baseUrl; ?>/js/plugins/toastr/toastr.min.js"></script>
+<script src="<?php echo Yii::app()->theme->baseUrl; ?>/js-old/plugins/toastr/toastr.min.js"></script>
 
-<script type="text/javascript">
-
-    function cartAnimation(status) {
-        toastr.options.timeOut = 2500; // 2.5s
-        toastr.options.closeButton = true;
-
-        if (status === true) {
-            toastr.success('Exam successfully added to cart');
-        } else if (status === false) {
-            toastr.warning('Exam already added to cart');
-        } else {
-            toastr.error('Error occured while adding the exam to the cart');
-        }
-
-    }
-
-    function cartAnimationForBulk(status, noOfPapers) {
-        toastr.options.timeOut = 2500; // 2.5s
-        toastr.options.closeButton = true;
-
-        if (status === true) {
-            toastr.success(noOfPapers + ' exams successfully added to cart');
-        } else if (status === false) {
-            toastr.warning('Exam already added to cart');
-        } else {
-            toastr.error('Error occured while adding the exam to the cart');
-        }
-
-    }
-
-</script>
 
 
 <style>
@@ -106,51 +75,77 @@
 
     $arr = Array();
     $examIDs = Array();
-    if (count($data) != 0) {            //check data array is not empty
+    if (count($data) != 0) {
+        echo '<div class="course-area section-padding">';
+        //check data array is not empty
         foreach ($data as $sub) {
 
             $oder_details = Exam::model()->getSubjectExamOrderForSubjectId($sub['subject_id']);
 
-            echo '  <div id="view-exam-subject-heading">
-                                        <span><h3>' . $sub['subject_name'] . '</h3></span> 
-                                    </div>';    //end of subject heading
-            echo'      <br/>';
+      echo '<div class="container" style="margin-bottom: 50px;margin-left: -6%">';
+            echo ' <div class="section-title-wrapper" id="view-exam-subject-heading">
+                        <div class="section-title" style="margin-bottom: 50px">  
+                         <h3 style="text-align: left">' . $sub['subject_name'] . '</h3>
+                        </div>
+                    </div>';    //end of subject heading
 
-            echo '<div class="view-exam-purchase-details">';
+            echo '<!-- Start of search button and text -->
+                         <div class="main" style="margin-bottom: 5%">
+                           <h5 class="mt-4 text-center heading">Here You can Purchase the exams in Bluk</a></h5>
+                           <br>
+                           <!-- Actual search box -->
+                               <div class="form-group has-search text-center">
+                                 <span class="fa fa-search form-control-feedback"></span>
+                                 <input type="text" class="form-control " placeholder="Enter the Number of Papers" class="button-bottom" style="width: 400px">
+                                 <br>
+                                 <div class="button-bottom-2"style="padding-left:38%; padding-right:100%;">
+                                     <button  class="button-default purchase">Purchase</button>
+                                 </div>
+                                 <!--this is sample button button type="button" name="button" style="padding-left:60px;padding-right:60px;padding-top:10px; padding-bottom:10px;  align-items: center;margin-left: 20%;margin-right: 20%;margin-bottom: 10px;margin-top: 10px;background-color: #2D3E50;border-radius: 8px;color: #FFFFFF; " >Purchase</button--->
+                               </div>
+                               <br>
+                               <!-- Another variation with a button -->
+                             </div><!-- end of search button and text -->';
 
-            echo '   <div id="view-exam-purchasebulk-heading">
-                        <span id="purchasebulk_heading"><h4 style="margin-top:0px">Purchase dynamic exams in bulk</h4></span>
-                    </div>
-
-                    <div id="view-exam-noofpapers">
-                        <input type="text" name="no_of_papers" id="noofpapers_' . $sub['subject_id'] . '" placeholder="Number of Papers">
-                    </div>';
-
-            echo'      <div id="view-exam-purchase-btn">';
 
 
-            echo CHtml::ajaxButton('Purchase', array('shoppingcart/purchaseBulk'), array(
-                'type' => 'POST',
-                'dataType' => 'json',
-                'data' => array('exam_id' => 'js:document.getElementById("examID_for_cart' . $sub['subject_id'] . '").value',
-                    'no_of_papers' => 'js:document.getElementById("noofpapers_' . $sub['subject_id'] . '").value'),
-                'success' => 'js:function(data){
-                    $("#quantityWidget").text(data.shopping_cart_qty);
-                    cartAnimationForBulk(data.response, data.added_papers);
-                }'
-                    ), array(
-                'class' => 'lightgreybtn',
-//                'id' => 'purchase_exam_' . $sub['subject_id']
-                'id' => Util::getRandomID('purchase_exam_' . $sub['subject_id'])
-            ));
 
-            echo'      </div>'; //view-exam-purchase-btn
-            echo '</div>';  //view-exam-purchase-details 
+
+
+//            echo '<div class="view-exam-purchase-details">';
+//
+//            echo '<div id="view-exam-purchasebulk-heading">
+//                        <span id="purchasebulk_heading"><h4 style="margin-top:0px">Purchase dynamic exams in bulk</h4></span>
+//                   </div>
+//
+//                    <div id="view-exam-noofpapers">
+//                        <input type="text" name="no_of_papers" id="noofpapers_' . $sub['subject_id'] . '" placeholder="Number of Papers">
+//                    </div>';
+//
+//            echo'<div id="view-exam-purchase-btn">';
+//
+//
+//            echo CHtml::ajaxButton('Purchase', array('shoppingcart/purchaseBulk'), array(
+//                'type' => 'POST',
+//                'dataType' => 'json',
+//                'data' => array('exam_id' => 'js:document.getElementById("examID_for_cart' . $sub['subject_id'] . '").value',
+//                    'no_of_papers' => 'js:document.getElementById("noofpapers_' . $sub['subject_id'] . '").value'),
+//                'success' => 'js:function(data){
+//                    $("#quantityWidget").text(data.shopping_cart_qty);
+//                    cartAnimationForBulk(data.response, data.added_papers);
+//                }'
+//                    ), array(
+//                'class' => 'lightgreybtn',
+////                'id' => 'purchase_exam_' . $sub['subject_id']
+//                'id' => Util::getRandomID('purchase_exam_' . $sub['subject_id'])
+//            ));
+//
+//            echo'  </div>'; //view-exam-purchase-btn
+//            echo '</div>';  //view-exam-purchase-details
 //            echo'  <br/>';
 
-            echo '<div class="view-exam-wrapper abc_' . $sub['subject_id'] . '">';
-
-            echo '<div class="view-exam-inner">';
+         //   echo '<div class="view-exam-wrapper abc_' . $sub['subject_id'] . '">';
+            echo'<div class="row">';
 
             $count = 1;
             $last_dynamic = null;
@@ -289,16 +284,17 @@
                 }
             }
 
-            echo '</div>';  //end of class view-exam-inner
 
-            echo '</div>';  //end of class view-exam-wrapper
+
+       echo '</div></div></div>';  //end of class view-exam-wrapper
             echo '<br />';
 
             echo '<hr />';
         }
+        echo '</div>';
     } else {
 
-        echo '<div class="error-messages-exam3"><h4>No Exams available for this Level</h4></div>';
+        echo '<div class="error-messages-exam3"><h4>No Exams available for this Level</h4>';
         echo '<br />';
         echo '<br />';
     }
@@ -310,76 +306,24 @@
 <?php
 
 function uiCSS($detail, $courseName, $sub) {
-    echo
-
-    '<div class="view-exam-item">';
-
-    echo'<div id="view-exam-image">';
+    echo '<div class="col-md-6 col-sm-3 col-lg-3" style="margin-bottom: 50px">';
+    echo'<div class="single-item">';
+    echo'<div class="single-item-image overlay-effect">';
 
     if ($detail['exam_image'] == null) {
-        echo'<img src="' . Yii::app()->request->baseUrl . '/images/hotspot_answer_images/noImage/no_image.png">';
+        echo'<a href="#"><img src="' . Yii::app()->request->baseUrl . '/themes/bootstrap/img/course/6.jpg"></a>';
     } else {
-        echo'<img src="' . Yii::app()->request->baseUrl . '/images/exam_images/' . $detail['exam_image'] . '">';
+        echo'<a href="#"><img src="' . Yii::app()->request->baseUrl . '/images/exam_images/' . $detail['exam_image'] . '"></a>';
     }
     //echo '<img src="" style="height: 200px; width:120px; border:1px solid #021a40;  ">';
     echo '</div>';    //end of view-exam-image
 
 
-    echo '<div id="view-exam-descriptions">';
+    echo '<div class="single-item-text">';
     echo '<input type="hidden" id="examid' . $detail['exam_id'] . ' value="' . $detail['exam_id'] . '">';
-    echo '<p title="' . $detail['exam_name'] . '"><b> Name :&nbsp;</b>' . Exam::TruncateText($detail['exam_name'], 15) . '</p>';
-    echo '<p><b> Type :&nbsp;</b>' . $detail['exam_type'] . '</p>';
-    echo '<p><b> Description  :&nbsp;</b>' . Exam::TruncateText($detail['exam_description'], 10) . '</p>';
-    echo '<p class="price_para"><b> Price :&nbsp;</b><span id="price-change' . $detail['exam_id'] . '">' . $detail['exam_price'] . '</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
-    echo '</p>';
-
-
-    echo CHtml::dropDownList('currency_id' . $detail['exam_id'], '', array('LKR' => 'LKR', 'GBP' => 'GBP', 'USD' => 'USD'), array(
-        'options' => array('GBP' => array('selected' => true)),
-        'empty' => 'Select',
-        'class' => 'drop',
-        'ajax' => array(
-            'type' => 'POST',
-            'url' => Yii::app()->createUrl('exam/convertCurrency'), //or $this->createUrl('loadcities') if '$this' extends CController
-            'update' => '#price-change' . $detail['exam_id'], //or 'success' => 'function(data){...handle the data in the way you want...}',
-            'data' => array(
-                'currency' => 'js:document.getElementById("currency_id' . $detail['exam_id'] . '").value',
-                'price' => 'js:document.getElementById("price-change' . $detail['exam_id'] . '").innerHTML',
-                // 'examid' => 'js:document.getElementById("examid'. $detail['exam_id'] .'").value',
-                'examid' => $detail['exam_id']
-            ),
-        )), array(
-        'id' => 'drop_' . $detail['exam_id']
-    ));
-
-
-
-
-    echo '<p class="time_exam"><b> Time  :&nbsp;</b>' . $detail['time'] . '</p>';
-
-
-    //  echo '<br />';
-    echo ' <div id="view-exam-cart-view-buttons">';
-
-    echo '<div id="view-exam-cart-btn">';
-    echo CHtml::ajaxButton('Add to cart', array('shoppingcart/addExam'), array(
-        'type' => 'POST',
-        'dataType' => 'json',
-        'data' => array('exam_id' => $detail['exam_id']),
-        'success' => 'js:function(data){
-                                    $("#quantityWidget").text(data.shopping_cart_qty);
-                                    cartAnimation(data.response);
-                                }'
-            ), array(
-        'class' => 'tinybluebtn',
-//        'id' => 'exam_' . $detail['exam_id']
-        'id' => Util::getRandomID('exam_' . $detail['exam_id']),
-    ));
-    echo'  </div>'; //end of view-exam-cart-btn
-//    echo '&nbsp;';
-
-    echo' <div id="view-exam-viewexam-btn">';
-
+    echo '<h4 title="' .  $detail['exam_name'] . '"><a href="#">'.Exam::TruncateText($detail['exam_name'],20) .'</a></h4><br>';
+    echo '<div class="single-item-text-info" style="margin-bottom: 10px!important;">';
+    echo '<span>Type : <span>' . $detail['exam_type'] . '</span>';
     echo CHtml::ajaxLink('View exam', Yii::app()->createUrl('Exam/ViewEachAvailabelExam'), array(
         'type' => 'POST',
         //'dataType' => 'json',
@@ -395,13 +339,26 @@ function uiCSS($detail, $courseName, $sub) {
             'viewexam_image' => $detail['exam_image']
         ),
         'update' => '.req_res',
-            ), array(
-        'class' => 'tinygreybtn hidden-for-phone',
-        'style' => 'text-decoration:none',
-//        'id' => 'viewexam_' . $detail['exam_id']
-        'id' => Util::getRandomID('viewexam_' . $detail['exam_id']),
-            )
+    ), array(
+            'class' => 'tinygreybtn hidden-for-phone',
+            'style' => 'text-decoration:none',
+
+            'id' => Util::getRandomID('viewexam_' . $detail['exam_id']),
+        )
     );
+    echo '</div>';
+
+    echo  '</span>';
+    echo '<div class="single-item-text-info">';
+    echo '<span>Description : <span>'. Exam::TruncateText($detail['exam_description'], 15) .'</span></span></div>';
+    echo ' <div class="single-item-text-info"><span>Time : <span>' . $detail['time'] . '</span></span></div>';
+    echo '<p class="price_para"><b> Price :&nbsp;</b><span id="price-change' . $detail['exam_id'] . '"> GPB ' . $detail['exam_price'] . '</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
+  echo ' <div class="button-bottom">
+          <button  type="button" class="button-default boder" style="width: 170px" data-examid="'.$detail['exam_id'].'" onclick="cart(this)">Add to cart</button>
+        </div>';
+echo' <div id="view-exam-viewexam-btn">';
+
+
 
 //    echo CHtml::ajaxLink('View exam', Yii::app()->createUrl('Exam/ViewEachAvailabelExam'), array(
 //        'type' => 'POST',
@@ -428,7 +385,7 @@ function uiCSS($detail, $courseName, $sub) {
 //    echo CHtml::link('View Exam', array('Exam/ViewEachAvailabelExam',
 //        'courseID'=>$courseID,
 //        'levelID'=>$id,
-//        'viewexam_coursename' => $courseName,        
+//        'viewexam_coursename' => $courseName,
 //        'viewexam_subject' => $sub['subject_name'],
 //        'viewexam_exam_id' => $detail['exam_id'],
 //        'viewexam_examtitle' => $detail['exam_name'],
@@ -438,14 +395,50 @@ function uiCSS($detail, $courseName, $sub) {
 //        'viewexam_examtime' => $detail['time']), array('class' => 'btn'));
 
 
-    echo'</div>';  //end of view-exam-viewexam-btn
+   // echo'</div>';  //end of view-exam-viewexam-btn
     echo '</div>'; //end of view-exam-cart-view-btns
 
 
     echo '</div>';  //end of view-exam-description
 
     echo '</div>';    //end of class item
+    echo '</div>';
 }
 ?>
+<style>
+    .boder{
+        border: none;
+    }
 
+
+
+    .purchase{
+        display: inline-block;
+        padding: 6px 12px;
+        margin-bottom: 0;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.42857143;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        background-image: none;
+        color: #fff;
+        background-color: #507281;
+        width:250px; ;
+        margin-right: 10%;
+        border-radius: 30px;
+        border: none;
+    }
+</style>
+<div class="test">
+
+</div>
 

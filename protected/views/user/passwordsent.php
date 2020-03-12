@@ -1,3 +1,5 @@
+<br>
+<br>
 <div class="container">
           
           <div class="span12"> 
@@ -5,6 +7,8 @@
               <div class="span2"></div>
               <div class="span8">
                   <h3 class="master_heading">Password Reset</h3>
+                  <br>
+                  <br>
           <div class="well">
             <p align=justify>Password has successfully sent to your email!</p>
             
@@ -28,3 +32,7 @@
 </div>
 </div>    -->
 </div>
+<br>
+<br>
+<br>
+<br>

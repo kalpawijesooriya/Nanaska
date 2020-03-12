@@ -4,7 +4,7 @@
     function clearFunction() {        
         x=document.getElementsByClassName("req_res");  // Find the elements
         for(var i = 0; i < x.length; i++){
-            x[i].innerHTML="<div id='course-description'><div class='span1'></div><div class='span4'><br /><br /><div class='master_heading'>Instructions</div><p>Please click on courses to see the relevant levels.</p><p>Select levels from the left hand side navigation to view exams relent to each level.</p><p>You have to purchase exams before taking them.</p> </div> </div>";    // Change the content
+            x[i].innerHTML="<div id='course-description'><div class='span4'></div><div class='span6'><br /><br /><div class='master_heading'> <h4>Instructions<h4></div><li>Please click on courses to see the relevant levels.</li><li>Select levels from the left hand side navigation to view exams relent to each level.</li><li>You have to purchase exams before taking them.</li> </div> </div>";    // Change the content
         }
         
     }
@@ -26,21 +26,22 @@ foreach ($courses as $course) {
 ?>
 
 <div class="row-fluid">
+
     <div class="container footer-stable">
-
-        <ul class="nav nav-tabs hidden-for-phone">
-            <?php
-            foreach ($courses as $key => $course) {
-                if ($key === 0) {
-                    echo '<li class="active" ><a href="#' . $course->course_id . '"  data-toggle="tab" id="ttt" onclick="clearFunction()">' . $course->course_name . '</a></li>';
-                } else {
-                    echo '<li class=""><a href="#' . $course->course_id . '"  data-toggle="tab" id="ttt" onclick="clearFunction()">' . $course->course_name . '</a></li>';
+        <div class="btn-group text-center">
+            <ul class="hidden-for-phone dropdown-menu dr-breakout text-center">
+                <?php
+                foreach ($courses as $key => $course) {
+                    if ($key === 0) {
+                        echo '<li class="button" ><a href="#' . $course->course_id . '"  data-toggle="tab" id="ttt" onclick="clearFunction()">' . $course->course_name . '</a></li>';
+                    } else {
+                        echo '<li class="button"><a href="#' . $course->course_id . '"  data-toggle="tab" id="ttt" onclick="clearFunction()">' . $course->course_name . '</a></li>';
+                    }
                 }
-            }
-            ?>
+                ?>
 
-        </ul>
-
+            </ul>
+        </div>
         <div class="tab-content hidden-for-phone">
             <?php
             foreach ($courses as $key => $course) {
@@ -50,7 +51,7 @@ foreach ($courses as $course) {
                 } else {
                     echo '<div class="tab-pane" id="' . $course->course_id . '">';
                 }
-                echo '<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">';
+                echo '<div class="col-xs-6 col-sm-3 col-lg-3" id="sidebar" role="navigation">';
                 echo '<div class="level-names style="style="float:left; height: auto;">';
 
                 echo '<ul class="levels-nav level-ul">';
@@ -71,18 +72,19 @@ foreach ($courses as $course) {
                 echo '</div>';
                 echo '</div>';
                 echo '</div>';
+
             }
             ?>
+        </div>
 
-
-            <div class="req_res">               
+            <div class="req_res" style="margin-top: -5%">
 
                 
 
             <?php
             if (!empty($courses)) {
                 ?>
-                <div class='span1'></div><div class='span4'><br /><br /><div class='master_heading'>Instructions</div><p>Please click on courses to see the relevant levels.</p><p>Select levels from the left hand side navigation to view exams relent to each level.</p><p>You have to purchase exams before taking them.</p> </div> </div>
+                <div class="span4"></div><div class='span6'><div class='master_heading' style="margin-bottom: 10px"><h4>Instructions</h4></div><li>Please click on courses to see the relevant levels.</li><li>Select levels from the left hand side navigation to view exams relent to each level.</li><li>You have to purchase exams before taking them.</li> </div> </div><br><br><br>
             <?php
         } else {
             ?>
@@ -95,7 +97,7 @@ foreach ($courses as $course) {
 </div>
 
 
-<div class="hidden-for-desktop">
+<div class="hidden-for-desktop text-center">
     <?php
     echo CHtml::dropDownList('course-list', '', $list_data, array(
         'prompt' => 'Select Course',
@@ -141,3 +143,128 @@ foreach ($courses as $course) {
 
     });
 </script>
+<style>
+    @media (min-width: 700px) {
+        .dr-breakout-btn {
+            display: none;
+        }
+        .dr-breakout {
+            display: inline;
+            background: transparent;
+            box-shadow:none;
+            border:none;
+            position: relative;
+            margin:0;
+        }
+        .dr-breakout li {
+            align-content: center;
+            display:inline;
+        }
+        .dr-breakout li a {
+            display: inline-block;
+            padding: 6px 12px;
+            margin-bottom: 0;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.42857143;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            -ms-touch-action: manipulation;
+            touch-action: manipulation;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background-image: none;
+            color: #fff;
+            background-color: #507281;
+            width:250px; ;
+            margin-right: 10%;
+            border-radius: 30px;
+        }
+    }
+
+    body {
+        background-color:#83a5b4;
+    }
+    .btn-group {
+
+        alignment: center;
+        margin: 50px 17%;
+    }
+    .container{
+        width: 90% !important;
+    }
+</style>
+<style>
+    .courses{
+        margin-right: 5%;
+    }
+    button{
+        padding-left: 5%;
+        padding-right: 5%;
+        width:250px;
+    }
+</style>
+
+<script>
+    function cart(param) {
+
+        var examId = $(param).data('examid');
+        $.ajax({
+            type: 'POST',
+            async:false,
+            url: '<?php echo Yii::app()->createUrl('shoppingcart/addExam'); ?>',
+            data:{'exam_id':examId},
+            success:function(data){
+                console.log(data)
+                data= $.parseJSON(data)
+                $("#quantityWidget").text(data.shopping_cart_qty);
+                cartAnimation(data.response);
+            },
+            error: function(data) {
+                console.log(data)
+            },
+
+
+        });
+    }
+</script>
+<script type="text/javascript">
+
+    function cartAnimation(status) {
+        toastr.options.timeOut = 2500; // 2.5s
+        toastr.options.closeButton = true;
+
+        if (status === true) {
+            toastr.success('Exam successfully added to cart');
+        } else if (status === false) {
+            toastr.warning('Exam already added to cart');
+        } else {
+            toastr.error('Error occured while adding the exam to the cart');
+        }
+
+    }
+
+    function cartAnimationForBulk(status, noOfPapers) {
+        toastr.options.timeOut = 2500; // 2.5s
+        toastr.options.closeButton = true;
+
+        if (status === true) {
+            toastr.success(noOfPapers + ' exams successfully added to cart');
+        } else if (status === false) {
+            toastr.warning('Exam already added to cart');
+        } else {
+            toastr.error('Error occured while adding the exam to the cart');
+        }
+
+    }
+
+
+
+</script>
+
+
+

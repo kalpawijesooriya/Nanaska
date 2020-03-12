@@ -8,12 +8,13 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
         'validateOnSubmit' => true,
     ),
     'htmlOptions' => array(
-        'class' => 'form-horizontal form-control',
+        'class' => '',
         'role' => 'form'
     )
         ));
 ?>
 <div class="well well-no-background">
+    <h3 class="master_heading text-center">Update Account Details</h3>
     <p class="help-block">Fields with <span class="required">*</span> are required.</p>
     <br />
         <?php //echo $form->errorSummary($model);  ?>
@@ -56,8 +57,8 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
     </div>
     
 
-    <div class="form-actions form-actions-no-background">
-<?php echo CHtml::submitButton('Save', array('class' => 'button button-news')); ?>
+    <div class="form-actions form-actions-no-background text-center">
+<?php echo CHtml::submitButton('Save', array('class' => 'loginBtn ')); ?>
     </div>
 </div>
 
@@ -117,3 +118,28 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 
 <?php $this->endWidget(); ?>
 
+<style>
+    .loginBtn{
+        font-size: 16px;
+        color: #fff;
+        line-height: 1.2;
+        justify-content: center;
+        align-items: center;
+        padding: 0 20px;
+        min-width: 120px;
+        height: 40px;
+        background-color: #3282B8;
+        border-radius: 27px;
+        -webkit-transition: all 0.4s;
+        -o-transition: all 0.4s;
+        -moz-transition: all 0.4s;
+        transition: all 0.4s;
+        outline: none !important;
+        border: none;
+
+    }
+
+    .btnContainer{
+        alignment: center;
+    }
+</style>

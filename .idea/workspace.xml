@@ -2,53 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf1bd393-a461-4e46-a754-d5537cf3d11f" name="Default" comment="Done :Complete the Testimonials feature in backend&#10;* Upload/edit/delete testimonials and name Dev- https://ellipsisjira.atlassian.ne&#10;* Upload/edit/delete testimonials and name UI dev - https://ellipsisjira.atlassian.net/browse/NWR-14&#10;t/browse/NWR-13&#10; * Testimonials list Dev - https://ellipsisjira.atlassian.net/browse/NWR-17&#10; * Testimonials list UI - https://ellipsisjira.atlassian.net/browse/NWR-18 &#10; * Upload profile image dev - https://ellipsisjira.atlassian.net/browse/NWR-16">
-      <change afterPath="$PROJECT_DIR$/themes/bootstrap/css/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/bootstrap/js/bootbox.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/bootstrap/js/vendor/animate/animate.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/bootstrap/js/vendor/animsition/css/animsition.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/bootstrap/js/vendor/animsition/css/animsition.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/bootstrap/js/vendor/animsition/js/animsition.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/bootstrap/js/vendor/animsition/js/animsition.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/bootstrap/js/vendor/bootstrap/css/bootstrap-grid.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/bootstrap/js/vendor/bootstrap/css/bootstrap-grid.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/bootstrap/js/vendor/bootstrap/css/bootstrap-grid.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/bootstrap/js/vendor/bootstrap/css/bootstrap-grid.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/bootstrap/js/vendor/bootstrap/css/bootstrap-reboot.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/bootstrap/js/vendor/bootstrap/css/bootstrap-reboot.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/bootstrap/js/vendor/bootstrap/css/bootstrap-reboot.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/bootstrap/js/vendor/bootstrap/css/bootstrap-reboot.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/bootstrap/js/vendor/bootstrap/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/bootstrap/js/vendor/bootstrap/css/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/bootstrap/js/vendor/bootstrap/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/bootstrap/js/vendor/bootstrap/css/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/bootstrap/js/vendor/bootstrap/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/bootstrap/js/vendor/bootstrap/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/bootstrap/js/vendor/bootstrap/js/popper.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/bootstrap/js/vendor/bootstrap/js/popper.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/bootstrap/js/vendor/bootstrap/js/tooltip.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/bootstrap/js/vendor/countdowntime/countdowntime.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/bootstrap/js/vendor/css-hamburgers/hamburgers.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/bootstrap/js/vendor/css-hamburgers/hamburgers.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/bootstrap/js/vendor/daterangepicker/daterangepicker.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/bootstrap/js/vendor/daterangepicker/daterangepicker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/bootstrap/js/vendor/daterangepicker/moment.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/bootstrap/js/vendor/daterangepicker/moment.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/bootstrap/js/vendor/jquery/jquery-ui.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/bootstrap/js/vendor/jquery/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/bootstrap/js/vendor/jquery2/jquery-3.2.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/bootstrap/js/vendor/perfect-scrollbar/perfect-scrollbar.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/bootstrap/js/vendor/perfect-scrollbar/perfect-scrollbar.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/bootstrap/js/vendor/select2/select2.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/bootstrap/js/vendor/select2/select2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/bootstrap/js/vendor/select2/select2.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/themes/bootstrap/js/vendor/select2/select2.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/protected/views/exam/new_ExamView.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/bootstrap/css/toastr.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/bootstrap/test/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/bootstrap/test/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/bootstrap/test/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/bootstrap/test/jquery-3.3.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/bootstrap/test/jquery-confirm.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/bootstrap/test/jquery-confirm.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/themes/bootstrap/test/jquery-ui.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/451c8dd9/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/451c8dd9/css/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/protected/modules/admin/views/default/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/modules/admin/views/default/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/controllers/ExamController.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/controllers/ExamController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/protected/runtime/application.log" beforeDir="false" afterPath="$PROJECT_DIR$/protected/runtime/application.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/protected/runtime/session-1.1.22.db" beforeDir="false" afterPath="$PROJECT_DIR$/protected/runtime/session-1.1.22.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/protected/views/exam/view_exam_not_loggedin.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/exam/view_exam_not_loggedin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/views/exam/viewexam.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/exam/viewexam.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/views/exam/viewexamnew.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/exam/viewexamnew.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/views/shoppingcart/shoppingCart.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/shoppingcart/shoppingCart.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/views/user/_edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/user/_edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/views/user/_form.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/user/_form.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/views/user/_scheduledExams.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/user/_scheduledExams.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/views/user/detail.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/user/detail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/views/user/detail_lecturer.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/user/detail_lecturer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/views/user/forgotpassword.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/user/forgotpassword.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/views/user/passwordsent.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/user/passwordsent.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/views/user/resetPassword.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/user/resetPassword.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/views/user/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/user/update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/views/user/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/user/view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/bootstrap/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/bootstrap/css/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/bootstrap/views/layouts/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/themes/bootstrap/views/layouts/main.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/bootstrap/views/site/aboutus.php" beforeDir="false" afterPath="$PROJECT_DIR$/themes/bootstrap/views/site/aboutus.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/themes/bootstrap/views/site/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/themes/bootstrap/views/site/login.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -97,7 +79,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/themes/bootstrap/js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/themes/bootstrap/test" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
@@ -107,11 +89,11 @@
       <recent name="C:\wamp64\www\nanaska-backend\themes\bootstrap\js" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\nanaska-backend\themes\bootstrap\test" />
+      <recent name="C:\wamp64\www\nanaska-backend\themes\bootstrap" />
       <recent name="C:\wamp64\www\nanaska-backend\themes\bootstrap\js" />
       <recent name="C:\wamp64\www\nanaska-backend\themes\bootstrap\img" />
       <recent name="C:\wamp64\www\nanaska-backend\themes\bootstrap\img\logo" />
-      <recent name="C:\wamp64\www\nanaska-backend\themes\bootstrap" />
-      <recent name="C:\wamp64\www\nanaska-backend\uploads\testimonials" />
     </key>
   </component>
   <component name="RunManager">
@@ -163,7 +145,16 @@
       <workItem from="1583123828081" duration="10940000" />
       <workItem from="1583148108067" duration="10019000" />
       <workItem from="1583208721437" duration="10362000" />
-      <workItem from="1583296611623" duration="98306000" />
+      <workItem from="1583296611623" duration="101474000" />
+      <workItem from="1583577726277" duration="5658000" />
+      <workItem from="1583725120388" duration="8152000" />
+      <workItem from="1583770459540" duration="2281000" />
+      <workItem from="1583811948448" duration="23256000" />
+      <workItem from="1583856572420" duration="8292000" />
+      <workItem from="1583900120730" duration="4508000" />
+      <workItem from="1583905334138" duration="3939000" />
+      <workItem from="1583911063128" duration="18339000" />
+      <workItem from="1583986318553" duration="9369000" />
     </task>
     <servers />
   </component>
@@ -183,14 +174,19 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="476" y="3" key="#PHP/0.0.1536.824@0.0.1536.824" timestamp="1582189905574" />
-    <state x="507" y="101" key="#broadcast_news.php" timestamp="1582189921564">
+    <state x="507" y="101" key="#broadcast_news.php" timestamp="1583824857361">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="507" y="101" key="#broadcast_news.php/0.0.1536.824/1920.0.1366.728@0.0.1536.824" timestamp="1583824857361" />
     <state x="507" y="101" key="#broadcast_news.php/0.0.1536.824@0.0.1536.824" timestamp="1582189921564" />
     <state x="271" y="104" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582019506454">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="271" y="104" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1582019506454" />
+    <state x="449" y="140" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1583988044448">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="449" y="140" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.824/1920.0.1366.728@0.0.1536.824" timestamp="1583988044448" />
     <state x="424" y="0" key="CommitChangelistDialog2" timestamp="1582284669116">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -203,10 +199,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="561" y="227" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1582098861615" />
-    <state x="604" y="336" key="NewPhpFileDialog" timestamp="1582098838313">
+    <state x="604" y="336" key="NewPhpFileDialog" timestamp="1583856702568">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1582098838313" />
+    <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1583856702568" />
     <state x="277" y="55" key="SettingsEditor" timestamp="1582240585331">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -224,9 +220,10 @@
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824/1920.0.1366.728@0.0.1536.824" timestamp="1583343266047" />
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1582021780670" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1582019541754">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1583736261697">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/1920.0.1440.860@0.0.1536.824" timestamp="1583736261697" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1582019541754" />
   </component>
 </project>

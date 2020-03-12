@@ -16,8 +16,9 @@
 $this->renderpartial('_level_news_sidemenu');
 ?>
 <div class="span8"> 
-<h3 class="master_heading">Update Account Details</h3>
+
 
 <?php echo $this->renderPartial('_edit',array('model'=>$model)); ?>
 </div>
 </div>
+<br><br><br><br><br><br><br><br><br><br><br>

@@ -7337,3 +7337,525 @@ Stack trace:
 REQUEST_URI=/nanaska-backend/index.php?r=admin/essayAnswer
 HTTP_REFERER=http://localhost/nanaska-backend/index.php?r=admin
 ---
+2020/03/06 19:08:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "register".' in C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php:486
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(270): CController->missingAction('register')
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): CController->run('register')
+#2 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/register')
+#3 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\wamp64\www\nanaska-backend\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/nanaska-backend/index.php?r=site/register
+HTTP_REFERER=http://localhost/nanaska-backend/index.php
+---
+2020/03/09 09:53:17 [error] [php] Object of class EWebUser could not be converted to string (C:\wamp64\www\nanaska-backend\themes\bootstrap\views\layouts\main.php:212)
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\web\widgets\CContentDecorator.php(76): UserController->renderFile()
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate()
+#2 C:\Users\Kalpa Wijesooriya\yii\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput()
+#3 C:\Users\Kalpa Wijesooriya\yii\framework\web\CBaseController.php(215): CContentDecorator->run()
+#4 C:\Users\Kalpa Wijesooriya\yii\framework\web\CBaseController.php(309): UserController->endWidget()
+#5 C:\wamp64\www\nanaska-backend\themes\bootstrap\views\layouts\column2.php(27): UserController->endContent()
+#6 C:\Users\Kalpa Wijesooriya\yii\framework\web\CBaseController.php(126): require()
+#7 C:\Users\Kalpa Wijesooriya\yii\framework\web\CBaseController.php(95): UserController->renderInternal()
+#8 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(787): UserController->renderFile()
+#9 C:\wamp64\www\nanaska-backend\protected\controllers\UserController.php(697): UserController->render()
+#10 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CInlineAction.php(49): UserController->actionDetailLecturer()
+#11 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(134): UserController->runAction()
+#13 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#15 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#16 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#17 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#19 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): UserController->run()
+#20 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#21 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#22 C:\wamp64\www\nanaska-backend\index.php(14): CWebApplication->run()
+REQUEST_URI=/nanaska-backend/index.php?r=user/detailLecturer
+2020/03/10 21:42:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "new_ExamView".' in C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php:486
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(270): CController->missingAction('new_ExamView')
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): CController->run('new_ExamView')
+#2 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('exam/new_ExamVi...')
+#3 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\wamp64\www\nanaska-backend\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/nanaska-backend/index.php?r=exam/new_ExamView
+---
+2020/03/10 21:42:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "new_ExamView".' in C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php:486
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(270): CController->missingAction('new_ExamView')
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): CController->run('new_ExamView')
+#2 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('exam/new_ExamVi...')
+#3 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\wamp64\www\nanaska-backend\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/nanaska-backend/index.php?r=exam/new_ExamView
+---
+2020/03/10 21:56:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin".' in C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin')
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#2 C:\wamp64\www\nanaska-backend\index.php(14): CApplication->run()
+#3 {main}
+REQUEST_URI=/nanaska-backend/index.php?r=admin/admin
+---
+2020/03/10 21:56:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "sitting".' in C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php:486
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(270): CController->missingAction('sitting')
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): CController->run('sitting')
+#2 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('exam/sitting')
+#3 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\wamp64\www\nanaska-backend\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/nanaska-backend/index.php?r=exam/sitting
+---
+2020/03/10 22:13:19 [error] [php] Trying to get property of non-object (C:\wamp64\www\nanaska-backend\protected\modules\admin\controllers\ExamController.php:1785)
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(134): ExamController->runAction()
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#3 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CInlineFilter.php(58): ExamController->filterAccessControl()
+#4 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#5 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(265): ExamController->runActionWithFilters()
+#7 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): ExamController->run()
+#8 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\wamp64\www\nanaska-backend\index.php(14): CWebApplication->run()
+REQUEST_URI=/nanaska-backend/index.php?r=admin/Exam/getTakes
+2020/03/10 22:13:32 [error] [php] Trying to get property of non-object (C:\wamp64\www\nanaska-backend\protected\modules\admin\controllers\ExamController.php:1785)
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(134): ExamController->runAction()
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#3 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CInlineFilter.php(58): ExamController->filterAccessControl()
+#4 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#5 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(265): ExamController->runActionWithFilters()
+#7 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): ExamController->run()
+#8 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\wamp64\www\nanaska-backend\index.php(14): CWebApplication->run()
+REQUEST_URI=/nanaska-backend/index.php?r=admin/Exam/getTakes
+2020/03/10 22:13:52 [error] [php] Trying to get property of non-object (C:\wamp64\www\nanaska-backend\protected\modules\admin\controllers\ExamController.php:1785)
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(134): ExamController->runAction()
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#2 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#3 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CInlineFilter.php(58): ExamController->filterAccessControl()
+#4 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#5 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(265): ExamController->runActionWithFilters()
+#7 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): ExamController->run()
+#8 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#10 C:\wamp64\www\nanaska-backend\index.php(14): CWebApplication->run()
+REQUEST_URI=/nanaska-backend/index.php?r=admin/Exam/getTakes
+2020/03/10 22:16:44 [error] [php] Non-static method Country::getCountryByID() should not be called statically, assuming $this from incompatible context (C:\wamp64\www\nanaska-backend\protected\modules\admin\views\lecturer\view.php:50)
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(872): LecturerController->renderFile()
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(785): LecturerController->renderPartial()
+#2 C:\wamp64\www\nanaska-backend\protected\modules\admin\controllers\LecturerController.php(58): LecturerController->render()
+#3 unknown(0): LecturerController->actionView()
+#4 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#5 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(134): LecturerController->runAction()
+#8 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#10 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CInlineFilter.php(58): LecturerController->filterAccessControl()
+#11 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#12 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(265): LecturerController->runActionWithFilters()
+#14 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): LecturerController->run()
+#15 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#17 C:\wamp64\www\nanaska-backend\index.php(14): CWebApplication->run()
+REQUEST_URI=/nanaska-backend/index.php?r=admin/lecturer/view&id=1
+2020/03/11 14:13:35 [error] [php] Undefined variable: courseName (C:\wamp64\www\nanaska-backend\protected\views\exam\viewexam.php:21)
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(872): ExamController->renderFile()
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(785): ExamController->renderPartial()
+#2 C:\wamp64\www\nanaska-backend\protected\controllers\ExamController.php(171): ExamController->render()
+#3 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CInlineAction.php(49): ExamController->actionviewexam()
+#4 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(134): ExamController->runAction()
+#6 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#8 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CInlineFilter.php(58): ExamController->filterAccessControl()
+#9 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#10 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(265): ExamController->runActionWithFilters()
+#12 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): ExamController->run()
+#13 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\wamp64\www\nanaska-backend\index.php(14): CWebApplication->run()
+REQUEST_URI=/nanaska-backend/index.php?r=exam/viewexam
+2020/03/11 14:14:21 [error] [php] Undefined variable: courseName (C:\wamp64\www\nanaska-backend\protected\views\exam\viewexam.php:219)
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(872): ExamController->renderFile()
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(785): ExamController->renderPartial()
+#2 C:\wamp64\www\nanaska-backend\protected\controllers\ExamController.php(171): ExamController->render()
+#3 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CInlineAction.php(49): ExamController->actionviewexam()
+#4 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(134): ExamController->runAction()
+#6 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#8 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CInlineFilter.php(58): ExamController->filterAccessControl()
+#9 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#10 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(265): ExamController->runActionWithFilters()
+#12 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): ExamController->run()
+#13 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\wamp64\www\nanaska-backend\index.php(14): CWebApplication->run()
+REQUEST_URI=/nanaska-backend/index.php?r=exam/viewexam
+2020/03/11 14:14:24 [error] [php] Undefined variable: courseName (C:\wamp64\www\nanaska-backend\protected\views\exam\viewexam.php:219)
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(872): ExamController->renderFile()
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(785): ExamController->renderPartial()
+#2 C:\wamp64\www\nanaska-backend\protected\controllers\ExamController.php(171): ExamController->render()
+#3 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CInlineAction.php(49): ExamController->actionviewexam()
+#4 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(134): ExamController->runAction()
+#6 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#8 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CInlineFilter.php(58): ExamController->filterAccessControl()
+#9 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#10 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(265): ExamController->runActionWithFilters()
+#12 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): ExamController->run()
+#13 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\wamp64\www\nanaska-backend\index.php(14): CWebApplication->run()
+REQUEST_URI=/nanaska-backend/index.php?r=exam/viewexam
+2020/03/11 14:14:28 [error] [php] Undefined variable: courseName (C:\wamp64\www\nanaska-backend\protected\views\exam\viewexam.php:219)
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(872): ExamController->renderFile()
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(785): ExamController->renderPartial()
+#2 C:\wamp64\www\nanaska-backend\protected\controllers\ExamController.php(171): ExamController->render()
+#3 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CInlineAction.php(49): ExamController->actionviewexam()
+#4 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(134): ExamController->runAction()
+#6 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#8 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CInlineFilter.php(58): ExamController->filterAccessControl()
+#9 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#10 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(265): ExamController->runActionWithFilters()
+#12 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): ExamController->run()
+#13 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\wamp64\www\nanaska-backend\index.php(14): CWebApplication->run()
+REQUEST_URI=/nanaska-backend/index.php?r=exam/viewexam
+2020/03/11 17:26:12 [error] [php] Undefined variable: detail (C:\wamp64\www\nanaska-backend\protected\views\exam\viewexam.php:218)
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(872): ExamController->renderFile()
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(785): ExamController->renderPartial()
+#2 C:\wamp64\www\nanaska-backend\protected\controllers\ExamController.php(171): ExamController->render()
+#3 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CInlineAction.php(49): ExamController->actionviewexam()
+#4 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(134): ExamController->runAction()
+#6 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#8 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CInlineFilter.php(58): ExamController->filterAccessControl()
+#9 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#10 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(265): ExamController->runActionWithFilters()
+#12 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): ExamController->run()
+#13 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#15 C:\wamp64\www\nanaska-backend\index.php(14): CWebApplication->run()
+REQUEST_URI=/nanaska-backend/index.php?r=exam/viewexam
+2020/03/11 17:46:34 [error] [php] Missing argument 1 for CHttpRequest::getPost(), called in C:\wamp64\www\nanaska-backend\protected\controllers\ShoppingcartController.php on line 40 and defined (C:\Users\Kalpa Wijesooriya\yii\framework\web\CHttpRequest.php:208)
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(134): ShoppingcartController->runAction()
+#2 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#4 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CInlineFilter.php(58): ShoppingcartController->filterAccessControl()
+#5 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#6 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(265): ShoppingcartController->runActionWithFilters()
+#8 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): ShoppingcartController->run()
+#9 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\wamp64\www\nanaska-backend\index.php(14): CWebApplication->run()
+REQUEST_URI=/nanaska-backend/index.php?r=shoppingcart/addExam
+2020/03/11 17:47:10 [error] [php] Missing argument 1 for CHttpRequest::getPost(), called in C:\wamp64\www\nanaska-backend\protected\controllers\ShoppingcartController.php on line 40 and defined (C:\Users\Kalpa Wijesooriya\yii\framework\web\CHttpRequest.php:208)
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(134): ShoppingcartController->runAction()
+#2 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#4 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CInlineFilter.php(58): ShoppingcartController->filterAccessControl()
+#5 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#6 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(265): ShoppingcartController->runActionWithFilters()
+#8 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): ShoppingcartController->run()
+#9 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\wamp64\www\nanaska-backend\index.php(14): CWebApplication->run()
+REQUEST_URI=/nanaska-backend/index.php?r=shoppingcart/addExam
+2020/03/11 17:48:26 [error] [php] Missing argument 1 for CHttpRequest::getPost(), called in C:\wamp64\www\nanaska-backend\protected\controllers\ShoppingcartController.php on line 40 and defined (C:\Users\Kalpa Wijesooriya\yii\framework\web\CHttpRequest.php:208)
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(134): ShoppingcartController->runAction()
+#2 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#4 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CInlineFilter.php(58): ShoppingcartController->filterAccessControl()
+#5 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#6 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(265): ShoppingcartController->runActionWithFilters()
+#8 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): ShoppingcartController->run()
+#9 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#11 C:\wamp64\www\nanaska-backend\index.php(14): CWebApplication->run()
+REQUEST_URI=/nanaska-backend/index.php?r=shoppingcart/addExam
+2020/03/12 12:30:24 [error] [php] move_uploaded_file(C:\wamp64\www\nanaska-backend\protected/..uploads/testimonials/7551-2.jpg): failed to open stream: No such file or directory (C:\Users\Kalpa Wijesooriya\yii\framework\web\CUploadedFile.php:201)
+Stack trace:
+#0 unknown(0): TestimonialsController->actionUpdate()
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#2 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#3 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(134): TestimonialsController->runAction()
+#5 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#7 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CInlineFilter.php(58): TestimonialsController->filterAccessControl()
+#8 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#9 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(265): TestimonialsController->runActionWithFilters()
+#11 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): TestimonialsController->run()
+#12 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#13 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#14 C:\wamp64\www\nanaska-backend\index.php(14): CWebApplication->run()
+REQUEST_URI=/nanaska-backend/index.php?r=admin/testimonials/update&id=40
+2020/03/12 12:31:18 [error] [exception.CException] exception 'CException' with message 'The file "1b2bb741b012252e60766ad246deaf61s_k11.jpg" was only partially uploaded.' in C:\Users\Kalpa Wijesooriya\yii\framework\validators\CFileValidator.php:207
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\validators\CFileValidator.php(181): CFileValidator->validateFile(Object(Testimonials), 'image_url', Object(CUploadedFile))
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\validators\CValidator.php(201): CFileValidator->validateAttribute(Object(Testimonials), 'image_url')
+#2 C:\Users\Kalpa Wijesooriya\yii\framework\base\CModel.php(159): CValidator->validate(Object(Testimonials), NULL)
+#3 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(810): CModel->validate(NULL)
+#4 C:\wamp64\www\nanaska-backend\protected\modules\admin\controllers\TestimonialsController.php(112): CActiveRecord->save()
+#5 [internal function]: TestimonialsController->actionUpdate('40')
+#6 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(TestimonialsController), Array)
+#7 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(TestimonialsController), Object(ReflectionMethod), Array)
+#8 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#12 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#17 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/testimoni...')
+#18 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#19 C:\wamp64\www\nanaska-backend\index.php(14): CApplication->run()
+#20 {main}
+REQUEST_URI=/nanaska-backend/index.php?r=admin/testimonials/update&id=40
+HTTP_REFERER=http://localhost/nanaska-backend/index.php?r=admin/testimonials/update&id=40
+---
+2020/03/12 12:31:34 [error] [exception.CException] exception 'CException' with message 'The file "2016-12-09-10-08-28.jpg" was only partially uploaded.' in C:\Users\Kalpa Wijesooriya\yii\framework\validators\CFileValidator.php:207
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\validators\CFileValidator.php(181): CFileValidator->validateFile(Object(Testimonials), 'image_url', Object(CUploadedFile))
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\validators\CValidator.php(201): CFileValidator->validateAttribute(Object(Testimonials), 'image_url')
+#2 C:\Users\Kalpa Wijesooriya\yii\framework\base\CModel.php(159): CValidator->validate(Object(Testimonials), NULL)
+#3 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(810): CModel->validate(NULL)
+#4 C:\wamp64\www\nanaska-backend\protected\modules\admin\controllers\TestimonialsController.php(112): CActiveRecord->save()
+#5 [internal function]: TestimonialsController->actionUpdate('40')
+#6 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(TestimonialsController), Array)
+#7 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(TestimonialsController), Object(ReflectionMethod), Array)
+#8 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#12 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#17 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/testimoni...')
+#18 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#19 C:\wamp64\www\nanaska-backend\index.php(14): CApplication->run()
+#20 {main}
+REQUEST_URI=/nanaska-backend/index.php?r=admin/testimonials/update&id=40
+HTTP_REFERER=http://localhost/nanaska-backend/index.php?r=admin/testimonials/update&id=40
+---
+2020/03/12 13:02:59 [error] [exception.CException] exception 'CException' with message 'The file "04112015(001).jpg" was only partially uploaded.' in C:\Users\Kalpa Wijesooriya\yii\framework\validators\CFileValidator.php:207
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\validators\CFileValidator.php(181): CFileValidator->validateFile(Object(Testimonials), 'image_url', Object(CUploadedFile))
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\validators\CValidator.php(201): CFileValidator->validateAttribute(Object(Testimonials), 'image_url')
+#2 C:\Users\Kalpa Wijesooriya\yii\framework\base\CModel.php(159): CValidator->validate(Object(Testimonials), NULL)
+#3 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(810): CModel->validate(NULL)
+#4 C:\wamp64\www\nanaska-backend\protected\modules\admin\controllers\TestimonialsController.php(82): CActiveRecord->save()
+#5 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CInlineAction.php(49): TestimonialsController->actionCreate()
+#6 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#8 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#10 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#15 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/testimoni...')
+#16 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#17 C:\wamp64\www\nanaska-backend\index.php(14): CApplication->run()
+#18 {main}
+REQUEST_URI=/nanaska-backend/index.php?r=admin/testimonials/create
+HTTP_REFERER=http://localhost/nanaska-backend/index.php?r=admin/testimonials/create
+---
+2020/03/12 13:07:33 [error] [exception.CException] exception 'CException' with message 'The file "1b2bb741b012252e60766ad246deaf61s_k11.jpg" was only partially uploaded.' in C:\Users\Kalpa Wijesooriya\yii\framework\validators\CFileValidator.php:207
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\validators\CFileValidator.php(181): CFileValidator->validateFile(Object(Testimonials), 'image_url', Object(CUploadedFile))
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\validators\CValidator.php(201): CFileValidator->validateAttribute(Object(Testimonials), 'image_url')
+#2 C:\Users\Kalpa Wijesooriya\yii\framework\base\CModel.php(159): CValidator->validate(Object(Testimonials), NULL)
+#3 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(810): CModel->validate(NULL)
+#4 C:\wamp64\www\nanaska-backend\protected\modules\admin\controllers\TestimonialsController.php(82): CActiveRecord->save()
+#5 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CInlineAction.php(49): TestimonialsController->actionCreate()
+#6 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#8 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#10 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#15 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/testimoni...')
+#16 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#17 C:\wamp64\www\nanaska-backend\index.php(14): CApplication->run()
+#18 {main}
+REQUEST_URI=/nanaska-backend/index.php?r=admin/testimonials/create
+HTTP_REFERER=http://localhost/nanaska-backend/index.php?r=admin/testimonials/create
+---
+2020/03/12 13:09:30 [error] [exception.CException] exception 'CException' with message 'The file "1b2bb741b012252e60766ad246deaf61s_k11.jpg" was only partially uploaded.' in C:\Users\Kalpa Wijesooriya\yii\framework\validators\CFileValidator.php:207
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\validators\CFileValidator.php(181): CFileValidator->validateFile(Object(Testimonials), 'image_url', Object(CUploadedFile))
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\validators\CValidator.php(201): CFileValidator->validateAttribute(Object(Testimonials), 'image_url')
+#2 C:\Users\Kalpa Wijesooriya\yii\framework\base\CModel.php(159): CValidator->validate(Object(Testimonials), NULL)
+#3 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(810): CModel->validate(NULL)
+#4 C:\wamp64\www\nanaska-backend\protected\modules\admin\controllers\TestimonialsController.php(82): CActiveRecord->save()
+#5 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CInlineAction.php(49): TestimonialsController->actionCreate()
+#6 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#8 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#10 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#15 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/testimoni...')
+#16 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#17 C:\wamp64\www\nanaska-backend\index.php(14): CApplication->run()
+#18 {main}
+REQUEST_URI=/nanaska-backend/index.php?r=admin/testimonials/create
+HTTP_REFERER=http://localhost/nanaska-backend/index.php?r=admin/testimonials/create
+---
+2020/03/12 13:09:34 [error] [exception.CException] exception 'CException' with message 'The file "1b2bb741b012252e60766ad246deaf61s_k11.jpg" was only partially uploaded.' in C:\Users\Kalpa Wijesooriya\yii\framework\validators\CFileValidator.php:207
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\validators\CFileValidator.php(181): CFileValidator->validateFile(Object(Testimonials), 'image_url', Object(CUploadedFile))
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\validators\CValidator.php(201): CFileValidator->validateAttribute(Object(Testimonials), 'image_url')
+#2 C:\Users\Kalpa Wijesooriya\yii\framework\base\CModel.php(159): CValidator->validate(Object(Testimonials), NULL)
+#3 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(810): CModel->validate(NULL)
+#4 C:\wamp64\www\nanaska-backend\protected\modules\admin\controllers\TestimonialsController.php(82): CActiveRecord->save()
+#5 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CInlineAction.php(49): TestimonialsController->actionCreate()
+#6 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#8 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#10 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#15 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/testimoni...')
+#16 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#17 C:\wamp64\www\nanaska-backend\index.php(14): CApplication->run()
+#18 {main}
+REQUEST_URI=/nanaska-backend/index.php?r=admin/testimonials/create
+HTTP_REFERER=http://localhost/nanaska-backend/index.php?r=admin/testimonials/create
+---
+2020/03/12 13:55:51 [error] [exception.CException] exception 'CException' with message 'The file "1b2bb741b012252e60766ad246deaf61s_k11.jpg" was only partially uploaded.' in C:\Users\Kalpa Wijesooriya\yii\framework\validators\CFileValidator.php:207
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\validators\CFileValidator.php(181): CFileValidator->validateFile(Object(Testimonials), 'image_url', Object(CUploadedFile))
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\validators\CValidator.php(201): CFileValidator->validateAttribute(Object(Testimonials), 'image_url')
+#2 C:\Users\Kalpa Wijesooriya\yii\framework\base\CModel.php(159): CValidator->validate(Object(Testimonials), NULL)
+#3 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(810): CModel->validate(NULL)
+#4 C:\wamp64\www\nanaska-backend\protected\modules\admin\controllers\TestimonialsController.php(112): CActiveRecord->save()
+#5 [internal function]: TestimonialsController->actionUpdate('38')
+#6 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(TestimonialsController), Array)
+#7 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(TestimonialsController), Object(ReflectionMethod), Array)
+#8 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#12 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#17 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/testimoni...')
+#18 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#19 C:\wamp64\www\nanaska-backend\index.php(14): CApplication->run()
+#20 {main}
+REQUEST_URI=/nanaska-backend/index.php?r=admin/testimonials/update&id=38
+HTTP_REFERER=http://localhost/nanaska-backend/index.php?r=admin/testimonials/update&id=38
+---
+2020/03/12 13:56:19 [error] [exception.CException] exception 'CException' with message 'The file "1b2bb741b012252e60766ad246deaf61s_k11.jpg" was only partially uploaded.' in C:\Users\Kalpa Wijesooriya\yii\framework\validators\CFileValidator.php:207
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\validators\CFileValidator.php(181): CFileValidator->validateFile(Object(Testimonials), 'image_url', Object(CUploadedFile))
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\validators\CValidator.php(201): CFileValidator->validateAttribute(Object(Testimonials), 'image_url')
+#2 C:\Users\Kalpa Wijesooriya\yii\framework\base\CModel.php(159): CValidator->validate(Object(Testimonials), NULL)
+#3 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(810): CModel->validate(NULL)
+#4 C:\wamp64\www\nanaska-backend\protected\modules\admin\controllers\TestimonialsController.php(112): CActiveRecord->save()
+#5 [internal function]: TestimonialsController->actionUpdate('38')
+#6 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(TestimonialsController), Array)
+#7 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(TestimonialsController), Object(ReflectionMethod), Array)
+#8 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#12 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#17 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/testimoni...')
+#18 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#19 C:\wamp64\www\nanaska-backend\index.php(14): CApplication->run()
+#20 {main}
+REQUEST_URI=/nanaska-backend/index.php?r=admin/testimonials/update&id=38
+HTTP_REFERER=http://localhost/nanaska-backend/index.php?r=admin/testimonials/update&id=38
+---
+2020/03/12 13:56:22 [error] [exception.CException] exception 'CException' with message 'The file "1b2bb741b012252e60766ad246deaf61s_k11.jpg" was only partially uploaded.' in C:\Users\Kalpa Wijesooriya\yii\framework\validators\CFileValidator.php:207
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\validators\CFileValidator.php(181): CFileValidator->validateFile(Object(Testimonials), 'image_url', Object(CUploadedFile))
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\validators\CValidator.php(201): CFileValidator->validateAttribute(Object(Testimonials), 'image_url')
+#2 C:\Users\Kalpa Wijesooriya\yii\framework\base\CModel.php(159): CValidator->validate(Object(Testimonials), NULL)
+#3 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(810): CModel->validate(NULL)
+#4 C:\wamp64\www\nanaska-backend\protected\modules\admin\controllers\TestimonialsController.php(112): CActiveRecord->save()
+#5 [internal function]: TestimonialsController->actionUpdate('38')
+#6 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(TestimonialsController), Array)
+#7 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(TestimonialsController), Object(ReflectionMethod), Array)
+#8 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#10 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#12 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#14 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#17 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/testimoni...')
+#18 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#19 C:\wamp64\www\nanaska-backend\index.php(14): CApplication->run()
+#20 {main}
+REQUEST_URI=/nanaska-backend/index.php?r=admin/testimonials/update&id=38
+HTTP_REFERER=http://localhost/nanaska-backend/index.php?r=admin/testimonials/update&id=38
+---

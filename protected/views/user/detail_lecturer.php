@@ -14,7 +14,7 @@
 
                 <div class="shortcuts">
                     <?php echo CHtml::link('<i class="icon-zoom-in text-large"></i><span class="shortcut-label">View Account Details</span>', array('viewLecturerDetails', 'id' => Yii::app()->user->id), array('class' => 'shortcut')); ?>
-                    <!--                                <a href="javascript:;" class="shortcut">
+                    <!-- <a href="javascript:;" class="shortcut">
                                                             <i class="icon-list-alt"></i>
                                                             <span class="shortcut-label">View Account Details</span>
                                                     </a>-->
@@ -30,3 +30,7 @@
     </div>
 
 </div>
+
+<br>
+<br>
+<br>

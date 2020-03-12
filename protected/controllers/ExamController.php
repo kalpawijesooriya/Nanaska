@@ -2742,4 +2742,9 @@ class ExamController extends Controller {
         }else
             echo"Error";
     }
+
+    public function actionnew_ExamView()
+    {
+
+    }
 }

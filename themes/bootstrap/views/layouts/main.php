@@ -164,6 +164,8 @@
             border-radius: 0px;
         }
     </style>
+
+
 </head>
 
 
@@ -181,12 +183,13 @@
                             </div>
                             <div class="col-lg-5 col-md-6 col-sm-6 col-xs-12">
                                 <div class="header-top-right">
+                                    <div class="content"><a href="http://forum.learncima.com/forum"><i class="zmdi zmdi-globe"></i> Our Forum</a></div>
                                     <?php
                                       if (Yii::app()->user->isGuest) {
                                           echo '<div class="content"><a href="#"><i class="zmdi zmdi-account"></i>Log in / Register</a>
                                                   <ul class="account-dropdown">
                                                    <li>'.CHtml::link("Login", array("site/login")).'</li>
-                                                   <li><a href="register.html">Register</a></li>
+                                                   <li>'.CHtml::link("Register", array("user/create")).'</a></li>
                                                   </ul>
                                                 </div>';
                                       }else {
@@ -208,7 +211,7 @@
                                              } else {
                                                  echo '<div class="content"><a href="?r=user/detailLecturer"><i class="zmdi zmdi-account-o"></i> My Profile</a></div>';
                                              }
-                                             echo '<li><a href="?r=site/logout"><button class="button button-login" type="button"><i class="icon-lock icon-white"></i> Log Out (' . Yii::app()->user->name . ')</button></a></li>';
+                                             echo '<div class="content"><a href="?r=site/logout"><i class="icon-lock icon-white"></i> Log Out</a></div>';
                                          }
 
                                       }
@@ -216,7 +219,12 @@
                                       ?>
 
 
-                                    <div class="content"><a href="cart.html"><i class="zmdi zmdi-shopping-basket"></i> Chechout</a></div>
+                                    <div class="content"><a href="?r=shoppingcart/viewcart" class="notification"><i class="zmdi zmdi-shopping-basket"></i> Chechout<span class="badge" id="quantityWidget">
+                                            <?php
+                                            $totalProductQty = Util::getShoppingCartQuantity();
+                                            echo $totalProductQty;
+                                            ?>
+                                        </span></a></div>
                                 </div>
                             </div>
                         </div>
@@ -251,26 +259,19 @@
                                                 <li <?php echo ($route == 'user/create') ? 'class="active"' : '' ?>>
                                                     <?php echo CHtml::link('Registration', array('user/create')) ?>
                                                 </li>
+                                                <?php if (Yii::app()->user->getId() == NULL) { ?>
+                                                    <li <?php echo ($route == 'exam/notLoggedinViewExam') ? 'class="active"' : '' ?>>
+                                                        <?php echo CHtml::link('Exams', array('exam/notLoggedinViewExam')) ?>
+                                                    </li>
+
+                                                <?php } else { ?>
+                                                    <li <?php echo ($route == 'exam/viewexam') ? 'class="active"' : '' ?>>
+                                                        <?php echo CHtml::link('Exams', array('exam/viewexam')) ?>
+                                                    </li>
+
+                                                <?php } ?>
 
 
-                                                <li class="dropdown">
-
-                                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> <span class="nav-label">Exams</span> <span class="caret"></span></a>
-
-                                                    <ul class="dropdown-menu">
-                                                        <li <?php echo ($route == 'site/cima') ? 'class="active"' : '' ?>>
-                                                            <?php echo CHtml::link('CIMA', array('site/contact')) ?>
-                                                        </li>
-                                                        <li <?php echo ($route == 'site/casl') ? 'class="active"' : '' ?>>
-                                                            <?php echo CHtml::link('CA - Srilanka', array('site/contact')) ?>
-                                                        </li>
-                                                        <li <?php echo ($route == 'site/wlp') ? 'class="active"' : '' ?>>
-                                                            <?php echo CHtml::link('Wisdom Leadership Program', array('site/contact')) ?>
-                                                        </li>
-                                                    </ul>
-                                                <li <?php echo ($route == 'site/contact') ? 'class="active"' : '' ?>>
-                                                    <?php echo CHtml::link('Contact Us', array('site/contact')) ?>
-                                                </li>
                                         </nav>
                                     </div>
                                     <ul class="header-search">
@@ -351,6 +352,7 @@
 
 
               <?php echo $content; ?>
+            <br>  <br>  <br>
             <!--Newsletter Area Start-->
             <div class="newsletter-area">
                 <div class="container">
@@ -461,17 +463,9 @@
     <!--End of Main Wrapper Area-->
     <!-- jquery
         ============================================ -->
-    <?php Yii::app()->clientScript->registerCoreScript('jquery'); ?>
-    <?php Yii::app()->clientScript->registerCoreScript('jquery.ui'); ?>
-    <?php $cs = Yii::app()->clientScript;
-    $cs->coreScriptPosition = $cs::POS_END;
 
-    $cs->scriptMap = array(
-        'jquery.js'=>false,
-        'jquery.ui.js'=>false,
-    ); ?>
 
-    <script src="<?php echo Yii::app()->request->baseUrl; ?>/themes/bootstrap/js/vendor/jquery-1.12.4.min.js"></script>
+<!--    <script src="--><?php //echo Yii::app()->request->baseUrl; ?><!--/themes/bootstrap/js/vendor/jquery-1.12.4.min.js"></script>-->
 
     <!-- bootstrap JS
     ============================================ -->
@@ -549,7 +543,18 @@
         location.href = "index.php?r=user/create";
     }
 
-
-
-
 </script>
+<style>
+
+
+
+    .notification .badge {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        padding: 5px 10px;
+        border-radius: 50%;
+        background: red;
+        color: white;
+    }
+</style>

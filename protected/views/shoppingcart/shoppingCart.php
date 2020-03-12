@@ -9,7 +9,31 @@ Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/sty
  * and open the template in the editor.
  */
 ?>
+<!--Breadcrumb Banner Area Start-->
+<link rel="stylesheet" href="<?php echo Yii::app()->theme->baseUrl; ?>/test/jquery-confirm.min.css"/>
+<div class="breadcrumb-banner-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="breadcrumb-text">
+                    <h1 class="text-center">cart</h1>
+                    <div class="breadcrumb-bar">
+                        <ul class="breadcrumb text-center">
+                            <li><a href="index.html">Home</a></li>
+                            <li>Cart</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
+        </div>
+    </div>
+</div>
+
+
+<br>
+<br>
+<br>
 <div class="row-fluid">
     <div class="container">
 
@@ -63,8 +87,8 @@ Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/sty
 
                         echo '<td style="text-align:right;">';
                         ?> 
-                        <a href="#" onclick="ConfirmMess(<?php echo $shopping_cart_exam['shopping_cart_exam_id'] ?>);
-                                false;" > Remove </a>
+                        <button  onclick="ConfirmMess(<?php echo $shopping_cart_exam['shopping_cart_exam_id'] ?>);
+                                false;" class="btn btn-sm btn-danger"> <i class="fa fa-trash"></i></button>
                            <?php
                            echo '</td>';
                            echo '</tr>';
@@ -194,46 +218,95 @@ Yii::app()->clientScript->registerCssFile(Yii::app()->theme->baseUrl . '/css/sty
         <br /><br /><br />
     </div>
 </div>
-
+<script src="<?php echo Yii::app()->request->baseUrl; ?>/themes/bootstrap/test/jquery-3.3.1.min.js"></script>
+<script src="<?php echo Yii::app()->request->baseUrl; ?>/themes/bootstrap/test/jquery-ui.js"></script>
+<script src="<?php echo Yii::app()->request->baseUrl; ?>/themes/bootstrap/test/jquery-confirm.min.js"></script>
 <script>
     function ConfirmMess(shoppingCartExamId) {
-        //return false;        
-        bootbox.confirm("Are you sure you want to remove the item from shopping cart? ", function (result) {
-            if (result) {
+        //return false;
+//         bootbox.confirm("Are you sure you want to remove the item from shopping cart? ", function (result) {
+//             if (result) {
+//
+//
+//                 $.ajax({
+//                     url: "index.php?r=shoppingcart/RemoveRequest",
+//                     type: "POST",
+//                     dataType: "json",
+//                     data: {'removeItem': shoppingCartExamId},
+//                     context: document.body
+//                 }).done(function (data) {
+// //                    $("#shopping_cart_total").html(data.shopping_cart_total);
+//
+//                     if (data.status === "success") {
+//                         jQuery("#item_" + shoppingCartExamId).slideUp("slow");
+//                         jQuery("#quantityWidget").text(data.shopping_cart_qty);
+//                         if (data.shopping_cart_qty == 0) {
+//                             $('#empty-cart-message').show();
+//                         }
+//                         jQuery("#total_price").html('<strong>' + data.total_price + '</strong>');
+//                         $('input[name="amount"]').val(data.total_price_pay);
+//                         $('input[name="merchant_reference_no"]').val(data.ref);
+//                         $('input[name="message_hash"]').val(data.message_hash);
+//                     }
+//                     else {
+//                         alert(data.message);
+//                     }
+//
+// //                    document.getElementById("quantityWidget").innerHTML = data.totalCartQuantity;
+// //                    document.getElementById("totalP").innerHTML = data.shopping_cart_total;
+//
+//                 });
+//
+//             }
+//
+//         });
 
 
-                $.ajax({
-                    url: "index.php?r=shoppingcart/RemoveRequest",
-                    type: "POST",
-                    dataType: "json",
-                    data: {'removeItem': shoppingCartExamId},
-                    context: document.body
-                }).done(function (data) {
+
+        $.confirm({
+            title:'Remove the course form the cart?',
+            content:'Please confirm your action within 8 seconds',
+            autoClose:'cancelAction|8000',
+            type:'blue',
+            draggable: true,
+            buttons: {
+                deleteUser: {
+                    text:'Confirm',
+                    btnClass:'btn-primary',
+                    action: function () {
+                        $.ajax({
+                            url: "index.php?r=shoppingcart/RemoveRequest",
+                            type: "POST",
+                            dataType: "json",
+                            data: {'removeItem': shoppingCartExamId},
+                            context: document.body
+                        }).done(function (data) {
 //                    $("#shopping_cart_total").html(data.shopping_cart_total);
 
-                    if (data.status === "success") {
-                        jQuery("#item_" + shoppingCartExamId).slideUp("slow");
-                        jQuery("#quantityWidget").text(data.shopping_cart_qty);
-                        if (data.shopping_cart_qty == 0) {
-                            $('#empty-cart-message').show();
-                        }
-                        jQuery("#total_price").html('<strong>' + data.total_price + '</strong>');
-                        $('input[name="amount"]').val(data.total_price_pay);
-                        $('input[name="merchant_reference_no"]').val(data.ref);
-                        $('input[name="message_hash"]').val(data.message_hash);
-                    }
-                    else {
-                        alert(data.message);
-                    }
+                            if (data.status === "success") {
+                                jQuery("#item_" + shoppingCartExamId).slideUp("slow");
+                                jQuery("#quantityWidget").text(data.shopping_cart_qty);
+                                if (data.shopping_cart_qty == 0) {
+                                    $('#empty-cart-message').show();
+                                }
+                                jQuery("#total_price").html('<strong>' + data.total_price + '</strong>');
+                                $('input[name="amount"]').val(data.total_price_pay);
+                                $('input[name="merchant_reference_no"]').val(data.ref);
+                                $('input[name="message_hash"]').val(data.message_hash);
+                            }
+                            else {
+                                alert(data.message);
+                            }
 
 //                    document.getElementById("quantityWidget").innerHTML = data.totalCartQuantity;
 //                    document.getElementById("totalP").innerHTML = data.shopping_cart_total;
 
-                });
-
+                        });
+                    }
+                },cancelAction: function () {
+                    $.alert('Action is canceled!');
+                }
             }
-
         });
-
     }
 </script>

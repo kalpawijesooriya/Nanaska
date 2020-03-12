@@ -7,7 +7,8 @@ $this->breadcrumbs=array(
 Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl.'/js/bootbox.min.js', CClientScript::POS_HEAD);
 
 ?>
-
+<br>
+<br>
 <div class="container">
     <div class="row">
     <div class="col col-lg-4"></div>

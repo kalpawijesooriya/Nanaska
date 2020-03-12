@@ -265,6 +265,16 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 
 
 </script>
+
+<?php Yii::app()->clientScript->registerCoreScript('jquery'); ?>
+<?php Yii::app()->clientScript->registerCoreScript('jquery.ui'); ?>
+<?php $cs = Yii::app()->clientScript;
+$cs->coreScriptPosition = $cs::POS_END;
+
+$cs->scriptMap = array(
+    'jquery.js'=>false,
+    'jquery.ui.js'=>false,
+); ?>
 <script src="<?php echo Yii::app()->request->baseUrl; ?>/themes/bootstrap/js/vendor/jquery-1.12.4.min.js"></script>
 <script type="text/javascript">
 
