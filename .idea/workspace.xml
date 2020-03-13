@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cf1bd393-a461-4e46-a754-d5537cf3d11f" name="Default" comment="Done :Complete the Testimonials feature in backend&#10;* Upload/edit/delete testimonials and name Dev- https://ellipsisjira.atlassian.ne&#10;* Upload/edit/delete testimonials and name UI dev - https://ellipsisjira.atlassian.net/browse/NWR-14&#10;t/browse/NWR-13&#10; * Testimonials list Dev - https://ellipsisjira.atlassian.net/browse/NWR-17&#10; * Testimonials list UI - https://ellipsisjira.atlassian.net/browse/NWR-18 &#10; * Upload profile image dev - https://ellipsisjira.atlassian.net/browse/NWR-16">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/protected/modules/admin/models/Testimonials.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/modules/admin/models/Testimonials.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/protected/runtime/application.log" beforeDir="false" afterPath="$PROJECT_DIR$/protected/runtime/application.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/protected/runtime/session-1.1.22.db" beforeDir="false" afterPath="$PROJECT_DIR$/protected/runtime/session-1.1.22.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
