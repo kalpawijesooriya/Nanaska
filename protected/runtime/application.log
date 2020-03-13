@@ -7859,3 +7859,64 @@ Stack trace:
 REQUEST_URI=/nanaska-backend/index.php?r=admin/testimonials/update&id=38
 HTTP_REFERER=http://localhost/nanaska-backend/index.php?r=admin/testimonials/update&id=38
 ---
+2020/03/13 11:02:34 [error] [php] include(testimonials_name.php): failed to open stream: No such file or directory (C:\Users\Kalpa Wijesooriya\yii\framework\YiiBase.php:463)
+Stack trace:
+#0 unknown(0): spl_autoload_call()
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\YiiBase.php(310): class_exists()
+#2 C:\Users\Kalpa Wijesooriya\yii\framework\validators\CValidator.php(174): import()
+#3 C:\Users\Kalpa Wijesooriya\yii\framework\base\CModel.php(287): createValidator()
+#4 C:\Users\Kalpa Wijesooriya\yii\framework\base\CModel.php(260): Testimonials->createValidators()
+#5 C:\Users\Kalpa Wijesooriya\yii\framework\base\CModel.php(547): Testimonials->getValidators()
+#6 C:\Users\Kalpa Wijesooriya\yii\framework\web\widgets\CActiveForm.php(567): Testimonials->getSafeAttributeNames()
+#7 C:\wamp64\www\nanaska-backend\protected\modules\admin\views\testimonials\_form.php(23): CActiveForm->errorSummary()
+#8 C:\Users\Kalpa Wijesooriya\yii\framework\web\CBaseController.php(126): require()
+#9 C:\Users\Kalpa Wijesooriya\yii\framework\web\CBaseController.php(95): TestimonialsController->renderInternal()
+#10 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(872): TestimonialsController->renderFile()
+#11 C:\wamp64\www\nanaska-backend\protected\modules\admin\views\testimonials\update.php(21): TestimonialsController->renderPartial()
+#12 C:\Users\Kalpa Wijesooriya\yii\framework\web\CBaseController.php(126): require()
+#13 C:\Users\Kalpa Wijesooriya\yii\framework\web\CBaseController.php(95): TestimonialsController->renderInternal()
+#14 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(872): TestimonialsController->renderFile()
+#15 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(785): TestimonialsController->renderPartial()
+#16 C:\wamp64\www\nanaska-backend\protected\modules\admin\controllers\TestimonialsController.php(126): TestimonialsController->render()
+#17 unknown(0): TestimonialsController->actionUpdate()
+#18 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs()
+#19 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#20 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#21 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(134): TestimonialsController->runAction()
+#22 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#23 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(1148): CAccessControlFilter->filter()
+#24 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CInlineFilter.php(58): TestimonialsController->filterAccessControl()
+#25 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter()
+#26 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(291): CFilterChain->run()
+#27 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(265): TestimonialsController->runActionWithFilters()
+#28 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): TestimonialsController->run()
+#29 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#30 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#31 C:\wamp64\www\nanaska-backend\index.php(14): CWebApplication->run()
+REQUEST_URI=/nanaska-backend/index.php?r=admin/testimonials/update&id=41
+2020/03/13 11:04:10 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'image_url' cannot be null. The SQL statement executed was: UPDATE `testimonials` SET `testimonials_id`=:yp0, `testimonials_name`=:yp1, `testimonials_description`=:yp2, `image_url`=:yp3 WHERE `testimonials`.`testimonials_id`=41.
+2020/03/13 11:04:10 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'image_url' cannot be null' in C:\Users\Kalpa Wijesooriya\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(1756): CDbCommand->execute()
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(1130): CActiveRecord->updateByPk('41', Array)
+#2 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(811): CActiveRecord->update(NULL)
+#3 C:\wamp64\www\nanaska-backend\protected\modules\admin\controllers\TestimonialsController.php(112): CActiveRecord->save()
+#4 [internal function]: TestimonialsController->actionUpdate('41')
+#5 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CAction.php(109): ReflectionMethod->invokeArgs(Object(TestimonialsController), Array)
+#6 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(TestimonialsController), Object(ReflectionMethod), Array)
+#7 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(134): CController->runAction(Object(CInlineAction))
+#9 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(1148): CFilter->filter(Object(CFilterChain))
+#11 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(131): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#16 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/testimoni...')
+#17 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#18 C:\wamp64\www\nanaska-backend\index.php(14): CApplication->run()
+#19 {main}
+REQUEST_URI=/nanaska-backend/index.php?r=admin/testimonials/update&id=41
+HTTP_REFERER=http://localhost/nanaska-backend/index.php?r=admin/testimonials/update&id=41
+---

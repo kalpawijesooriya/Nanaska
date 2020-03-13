@@ -3,13 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="cf1bd393-a461-4e46-a754-d5537cf3d11f" name="Default" comment="Done :Complete the Testimonials feature in backend&#10;* Upload/edit/delete testimonials and name Dev- https://ellipsisjira.atlassian.ne&#10;* Upload/edit/delete testimonials and name UI dev - https://ellipsisjira.atlassian.net/browse/NWR-14&#10;t/browse/NWR-13&#10; * Testimonials list Dev - https://ellipsisjira.atlassian.net/browse/NWR-17&#10; * Testimonials list UI - https://ellipsisjira.atlassian.net/browse/NWR-18 &#10; * Upload profile image dev - https://ellipsisjira.atlassian.net/browse/NWR-16">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/modules/admin/models/Testimonials.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/modules/admin/models/Testimonials.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/runtime/application.log" beforeDir="false" afterPath="$PROJECT_DIR$/protected/runtime/application.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/protected/runtime/session-1.1.22.db" beforeDir="false" afterPath="$PROJECT_DIR$/protected/runtime/session-1.1.22.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/protected/views/exam/viewexam.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/exam/viewexam.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/protected/views/shoppingcart/shoppingCart.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/shoppingcart/shoppingCart.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bootstrap/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/themes/bootstrap/css/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bootstrap/views/layouts/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/themes/bootstrap/views/layouts/main.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bootstrap/views/site/aboutus.php" beforeDir="false" afterPath="$PROJECT_DIR$/themes/bootstrap/views/site/aboutus.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/bootstrap/views/site/products.php" beforeDir="false" afterPath="$PROJECT_DIR$/themes/bootstrap/views/site/products.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +52,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/themes/bootstrap/test" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -133,6 +130,7 @@
       <workItem from="1583905334138" duration="3939000" />
       <workItem from="1583911063128" duration="18339000" />
       <workItem from="1583986318553" duration="9862000" />
+      <workItem from="1584066830428" duration="6631000" />
     </task>
     <servers />
   </component>
