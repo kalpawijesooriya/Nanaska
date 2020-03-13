@@ -7920,3 +7920,5 @@ Stack trace:
 REQUEST_URI=/nanaska-backend/index.php?r=admin/testimonials/update&id=41
 HTTP_REFERER=http://localhost/nanaska-backend/index.php?r=admin/testimonials/update&id=41
 ---
+2020/03/13 13:23:58 [error] [system.db.CDbCommand] Error in preparing SQL: DELETE FROM 'YiiSession' WHERE expire<:expire
+2020/03/13 13:23:58 [error] [system.db.CDbCommand] CDbCommand::execute() failed: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 no such table: YiiSession. The SQL statement executed was: DELETE FROM 'YiiSession' WHERE expire<:expire.

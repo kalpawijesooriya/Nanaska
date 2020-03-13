@@ -99,3 +99,6 @@ fabric.properties
 .idea/**/markdown-navigator/
 
 # End of https://www.gitignore.io/api/phpstorm
+
+protected/runtime/application.log
+protected/runtime/session-1.1.22.db
