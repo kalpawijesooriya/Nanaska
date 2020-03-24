@@ -68,7 +68,7 @@
 </script>
 
 
-<form class="form-exam-details">
+<form class="form-exam-details" style="margin-left: 0px!important;">
     <?php
     $data = Exam::model()->getSubjectsForLevelId($id);  //get subject details
     $userCount = 0;
@@ -76,13 +76,13 @@
     $arr = Array();
     $examIDs = Array();
     if (count($data) != 0) {
-        echo '<div class="course-area section-padding">';
+        echo '<div class="course-area section-padding" style="padding-top: 0px !important;padding-left: 0px !important;">';
         //check data array is not empty
         foreach ($data as $sub) {
 
             $oder_details = Exam::model()->getSubjectExamOrderForSubjectId($sub['subject_id']);
 
-      echo '<div class="container" style="margin-bottom: 50px;margin-left: -6%">';
+      echo '<div class="container" >';
             echo ' <div class="section-title-wrapper" id="view-exam-subject-heading">
                         <div class="section-title" style="margin-bottom: 50px">  
                          <h3 style="text-align: left">' . $sub['subject_name'] . '</h3>
@@ -91,14 +91,19 @@
 
             echo '<!-- Start of search button and text -->
                          <div class="main" style="margin-bottom: 5%">
-                           <h5 class="mt-4 text-center heading">Here You can Purchase the exams in Bluk</a></h5>
+                           <h5 class="mt-4 heading">Here You can Purchase the exams in Bulk</a></h5>
                            <br>
                            <!-- Actual search box -->
-                               <div class="form-group has-search text-center">
-                                 <span class="fa fa-search form-control-feedback"></span>
-                                 <input type="text" class="form-control " placeholder="Enter the Number of Papers" class="button-bottom" style="width: 400px">
+                               <div class="form-group has-search ">
+                                 <span class="form-control-feedback"></span>
+                                 <div class="row text-center">
+                                 <div class="col-lg-4 col-mg-4 col-sm-4"></div>
+                                  <div class="col-lg-4 col-mg-4 col-sm-4 ">
+                                      <input type="text" class="form-control" placeholder="Enter the Number of Papers" class="button-bottom">
+                                  </div>
+                                 </div>
                                  <br>
-                                 <div class="button-bottom-2"style="padding-left:38%; padding-right:100%;">
+                                 <div class="button-bottom-2" style="margin-left: 12%">
                                      <button  class="button-default purchase">Purchase</button>
                                  </div>
                                  <!--this is sample button button type="button" name="button" style="padding-left:60px;padding-right:60px;padding-top:10px; padding-bottom:10px;  align-items: center;margin-left: 20%;margin-right: 20%;margin-bottom: 10px;margin-top: 10px;background-color: #2D3E50;border-radius: 8px;color: #FFFFFF; " >Purchase</button--->

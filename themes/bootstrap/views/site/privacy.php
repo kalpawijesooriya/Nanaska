@@ -2,7 +2,10 @@
 <div class="container">
     <div class="span2"></div>
     <div class="span8">
-        <h4 class="master_heading_terms">Privacy Policy</h4>
+        <h4 class="master_heading_terms" style="margin-top: 0px !important;
+        color: #23519b !important;
+        margin-bottom: 20px !important;
+        font-size: 20px !important;">Privacy Policy</h4>
         <br />
         
         <p>This is the privacy policy ("Privacy Policy") for Nanaska educational website.</p>
@@ -11,7 +14,10 @@
         
         <p>We may revise this Privacy Policy from time to time. We will notify you of any important changes by posting a notice on all Privacy Policy links. If you see a notice of change, please check the Privacy Policy, because your continued use of the site after we post the change means you have agreed to the new terms.</p>
    
-        <div class="master_heading_terms-sub">Collection of your personal data</div>
+        <div class="master_heading_terms-sub"  style="margin-top: 0px !important;
+        color: #23519b !important;
+        margin-bottom: 20px !important;
+        font-size: 20px !important;">Collection of your personal data</div>
         
         <p>We collect your personal data when you ask for information about our courses or study materials, when you submit your answers to our assessment quizzes or surveys, when you enroll in one of our courses or order study materials.</p>
     
@@ -23,7 +29,10 @@
         
         <p>We may also use your postal and email addresses to send you information about further professional training, and other services or products similar to those you have ordered from us, or to send you an invitation to solicit such information from our sibling companies. If you do not wish us to send you this additional information, you can let us know by following the opt-out instructions that we include in every email, or by sending us notice of your preferences through the mechanisms listed in the section below entitled Your Ability to Choose.</p>
         
-        <div class="master_heading_terms-sub">Sharing your data</div>
+        <div class="master_heading_terms-sub"  style="margin-top: 0px !important;
+        color: #23519b !important;
+        margin-bottom: 20px !important;
+        font-size: 20px !important;">Sharing your data</div>
         <p>We will need to use your data to perform our obligations and exercise our rights under agreements made with you and to inform you of feedback and exam results.</p>
         
         <p>If you have enrolled in our courses through your employer, we will share your data and course attendance and test results with your employer.</p>
@@ -32,7 +41,10 @@
         
         <p>We will share your personal data only with the service providers who help us run this  site or fulfill your requests and with other sibling companies to enable processing and administration of study material orders or to enable them to inform you about services and products which may be of interest to you. We may also need to disclose your personal data to third parties when we, in our sole discretion, believe it is necessary to comply with the law, to enforce our User Agreement or this Privacy Policy, or in connection with a sale or transfer of the Nanaska.com.</p>
         
-        <div class="master_heading_terms-sub">Transfer of your data outside your country</div>
+        <div class="master_heading_terms-sub"  style="margin-top: 0px !important;
+        color: #23519b !important;
+        margin-bottom: 20px !important;
+        font-size: 20px !important;">Transfer of your data outside your country</div>
         
         <p>As we are an international business with employees, affiliates and service providers all over the world, please note that
         the personal data you provide to us may be transferred to and processed and stored in the Sri Lanka or other countries,
@@ -43,7 +55,10 @@
         disclosure and transfer of such personal data to the Sri Lanka and other countries where Nanaska has offices and service
         providers.</p>
         
-        <div class="master_heading_terms-sub">Your ability to choose</div>
+        <div class="master_heading_terms-sub"  style="margin-top: 0px !important;
+        color: #23519b !important;
+        margin-bottom: 20px !important;
+        font-size: 20px !important;">Your ability to choose</div>
         
         <p>As mentioned above, we may use your email or postal address to send you information on obtaining or maintaining your
         professional qualification, or other services or products we or other sibling companies think might interest you.
@@ -58,7 +73,10 @@
         <p>Sri Lanka</p>
         <p>10290</p>
         
-        <div class="master_heading_terms-sub">Review and correction</div>
+        <div class="master_heading_terms-sub"  style="margin-top: 0px !important;
+        color: #23519b !important;
+        margin-bottom: 20px !important;
+        font-size: 20px !important;">Review and correction</div>
         
         <p>You may review and update the personal data you have provided to us by emailing us at info@nanaska.com or sending your request by post to:</p>
        
@@ -77,3 +95,12 @@
         
     </div>
 </div>
+
+<style>
+    master_heading_terms-sub {
+        margin-top: 0px !important;
+        color: #23519b !important;
+        margin-bottom: 20px !important;
+        font-size: 20px !important;
+    }
+</style>

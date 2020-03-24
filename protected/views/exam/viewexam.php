@@ -6,13 +6,20 @@
         for(var i = 0; i < x.length; i++){
             x[i].innerHTML="<div id='course-description'><div class='span4'></div><div class='span6'><br /><br /><div class='master_heading'> <h4>Instructions<h4></div><li>Please click on courses to see the relevant levels.</li><li>Select levels from the left hand side navigation to view exams relent to each level.</li><li>You have to purchase exams before taking them.</li> </div> </div>";    // Change the content
         }
-        
+        $('.nav-list  li.active').removeClass('active');
+        $(this).addClass('active');
+
     }
     
     function hideFunction(){
         $('.course-description').hide();
-    }
 
+    }
+    $('#nav-list').on('click', 'li', function() {
+        alert("WWW")
+        // $('.nav-list li.active').removeClass('active');
+        // $(this).addClass('active');
+    });
 </script>
 
 <?php
@@ -25,74 +32,81 @@ foreach ($courses as $course) {
 }
 ?>
 
-<div class="row-fluid">
+<div class="row-fluid text-center">
 
-    <div class="container footer-stable">
-        <div class="btn-group text-center">
-            <ul class="hidden-for-phone dropdown-menu dr-breakout text-center">
+    <div class=" footer-stable">
+        <div class="btn-group">
+            <div class="row" >
+            <ul class="hidden-for-phone dropdown-menu dr-breakout text-center nav-list" id="nav-list">
                 <?php
                 foreach ($courses as $key => $course) {
                     if ($key === 0) {
-                        echo '<li class="button" ><a href="#' . $course->course_id . '"  data-toggle="tab" id="ttt" onclick="clearFunction()">' . $course->course_name . '</a></li>';
+                        echo '<li class="button active col col-lg-4 col-md-12"  ><a href="#' . $course->course_id . '"  data-toggle="tab" id="ttt" onclick="clearFunction()">' . $course->course_name . '</a></li>';
                     } else {
-                        echo '<li class="button"><a href="#' . $course->course_id . '"  data-toggle="tab" id="ttt" onclick="clearFunction()">' . $course->course_name . '</a></li>';
+                        echo '<li class="button col col-lg-4 col-md-12"><a href="#' . $course->course_id . '"  data-toggle="tab" id="ttt" onclick="clearFunction()">' . $course->course_name . '</a></li>';
                     }
                 }
                 ?>
 
             </ul>
+            </div>
         </div>
-        <div class="tab-content hidden-for-phone">
-            <?php
-            foreach ($courses as $key => $course) {
+        <div class="row">
+            <div class="col col-lg-2">
+                <div class="tab-content hidden-for-phone">
+                    <?php
+                    foreach ($courses as $key => $course) {
 
-                if ($key === 0) {
-                    echo '<div class="tab-pane active" id="' . $course->course_id . '">';
-                } else {
-                    echo '<div class="tab-pane" id="' . $course->course_id . '">';
-                }
-                echo '<div class="col-xs-6 col-sm-3 col-lg-3" id="sidebar" role="navigation">';
-                echo '<div class="level-names style="style="float:left; height: auto;">';
-
-                echo '<ul class="levels-nav level-ul">';
-                foreach ($levels as $course_id => $courseLevels) {
-                    if ($course->course_id == $course_id) {
-                        foreach ($courseLevels as $courseLevel) {
-                            echo CHtml::ajaxLink('<li>' . $courseLevel->level_name . '</li>', Yii::app()->createUrl('exam/viewDetails'), array(
-                                'type' => 'POST',
-                                //'dataType' => 'json',
-                                'onClick' => 'js:hideFunction()',
-                                'data' => array('levelId' => $courseLevel->level_id, 'courseID' => $course_id),
-                                'update' => '.req_res',
-                                    ), array('class' => 'link-background '));
+                        if ($key === 0) {
+                            echo '<div class="tab-pane active " id="' . $course->course_id . '">';
+                        } else {
+                            echo '<div class="tab-pane" id="' . $course->course_id . '">';
                         }
+                        echo '<div class="col-xs-6 col-sm-3 col-lg-3" id="sidebar" role="navigation">';
+                        echo '<div class="level-names style="style="float:left; height: auto;">';
+
+                        echo '<ul class="levels-nav level-ul">';
+                        foreach ($levels as $course_id => $courseLevels) {
+                            if ($course->course_id == $course_id) {
+                                foreach ($courseLevels as $courseLevel) {
+                                    echo CHtml::ajaxLink('<li class="level" style="font-weight: bold; background:#e5eCf9; margin-top: 10px ;padding: 20px;">' . $courseLevel->level_name . '</li>', Yii::app()->createUrl('exam/viewDetails'), array(
+                                        'type' => 'POST',
+                                        //'dataType' => 'json',
+                                        'onClick' => 'js:hideFunction()',
+                                        'data' => array('levelId' => $courseLevel->level_id, 'courseID' => $course_id),
+                                        'update' => '.req_res',
+                                            ), array('class' => 'link-background button'));
+                                }
+                            }
+                        }
+                        echo '</ul>';
+                        echo '</div>';
+                        echo '</div>';
+                        echo '</div>';
+
                     }
-                }
-                echo '</ul>';
-                echo '</div>';
-                echo '</div>';
-                echo '</div>';
-
-            }
-            ?>
-        </div>
-
-            <div class="req_res" style="margin-top: -5%">
+                    ?>
+                 </div>
+             </div>
+            <div class="col col-lg-10" style="margin-left: -100px!important;">
+            <div class="req_res" >
 
                 
 
             <?php
             if (!empty($courses)) {
                 ?>
-                <div class="span4"></div><div class='span6'><div class='master_heading' style="margin-bottom: 10px"><h4>Instructions</h4></div><li>Please click on courses to see the relevant levels.</li><li>Select levels from the left hand side navigation to view exams relent to each level.</li><li>You have to purchase exams before taking them.</li> </div> </div><br><br><br>
+                <div class="span2"></div><div class='span6'><div class='master_heading' style="margin-bottom: 10px"><h4>Instructions</h4></div><li>Please click on courses to see the relevant levels.</li><li>Select levels from the left hand side navigation to view exams relent to each level.</li><li>You have to purchase exams before taking them.</li> </div><br><br><br>
             <?php
         } else {
             ?>
-            <div class='span1'></div><div class='span4'><br /><br /><p>Sorry, this content is not currently available.</p></div> </div>
+            <div class='span1'></div><div class='span4'><br /><br /><p>Sorry, this content is not currently available.</p></div>
         <?php
     }
     ?>
-
+            </div>
+        </div>
+        </div>
 </div>
 </div>
 
@@ -123,9 +137,7 @@ foreach ($courses as $course) {
             )));
     ?>
 
-    <div class="req_res">
 
-    </div>
 </div>
 
 </div>
@@ -195,7 +207,7 @@ foreach ($courses as $course) {
         margin: 50px 17%;
     }
     .container{
-        width: 90% !important;
+
     }
 </style>
 <style>

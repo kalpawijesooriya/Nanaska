@@ -59,41 +59,45 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 
             <h4 class="bold"> Personal <span class="light">Details</span> </h4> <br/>
             <div class="border-seperated">
-                <div class="control-group">
 
-                    <?php echo $form->labelEx($model, 'first_name', array('class' => 'col-sm-2 control-label')); ?>
-                    <div class="controls"><?php echo $form->textField($model, 'first_name', array('size' => 60, 'maxlength' => 100, 'placeholder' => 'First Name', 'class' => 'form-control textInput')); ?>
+
+
+
+
+                <div class="control-group row">
+                    <?php echo $form->labelEx($model, 'first_name', array('class' => 'col-md-3 col-form-label')); ?>
+                    <div class="col-md-8"><?php echo $form->textField($model, 'first_name', array('size' => 60, 'maxlength' => 100, 'placeholder' => 'First Name', 'class' => 'form-control textInput')); ?>
                         <?php echo $form->error($model, 'first_name'); ?></div>
                 </div>
 
-                <div class="control-group">
-                    <?php echo $form->labelEx($model, 'last_name', array('class' => 'col-sm-2 control-label')); ?>
-                    <div class="controls"><?php echo $form->textField($model, 'last_name', array('size' => 60, 'maxlength' => 100, 'placeholder' => 'Last Name', 'class' => 'form-control textInput')); ?>
+                <div class="control-group row">
+                    <?php echo $form->labelEx($model, 'last_name', array('class' => 'col-md-3 col-form-label')); ?>
+                    <div class="col-md-8"><?php echo $form->textField($model, 'last_name', array('size' => 60, 'maxlength' => 100, 'placeholder' => 'Last Name', 'class' => 'form-control textInput')); ?>
                         <?php echo $form->error($model, 'last_name'); ?></div>
                 </div>
 
-                <div class="control-group">
-                    <?php echo $form->labelEx($model, 'phone_number', array('class' => 'col-sm-2 control-label')); ?>
-                    <div class="controls"><?php echo $form->textField($model, 'phone_number', array('placeholder' => 'Phone Number', 'onkeypress' => 'return restrictInput(this,event,digitsOnly);', 'class' => 'form-control textInput')); ?>
+                <div class="control-group row">
+                    <?php echo $form->labelEx($model, 'phone_number', array('class' => 'col-md-3 col-form-label')); ?>
+                    <div class="col-md-8"><?php echo $form->textField($model, 'phone_number', array('placeholder' => 'Phone Number', 'onkeypress' => 'return restrictInput(this,event,digitsOnly);', 'class' => 'form-control textInput')); ?>
                         <?php echo $form->error($model, 'phone_number'); ?></div>
                 </div>
 
-                <div class="control-group">
-                    <?php echo $form->labelEx($model, 'address', array('class' => 'col-sm-2 control-label')); ?>
-                    <div class="controls"><?php echo $form->textField($model, 'address', array('size' => 60, 'maxlength' => 100, 'placeholder' => 'Address', 'class' => 'form-control textInput')); ?>
+                <div class="control-group row">
+                    <?php echo $form->labelEx($model, 'address', array('class' => 'col-md-3 col-form-label')); ?>
+                    <div class="col-md-8"><?php echo $form->textField($model, 'address', array('size' => 60, 'maxlength' => 100, 'placeholder' => 'Address', 'class' => 'form-control textInput')); ?>
                         <?php echo $form->error($model, 'address'); ?></div>
                 </div>
 
-                <div class="control-group">
-                    <?php echo $form->labelEx($model, 'country_id', array('class' => 'col-sm-2 control-label')); ?>
-                    <div class="controls"><?php echo $form->dropDownList($model, 'country_id', Country::model()->getCountries(), array('empty' => 'Select Country', 'class' => 'form-control textInput'));
+                <div class="control-group row">
+                    <?php echo $form->labelEx($model, 'country_id', array('class' => 'col-md-3 col-form-label')); ?>
+                    <div class="col-md-8"><?php echo $form->dropDownList($model, 'country_id', Country::model()->getCountries(), array('empty' => 'Select Country', 'class' => 'form-control textInput'));
                         ?>
                         <?php echo $form->error($model, 'country_id'); ?></div>
                 </div>
 
-                <div class="control-group">
-                    <?php echo $form->labelEx($model, 'email', array('class' => 'col-sm-2 control-label')); ?>
-                    <div class="controls"><?php echo $form->textField($model, 'email', array('size' => 60, 'maxlength' => 100, 'placeholder' => 'E-mail', 'class' => 'form-control textInput')); ?>
+                <div class="control-group row">
+                    <?php echo $form->labelEx($model, 'email', array('class' => 'col-md-3 col-form-label')); ?>
+                    <div class="col-md-8"><?php echo $form->textField($model, 'email', array('size' => 60, 'maxlength' => 100, 'placeholder' => 'E-mail', 'class' => 'form-control textInput')); ?>
                         <?php echo $form->error($model, 'email'); ?></div>
                 </div>
             </div>
@@ -105,11 +109,11 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
             <div class="border-seperated">
                 <div class="control-group">
                     <?php
-                    echo '<label for="inputEmail3" class="col-sm-2 control-label">Course <span class="astrix">*</span></label>';
+                    echo '<label for="inputEmail3" class="col-md-3 col-form-label">Course <span class="astrix">*</span></label>';
 
-                    echo '<div class="controls">' . CHtml::activeDropDownList($model, 'course_id', CHtml::listData(Course::model()->findAll(), 'course_id', 'course_name textInput'), array(
+                    echo '<div class="col-md-8">' . CHtml::activeDropDownList($model, 'course_id', CHtml::listData(Course::model()->findAll(), 'course_id', 'course_name'), array(
                             'prompt' => 'Select Course',
-                            'class' => 'form-control span5',
+                            'class' => 'form-control',
                             'ajax' => array(
                                 'type' => 'POST', //request type
                                 'url' => CController::createUrl('Level/getlevels'),
@@ -120,13 +124,13 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
                     ?>
                 </div>
 
-                <div class="control-group">
+                <div class="control-group row">
                     <?php
-                    echo '<label for="inputEmail3" class="col-sm-2 control-label">Level <span class="astrix">*</span></label>';
+                    echo '<label for="inputEmail3" class="col-md-3 col-form-label">Level <span class="astrix">*</span></label>';
 
-                    echo '<div class="controls">' . CHtml::activeDropDownList($model, 'level_id', array(), array(
+                    echo '<div class="col-md-8">' . CHtml::activeDropDownList($model, 'level_id', array(), array(
                             'empty' => 'Select Level',
-                            'class' => 'form-control span5'
+                            'class' => 'form-control'
                         ));
                     ?>
                     <?php
@@ -136,10 +140,10 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 
                 </div>
 
-                <div class="control-group">
-                    <?php echo '<label for="inputEmail3" class="col-sm-2 control-label">Session <span class="astrix">*</span></label>'; ?>
+                <div class="control-group row">
+                    <?php echo '<label for="inputEmail3" class="col-md-3 col-form-label">Session <span class="astrix">*</span></label>'; ?>
                     <!--                    <p class="col-sm-2 control-label" style="display:inline">Session<span class="astrix">*</span></p>-->
-                    <div class="controls"><?php echo $form->dropDownList($model, 'sitting_id', Sitting::model()->getSittings(), array('empty' => 'Select Session', 'class' => 'span5'));
+                    <div class="col-md-8"><?php echo $form->dropDownList($model, 'sitting_id', Sitting::model()->getSittings(), array('empty' => 'Select Session', 'class' => 'span5'));
                         ?>
                         <?php echo $form->error($model, 'sitting_id'); ?></div>
                 </div>
@@ -157,6 +161,9 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
                                 </div>-->
             </div>
 
+
+
+
             <div class="control-group">
                 <div class="controls">
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -165,7 +172,7 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
                         <?php //echo $form->labelEx($model,'verifyCode'); ?>
 
                         <?php $this->widget('CCaptcha'); ?>
-                        <?php echo $form->textField($model,'verifyCode',array('class'=> 'form-control textInput','style'=>'width:200px;')); ?>
+                        <?php echo $form->textField($model,'verifyCode'); ?>
 
                         <div>Please enter the letters as they are shown in the image above.
                             <br/>Letters are not case-sensitive.</div>
@@ -177,6 +184,7 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
         </div>
 
         <div class="control-group">
+
             <div class="controls text-left">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <button type="submit" class="btn btn btn-primary" id="changebutton">Send Contact Info</button>
@@ -193,14 +201,15 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
             <h4 class="bold"> Login <span class="light">Details</span> </h4> <br/>
             <div class="border-seperated">
 
-                <div class="control-group">
+
+                <div class="control-group row">
                     <?php echo $form->labelEx($model, 'password', array('class' => 'col-sm-2 control-label')); ?>
-                    <div class="controls"><?php echo $form->passwordField($model, 'password', array('size' => 32, 'maxlength' => 32, 'placeholder' => 'Password', 'class' => 'form-control textInput')); ?>
+                    <div class="col-md-8"><?php echo $form->passwordField($model, 'password', array('size' => 32, 'maxlength' => 32, 'placeholder' => 'Password', 'class' => 'form-control textInput')); ?>
                         <?php echo $form->error($model, 'password'); ?></div>
                 </div>
-                <div class="control-group">
+                <div class="control-group row">
                     <p class="col-sm-2 control-label" style="display:inline">Repeat Password<span class="astrix">*</span></p>
-                    <div class="controls"><?php echo $form->passwordField($model, 'repeatpassword', array('size' => 32, 'maxlength' => 32, 'placeholder' => 'Repeat Password', 'class' => 'form-control textInput')); ?>
+                    <div class="col-md-8"><?php echo $form->passwordField($model, 'repeatpassword', array('size' => 32, 'maxlength' => 32, 'placeholder' => 'Repeat Password', 'class' => 'form-control textInput')); ?>
                         <?php echo $form->error($model, 'repeatpassword'); ?></div>
                 </div>
             </div>

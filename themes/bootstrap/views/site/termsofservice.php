@@ -1,7 +1,10 @@
 <div class="container">
     <div class="span2"></div>
     <div class="span8">
-        <h2 class="master_heading_terms">Terms & Conditions</h2>
+        <h2 class="master_heading_terms"  style="margin-top: 0px !important;
+        color: #23519b !important;
+        margin-bottom: 20px !important;
+        font-size: 20px !important;">Terms & Conditions</h2>
 
         <p>Welcome to Nanaska.com. If you continue to browse and use this web site, you are agreeing to
             comply with and be bound by the following terms & conditions of use, which together with our privacy
@@ -10,7 +13,10 @@
 
         <br />
 
-        <div class="master_heading_terms-sub">The use of this website is subject to the following terms of use.</div>
+        <div class="master_heading_terms-sub" style="margin-top: 0px !important;
+        color: #23519b !important;
+        margin-bottom: 20px !important;
+        font-size: 20px !important;">The use of this website is subject to the following terms of use.</div>
 
         <ol type="1">
             <li>The contents of the pages of this website is for your information and use only. It is subjected to
@@ -24,7 +30,10 @@
 
         <br />
 
-        <div class="master_heading_terms-sub">General eligibility Criteria for Nanaska Pass Assurance Scheme</div>
+        <div class="master_heading_terms-sub" style="margin-top: 0px !important;
+        color: #23519b !important;
+        margin-bottom: 20px !important;
+        font-size: 20px !important;">General eligibility Criteria for Nanaska Pass Assurance Scheme</div>
 
         <ol type="1">
             <li>The student should have paid the course fees in full by the date upon which the courses
@@ -49,7 +58,10 @@
             assurance scheme at any time with immediate effect, with or without prior notice.</p>
         <br />
 
-        <div class="master_heading_terms-sub">Eligibility criteria for Operational, Managerial and Strategic level students</div>
+        <div class="master_heading_terms-sub" style="margin-top: 0px !important;
+        color: #23519b !important;
+        margin-bottom: 20px !important;
+        font-size: 20px !important;">Eligibility criteria for Operational, Managerial and Strategic level students</div>
 
         <ul>
             <li>Use of study material</li>
@@ -66,7 +78,10 @@
 
         <br />
 
-        <div class="master_heading_terms-sub">Security</div>
+        <div class="master_heading_terms-sub" style="margin-top: 0px !important;
+        color: #23519b !important;
+        margin-bottom: 20px !important;
+        font-size: 20px !important;">Security</div>
 
         <p>In exchange for your acceptance with this Terms and Conditions, you are authorized to use the website,
             only for personal and noncommercial purposes. In other words, you cannot use the website to generate
@@ -101,7 +116,10 @@
 
         <br />
 
-        <div class="master_heading_terms-sub">Payment Terms</div>
+        <div class="master_heading_terms-sub" style="margin-top: 0px !important;
+        color: #23519b !important;
+        margin-bottom: 20px !important;
+        font-size: 20px !important;">Payment Terms</div>
 
         <ol type="1">
             <li>Enrolment on a course, together with the payment of the required deposit, creates a binding
@@ -127,7 +145,10 @@
 
         <br />
 
-        <div class="master_heading_terms-sub">Student Conduct</div>
+        <div class="master_heading_terms-sub" style="margin-top: 0px !important;
+        color: #23519b !important;
+        margin-bottom: 20px !important;
+        font-size: 20px !important;">Student Conduct</div>
 
         <p>Students are expected to conduct themselves at all times in a manner which demonstrates respect for
             Nanaska and its staff, fellow students and property. Breaches of the Student conduct terms can
@@ -146,7 +167,10 @@
         </ul>
 
         <br />
-        <div class="master_heading_terms-sub">System Requirements</div>
+        <div class="master_heading_terms-sub" style="margin-top: 0px !important;
+        color: #23519b !important;
+        margin-bottom: 20px !important;
+        font-size: 20px !important;">System Requirements</div>
 
         <p>It is your responsibility to check that the computer you plan to use to access your Nanaska account
             and/or online course is compatible with the minimum specification requirement for operating Nanaska
@@ -200,7 +224,10 @@
 
         <br />
 
-        <div class="master_heading_terms-sub">Disruption of Online Access/Technical Support</div>
+        <div class="master_heading_terms-sub" style="margin-top: 0px !important;
+        color: #23519b !important;
+        margin-bottom: 20px !important;
+        font-size: 20px !important;">Disruption of Online Access/Technical Support</div>
 
         <p>Nanaska will not be responsible to you for any delay or disruptions to your access to material as a
             result of any of the following:</p>
@@ -244,7 +271,10 @@
                 downloading any materials.</li>
         </ol>
 
-        <div class="master_heading_terms-sub">Online Learning – Study Materials</div>
+        <div class="master_heading_terms-sub" style="margin-top: 0px !important;
+        color: #23519b !important;
+        margin-bottom: 20px !important;
+        font-size: 20px !important;">Online Learning – Study Materials</div>
 
         <ol type="1">
             <li>The study materials which are included online courses will be able to access via your account
@@ -258,7 +288,10 @@
                 conditions.</li>
         </ol>
 
-        <div class="master_heading_terms-sub">Cancellation and Deferral Terms</div>
+        <div class="master_heading_terms-sub" style="margin-top: 0px !important;
+        color: #23519b !important;
+        margin-bottom: 20px !important;
+        font-size: 20px !important;">Cancellation and Deferral Terms</div>
 
         <ol type="1">
             <li>You may defer your online course to the next sitting if Nanaska is notified in writing in advance.
@@ -291,7 +324,10 @@
         </ol>
 
         <br />
-        <div class="master_heading_terms-sub">Intellectual Property Rights</div>
+        <div class="master_heading_terms-sub" style="margin-top: 0px !important;
+        color: #23519b !important;
+        margin-bottom: 20px !important;
+        font-size: 20px !important;">Intellectual Property Rights</div>
 
         <p>At all times, Learn CIMA and/or its licensors, remain the owner of the intellectual property of the online
             courses that are available under www.learncima.com and Nanaska related forums, the Study Materials
@@ -314,7 +350,10 @@
             or the Copyright or other Intellectual property rights of Nanaska’s licensors.</p>
 
         <br />
-        <div class="master_heading_terms-sub">Warranties</div>
+        <div class="master_heading_terms-sub" style="margin-top: 0px !important;
+        color: #23519b !important;
+        margin-bottom: 20px !important;
+        font-size: 20px !important;">Warranties</div>
 
         <p>Nanaska expects you to take reasonable care to verify that the course and study materials in question
             will meet your requirements.</p>
@@ -330,7 +369,10 @@
             permissible by law.</p>
 
         <br />
-        <div class="master_heading_terms-sub">Limitation of Liability</div>
+        <div class="master_heading_terms-sub" style="margin-top: 0px !important;
+        color: #23519b !important;
+        margin-bottom: 20px !important;
+        font-size: 20px !important;">Limitation of Liability</div>
 
         <p>The exclusions and limitations of liability contained in these Terms do not apply to a party’s liability:</p>
 
@@ -368,7 +410,10 @@
 
         <br />
 
-        <div class="master_heading_terms-sub">Disclaimer</div>
+        <div class="master_heading_terms-sub" style="margin-top: 0px !important;
+        color: #23519b !important;
+        margin-bottom: 20px !important;
+        font-size: 20px !important;">Disclaimer</div>
         <p>The offered courses in the Nanaska.com are for training or examination preparation purposes only.
             Nanaska will not accept any responsibility to any party for the use of the tuition provided and/or the
             contents of the Study Materials for any purpose other than training or examination for educational
@@ -376,7 +421,10 @@
 
         <br />
 
-        <div class="master_heading_terms-sub">Governing Law and Termination</div>
+        <div class="master_heading_terms-sub" style="margin-top: 0px !important;
+        color: #23519b !important;
+        margin-bottom: 20px !important;
+        font-size: 20px !important;">Governing Law and Termination</div>
         <p>You agree that any dispute between you and us will be governed by the laws of English, without giving
             effect to its choice of law principles.</p>
 

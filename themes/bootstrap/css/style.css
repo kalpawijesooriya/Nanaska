@@ -170,7 +170,7 @@ body {
     transition: all 0.3s ease 0s
 }
 .section-margin {margin: 120px 0 140px 0}
-.section-padding {padding: 120px 0}
+.section-padding {padding:0px 0}
 .section-bottom-padding {padding: 0 0 120px 0}
 .section-top-padding {padding: 120px 0 0 0}
 .section-title {

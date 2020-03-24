@@ -1,4 +1,5 @@
 <!--Breadcrumb Banner Area Start-->
+<br> <br>
 <div class="breadcrumb-banner-area">
     <div class="container">
         <div class="row">
@@ -125,7 +126,7 @@
                             <div class="p-2 bd-highlight">
                                 <h4>
                                     <?php
-                                    echo '<li>'. CHtml::link('Individual Material', array('/site/Details', 'id' => 2, 'level' => 'managerial', 'course' => 'individual-material'), array('target'=>'_blank', 'class'=>'product-date-font product-level-link')).'</li>';
+                                    echo '<li>'. CHtml::link('Mocks', array('/site/Details', 'id' => 2, 'level' => 'managerial', 'course' => 'mocks'), array('target'=>'_blank', 'class'=>'product-date-font product-level-link')).'</li>';
                                     ?>
                                 </h4>
                             </div>
@@ -133,10 +134,12 @@
                             <div class="p-2 bd-highlight">
                                 <h4>
                                     <?php
-                                    echo '<li>'. CHtml::link('Mocks', array('/site/Details', 'id' => 2, 'level' => 'managerial', 'course' => 'mocks'), array('target'=>'_blank', 'class'=>'product-date-font product-level-link')).'</li>';
+                                    echo '<li>'. CHtml::link('Individual Material', array('/site/Details', 'id' => 2, 'level' => 'managerial', 'course' => 'individual-material'), array('target'=>'_blank', 'class'=>'product-date-font product-level-link')).'</li>';
                                     ?>
                                 </h4>
                             </div>
+
+
                             <br>
                         </div>
 

@@ -27,6 +27,7 @@ $this->widget('bootstrap.widgets.TbAlert', array(
 
 <?php else: ?>
 <!--Breadcrumb Banner Area Start-->
+    <br> <br>
 <div class="breadcrumb-banner-area">
     <div class="container">
         <div class="row">
@@ -44,11 +45,13 @@ $this->widget('bootstrap.widgets.TbAlert', array(
         </div>
     </div>
 </div>
+    <br> <br>
 <!--End of Breadcrumb Banner Area-->
 <!--Google Map Area Start-->
 <div class="google-map-area">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.1226013365304!2d79.88915801477265!3d6.875911295031303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25bc818a089b5%3A0x5be46ebee1b884f6!2sNanaska%20Institute!5e0!3m2!1sen!2slk!4v1583142839725!5m2!1sen!2slk" width="100%" height="485" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
 </div>
+    <br> <br>
 <!--End of Google Map Area-->
 <!--Contact Form Area Start-->
 <div class="contact-form-area section-padding">

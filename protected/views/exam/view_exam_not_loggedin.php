@@ -1,5 +1,5 @@
 
-
+<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->baseUrl; ?>/css/tabs.css" />
 <script src="<?php echo Yii::app()->request->baseUrl; ?>/themes/bootstrap/js/vendor/jquery-1.12.4.min.js"></script>
 <script type="text/javascript">
     function hideFunction(){
@@ -26,14 +26,13 @@ foreach ($courses as $course) {
 }
 ?>
 <div class="btn-group text-center">
-    <button type="button" class="btn btn-default dropdown-toggle dr-breakout-btn text-center" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Select Course <span class="caret text-center"></span>
-    </button>
+
+    <div class="row" >
     <ul class="dropdown-menu dr-breakout text-center">
         <?php
         foreach ($courses as $key => $course)
         {
-            echo ' <li class="button text-center"><a href="#" onclick="showFoo('.$course->course_id .')" >' . $course->course_name . '</a></li>';
+            echo ' <li class="button text-center col col-lg-4" style="margin-top:20px"><a href="#" onclick="showFoo('.$course->course_id .')" >' . $course->course_name . '</a></li>';
             if ($key===0){
                 echo '<script>
                        $(window).on(\'load\', function() {
@@ -45,13 +44,38 @@ foreach ($courses as $course) {
         ?>
     </ul>
 </div>
+</div>
 
-<div class="course-area section-padding bg-white" id="courses" style="margin: auto;">
+
+
+<div class="hidden-for-desktop text-center">
+    <select  onchange="changeFunc();" id="selectBox">
+        <?php
+        foreach ($courses as $key => $course)
+        {
+            echo ' <option  class="button text-center col col-lg-4" style="margin-top:20px"  value="'.$course->course_id .'" >' . $course->course_name . '</option>';
+            if ($key===0){
+                echo '<script>
+                       $(window).on(\'load\', function() {
+                            showFoo('.$course->course_id .')
+                        });
+                      </script>';
+            }
+        }
+        ?>
+    </select>
+</div>
+<br><br>
+<div class="course-area section-padding bg-white" id="courses" style="margin-left: 20px;margin-right: 20px">
 
 </div>
 <br><br><br>
 <script type="text/javascript">
-
+    function changeFunc(){
+        var selectBox = document.getElementById("selectBox");
+        var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+        showFoo(selectedValue)
+    }
     function showFoo(id) {
         $.ajax({
             type: 'POST',

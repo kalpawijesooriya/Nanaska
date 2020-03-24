@@ -30,7 +30,7 @@ class Testimonials extends CActiveRecord
 			array('image_url', 'required'),
 
             array('image_url', 'file', 'types'=>'jpg, gif, png', 'allowEmpty'=>true,'on'=>'insert,update,delete'),// this will allow empty field when page is update (remember here i create scenario update)
-			array('testimonials_name, testimonials_description, image_url', 'length', 'max'=>255),
+			array('testimonials_name,  image_url', 'length', 'max'=>255),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
 			array('testimonials_id, testimonials_name, testimonials_description, image_url', 'safe', 'on'=>'search'),

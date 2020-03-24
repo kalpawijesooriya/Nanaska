@@ -6,7 +6,27 @@
  */
 ?>
 
-<div class="container">
+
+<br> <br>
+<div class="breadcrumb-banner-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="breadcrumb-text">
+                    <h1 class="text-center">Payments</h1>
+                    <div class="breadcrumb-bar">
+                        <ul class="breadcrumb text-center">
+                            <li><a href="index.html">Home</a></li>
+                            <li>Payments</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--End of Breadcrumb Banner Area-->
+<div class="container" style="margin-bottom: 80px">
     <div class="row">
         <div class="span2">
         </div>
@@ -22,73 +42,75 @@
                     'validateOnSubmit' => true,
                 ),
                 'htmlOptions' => array(
-                    'class' => 'form-horizontal form-control',
+
                     'role' => 'form'
                 )
                     ));
             ?>
 
-            <h3 class="master_heading">Payment</h3>
-            <p class="note">Fields with <span class="required">*</span> are required.</p>
+            <h2 class="master_heading text-center" style="margin-bottom: 50px; margin-top: 50px">Payment</h2>
 
-            <div class="well transparent">
+
+            <div class="well">
 
 
                 <div class="border-seperated">
+                    <h4 class="bold">Payment <span class="light">Details</span> </h4> <br/>
 
-                    <div class="control-group">
-                        <label class="control-label" for="first_name">First Name <span class="required">*</span></label>
-                        <?php //echo CHtml::textField('first_name', '', array('placeholder' => 'First Name', 'class' => 'span5')); ?>
-                        <div class="controls"><input type="text" placeholder="First Name" class="span5" name="first_name"></div>
+
+
+                    <div class="form-group row">
+                        <label class="col-md-3 col-form-label" for="first_name">First Name <span class="required">*</span></label>
+                        <div class="col-md-8"><input type="text" placeholder="First Name" class="form-control textInput" name="first_name"></div>
                     </div>
 
-                    <div class="control-group">
-                        <label class="control-label" for="last_name">Last Name <span class="required">*</span></label>
+                    <div class="form-group row">
+                        <label class="col-md-3 col-form-label" for="last_name">Last Name <span class="required ">*</span></label>
                         <?php //echo CHtml::textField('last_name', '', array('placeholder' => 'Last Name', 'class' => 'span5')); ?>
-                        <div class="controls"><input type="text" placeholder="Last Name" class="span5" name="last_name"></div>
+                        <div class="col-md-8"><input type="text" placeholder="Last Name" class="form-control textInput" name="last_name"></div>
                     </div>
 
-                    <div class="control-group">
-                        <label class="control-label" for="address">Address <span class="required">*</span></label>
+                    <div class="form-group row">
+                        <label class="col-md-3 col-form-label" for="address">Address <span class="requiredl">*</span></label>
                         <?php //echo CHtml::textField('address', '', array('placeholder' => 'Address', 'class' => 'span5')); ?>
-                        <div class="controls"><input type="text" placeholder="Address" class="span5" name="address"></div>
+                        <div class="col-md-8"><input type="text" placeholder="Address" class="form-control textInput" name="address"></div>
                     </div>
 
-                    <div class="control-group">
-                        <label class="control-label" for="cima_id">CIMA ID <span class="required">*</span></label>
+                    <div class="form-group row">
+                        <label class="col-md-3 col-form-label" for="cima_id">CIMA ID <span class="required">*</span></label>
                         <?php //echo CHtml::textField('cima_id', '', array('placeholder' => 'CIMA ID', 'class' => 'span5')); ?>
-                        <div class="controls"><input type="text" placeholder="CIMA ID" class="span5" name="cima_id"></div>
+                        <div class="col-md-8"><input type="text" placeholder="CIMA ID" class="form-control textInput" name="cima_id"></div>
                     </div>
 
-                    <div class="control-group">
-                        <label class="control-label" for="email">Email <span class="required">*</span></label>
+                    <div class="form-group row">
+                        <label class="col-md-3 col-form-label" for="email">Email <span class="required">*</span></label>
                         <?php //echo CHtml::textField('email', '', array('placeholder' => 'Email', 'class' => 'span5')); ?>
-                        <div class="controls"><input type="text" placeholder="Email" class="span5" name="email"></div>
+                        <div class="col-md-8"><input type="text" placeholder="Email" class="form-control textInput" name="email"></div>
                     </div>
 
-                    <div class="control-group">
-                        <label class="control-label" for="contact_no">Contact No <span class="required">*</span></label>
+                    <div class="form-group row">
+                        <label class="col-md-3 col-form-label" for="contact_no">Contact No <span class="required">*</span></label>
                         <?php //echo CHtml::textField('contact_no', '', array('placeholder' => 'Contact No','onkeypress' => 'return restrictInput(this,event,digitsOnly);', 'class' => 'span5')); ?>
-                        <div class="controls"><input type="text" placeholder="Contact No" class="span5" name="contact_no" onkeypress = "return restrictInput(this,event,digitsOnly)"></div>
+                        <div class="col-md-8"><input type="text" placeholder="Contact No" class="form-control textInput" name="contact_no" onkeypress = "return restrictInput(this,event,digitsOnly)"></div>
                     </div>
 
-                    <div class="control-group">
-                        <label class="control-label" for="course">Course <span class="required">*</span></label>
+                    <div class="form-group row">
+                        <label class="col-md-3 col-form-label" for="course">Course <span class="required">*</span></label>
                         <?php //echo CHtml::textField('course', '', array('placeholder' => 'Course', 'class' => 'span5')); ?>
-                        <div class="controls"><input type="text" placeholder="Course" class="span5" name="course"></div>
+                        <div class="col-md-8"><input type="text" placeholder="Course" class="form-control textInput" name="course"></div>
                     </div>
 
-                    <div class="control-group">
-                        <label class="control-label" for="amount">Amount (GBP) <span class="required">*</span></label>
+                    <div class="form-group row">
+                        <label class="col-md-3 col-form-label" for="amount">Amount (GBP) <span class="required">*</span></label>
                         <?php //echo CHtml::textField('amount', '',array('placeholder' => 'Amount (GBP)', 'class' => 'span5', 'min' => 0, 'numeric')); ?>
-                        <div class="controls">
+                        <div class="col-md-8">
                             <?php if ($price == null) {
                                 ?>
-                                <input type="number" placeholder="Amount (GBP)" class="span5" name="amount" min="1" >
+                                <input type="number" placeholder="Amount (GBP)" class="form-control textInput" name="amount" min="1" >
                                 <?php
                             } else {
                                 ?>
-                                <input type="number" placeholder="Amount (GBP)" class="span5" name="amount" value="<?php echo $price; ?>" min="1" readonly="true"> 
+                                <input type="number" placeholder="Amount (GBP)" class="form-control textInput" name="amount" value="<?php echo $price; ?>" min="1" readonly="true">
                                 <?php
                             }
                             ?>
@@ -106,7 +128,7 @@
                 <input type="checkbox" name="agree" id="check_box_agree" style="margin-top: 0px;" onclick="validateCheckBox()" /> I here by agree all the <?php echo CHtml::link('terms and conditions', array('site/termsofservice')); ?>. <br /><br />
                 
                 
-                <button type="submit" class="greybtnsmall" id="btn-pay" disabled="true">Pay</button>
+                <button type="submit" class="loginBtn" id="btn-pay" disabled="true" >Pay</button>
                 
             </div>
             <?php $this->endWidget(); ?>
@@ -119,9 +141,21 @@
 
 </div>
 
-<script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/plugins/ajax_validation/ajaxvalidation.js">
 </script>
+<?php Yii::app()->clientScript->registerCoreScript('jquery'); ?>
+<?php Yii::app()->clientScript->registerCoreScript('jquery.ui'); ?>
+<?php $cs = Yii::app()->clientScript;
+$cs->coreScriptPosition = $cs::POS_END;
 
+$cs->scriptMap = array(
+    'jquery.js'=>false,
+    'jquery.ui.js'=>false,
+    'jquery.min.js'=>false
+); ?>
+
+<script src="<?php echo Yii::app()->request->baseUrl; ?>/themes/bootstrap/js/vendor/jquery-1.12.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 <script type="text/javascript">
     var digitsOnly = /[+1234567890]/g;
     var integerOnly = /[0-9\.]/g;
@@ -202,17 +236,53 @@
         });
 
     });
-    
-    
+
+
     
     function validateCheckBox(){
         if(document.getElementById("check_box_agree").checked){
-            document.getElementById("btn-pay").className = "bluebtnsmall";//attr('class', 'bluebtn');
+            document.getElementById("btn-pay").className = "loginBtn";//attr('class', 'bluebtn');
             document.getElementById("btn-pay").disabled = false;
         }else{
-            document.getElementById("btn-pay").className = "greybtnsmall";//attr('class', 'bluebtn');
+            document.getElementById("btn-pay").className = "loginBtn";//attr('class', 'bluebtn');
             document.getElementById("btn-pay").disabled = true;
         }
     }
 
 </script>
+
+<style>
+
+    .textInput {
+        height: 30px !important;
+    }
+    .loginBtn{
+        font-size: 16px;
+        color: #fff;
+        line-height: 1.2;
+        justify-content: center;
+        align-items: center;
+        padding: 0 20px;
+        min-width: 120px;
+        height: 40px;
+        background-color: #3282B8;
+        border-radius: 27px;
+        -webkit-transition: all 0.4s;
+        -o-transition: all 0.4s;
+        -moz-transition: all 0.4s;
+        transition: all 0.4s;
+        outline: none !important;
+        border: none;
+        margin-bottom: 30px;
+
+    }
+
+    .btnContainer{
+        alignment: center;
+    }
+
+
+</style>
+
+
+

@@ -179,14 +179,14 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-7 col-md-6 col-sm-5 hidden-xs">
-                                <span>Have any question? +97- 477 - 739 - 8996</span>
+                                <span>Have any question? <a href = "mailto: info@nanaska.com">info@nanaska.com</a></span>
                             </div>
                             <div class="col-lg-5 col-md-6 col-sm-6 col-xs-12">
                                 <div class="header-top-right">
                                     <div class="content"><a href="http://forum.learncima.com/forum"><i class="zmdi zmdi-globe"></i> Our Forum</a></div>
                                     <?php
                                       if (Yii::app()->user->isGuest) {
-                                          echo '<div class="content"><a href="#"><i class="zmdi zmdi-account"></i>Log in / Register</a>
+                                          echo '<div class="content"><a href="#"><i class="zmdi zmdi-account"></i>Exam Practice</a>
                                                   <ul class="account-dropdown">
                                                    <li>'.CHtml::link("Login", array("site/login")).'</li>
                                                    <li>'.CHtml::link("Register", array("user/create")).'</a></li>
@@ -219,7 +219,7 @@
                                       ?>
 
 
-                                    <div class="content"><a href="?r=shoppingcart/viewcart" class="notification"><i class="zmdi zmdi-shopping-basket"></i> Chechout<span class="badge" id="quantityWidget">
+                                    <div class="content"><a href="?r=shoppingcart/viewcart" class="notification"><i class="zmdi zmdi-shopping-basket"></i> Checkout<span class="badge" id="quantityWidget">
                                             <?php
 
                                             $totalProductQty = Util::getShoppingCartQuantity();
@@ -232,7 +232,7 @@
 
                                             }else{
                                                 echo '<script>
-                                        document.getElementById("quantityWidget").style.visibility = "visible";
+                                               document.getElementById("quantityWidget").style.visibility = "visible";
                                          
                                                   </script>';
                                                 echo $totalProductQty;
@@ -250,7 +250,8 @@
                         <div class="row">
                             <div class="col-md-3 col-sm-12">
                                 <div class="logo">
-                                    <a href="index.html"><img src="themes/bootstrap/img/logo/logo.png" alt="EDUCAT"></a>
+                                    <a href="/nanaska-backend/index.php"><img class="hedderLogo" src="themes/bootstrap/img/logo/logoHedder.png" alt="EDUCAT"></a>
+
                                 </div>
                             </div>
                             <div class="col-md-9">
@@ -273,6 +274,12 @@
                                                 </li>
                                                 <li <?php echo ($route == 'user/create') ? 'class="active"' : '' ?>>
                                                     <?php echo CHtml::link('Registration', array('user/create')) ?>
+                                                </li>
+                                                <li <?php echo ($route == 'user/payment') ? 'class="active"' : '' ?>>
+                                                    <?php echo CHtml::link('Payments', array('user/payment')) ?>
+                                                </li>
+                                                <li <?php echo ($route == 'site/contact') ? 'class="active"' : '' ?>>
+                                                    <?php echo CHtml::link('Contact Us', array('site/contact')) ?>
                                                 </li>
                                                 <?php if (Yii::app()->user->getId() == NULL) { ?>
                                                     <li <?php echo ($route == 'exam/notLoggedinViewExam') ? 'class="active"' : '' ?>>
@@ -323,35 +330,35 @@
                                         $route = Yii::app()->controller->id . '/' . Yii::app()->controller->action->id;
                                         ?>
                                         <ul>
-                                            <li <?php echo ($route == 'site/index') ? 'class="active"' : '' ?>>
+                                            <li class="current" <?php echo ($route == 'site/index') ? 'class="active"' : '' ?>>
                                                 <?php echo CHtml::link('Home', Yii::app()->homeUrl) ?>
                                             </li>
-                                            <li <?php echo ($route == 'site/viewAboutus') ? 'class="active"' : '' ?>>
+                                            <li class="current" <?php echo ($route == 'site/viewAboutus') ? 'class="active"' : '' ?>>
                                                 <?php echo CHtml::link('About Us', array('site/viewAboutus')) ?>
                                             </li>
-                                            <li <?php echo ($route == 'site/viewOurProduct') ? 'class="active"' : '' ?>>
+                                            <li class="current" <?php echo ($route == 'site/viewOurProduct') ? 'class="active"' : '' ?>>
                                                 <?php echo CHtml::link('Our Products', array('site/viewOurProduct')) ?>
                                             </li>
-                                            <li <?php echo ($route == 'user/create') ? 'class="active"' : '' ?>>
+                                            <li class="current" <?php echo ($route == 'user/create') ? 'class="active"' : '' ?>>
                                                 <?php echo CHtml::link('Registration', array('user/create')) ?>
                                             </li>
 
-                                            <li <?php echo ($route == 'user/payment') ? 'class="active"' : '' ?>>
+                                            <li class="current" <?php echo ($route == 'user/payment') ? 'class="active"' : '' ?>>
                                                 <?php echo CHtml::link('Payments', array('user/payment')) ?>
                                             </li>
                                             <?php if (Yii::app()->user->getId() == NULL) { ?>
-                                                <li <?php echo ($route == 'exam/notLoggedinViewExam') ? 'class="active"' : '' ?>>
+                                                <li class="current" <?php echo ($route == 'exam/notLoggedinViewExam') ? 'class="active"' : '' ?>>
                                                     <?php echo CHtml::link('Exams', array('exam/notLoggedinViewExam')) ?>
                                                 </li>
 
                                             <?php } else { ?>
-                                                <li <?php echo ($route == 'exam/viewexam') ? 'class="active"' : '' ?>>
+                                                <li class="current" <?php echo ($route == 'exam/viewexam') ? 'class="active"' : '' ?>>
                                                     <?php echo CHtml::link('Exams', array('exam/viewexam')) ?>
                                                 </li>
 
                                             <?php } ?>
 
-                                            <li <?php echo ($route == 'site/contact') ? 'class="active"' : '' ?>>
+                                            <li class="current" <?php echo ($route == 'site/contact') ? 'class="active"' : '' ?>>
                                                 <?php echo CHtml::link('Contact Us', array('site/contact')) ?>
                                             </li>
 
@@ -409,7 +416,7 @@
                         <div class="col-md-3 col-sm-4">
 
                                 <div class="footer-logo">
-                                    <a href="index.html"><img src="themes/bootstrap/img/logo/footer.png" alt=""></a>
+                                    <a href="/nanaska-backend/index.php"><img src="themes/bootstrap/img/logo/footer.png" alt=""></a>
                                 </div>
                         </div>
                                 <div class="col-md-3 col-sm-4">
@@ -424,9 +431,10 @@
                                     <div class="single-footer-widget">
                                         <h3>LEARN MORE</h3>
                                         <ul class="footer-list">
-                                            <li><a href="#">Online Exams</a></li>
+
+                                            <li><?php echo CHtml::link('Online Exams', array('exam/viewexam')); ?></li>
                                             <li><a href="#">Course Structure</a></li>
-                                            <li><a href="#">Schemes</a></li>
+
                                             <li><a href="#">Levels & Categories</a></li>
                                             <dd>
                                                 <?php echo CHtml::link('Terms and Conditions', array('site/termsofservice')); ?>
@@ -440,10 +448,8 @@
                                 </div>
                             <div class="col-md-3 col-sm-4">
                                 <div class="single-footer-widget">
-                                    <div class="footer-logo">
-                                        <a href="index.html"><img src="themes/bootstrap/img/logo/footer2.png" alt=""></a>
-                                    </div>
-                                <p>“Education is not received. It is achieved.” ~ Anonymous</p>
+
+
                                 <div class="social-icons">
                                     <a href="https://www.facebook.com/LearnCIMA"><i class="zmdi zmdi-facebook"></i></a>
                                     <a href="https://www.linkedin.com/in/learn-cima-92b430120?authType=NAME_SEARCH&authToken=4cu3&locale=en_US&trk=tyah&trkInfo=clickedVertical%3Amynetwork%2CclickedEntityId%3A502704179%2CauthType%3ANAME_SEARCH%2Cidx%3A1-1-1%2CtarId%3A1466066734498%2Ctas%3Alearn%20cima"><i class="zmdi zmdi-linkedin"></i></a>
@@ -456,6 +462,7 @@
                 </div>
             </div>
             <!--End of Footer Widget Area-->
+            <!--End of Footer Widget Area-->
             <!--Footer Area Start-->
             <footer class="footer-area">
                 <div class="container">
@@ -465,7 +472,7 @@
                         </div>
                         <div class="col-md-6 col-sm-5">
                             <div class="column-right">
-                                <span>Privacy Policy , Terms &amp; Conditions</span>
+
                             </div>
                         </div>
                     </div>
@@ -561,7 +568,12 @@
 </script>
 <style>
 
-
+.hedderLogo{
+    max-width: 150% !important;
+    min-width: 150%!important;
+    min-height:150%!important;
+    max-height:150%!important;
+}
 
     .notification .badge {
         position: absolute;
@@ -572,4 +584,10 @@
         background: red;
         color: white;
     }
+body {
+    overflow-x: hidden; /* Hide scrollbars */
+}
+
+
+
 </style>

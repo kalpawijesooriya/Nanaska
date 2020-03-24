@@ -4,7 +4,7 @@
 <!---->
 <!--<script type="text/javascript" src="--><?php //echo Yii::app()->theme->baseUrl; ?><!--/js/jquery.easing.min.js"></script>-->
 <!--<script type="text/javascript" src="--><?php //echo Yii::app()->theme->baseUrl; ?><!--/js/jquery.easy-ticker.js"></script>-->
-
+<br><br>
 <?php $this->pageTitle = Yii::app()->name; ?>
 <link rel="stylesheet" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/news.css"/>
 <div class="slider-area">
@@ -26,7 +26,9 @@
                                         suffered alteration in some form, by injected humour, or randomised words which<br>
                                         don't look even slightly believable.</p>
                                     <div class="banner-readmore wow fadeInUp" data-wow-duration="3600ms" data-wow-delay=".6s">
-                                        <a class="button-default" href="products.html">View our products</a>
+                                        <?php echo CHtml::link('View our products', array('Site/viewOurProduct'), array('class' => 'button-default')); ?>
+
+
                                     </div>
                                 </div>
                             </div>
@@ -48,7 +50,8 @@
                                         suffered alteration in some form, by injected humour, or randomised words which<br>
                                         don't look even slightly believable.</p>
                                     <div class="banner-readmore wow rotateInDownLeft" data-wow-duration="1800ms" data-wow-delay="0s">
-                                        <a class="button-default" href="products.html">View our products</a>
+
+                                        <?php echo CHtml::link('View our products', array('Site/viewOurProduct'), array('class' => 'button-default')); ?>
                                     </div>
                                 </div>
                             </div>
@@ -69,7 +72,7 @@
                     <p>To be the preferred online tuition provider, with personalized service and value for money.</p>
 
                     <h5>What we strive for ?</h5>
-                    <p>To develop a student, who enjoys learning, whom we enjoy teaching, markers enjoy passing, and employers enjoy employing.</p>
+                    <p>To develop a student who enjoys studying, we enjoy teaching, CIMA enjoys passing, companies working with.</p>
                     <?php echo CHtml::link('Discover More', array('Site/viewAboutus'), array('class' => 'button-default')); ?>
 <!--                    <a class="button-default" href="about.html">Discover More</a>-->
                 </div>
@@ -84,7 +87,8 @@
             <div class="col-md-12">
                 <div class="section-title-wrapper">
                     <div class="section-title">
-                        <h3>POPULAR Products</h3>
+                        <br> <br>
+                        <h3>Our Products</h3>
                         <br>
 
                     </div>
@@ -98,7 +102,7 @@
                         <a href="#"><img src="themes/bootstrap/img/course/1.jpg" alt=""></a>
                     </div>
                     <div class="single-item-text">
-                        <h4><a href="#">OPERATIONAL LEVEL</a></h4>
+                        <h4><a href="#">STRATEGIC LEVEL</a></h4>
                         <div class="single-item-text-info">
                             <span>By: <span>M S Nawaz</span></span>
                             <span>Date: <span>Feb 2020</span></span>
@@ -107,7 +111,8 @@
 
                     </div>
                     <div class="button-bottom">
-                        <?php echo CHtml::link('Learn Now', array('/site/Details', 'id' => 3, 'level' => 'operational', 'course' => 'full-course'), array('target'=>'_blank', 'class'=>'button-default'));?>
+                        <?php echo CHtml::link('Learn Now', array('Site/viewOurProduct'), array('class' => 'button-default')); ?>
+
                     </div>
                 </div>
             </div>
@@ -127,7 +132,7 @@
 
                     </div>
                     <div class="button-bottom">
-                        <?php echo CHtml::link('Learn Now', array('/site/Details', 'id' => 2, 'level' => 'managerial', 'course' => 'full-course'), array('target'=>'_blank', 'class'=>'button-default')); ?>
+                        <?php echo CHtml::link('Learn Now', array('Site/viewOurProduct'), array('class' => 'button-default')); ?>
                     </div>
                 </div>
             </div>
@@ -146,14 +151,14 @@
 
                     </div>
                     <div class="button-bottom">
-                        <a href="#" class="button-default">Learn Now</a>
+                        <?php echo CHtml::link('Learn Now', array('Site/viewOurProduct'), array('class' => 'button-default')); ?>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-12 col-sm-12 text-center">
-
                 <?php echo CHtml::link('DISCOVER ALL PRODUCTS', array('Site/viewOurProduct'), array('class' => 'button-default button-large')); ?>
+
             </div>
         </div>
     </div>
@@ -162,8 +167,21 @@
 
 
 <!--Testimonial Area Start-->
+<div class="row">
+    <div class="col-md-12">
+        <div class="section-title-wrapper">
+            <div class="section-title">
+                <br> <br>
+                <h3>Testimonials</h3>
+                <br>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="testimonial-area">
     <div class="container">
+
+
         <div class="row">
             <div class="col-lg-12 col-lg-offset-0 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
                 <div class="row">
@@ -183,7 +201,7 @@
                                                    <img src="'.$item['image_url'].'" alt="testimonial 1" />
                                                  </div>';
                                      }
-//
+
                                  }
 
                             ?>
@@ -234,7 +252,7 @@
                         <h3><a href="#">LEAD LECTURE</a></h3>
 
                         <p>There are many variaons of passages of Lorem Ipsuable, amrn in some by injected humour, </p>
-                        <a href="#" class="button-default">Read more</a>
+                        <a href="#" class="button-default">Lead Lecturer</a>
                     </div>
                 </div>
             </div>
@@ -280,12 +298,14 @@
 </div>
 <!--End of Latest News Area-->
 <!--Event Area Start-->
-<div class="event-area section-padding"style="background-Color:#2d3e50;">
+<br> <br>
+<div class="event-area section-padding"style="background-Color:#2d3e50;min-height: 250px;">
     <div class="container"style="background-color:#2d3e50">
         <div class="row">
             <div class="col-md-12">
                 <div class="breadcrumb-text "style="color:white !important;">
                     <div class="breadcrumb-text"style=",color:White;font-weight:bold;text-align:center;padding-bottom: 10px;">
+                        <br> <br>
                         <h3>OUR LATEST NEWS</h3>
                         <br>
                     </div>
@@ -293,6 +313,16 @@
             </div>
         </div>
     </div>
+    <style>
+
+        #inner1{
+            float:left;
+        }
+        #inner2{
+            float:left;
+            clear: left;
+        }
+    </style>
 
     <div class="row">
         <section id="carousel">
@@ -311,24 +341,9 @@
                                } else {
                             ?>
 
-                            <!-- Carousel indicators -->
-                            <ol class="carousel-indicators text-center" style="padding-top:50px;">
-                                <?php
-                                $counter = 0;
 
-                                foreach ($msgs as $msg) {
-
-                                    if ($counter == 0) {
-                                        echo '<li data-target="#fade-quote-carousel text-center" data-slide-to="' . $counter . '" class="active"></li>';
-                                    } else {
-                                        echo '<li data-target="#fade-quote-carousel text-center" data-slide-to="' . $counter . '"></li>';
-                                    }
-                                    ++$counter;
-                                }
-
-                                ?>
-                            </ol>
                             <!-- Carousel items -->
+
                             <div class="carousel-inner text-center" style="Color:white;">
                                 <?php
                                 $count = 0;
@@ -354,7 +369,26 @@
                                 ?>
 
                             </div>
-                        </div>
+                            <!-- Carousel indicators -->
+
+                                <ol class="carousel-indicators text-center" style="margin-top:150px;">
+                                    <?php
+                                    $counter = 0;
+
+                                    foreach ($msgs as $msg) {
+
+                                        if ($counter == 0) {
+                                            echo '<li data-target="#fade-quote-carousel text-center" data-slide-to="' . $counter . '" class="active"></li>';
+                                        } else {
+                                            echo '<li data-target="#fade-quote-carousel text-center" data-slide-to="' . $counter . '"></li>';
+                                        }
+                                        ++$counter;
+                                    }
+
+                                    ?>
+                                </ol>
+                            </div>
+
                     </div>
                 </div>
             </div>
@@ -381,20 +415,20 @@
         <div class="row">
             <div class="col-md-3 col-sm-3">
                 <div class="single-fun-factor">
-                    <h4>Teachers</h4>
-                    <h2><span class="counter">79</span>+</h2>
+                    <h4>Tutors</h4>
+                    <h2><span class="counter">15</span>+</h2>
                 </div>
             </div>
             <div class="col-md-3 col-sm-3">
                 <div class="single-fun-factor">
-                    <h4>Members</h4>
-                    <h2><span class="counter">120</span>+</h2>
+                    <h4>Students</h4>
+                    <h2><span class="counter">1000</span>+</h2>
                 </div>
             </div>
             <div class="col-md-3 col-sm-3">
                 <div class="single-fun-factor">
                     <h4>Courses</h4>
-                    <h2><span class="counter">36</span>+</h2>
+                    <h2><span class="counter">8</span>+</h2>
                 </div>
             </div>
             <div class="col-md-3 col-sm-3">
@@ -425,7 +459,7 @@
 //                ?>
 <!--                           <div style="text-align: center;">-->
 <!--                                    <i class="icon-arrow-up" id="nt-example1-prev"></i>-->
-<!--                                </div>-->-->
+<!--                                </div>-->
 <!--                <div id="nt-example1-container">-->
 <!---->
 <!--                    <ul id="nt-example1">-->
@@ -542,7 +576,7 @@
 <!--            <div class="span5"></div>-->
 <!--            <div class="span3" style="margin-left: 0px;">-->
 <!--                <input id="news_text_box" type="email" class="input-medium search-query" placeholder="Your Email Address" required>-->
-<!--                                        <button type="submit" class="button button-signin">Submit</button>-->-->
+<!--                                        <button type="submit" class="button button-signin">Submit</button>-->
 <!--                --><?php
 //                echo CHtml::ajaxButton('Submit', array('User/sendMaterialMail'), array(
 //                    'type' => 'POST',

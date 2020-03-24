@@ -113,7 +113,7 @@ class TestimonialsController extends Controller
 
                 if(!empty($uploadedFile))  // check if uploaded file is set or not
                 {
-                    $uploadedFile->saveAs(Yii::app()->basePath.'/..'.$model->image_url);
+                    $uploadedFile->saveAs(Yii::app()->basePath.'/../'.$model->image_url);
                     $this->redirect(array('view','id'=>$model->testimonials_id));
                     echo "done";
                 }
@@ -138,7 +138,7 @@ class TestimonialsController extends Controller
 
 	    $this->loadModel($id)->delete();
 
-        $file = Yii::app()->basePath.'/..'.$model->image_url;
+        $file = Yii::app()->basePath.'/../'.$model->image_url;
 
         if (file_exists($file)) {
 
