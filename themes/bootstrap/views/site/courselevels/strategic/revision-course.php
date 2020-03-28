@@ -5,7 +5,7 @@
         <h2 class="product-names-inside">STRATEGIC LEVEL CASE STUDY – <span class="product-date-font"><?php echo $commencement; ?></span></h2>
         
         <form action="index.php?r=User/Payment" method="post" name="price">
-            <h3 class="red-heading">Revision Course <a href="#" onclick="document.forms['price'].submit();" class="red-heading"><u>£350</u></a></h3>
+            <h3 class="red-heading">Booster Course <a href="#" onclick="document.forms['price'].submit();" class="red-heading"><u>£350</u></a></h3>
         <input type="hidden" name="price" value="350">
         </form>
         

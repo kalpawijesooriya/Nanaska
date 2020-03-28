@@ -4,7 +4,7 @@
 <!---->
 <!--<script type="text/javascript" src="--><?php //echo Yii::app()->theme->baseUrl; ?><!--/js/jquery.easing.min.js"></script>-->
 <!--<script type="text/javascript" src="--><?php //echo Yii::app()->theme->baseUrl; ?><!--/js/jquery.easy-ticker.js"></script>-->
-<br><br>
+<br>
 <?php $this->pageTitle = Yii::app()->name; ?>
 <link rel="stylesheet" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/news.css"/>
 <div class="slider-area">
@@ -104,10 +104,10 @@
                     <div class="single-item-text">
                         <h4><a href="#">STRATEGIC LEVEL</a></h4>
                         <div class="single-item-text-info">
-                            <span>By: <span>M S Nawaz</span></span>
-                            <span>Date: <span>Feb 2020</span></span>
+
+                            <span>Date: <span><?php echo $strategicCommencement; ?></span></span>
                         </div>
-                        <p>There are many variations of sages of Lorem Ipsum available, but the mrity have suffered alteration in some orm, by injected humo ur,There are many but the mri have suffered alteration in some </p>
+                        <p>This is the  final hurdle of CIMA students. We offer a range of products with individual attention & complete 24/7 service support  to pass this level with flying colours. Click below for more details. <br> <br></p>
 
                     </div>
                     <div class="button-bottom">
@@ -125,10 +125,10 @@
                     <div class="single-item-text">
                         <h4><a href="#">MANAGEMENT LEVEL</a></h4>
                         <div class="single-item-text-info">
-                            <span>By: <span>Subas Das</span></span>
-                            <span>Date: <span>Feb 2020</span></span>
+
+                            <span>Date: <span><?php echo $managerialCommencement; ?></span></span>
                         </div>
-                        <p>There are many variations of sages of Lorem Ipsum available, but the mrity have suffered alteration in some orm, by injected humo ur,There are many but the mri have suffered alteration in some </p>
+                        <p>Our MCS Course once produced World's No 1 and we make you pass. Click below to learn more about our range of products which consits of 10 steps & key is 6 mock exams based on current pre seen in the real exam engine.	 </p>
 
                     </div>
                     <div class="button-bottom">
@@ -144,10 +144,10 @@
                     <div class="single-item-text">
                         <h4><a href="#">FOUNDATION LEVEL</a></h4>
                         <div class="single-item-text-info">
-                            <span>By: <span>Momin Boss</span></span>
-                            <span>Date: <span>Not Available</span></span>
+
+                            <span>Date: <span><?php echo $foundationCommencement; ?></span></span>
                         </div>
-                        <p>There are many variations of sages of Lorem Ipsum available, but the mrity have suffered alteration in some orm, by injected humo ur,There are many but the mri have suffered alteration in some </p>
+                        <p>With the full emphasis of E1, P1 and F1 where we revise all key theory aspects and with a detailed past paper analysis, we are offering a course for OCS. Click below for learn more. <br> <br>  </p>
 
                     </div>
                     <div class="button-bottom">
@@ -178,7 +178,7 @@
         </div>
     </div>
 </div>
-<div class="testimonial-area">
+<div class="testimonial-area" style="height: 50% !important;">
     <div class="container">
 
 
@@ -208,7 +208,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-text-slider text-center">
+                <div class="testimonial-text-slider text-center" style="width: 100%">
                     <?php
                     if (!empty($data)) {
 
@@ -227,7 +227,7 @@
         </div>
     </div>
 </div>
-<br/><br/><br/>
+<br/>
 <!--End of Testimonial Area-->
 <!--Latest News Area Start-->
 <div class="latest-area section-padding bg-white">
@@ -246,50 +246,52 @@
             <div class="col-md-6">
                 <div class="single-latest-item">
                     <div class="single-latest-image">
-                        <a href="#"><img src="themes/bootstrap/img/latest/1.jpg" alt=""></a>
+                        <a ><img src="themes/bootstrap/img/latest/1.jpg" alt=""></a>
                     </div>
                     <div class="single-latest-text">
-                        <h3><a href="#">LEAD LECTURE</a></h3>
+                        <h3><a >LEAD LECTURER</a></h3>
 
-                        <p>There are many variaons of passages of Lorem Ipsuable, amrn in some by injected humour, </p>
-                        <a href="#" class="button-default">Lead Lecturer</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="single-latest-item">
-                    <div class="single-latest-image">
-                        <a href="#"><img src="themes/bootstrap/img/latest/2.jpg" alt=""></a>
-                    </div>
-                    <div class="single-latest-text">
-                        <h3><a href="#">OUR SPECIALTY</a></h3>
+                        <p style="margin-bottom: 15px"> Mr. Channa leads a panel  of 23 lectures <br> <br> <br><br></p>
 
-                        <p>There are many variaons of passages of Lorem Ipsuable, amrn in some by injected humour, </p>
-                        <a href="#" class="button-default">Read MORE</a>
+                        <?php echo CHtml::link('READ MORE', array('Site/leadLecture'), array('class' => 'button-default')); ?>
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="single-latest-item">
                     <div class="single-latest-image">
-                        <a href="#"><img src="themes/bootstrap/img/latest/3.jpg" alt=""></a>
+                        <a ><img src="themes/bootstrap/img/latest/2.jpg" alt=""></a>
                     </div>
                     <div class="single-latest-text">
-                        <h3><a href="#">OUR FORUM</a></h3>
-                        <p>There are many variaons of passages of Lorem Ipsuable, amrn in some by injected humour, </p>
-                        <a href="#" class="button-default">Read More</a>
+                        <h3><a >OUR SPECIALTY</a></h3>
+
+                        <p style="margin-bottom: 15px">Our commitments for your success.<br> <br> <br><br>  </p>
+
+                        <?php echo CHtml::link('READ MORE', array('Site/ourSpecialty'), array('class' => 'button-default')); ?>
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="single-latest-item">
                     <div class="single-latest-image">
-                        <a href="#"><img src="themes/bootstrap/img/latest/4.jpg" alt=""></a>
+                        <a ><img src="themes/bootstrap/img/latest/3.jpg" alt=""></a>
                     </div>
                     <div class="single-latest-text">
-                        <h3><a href="#">SYLLABUS</a></h3>
-                        <p>There are many variaons of passages of Lorem Ipsuable, amrn in some by injected humour, </p>
-                        <a href="#" class="button-default">Read More</a>
+                        <h3><a >OUR FORUM</a></h3>
+                        <p style="margin-bottom: 15px"> Virtual space to access all study materials, videos & clarify doubts. <br> <br> <br>  </p>
+                        <a href="http://learncima.co.uk/nanaska/" class="button-default">See More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="single-latest-item">
+                    <div class="single-latest-image">
+                        <a ><img src="themes/bootstrap/img/latest/4.jpg" alt=""></a>
+                    </div>
+                    <div class="single-latest-text">
+                        <h3><a >SYLLABUS</a></h3>
+                        <p style="margin-bottom: 15px">CIMA Syllabus 2020	<br> <br> <br> <br></p>
+                        <?php echo CHtml::link('READ MORE', array('Site/syllabus'), array('class' => 'button-default')); ?>
                     </div>
                 </div>
             </div>
@@ -444,260 +446,5 @@
 
 <br/><br/><br/>
 
-<!--<div class="container footer-stable">-->
-<!--    <div class="row"> -->
-<!---->
-<!--        <div class="span4">-->
-<!--            --><?php
-//            $msgs = News::model()->getBroadcastNews();
-//            if (empty($msgs)) {
-//                echo '<div class="well">';
-//                echo '<center><b>News not available</b></center>';
-//
-//                echo '</div>';
-//            } else {
-//                ?>
-<!--                           <div style="text-align: center;">-->
-<!--                                    <i class="icon-arrow-up" id="nt-example1-prev"></i>-->
-<!--                                </div>-->
-<!--                <div id="nt-example1-container">-->
-<!---->
-<!--                    <ul id="nt-example1">-->
-<!--                        --><?php
-//                        foreach ($msgs as $msg) {
-//                            ?>
-<!--                            <li class="news-row">--><?php //echo $msg['message']; ?><!--</li>-->
-<!--                            --><?php
-//                        }
-//                        ?>
-<!--                    </ul>-->
-<!--                </div>-->
-            <!-- <div style="text-align: center;">-->
-<!--                                    <i class="icon-arrow-down" id="nt-example1-next"></i>-->
-<!--                      </div>-->
-<!--                --><?php
-//            }
-//            ?>
-<!--        </div>-->
-<!--    </div>-->
 
 
-<!--    <div class="row">-->
-<!--        <div class="span8">-->
-<!--            <div class="span3 text-align-center" id="syllabus_logo"><img id="syllabus_img" name="syllabus_img" src="assets/img/syllabus.jpg" class="img-responsive circle-border" alt="Responsive image" onclick="renderRest(this)"><h4>2015 Syllabus</h4> </div>-->
-<!--            <div class="span3 text-align-center" id="lecturer_logo"><img id="lecturer_img" name="lecturer_img" src="assets/img/lead_lecture.jpg" class="img-responsive circle-border" alt="Responsive image" onclick="renderRest(this)"> <h4>Lead Lecturer</h4></div>-->
-<!--            <div class="span3 text-align-center" id="speciality_logo"><img id="speciality_img" name="speciality_img" src="assets/img/our_strengths.jpg" class="img-responsive circle-border" alt="Responsive image" onclick="renderRest(this)"><h4>Our Specialty</h4></div>-->
-<!--            <div class="span3 text-align-center" id="forum_logo"> <a href="http://forum.learncima.com/forum" target="_blank"><img src="assets/img/forum.jpg" class="img-responsive circle-border" alt="Responsive image"></a><h4>Our Forum</h4> </div>-->
-<!---->
-<!--        </div>-->
-<!--        <div class="span4 videoWrapper" id="youtubevid">-->
-<!--            <iframe width="380" height="240" src="//www.youtube.com/embed/ku3Wo0Ul4-0" frameborder="0" allowfullscreen></iframe>-->
-<!---->
-<!--        </div>-->
-<!---->
-<!--    </div>-->
-<!--    <div id="lead_lecturer_info" style="display: none">-->
-<!--        <h2>Lead Lecturer</h2>-->
-<!--        <br />-->
-<!--        <div class="row">-->
-<!--            <div class="span1"></div>-->
-<!---->
-<!--            <div class="span3">-->
-<!--                <div id="pic-channa">                        -->
-<!--                    <img src="--><?php //echo Yii::app()->baseUrl; ?><!--/assets/img/mrchanna3.jpg" />-->
-<!--                </div>-->
-<!--            </div>-->
-<!---->
-<!--            <div class="span5">-->
-<!--                <ul id="ul-qualifications1">-->
-<!--                    <br /><br />-->
-<!--                    <li>Fellow Member of CIMA.</li>-->
-<!--                    <li>Fellow Member of the Institute of Chartered Accountants of Sri Lanka.</li>-->
-<!--                    <li>MBA from University of Southern Queensland, Australia.</li>-->
-<!--                    <li>First Class Degree from University of Sri Jayewardenepura, Sri Lanka.</li>                        -->
-<!--                </ul>-->
-<!--            </div>                -->
-<!--        </div>-->
-<!--        <br />-->
-<!---->
-<!--        <div class="row">-->
-<!--            <div class="span11">-->
-<!--                <div class="span7">-->
-<!--                    <ul id="ul-qualifications2">-->
-<!--                        <li>Over 17 years of lecturing experience.</li>-->
-<!--                        <li>The lecturer for P3 (Performance Strategy), E3 (Enterprise Strategy) and T4 at one of the largest CIMA Institutes in the world.</li>-->
-<!--                        <li>Conducted revision programmes in Malaysia, Singapore, India, Hong Kong & Indonesia for P3 and for T4 as invited by CIMA Malaysia & CIMA Singapore.</li>-->
-<!--                        <li>Ex-Part Time Lecturer for MBA at Post Graduate Institute of Management, University of Sri Jayewardenepura.</li>-->
-<!--                    </ul>-->
-<!---->
-<!--                </div>-->
-<!---->
-<!--                <div class="span5">-->
-<!--                    <h4 align="justify" id="heading-prfessionalexp">Professional Experiences</h4>-->
-<!--                    <ul id="ul-qualifications1">-->
-<!--                        <br />-->
-<!--                        <li>Country Manager for Ernst and Young, Maldives. (2000 to 2002)</li>-->
-<!--                        <li>CFO for a multinational manufacturing entity. (2003 to up to date)</li>-->
-<!--                        <li>With his experiences and knowledge, a great mixture of theory and application for CIMA is assured.</li>-->
-<!--                    </ul>-->
-<!---->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!---->
-<!--    </div>-->
-<!--    <div id="syllabus_info" style="display: none">-->
-<!--        <h2>2015 Syllabus</h2><br/>-->
-<!--        <img src="assets/img/syllabus_pic.jpg" class="img-responsive" alt="Responsive image"> -->
-<!--    </div>-->
-<!--    <div id="specialty_info" style="display: none">-->
-<!--        <h2>Our Specialty</h2>-->
-<!--        <div class="span5">-->
-<!--            <ul id="ul-qualifications1">-->
-<!--                <br /><br />-->
-<!--                <li>Personalized attention</li>-->
-<!--                <li>1-2-1 coaching</li>-->
-<!--                <li>Practice exams</li>-->
-<!--                <li>Live classrooms</li>-->
-<!--                <li>Best technology</li>-->
-<!--                <li>Speedy response</li>-->
-<!--            </ul>-->
-<!--        </div>-->
-<!--    </div>-->
-<!---->
-<!---->
-<!--</div>-->
-
-<!--    /container -->
-
-<!--<div class="bottom_container_newsletter">-->
-<!--    <div class="container"> <h2> For Free Materials  </h2> <p> by submitting your email address we will be able to send you free materials </p>-->
-<!--        <form class="form-search">-->
-<!--            <div class="span5"></div>-->
-<!--            <div class="span3" style="margin-left: 0px;">-->
-<!--                <input id="news_text_box" type="email" class="input-medium search-query" placeholder="Your Email Address" required>-->
-<!--                                        <button type="submit" class="button button-signin">Submit</button>-->
-<!--                --><?php
-//                echo CHtml::ajaxButton('Submit', array('User/sendMaterialMail'), array(
-//                    'type' => 'POST',
-//                    'dataType' => 'json',
-//                    'data' => array('mail' => 'js:news_text_box.value'),
-//                    'beforeSend' => 'function(){
-//                $("#loading").addClass("loading_front");}',
-//                    'complete' => 'function(){
-//                 $("#loading").removeClass("loading_front");}',
-//                    'success' => 'js:function(data){
-//                                    var google_conversion_id = 962159633;
-//                                    var google_conversion_language = "en";
-//                                    var google_conversion_format = "3";
-//                                    var google_conversion_color = "ffffff";
-//                                    var google_conversion_label = "4OI5CIPOhVkQkcjlygM";
-//                                    var google_remarketing_only = false;
-//
-//                                    $.getScript( "http://www.googleadservices.com/pagead/conversion.js" );
-//
-//                                    bootbox.alert(data.msg);
-//                                    document.getElementById("news_text_box").value="";
-//                                }'
-//                        ), array(
-//                    'class' => 'button button-signin',
-//                    'id' => 'material_submit' . rand(0, 99),
-//                ));
-//                ?>
-<!--            </div>-->
-<!--            <div class="span1" style="margin-left: -10px;">-->
-<!--                <div id="loading" style="width: 32px; height: 32px;"></div>-->
-<!--            </div>-->
-<!--        </form>-->
-<!---->
-<!--    </div>-->
-<!--</div>-->
-
-<!--<script type="text/javascript" src="--><?php //echo Yii::app()->theme->baseUrl; ?><!--/js/slick.min.js"></script> -->
-<!--<script>-->
-<!--                //	$(document).ready(function(){-->
-<!--                //		$('.slider').slick({-->
-<!--                //		  slidesToShow: 5,-->
-<!--                //		  slidesToScroll: 1,-->
-<!--                //		  autoplay: true,-->
-<!--                //		  autoplaySpeed: 2000,		-->
-<!--                //		  vertical:true-->
-<!--                //		});-->
-<!--                //	});-->
-<!--</script>-->
-
-<!--<script type="text/javascript">
-/* <![CDATA[ */
-var google_conversion_id = 962159633;
-var google_conversion_language = "en";
-var google_conversion_format = "3";
-var google_conversion_color = "ffffff";
-var google_conversion_label = "4OI5CIPOhVkQkcjlygM";
-var google_remarketing_only = false;
-/* ]]> */
-</script>
-<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
-</script>
-<noscript>
-<div style="display:inline;">
-<img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/962159633/?label=4OI5CIPOhVkQkcjlygM&amp;guid=ON&amp;script=0"/>
-</div>
-</noscript>-->
-
-
-
-
-<!--<script type="text/javascript">-->
-<!---->
-<!--    function renderRest(element) {-->
-<!--        //alert(element.name);-->
-<!--        var options = {};-->
-<!--        if (element.name == "syllabus_img") {-->
-<!--            $('#lead_lecturer_info').hide();-->
-<!--            $('#specialty_info').hide();-->
-<!--            $('#syllabus_info').slideDown(1000);-->
-<!--            //if(document.getElementById('syllabus_info').style.visibility == "hidden"){-->
-<!--            $('html, body').animate({-->
-<!--                scrollTop: $('#syllabus_info').offset().top-->
-<!--            }, 1200);-->
-<!--            //}-->
-<!---->
-<!--        } else if (element.name == "lecturer_img") {-->
-<!--            $('#syllabus_info').hide();-->
-<!--            $('#specialty_info').hide();-->
-<!--            $('#lead_lecturer_info').slideDown(1000);-->
-<!--            $('html, body').animate({-->
-<!--                scrollTop: $('#lead_lecturer_info').offset().top-->
-<!--            }, 1000);-->
-<!---->
-<!--        } else if (element.name == "speciality_img") {-->
-<!--            $('#syllabus_info').hide();-->
-<!--            $('#lead_lecturer_info').hide();-->
-<!--            $('#specialty_info').slideDown(1000);-->
-<!--            $('html, body').animate({-->
-<!--                scrollTop: $('#specialty_info').offset().top-->
-<!--            }, 1000);-->
-<!---->
-<!--        }-->
-<!--    }-->
-<!--</script>-->
-
-
-<!--<script type="text/javascript">-->
-<!--    $(document).ready(function () {-->
-<!---->
-<!--        var dd = $('#nt-example1-container').easyTicker({-->
-<!--            direction: 'up',-->
-<!--            easing: 'easeInExpo',-->
-<!--            speed: 'slow',-->
-<!--            interval: 3000,-->
-<!--            height: 350,-->
-<!--            visible: 4,-->
-<!--            mousePause: 1,-->
-<!--            controls: {-->
-<!--                up: '#nt-example1-prev',-->
-<!--                down: '#nt-example1-next'-->
-<!--            }-->
-<!--        });-->
-<!--    });-->
-<!--</script>-->

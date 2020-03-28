@@ -30,7 +30,27 @@ class SiteController extends Controller {
     public function actionIndex() {
         // renders the view file 'protected/views/site/index.php'
         // using the default layout 'protected/views/layouts/main.php'
-        $this->render('index');
+
+        $model = new ProductCategories();
+        $strategiccommenceDate = $model->getCommencement(1);
+        $strategiccommenceString = (strlen($strategiccommenceDate['commencement']) > 1 ? '('.$strategiccommenceDate['commencement'].')' : '(Coming Soon...)');
+
+        $managerialcommenceDate = $model->getCommencement(2);
+        $managerialcommenceString = (strlen($managerialcommenceDate['commencement']) > 1 ? '('.$managerialcommenceDate['commencement'].')' : '(Coming Soon...)');
+
+        $operationalcommenceDate = $model->getCommencement(3);
+        $operationalcommenceString = (strlen($operationalcommenceDate['commencement']) > 1 ? '('.$operationalcommenceDate['commencement'].')' : '(Coming Soon...)');
+
+        $foundationcommenceDate = $model->getCommencement(4);
+        $foundationcommenceString = (strlen($foundationcommenceDate['commencement']) > 1 ? '('.$foundationcommenceDate['commencement'].')' : '(Coming Soon...)');
+
+        $this->render('index',array(
+            'strategicCommencement'=> $strategiccommenceString,
+            'managerialCommencement'=> $managerialcommenceString,
+            'operationalCommencement'=> $operationalcommenceString,
+            'foundationCommencement'=> $foundationcommenceString,
+        ));
+
     }
 
     /**
@@ -205,6 +225,11 @@ class SiteController extends Controller {
         $this->render('testimonial');
     }
 
+    public function actionleadLecture() {
+        $this->render('leadLecture');
+    }
+
+
     public function actionViewPrivacy() {
         $this->render('privacy');
     }
@@ -258,6 +283,13 @@ class SiteController extends Controller {
     public function actionViewBroadcastNews() {
         $newsId = $_REQUEST['news_id'];
         $this->render('broadcast_news', array('news_id' => $newsId));
+    }
+
+    public function actionourSpecialty() {
+        $this->render('ourSpecialty');
+    }
+    public function actionsyllabus() {
+        $this->render('syllabus');
     }
 
 }

@@ -1210,7 +1210,7 @@ body {
 .testimonial-area {
     background: rgba(0, 0, 0, 0) url("../img/banner/3.jpg") no-repeat scroll 0 0 / cover;
     overflow: hidden;
-    padding: 95px 0 82px;
+    padding: 20px 0 20px;
     position: relative;
 }
 .testimonial-area:after {

@@ -45,14 +45,9 @@ $this->widget('bootstrap.widgets.TbAlert', array(
         </div>
     </div>
 </div>
-    <br> <br>
+    <br>
 <!--End of Breadcrumb Banner Area-->
-<!--Google Map Area Start-->
-<div class="google-map-area">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.1226013365304!2d79.88915801477265!3d6.875911295031303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25bc818a089b5%3A0x5be46ebee1b884f6!2sNanaska%20Institute!5e0!3m2!1sen!2slk!4v1583142839725!5m2!1sen!2slk" width="100%" height="485" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-</div>
-    <br> <br>
-<!--End of Google Map Area-->
+
 <!--Contact Form Area Start-->
 <div class="contact-form-area section-padding">
     <div class="container">
@@ -60,18 +55,17 @@ $this->widget('bootstrap.widgets.TbAlert', array(
             <div class="col-md-4">
                 <h4 class="contact-title">contact info</h4>
                 <div class="contact-text">
-                    <p><span class="c-icon"><i class="zmdi zmdi-phone"></i></span><span class="c-text">+88 018 785 454 589</span></p>
-                    <p><span class="c-icon"><i class="zmdi zmdi-email"></i></span><span class="c-text">info@nanaska.com</span></p>
-                    <p><span class="c-icon"><i class="zmdi zmdi-pin"></i></span><span class="c-text">House 09, Road 32, Mohammadpur,<br>
-                                    Dhaka-1200, UK</span></p>
+                    <p><span class="c-icon"><i class="zmdi zmdi-phone"></i></span><span class="c-text">+94 777 398 996	</span></p>
+                    <p><span class="c-icon"><i class="zmdi zmdi-email"></i></span><span class="c-text">info@nanaska.com	</span></p>
+                    <p><span class="c-icon"><i class="zmdi zmdi-pin"></i></span><span class="c-text">104/11, Lake Road ,Boralesgamuwa	<br>Sri Lanka - 10290
+                                   </span></p>
                 </div>
                 <h4 class="contact-title">social media</h4>
                 <div class="link-social">
-                    <a href="#"><i class="zmdi zmdi-facebook"></i></a>
-                    <a href="#"><i class="zmdi zmdi-rss"></i></a>
-                    <a href="#"><i class="zmdi zmdi-google-plus"></i></a>
-                    <a href="#"><i class="zmdi zmdi-pinterest"></i></a>
-                    <a href="#"><i class="zmdi zmdi-instagram"></i></a>
+                    <a href="https://www.facebook.com/LearnCIMA			"><i class="zmdi zmdi-facebook"></i></a>
+                    <a href="https://lk.linkedin.com/in/nanaska-learncima-92b430120					"><i class="zmdi zmdi-rss"></i></a>
+                    <a href="https://twitter.com/learn_cima"><i class="zmdi zmdi-twitter"></i></a>
+
                 </div>
             </div>
             <div class="col-md-7">

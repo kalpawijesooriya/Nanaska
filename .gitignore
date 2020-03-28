@@ -6,6 +6,8 @@ package-lock.json
 .idea/workspace.xml
 .idea
 
+protected/runtime/application.log
+protected/runtime/session-1.1.22.db
 
 # Created by https://www.gitignore.io/api/phpstorm
 # Edit at https://www.gitignore.io/?templates=phpstorm
@@ -32,7 +34,8 @@ package-lock.json
 .idea/**/dynamic.xml
 .idea/**/uiDesigner.xml
 .idea/**/dbnavigator.xml
-
+.idea/**/workspace.xml
+.idea/workspace.xml
 # Gradle
 .idea/**/gradle.xml
 .idea/**/libraries

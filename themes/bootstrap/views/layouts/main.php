@@ -8,7 +8,7 @@
     <title><?php echo CHtml::encode($this->pageTitle); ?></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- favicon
 		============================================ -->
@@ -164,7 +164,19 @@
             border-radius: 0px;
         }
     </style>
+    <style>
+        @media (min-width: 1024px) {
+            .hidden-for-desktopView {
+                display: none;
+            }
+        }
 
+        @media (max-width:629px) {
+            .hidden-for-mobileView {
+                display: none;
+            }
+        }
+    </style>
 
 </head>
 
@@ -183,7 +195,7 @@
                             </div>
                             <div class="col-lg-5 col-md-6 col-sm-6 col-xs-12">
                                 <div class="header-top-right">
-                                    <div class="content"><a href="http://forum.learncima.com/forum"><i class="zmdi zmdi-globe"></i> Our Forum</a></div>
+                                    <div class="content"><a href="http://learncima.co.uk/nanaska/"><i class="zmdi zmdi-globe"></i> Our Forum</a></div>
                                     <?php
                                       if (Yii::app()->user->isGuest) {
                                           echo '<div class="content"><a href="#"><i class="zmdi zmdi-account"></i>Exam Practice</a>
@@ -249,7 +261,11 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-3 col-sm-12">
-                                <div class="logo">
+                                <div class="logo hidden-for-desktopView">
+                                    <a href="/nanaska-backend/index.php"><img  src="themes/bootstrap/img/logo/logoHedder.png" alt="EDUCAT" style="margin-left: -20%"></a>
+
+                                </div>
+                                <div class="logo hidden-for-mobileView">
                                     <a href="/nanaska-backend/index.php"><img class="hedderLogo" src="themes/bootstrap/img/logo/logoHedder.png" alt="EDUCAT"></a>
 
                                 </div>
@@ -296,11 +312,7 @@
 
                                         </nav>
                                     </div>
-                                    <ul class="header-search">
-                                        <li class="search-menu">
-                                            <i id="toggle-search" class="zmdi zmdi-search-for"></i>
-                                        </li>
-                                    </ul>
+
                                     <!--Search Form-->
                                     <div class="search">
                                         <div class="search-form">
@@ -379,10 +391,10 @@
             <div class="newsletter-area">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-5 col-sm-5">
+                        <div class="col-md-5 col-sm-5" style="height: 20px">
                             <div class="newsletter-content">
                                 <h3>SUBSCRIBE</h3>
-                                <h2>TO GET OUR NEW MATERIALS</h2>
+                                <h4>TO GET OUR NEW MATERIALS</h4>
                             </div>
                         </div>
                         <div class="col-md-7 col-sm-7">
@@ -569,10 +581,11 @@
 <style>
 
 .hedderLogo{
-    max-width: 150% !important;
-    min-width: 150%!important;
-    min-height:150%!important;
-    max-height:150%!important;
+    max-width: 250px !important;
+    min-width: 250%!important;
+    min-height:250%!important;
+    max-height:250%!important;
+    margin-left: -50%!important;
 }
 
     .notification .badge {

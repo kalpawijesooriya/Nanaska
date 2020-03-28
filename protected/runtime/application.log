@@ -8333,3 +8333,25 @@ Stack trace:
 #14 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
 #15 C:\wamp64\www\nanaska-backend\index.php(14): CWebApplication->run()
 REQUEST_URI=/nanaska-backend/index.php?r=user/payment
+2020/03/26 13:42:31 [error] [system.db.CDbCommand] Error in preparing SQL: DELETE FROM 'YiiSession' WHERE expire<:expire
+2020/03/26 13:42:31 [error] [system.db.CDbCommand] CDbCommand::execute() failed: CDbCommand failed to prepare the SQL statement: SQLSTATE[HY000]: General error: 1 no such table: YiiSession. The SQL statement executed was: DELETE FROM 'YiiSession' WHERE expire<:expire.
+2020/03/27 12:55:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "leadLecture".' in C:\wamp64\www\yii\framework\web\CController.php:486
+Stack trace:
+#0 C:\wamp64\www\yii\framework\web\CController.php(270): CController->missingAction('leadLecture')
+#1 C:\wamp64\www\yii\framework\web\CWebApplication.php(282): CController->run('leadLecture')
+#2 C:\wamp64\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Site/leadLectur...')
+#3 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\wamp64\www\nanaska-backend\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/nanaska-backend/index.php?r=Site/leadLecture
+HTTP_REFERER=http://localhost/nanaska-backend/
+---
+2020/03/27 16:56:20 [error] [php] Undefined index: news_id (C:\wamp64\www\nanaska-backend\protected\controllers\SiteController.php:269)
+Stack trace:
+#0 C:\wamp64\www\yii\framework\web\CController.php(286): SiteController->runAction()
+#1 C:\wamp64\www\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#2 C:\wamp64\www\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#3 C:\wamp64\www\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\wamp64\www\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#5 C:\wamp64\www\nanaska-backend\index.php(14): CWebApplication->run()
+REQUEST_URI=/nanaska-backend/index.php?r=Site/ourSpecialty
