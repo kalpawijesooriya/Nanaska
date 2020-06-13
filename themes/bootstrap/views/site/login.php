@@ -94,7 +94,7 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl.'/js/boo
 <style>
 
     .textInput {
-        height: 30px !important;
+        height: 35px !important;
     }
     .loginBtn{
         font-size: 16px;

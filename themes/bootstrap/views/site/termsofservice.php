@@ -8,7 +8,7 @@
 
         <p>Welcome to Nanaska.com. If you continue to browse and use this web site, you are agreeing to
             comply with and be bound by the following terms & conditions of use, which together with our privacy
-            policy govern Nanaska‚Äôs relationship with you in relation to this web site. If you
+            policy govern Nanaskaís relationship with you in relation to this web site. If you
             disagree with any part of these terms & conditions, please do not use our website.</p>
 
         <br />
@@ -39,7 +39,7 @@
             <li>The student should have paid the course fees in full by the date upon which the courses
                 fees were due. If a special discount was applicable for the fees paid, then not eligible for
                 pass assurance.</li>
-            <li>The student expecting to use Pass Assurance scheme should notify it by the time of re-¬≠‚Äê
+            <li>The student expecting to use Pass Assurance scheme should notify it by the time of re-≠-
                 registration with Nanaska and not at any time later once the course have been
                 started.</li>
             <li>Pass assurance is not transferable or cannot be carried forward hence can be used only
@@ -134,7 +134,7 @@
             <li>The course fee for any course at any given time will be as displayed on the website and
                 enrolment form. Course fees are quoted in pounds sterling.</li>
             <li>The course fee is shown prior to completion of the online transaction.</li>
-            <li>If you select ‚Äúpay by debit or credit card‚Äù option to indicate that you will pay the course fee,
+            <li>If you select ìpay by debit or credit cardî option to indicate that you will pay the course fee,
                 Nanaska will debit the course fee from your credit card or debit card immediately you make an
                 order for a course. Credit or debit card details are collected over a secure link.</li>
             <li>Upon receiving your booking of a course, Nanaska will send an invoice within 24 hours.</li>
@@ -183,7 +183,7 @@
             <li>Supported Browsers</li>
             <ul style="list-style-type:circle">
                 <li>Microsoft Internet Explorer Version 7 or above</li>
-                <li>Mozilla Firefox Version 3.6 ‚Äì 31</li>
+                <li>Mozilla Firefox Version 3.6 ñ 31</li>
                 <li>Google Chrome Version 30 or above</li>
             </ul>
 
@@ -204,9 +204,9 @@
                 <li>Java software need to be installed on your computer
                 </li>
             </ul>
-            <li>Disable pop-¬≠‚Äêup blocking software</li>
+            <li>Disable pop-≠-up blocking software</li>
             <ul>
-                <li>Pop-¬≠‚Äêup blocking Applications might prevent Learning Objects from loading successfully.
+                <li>Pop-≠-up blocking Applications might prevent Learning Objects from loading successfully.
                 </li>
             </ul>
 
@@ -254,7 +254,7 @@
             <li>From time to time this web site may include links to other web sites. These links are provided for
                 your convenience to provide further information. They do not signify that we endorse the web
                 site(s). We have no responsibility for the content of the linked website(s).</li>
-            <li>Periods of downtime may be required in respect of Nanaska and Nanaska‚Äôs information
+            <li>Periods of downtime may be required in respect of Nanaska and Nanaskaís information
                 technology infrastructure (for example, the website or any sites used to host online materials).
                 Technical support may not be available at such time. The LearnCIMA will not have any liability
                 with respect to any such periods of unavailability.</li>
@@ -266,15 +266,15 @@
                 network or lines, computer online systems, servers or providers, computer equipment or
                 software, failure of any email or online application to be received on account of technical
                 problems or traffic congestion on the internet, telephone lines or at any web site, or any               
-                combination of these, including any injury or damage to a student‚Äôs or other customer‚Äôs or any
-                other person‚Äôs computer or mobile telephone related to or resulting from participation or
+                combination of these, including any injury or damage to a studentís or other customerís or any
+                other personís computer or mobile telephone related to or resulting from participation or
                 downloading any materials.</li>
         </ol>
 
         <div class="master_heading_terms-sub" style="margin-top: 0px !important;
         color: #23519b !important;
         margin-bottom: 20px !important;
-        font-size: 20px !important;">Online Learning ‚Äì Study Materials</div>
+        font-size: 20px !important;">Online Learning ñ Study Materials</div>
 
         <ol type="1">
             <li>The study materials which are included online courses will be able to access via your account
@@ -296,7 +296,7 @@
         <ol type="1">
             <li>You may defer your online course to the next sitting if Nanaska is notified in writing in advance.
                 Written notification should be received no later than one week before the start of the course
-                period for which you have enrolled for. An administration charge of ¬£60 will be payable. It may be
+                period for which you have enrolled for. An administration charge of £60 will be payable. It may be
                 necessary to purchase new study materials upon recommencement of deferred study. The costs
                 of these are not included in amounts previously paid and will be charged separately.</li>
             <li>You may cancel your purchase of an online course within a period of 7 working days beginning on
@@ -335,19 +335,19 @@
             reproduced, published, stored in a retrieval system or transmitted by any form or by any means without
             the prior written permission of LearnCIMA.</p>
 
-        <p>In consideration of receipt by Nanaska of the Fee, Nanaska grants to you a non-¬≠‚Äêexclusive, non-¬≠‚Äê
+        <p>In consideration of receipt by Nanaska of the Fee, Nanaska grants to you a non-≠-exclusive, non-≠-
             transferable license to use the study materials and study contents for the sole purpose of studying for the
             relevant course ordered and paid and/or the online course. Further the license granted to access study
             materials is to use on user account only.</p>
-        <p>Save as expressly set out in these terms, you may not modify, copy, reproduce, re-¬≠‚Äêpublish, sub-¬≠‚Äêlicense,
+        <p>Save as expressly set out in these terms, you may not modify, copy, reproduce, re-≠-publish, sub-≠-license,
             sell, upload, broadcast, post, transmit, make available, disseminate or distribute in any way any of the
             study materials or study content. You may not modify, adapt, merge, translate, disassemble, decompile,
             recompile or reverse engineer any software forming part of the Online Study Materials or create
             derivative works based on the whole of or any part, or which incorporate, the Online Study Materials or
             study into any software program.</p>
         <p>Use of the Study Materials not expressly permitted in these Terms is strictly prohibited and will constitute
-            an infringement of either Nanaska‚Äôs Copyright or Nanaska‚Äôs other intellectual property rights, and /
-            or the Copyright or other Intellectual property rights of Nanaska‚Äôs licensors.</p>
+            an infringement of either Nanaskaís Copyright or Nanaskaís other intellectual property rights, and /
+            or the Copyright or other Intellectual property rights of Nanaskaís licensors.</p>
 
         <br />
         <div class="master_heading_terms-sub" style="margin-top: 0px !important;
@@ -374,7 +374,7 @@
         margin-bottom: 20px !important;
         font-size: 20px !important;">Limitation of Liability</div>
 
-        <p>The exclusions and limitations of liability contained in these Terms do not apply to a party‚Äôs liability:</p>
+        <p>The exclusions and limitations of liability contained in these Terms do not apply to a partyís liability:</p>
 
         <ol type="1">
             <li>For fraud or willful default</li>
@@ -405,7 +405,7 @@
 
 
         <p>Nanaska will not be held responsible for any delay or failure to comply with its obligations under these
-            Terms if the delay or failure arises from any cause which is beyond Nanaska‚Äôs reasonable control. This
+            Terms if the delay or failure arises from any cause which is beyond Nanaskaís reasonable control. This
             condition does not affect your statutory rights.</p>
 
         <br />

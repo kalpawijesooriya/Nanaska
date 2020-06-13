@@ -158,6 +158,32 @@
                  src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/962159633/?value=0&amp;guid=ON&amp;script=0"/>
         </div>
     </noscript>
+<style>
+
+.hedderLogo{
+    max-width: 175% !important;
+    min-width: 175%!important;
+    min-height:175%!important;
+    max-height:175%!important;
+ 
+}
+
+    .notification .badge {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        padding: 5px 10px;
+        border-radius: 50%;
+        background: red;
+        color: white;
+    }
+body {
+    overflow-x: hidden; /* Hide scrollbars */
+}
+
+
+
+</style>
 
     <style>
         #news_text_box{
@@ -435,7 +461,7 @@
                                     <div class="single-footer-widget">
                                         <h3>GET IN TOUCH</h3>
                                         <a href="tel:555-555-1212"><i class="fa fa-phone"></i>+94 - 777 - 739 - 8996</a>
-                                        <span><i class="fa fa-envelope"></i>info@nanaska.com</span>
+                                        <span><i class="fa fa-envelope"></i><a href = "mailto: info@nanaska.com">info@nanaska.com</a></span>
 
                                     </div>
                                 </div>
@@ -464,9 +490,9 @@
 
                                 <div class="social-icons">
                                     <a href="https://www.facebook.com/LearnCIMA"><i class="zmdi zmdi-facebook"></i></a>
-                                    <a href="https://www.linkedin.com/in/learn-cima-92b430120?authType=NAME_SEARCH&authToken=4cu3&locale=en_US&trk=tyah&trkInfo=clickedVertical%3Amynetwork%2CclickedEntityId%3A502704179%2CauthType%3ANAME_SEARCH%2Cidx%3A1-1-1%2CtarId%3A1466066734498%2Ctas%3Alearn%20cima"><i class="zmdi zmdi-linkedin"></i></a>
+                                    <a href="https://lk.linkedin.com/in/nanaska-learncima-92b430120"><i class="zmdi zmdi-linkedin"></i></a>
                                     <a href="https://twitter.com/learn_cima"><i class="zmdi zmdi-twitter"></i></a>
-                                    <a href="#"><i class="zmdi zmdi-instagram"></i></a>
+
                                 </div>
                               </div>
                             </div>
@@ -578,29 +604,3 @@
     }
 
 </script>
-<style>
-
-.hedderLogo{
-    max-width: 250px !important;
-    min-width: 250%!important;
-    min-height:250%!important;
-    max-height:250%!important;
-    margin-left: -50%!important;
-}
-
-    .notification .badge {
-        position: absolute;
-        top: -10px;
-        right: -10px;
-        padding: 5px 10px;
-        border-radius: 50%;
-        background: red;
-        color: white;
-    }
-body {
-    overflow-x: hidden; /* Hide scrollbars */
-}
-
-
-
-</style>

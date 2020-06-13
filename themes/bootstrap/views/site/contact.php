@@ -1,4 +1,6 @@
-<?php if (Yii::app()->user->hasFlash('contact')): ?>
+<?php if (Yii::app()->user->hasFlash('contact')): 
+    
+    ?>
 <script type="text/javascript">
     /* <![CDATA[ */
     var google_conversion_id = 962159633;
@@ -63,7 +65,7 @@ $this->widget('bootstrap.widgets.TbAlert', array(
                 <h4 class="contact-title">social media</h4>
                 <div class="link-social">
                     <a href="https://www.facebook.com/LearnCIMA			"><i class="zmdi zmdi-facebook"></i></a>
-                    <a href="https://lk.linkedin.com/in/nanaska-learncima-92b430120					"><i class="zmdi zmdi-rss"></i></a>
+                    <a href="https://lk.linkedin.com/in/nanaska-learncima-92b430120					"><i class="zmdi zmdi-linkedin"></i></a>
                     <a href="https://twitter.com/learn_cima"><i class="zmdi zmdi-twitter"></i></a>
 
                 </div>
@@ -139,5 +141,19 @@ $this->widget('bootstrap.widgets.TbAlert', array(
         </div>
     </div>
 </div>
+<?php Yii::app()->clientScript->registerCoreScript('jquery'); ?>
+<?php Yii::app()->clientScript->registerCoreScript('jquery.ui'); ?>
+<?php $cs = Yii::app()->clientScript;
+$cs->coreScriptPosition = $cs::POS_END;
+
+$cs->scriptMap = array(
+    'jquery.js'=>false,
+    'jquery.ui.js'=>false,
+    'jquery.min.js'=>false
+); ?>
+
+<script src="<?php echo Yii::app()->request->baseUrl; ?>/themes/bootstrap/js/vendor/jquery-1.12.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 <!--End of Contact Form-->
 <?php endif; ?>

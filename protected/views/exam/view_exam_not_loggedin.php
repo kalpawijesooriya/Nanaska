@@ -205,10 +205,7 @@ foreach ($courses as $course) {
         }
     }
 
-    body {
-        background-color:#83a5b4;
-    }
-    .btn-group {
+       .btn-group {
 
         alignment: center;
         margin: 50px 20%;

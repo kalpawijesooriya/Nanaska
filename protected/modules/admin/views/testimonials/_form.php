@@ -41,7 +41,7 @@
         <input name="Testimonials[image_url]" id="Testimonials_image_url" type="file" accept="image/*">
         <?php echo $form->error($model,'image_url'); ?>
         <label for="Testimonials_image_url" id="file-drag">
-            <img id="file-image" src="" alt="Preview" class="image" >
+            <img id="file-image" src="" alt="Preview" >
             <div id="start">
                 <i class="fa fa-download" aria-hidden="true"></i>
                 <div>Select a file or drag here</div>
@@ -219,7 +219,7 @@
         if(!$model->isNewRecord)
         {
 
-            echo 'document.getElementById("file-image").src = "/nanaska-backend/'.$model["image_url"].'";';
+            echo 'document.getElementById("file-image").src = "/nanaska-back/'.$model["image_url"].'";';
 
             echo'    document.getElementById(\'file-image\').style.visibility = \'visible\';';
 
@@ -240,13 +240,13 @@
 
 
 <style>
-
+img{max-height: 100px}
     .width274{width: 500px;}
 
     @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
     @import url('https://fonts.googleapis.com/css?family=Roboto');
 
-img{max-height: 120px}
+
     .uploader {
         display: block;
         clear: both;
@@ -352,7 +352,6 @@ img{max-height: 120px}
     }
     .uploader .btn {
         display: inline-block;
-        margin: 0.5rem 0.5rem 1rem 0.5rem;
         clear: both;
         font-family: inherit;
         font-weight: 700;

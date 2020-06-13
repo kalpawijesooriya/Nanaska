@@ -41,9 +41,9 @@ foreach ($courses as $course) {
                 <?php
                 foreach ($courses as $key => $course) {
                     if ($key === 0) {
-                        echo '<li class="button active col col-lg-4 col-md-12"  ><a href="#' . $course->course_id . '"  data-toggle="tab" id="ttt" onclick="clearFunction()">' . $course->course_name . '</a></li>';
+                        echo '<li class="button active col col-lg-4" style="margin-top:20px" ><a href="#' . $course->course_id . '"  data-toggle="tab" id="ttt" onclick="clearFunction()">' . $course->course_name . '</a></li>';
                     } else {
-                        echo '<li class="button col col-lg-4 col-md-12"><a href="#' . $course->course_id . '"  data-toggle="tab" id="ttt" onclick="clearFunction()">' . $course->course_name . '</a></li>';
+                        echo '<li class="button col col-lg-4" style="margin-top:20px"><a href="#' . $course->course_id . '"  data-toggle="tab" id="ttt" onclick="clearFunction()">' . $course->course_name . '</a></li>';
                     }
                 }
                 ?>
@@ -196,10 +196,6 @@ foreach ($courses as $course) {
             margin-right: 10%;
             border-radius: 30px;
         }
-    }
-
-    body {
-        background-color:#83a5b4;
     }
     .btn-group {
 

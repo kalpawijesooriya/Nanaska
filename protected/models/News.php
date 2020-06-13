@@ -108,12 +108,35 @@ class News extends CActiveRecord {
 
     public function getBroadcastNews() {
         $data = Yii::app()->db->createCommand()
-                ->select('*')
+                ->select('message,news_id')
                 ->from('news')
                 ->where('news_type=:news_type', array(':news_type' => 'BROADCAST_NEWS'))
                 ->queryAll();
+        $count1=0;
 
-        return $data;
+        $main_arry=array();
+        $sub_arry=array();
+
+        foreach ( $data as $item)
+        {
+            if ($count1<=3){
+                array_push($sub_arry, $item);
+
+            }
+            else if($count1==4){
+               // echo json_encode($sub_arry);
+                array_push($main_arry,$sub_arry);
+                $sub_arry=array();
+                array_push($sub_arry, $item);
+                $count1=0;
+            }
+            $count1= $count1+1;
+        }
+
+        if ($count1<=3)
+            array_push($main_arry,$sub_arry);
+
+        return $main_arry;
     }
 
     public function getAllTheBroadcastNews($news_id) {
@@ -123,7 +146,8 @@ class News extends CActiveRecord {
                 ->where('news_id=:news_id', array(':news_id' => $news_id))
                 ->queryAll();
 
-        return $data;
+
+        return  $data;
     }
 
     public function getLevelNews($userid) {

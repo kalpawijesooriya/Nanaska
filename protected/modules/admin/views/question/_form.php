@@ -8,7 +8,20 @@
         color: red;
     }
 </style>
+<?php Yii::app()->clientScript->registerCoreScript('jquery'); ?>
+<?php Yii::app()->clientScript->registerCoreScript('jquery.ui'); ?>
+<?php $cs = Yii::app()->clientScript;
+$cs->coreScriptPosition = $cs::POS_END;
 
+$cs->scriptMap = array(
+    'jquery.js'=>false,
+    'jquery.ui.js'=>false,
+    'jquery.min.js'=>false
+); ?>
+
+<script src="<?php echo Yii::app()->request->baseUrl; ?>/themes/bootstrap/js/vendor/jquery-1.12.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 <?php
 //Yii::app()->session['drag_drop_typeb_session'] = array();
 $user_id = Yii::app()->user->getId();
@@ -20,7 +33,7 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 //		'validateOnSubmit'=>true,
 //	),
     'htmlOptions' => array('enctype' => 'multipart/form-data'),
-        ));
+));
 ?>
 
 
@@ -42,7 +55,7 @@ foreach (Yii::app()->user->getFlashes() as $key => $message) {
 <div class="container">
     <div class="row">
         <div class="span3">
-            <div class="control-group"> 
+            <div class="control-group">
                 <?php
                 echo 'Course <span class="asterix">*</span>';
                 echo '<br>';
@@ -67,12 +80,12 @@ foreach (Yii::app()->user->getFlashes() as $key => $message) {
         }',
                     )
                 ));
-                ?> 
+                ?>
                 <?php echo $form->error($model, 'course_id', array('class' => 'alert alert-danger')); ?>
                 <b id="course_error"></b>
             </div>
 
-            <div class="control-group"> 
+            <div class="control-group">
                 <?php
                 echo 'Level <span class="asterix">*</span>';
                 echo '<br>';
@@ -88,13 +101,13 @@ foreach (Yii::app()->user->getFlashes() as $key => $message) {
                     Question_subject_area_id.value="";
                 }
             }',
-                )));
-                ?>   </div>   
+                    )));
+                ?>   </div>
 
             <?php echo $form->error($model, 'level_id', array('class' => 'alert alert-danger')); ?>
 
 
-            <div class="control-group"> 
+            <div class="control-group">
                 <?php
                 echo 'Subjects <span class="asterix">*</span>';
                 echo '<br>';
@@ -105,22 +118,22 @@ foreach (Yii::app()->user->getFlashes() as $key => $message) {
                         'type' => 'POST', //request type
                         'url' => CController::createUrl('subjectArea/getSubjectAreas'),
                         'update' => '#Question_subject_area_id',
-                )));
+                    )));
                 ?></div>
         </div>
 
         <div class="span9">
-            <div class="control-group"> 
+            <div class="control-group">
                 <?php
                 echo 'Subject Area <span class="asterix">*</span>';
                 echo '<br>';
                 echo $form->dropDownList($model, 'subject_area_id', array(), array('empty' => 'Select Subject Area'));
-                ?></div> 
+                ?></div>
 
             <?php
-//    echo '<br>';
+            //    echo '<br>';
             ?>
-            <div class="control-group"> 
+            <div class="control-group">
                 <?php
                 echo 'Question Type <span class="asterix">*</span>';
                 echo '<br>';
@@ -138,7 +151,7 @@ foreach (Yii::app()->user->getFlashes() as $key => $message) {
                     'TRUE_OR_FALSE_ANSWER' => 'True Or false Answer Questions',
                     'HOT_SPOT_ANSWER' => 'Hot Spot Answer Questions',
                     'ESSAY_ANSWER' => 'Essay Answer Questions'
-                        ), array(
+                ), array(
                     'class' => 'form-control',
                     'ajax' => array(
                         'type' => 'POST', //request type
@@ -162,8 +175,8 @@ foreach (Yii::app()->user->getFlashes() as $key => $message) {
                     $("#button_row").css("margin-top","10px");
                 }
             }'
-                )));
-                ?>   </div>  
+                    )));
+                ?>   </div>
 
             <?php echo $form->textFieldRow($model, 'number_of_marks', array('maxlength' => 200, 'placeholder' => 'Number Of Marks')); ?>
 
@@ -219,10 +232,10 @@ foreach (Yii::app()->user->getFlashes() as $key => $message) {
                             
                         }
                     }'
-                    ), array(
-                'id' => 'rexample_btn',
-                'class' => 'tinybluebtn',
-                    )
+            ), array(
+                    'id' => 'rexample_btn',
+                    'class' => 'tinybluebtn',
+                )
             );
             ?>
 
@@ -249,17 +262,17 @@ foreach (Yii::app()->user->getFlashes() as $key => $message) {
                 <input type="hidden" id="update_ff" name="update_ff" value="CREATE" />
                 <input type="hidden" name="question_part_count" id="question_part_count" value="">
             </div>
-            <div class="control-group"> 
+            <div class="control-group">
                 <?php //echo $form->textAreaRow($model, 'question_text', array('rows' => 15, 'cols' => 50, 'class' => 'span8'));  ?>
             </div>
 
-            <div class="control-group"> 
+            <div class="control-group">
                 <div id ="answer-rows" >
                     <?php //$this->renderpartial('_single_answers');   ?>
                 </div>
             </div>
 
-            <div class="control-group"> 
+            <div class="control-group">
                 <div id ="essay-type-row" >
                     <?php
                     ?>
@@ -273,7 +286,7 @@ foreach (Yii::app()->user->getFlashes() as $key => $message) {
     <!--        <br />
             <input type="button" id="temp" onclick="validateForm()" value="test">
             <br />-->
- 
+
     <div class="row" id="button_row">
 
         <div class="span7" id="preview_bn">
@@ -298,10 +311,10 @@ foreach (Yii::app()->user->getFlashes() as $key => $message) {
                             
                         }
                     }'
-                    ), array(
-                'id' => 'review_btn',
-                'class' => 'tinybluebtn',
-                    )
+            ), array(
+                    'id' => 'review_btn',
+                    'class' => 'tinybluebtn',
+                )
             );
             ?>
 
@@ -540,13 +553,13 @@ $this->endWidget('zii.widgets.jui.CJuiDialog');
         }
         return error;
     }
-    
+
     var c = 2;
     var q = 1;
-    
+
     var imgc = 2;
     var imgq = 1;
-    
+
     $('.addm').live('click',function(){
         //alert(c);
         var delcount = "tr_"+q;
@@ -555,12 +568,12 @@ $this->endWidget('zii.widgets.jui.CJuiDialog');
         $(this).attr('class','del');
         $(this).attr('onclick','deleteAnswer("'+delcount+'","'+deltxt+'")');
         var appendTxt = "<tr id='tr_"+c+"' class='span5' style='margin-left:0px; width:400px;'><td><textarea id='txt_"+c+"' name='answer[]' /></td> <td><input type='checkbox' name='correct["+c+"]' id='acheck_"+c+"'></td> <td><input type='button' class='addm' value='Add More' class='btn'/></td></tr>";
-        
+
         $("#options-table tr:last").after(appendTxt);
         c++;
         q++;
     });
-    
+
     $('.imgaddm').live('click',function(){
         var deltr = "imgtr_"+imgq;
         var delimg = "imgfile_"+imgq;
@@ -568,18 +581,18 @@ $this->endWidget('zii.widgets.jui.CJuiDialog');
         $(this).attr('class','imgdel');
         $(this).attr('onclick','deleteImageAnswers("'+deltr+'","'+delimg+'")');
         var appendTxt = "<tr id='imgtr_"+imgc+"' class='span5' style='margin-left:0px; width:400px;'><td><input type='file' id='imgfile_"+imgc+"' name='imageanswer[]' style='width:220px;' /></td> <td><input type='checkbox' name='correctimg["+imgc+"]' id='imgch_"+c+"'></td> <td><input type='button' class='imgaddm' value='Add More' class='btn'/></td></tr>";
-        
+
         $("#image-answer-table tr:last").after(appendTxt);
         imgc++;
         imgq++;
     });
-    
+
     var sc = 2;
     var sq = 1;
-    
+
     var simgc = 2;
     var simgq = 1;
-    $('.adds').live('click',function(){        
+    $('.adds').live('click',function(){
         var delcount = "tr_"+sq;
         var deltxt = "txt_"+sq;
         var delCheck = "acheck_"+sq;
@@ -587,12 +600,12 @@ $this->endWidget('zii.widgets.jui.CJuiDialog');
         $(this).attr('class','del');
         $(this).attr('onclick','deleteAnswer("'+delcount+'","'+deltxt+'","'+delCheck+'")');
         var appendTxt = "<tr id='tr_"+sc+"' class='span5' style='margin-left:0px; width:400px;'><td><textarea id='txt_"+sc+"' name='answer[]' /></td> <td><input type='checkbox' name='correct["+sc+"]' id='acheck_"+sc+"'></td> <td><input type='button' class='adds' value='Add More' class='btn'/></td></tr>";
-        
+
         $("#options-table tr:last").after(appendTxt);
         sc++;
         sq++;
     });
-    
+
     $('.imgadds').live('click',function(){
         var deltr = "imgtr_"+simgq;
         var delimg = "imgfile_"+simgq;
@@ -600,7 +613,7 @@ $this->endWidget('zii.widgets.jui.CJuiDialog');
         $(this).attr('class','imgdel');
         $(this).attr('onclick','deleteImageAnswers("'+deltr+'","'+delimg+'")');
         var appendTxt = "<tr id='imgtr_"+simgc+"' class='span5' style='margin-left:0px; width:400px;'><td><input type='file' id='imgfile_"+simgc+"' name='imageanswer[]' style='width:220px;' /></td> <td><input type='checkbox' name='correctimg["+simgc+"]' id='imgch_"+sc+"'></td> <td><input type='button' class='imgadds' value='Add More' class='btn'/></td></tr>";
-        
+
         $("#image-answer-table tr:last").after(appendTxt);
         simgc++;
         simgq++;

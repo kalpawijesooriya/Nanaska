@@ -4,14 +4,22 @@
 <!---->
 <!--<script type="text/javascript" src="--><?php //echo Yii::app()->theme->baseUrl; ?><!--/js/jquery.easing.min.js"></script>-->
 <!--<script type="text/javascript" src="--><?php //echo Yii::app()->theme->baseUrl; ?><!--/js/jquery.easy-ticker.js"></script>-->
+<div class="logo hidden-for-desktopView">
+
 <br>
+</div>
 <?php $this->pageTitle = Yii::app()->name; ?>
 <link rel="stylesheet" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/news.css"/>
+
 <div class="slider-area">
     <div class="preview-2">
         <div id="nivoslider" class="slides">
-            <img src="themes/bootstrap/img/slider/1.jpg" alt="" title="#slider-1-caption1"/>
-            <img src="themes/bootstrap/img/slider/2.jpg" alt="" title="#slider-1-caption2"/>
+            <img src="themes/bootstrap/img/slider/Slider 1.jpg" alt="" title="#slider-1-caption1"/>
+            
+            <img src="themes/bootstrap/img/slider/Slider 2.jpg" alt="" title="#slider-1-caption2"/>
+            <img src="themes/bootstrap/img/slider/Slider 3.jpg" alt="" title="#slider-1-caption3"/>
+            <img src="themes/bootstrap/img/slider/Slider 4 .jpg" alt="" title="#slider-1-caption4"/>
+            <img src="themes/bootstrap/img/slider/Slider 5.jpg" alt="" title="#slider-1-caption5"/>
         </div>
         <div id="slider-1-caption1" class="nivo-html-caption nivo-caption">
             <div class="banner-content slider-1">
@@ -20,8 +28,8 @@
                         <div class="col-md-12">
                             <div class="text-content-wrapper">
                                 <div class="text-content">
-                                    <h1 class="title1 wow fadeInUp" data-wow-duration="2000ms" data-wow-delay="0s">SMILE WITH<br>
-                                        RESULTS</h1>
+                                    <h1 class="title1 wow fadeInUp" data-wow-duration="2000ms" data-wow-delay="0s">LEARN CIMA WITH<br>
+                                    WORLD NO 1 CASE STUDY PROVIDER</h1>
                                     <p class="sub-title wow fadeInUp hidden-sm hidden-xs" data-wow-duration="2900ms" data-wow-delay=".5s"> There are many variations of passages of Lorem Ipsum available, but the majority have<br>
                                         suffered alteration in some form, by injected humour, or randomised words which<br>
                                         don't look even slightly believable.</p>
@@ -44,14 +52,70 @@
                         <div class="col-md-12">
                             <div class="text-content-wrapper">
                                 <div class="text-content slide-2">
-                                    <h1 class="title1 wow rotateInDownLeft" data-wow-duration="1000ms" data-wow-delay="0s">LEARN CMMA WITH<br>
-                                        WORLD NO.1 CASE STUDY</h1>
-                                    <p class="sub-title wow rotateInDownLeft hidden-sm hidden-xs" data-wow-duration="1800ms" data-wow-delay="0s"> There are many variations of passages of Lorem Ipsum available, but the majority have<br>
-                                        suffered alteration in some form, by injected humour, or randomised words which<br>
-                                        don't look even slightly believable.</p>
-                                    <div class="banner-readmore wow rotateInDownLeft" data-wow-duration="1800ms" data-wow-delay="0s">
+                                    <h2 class="title1 wow rotateInDownLeft" data-wow-duration="1000ms" data-wow-delay="0s" style="font-size:80px">#Stay Safe !</h2>
+                                    <h2 class="sub-title wow rotateInDownLeft hidden-sm hidden-xs" data-wow-duration="1800ms" data-wow-delay="0s" style="font-size:70px">Study <br>
+                                  <spain style="color:red;font-size:90px"> O</spain>nline
+                                      </h2>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="slider-1-caption3" class="nivo-html-caption nivo-caption">
+            <div class="banner-content slider-3">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="text-content-wrapper">
+                                <div class="text-content">
+                                   
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="slider-1-caption4" class="nivo-html-caption nivo-caption">
+            <div class="banner-content slider-4">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="text-content-wrapper">
+                                <div class="text-content">
+                                    <h1 class="title1 wow fadeInUp" data-wow-duration="2000ms" data-wow-delay="0s">We Make You Pass!! </h1>
+                                    <p class="sub-title wow fadeInUp hidden-sm hidden-xs" data-wow-duration="2900ms" data-wow-delay=".5s" style="font-size:20px">
+                                     Value for Money<br>
+                                     Personal Attention<br>
+                                     Best Mocks to Practice<br>
+                                     Friendly Approach<br>
+                                     24/7 Service
+                                       </p>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="slider-1-caption5" class="nivo-html-caption nivo-caption">
+            <div class="banner-content slider-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="text-content-wrapper">
+                                <div class="text-content">
+                                   
+                                    <p class="sub-title wow fadeInUp hidden-sm hidden-xs" data-wow-duration="2900ms" data-wow-delay=".5s"> 
+                                        </p>
+                                    <div class="banner-readmore wow fadeInUp" data-wow-duration="3600ms" data-wow-delay=".6s">
+                                                     <a class="button-default" href="#testimonial-area">Success Stories</a>
 
-                                        <?php echo CHtml::link('View our products', array('Site/viewOurProduct'), array('class' => 'button-default')); ?>
                                     </div>
                                 </div>
                             </div>
@@ -62,6 +126,9 @@
         </div>
     </div>
 </div>
+
+
+
 <div class="about-area">
     <div class="container">
         <div class="row">
@@ -72,7 +139,7 @@
                     <p>To be the preferred online tuition provider, with personalized service and value for money.</p>
 
                     <h5>What we strive for ?</h5>
-                    <p>To develop a student who enjoys studying, we enjoy teaching, CIMA enjoys passing, companies working with.</p>
+                    <p>To develop a student who enjoys studying, we enjoy teaching, CIMA enjoys passing, companies enjoy working with.						</p>
                     <?php echo CHtml::link('Discover More', array('Site/viewAboutus'), array('class' => 'button-default')); ?>
 <!--                    <a class="button-default" href="about.html">Discover More</a>-->
                 </div>
@@ -142,10 +209,10 @@
                         <a href="#"><img src="themes/bootstrap/img/course/3.jpg" alt=""></a>
                     </div>
                     <div class="single-item-text">
-                        <h4><a href="#">FOUNDATION LEVEL</a></h4>
+                        <h4><a href="#">OPERATIONAL LEVEL</a></h4>
                         <div class="single-item-text-info">
 
-                            <span>Date: <span><?php echo $foundationCommencement; ?></span></span>
+                            <span>Date: <span><?php echo $operationalCommencement; ?></span></span>
                         </div>
                         <p>With the full emphasis of E1, P1 and F1 where we revise all key theory aspects and with a detailed past paper analysis, we are offering a course for OCS. Click below for learn more. <br> <br>  </p>
 
@@ -155,7 +222,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="col-md-12 col-sm-12 text-center">
                 <?php echo CHtml::link('DISCOVER ALL PRODUCTS', array('Site/viewOurProduct'), array('class' => 'button-default button-large')); ?>
 
@@ -165,9 +231,9 @@
 </div>
 <!--End of Course Area-->
 
-
+<div id="testimonial-area"></div>
 <!--Testimonial Area Start-->
-<div class="row">
+<div class="row" >
     <div class="col-md-12">
         <div class="section-title-wrapper">
             <div class="section-title">
@@ -178,7 +244,7 @@
         </div>
     </div>
 </div>
-<div class="testimonial-area" style="height: 50% !important;">
+<div class="testimonial-area" style="height: 50% !important;" >
     <div class="container">
 
 
@@ -246,12 +312,12 @@
             <div class="col-md-6">
                 <div class="single-latest-item">
                     <div class="single-latest-image">
-                        <a ><img src="themes/bootstrap/img/latest/1.jpg" alt=""></a>
+                        <a ><img src="themes/bootstrap/img/latest/Lead Lecturer home page .jpg" alt=""></a>
                     </div>
                     <div class="single-latest-text">
                         <h3><a >LEAD LECTURER</a></h3>
 
-                        <p style="margin-bottom: 15px"> Mr. Channa leads a panel  of 23 lectures <br> <br> <br><br></p>
+                        <p style="margin-bottom: -30px"> Mr. Channa leads a panel  of 23 lectures <br> <br> <br><br></p>
 
                         <?php echo CHtml::link('READ MORE', array('Site/leadLecture'), array('class' => 'button-default')); ?>
                     </div>
@@ -260,12 +326,12 @@
             <div class="col-md-6">
                 <div class="single-latest-item">
                     <div class="single-latest-image">
-                        <a ><img src="themes/bootstrap/img/latest/2.jpg" alt=""></a>
+                        <a ><img src="themes/bootstrap/img/latest/Our Specialty.jpg" alt=""></a>
                     </div>
                     <div class="single-latest-text">
                         <h3><a >OUR SPECIALTY</a></h3>
 
-                        <p style="margin-bottom: 15px">Our commitments for your success.<br> <br> <br><br>  </p>
+                        <p style="margin-bottom: -30px">Our commitments for your success.<br> <br> <br><br>  </p>
 
                         <?php echo CHtml::link('READ MORE', array('Site/ourSpecialty'), array('class' => 'button-default')); ?>
                     </div>
@@ -274,11 +340,11 @@
             <div class="col-md-6">
                 <div class="single-latest-item">
                     <div class="single-latest-image">
-                        <a ><img src="themes/bootstrap/img/latest/3.jpg" alt=""></a>
+                        <a ><img src="themes/bootstrap/img/latest/Our Forum.jpg" alt=""></a>
                     </div>
                     <div class="single-latest-text">
                         <h3><a >OUR FORUM</a></h3>
-                        <p style="margin-bottom: 15px"> Virtual space to access all study materials, videos & clarify doubts. <br> <br> <br>  </p>
+                        <p style="margin-bottom: -7px"> Virtual space to access all study materials, videos & clarify doubts. <br> <br> <br>  </p>
                         <a href="http://learncima.co.uk/nanaska/" class="button-default">See More</a>
                     </div>
                 </div>
@@ -286,11 +352,11 @@
             <div class="col-md-6">
                 <div class="single-latest-item">
                     <div class="single-latest-image">
-                        <a ><img src="themes/bootstrap/img/latest/4.jpg" alt=""></a>
+                        <a ><img src="themes/bootstrap/img/latest/Syllabus home page .jpg" alt=""></a>
                     </div>
                     <div class="single-latest-text">
                         <h3><a >SYLLABUS</a></h3>
-                        <p style="margin-bottom: 15px">CIMA Syllabus 2020	<br> <br> <br> <br></p>
+                        <p style="margin-bottom:-7px">CIMA Syllabus 2020	<br> <br> <br> <br></p>
                         <?php echo CHtml::link('READ MORE', array('Site/syllabus'), array('class' => 'button-default')); ?>
                     </div>
                 </div>
@@ -299,16 +365,15 @@
     </div>
 </div>
 <!--End of Latest News Area-->
-<!--Event Area Start-->
 <br> <br>
-<div class="event-area section-padding"style="background-Color:#2d3e50;min-height: 250px;">
+
+<div class="event-area section-padding usa"style="background-Color:#2d3e50;">
     <div class="container"style="background-color:#2d3e50">
         <div class="row">
             <div class="col-md-12">
                 <div class="breadcrumb-text "style="color:white !important;">
                     <div class="breadcrumb-text"style=",color:White;font-weight:bold;text-align:center;padding-bottom: 10px;">
-                        <br> <br>
-                        <h3>OUR LATEST NEWS</h3>
+                        <h3 style="padding-top: 20px">OUR LATEST NEWS</h3>
                         <br>
                     </div>
                 </div>
@@ -316,89 +381,102 @@
         </div>
     </div>
     <style>
+        @media (min-width: 1024px) {
+            .new {
+                margin-top:100px;
+            }
+            .usa{
+                min-height: 300px
+            }
 
-        #inner1{
-            float:left;
         }
-        #inner2{
-            float:left;
-            clear: left;
+
+        @media (max-width:629px) {
+             .new {
+                margin-top:250px;
+            }
+            .usa{
+                min-height: 450px
+            }
         }
     </style>
-
     <div class="row">
         <section id="carousel">
             <div class="container">
-                <div class="row text-center">
-                    <div class="col-md-12 col-md-offset text-center">
+                <div class="row">
+                    <div class="col-md-12 col-md-offset">
 
-                        <div class="carousel slide text-center" style="color:white;" id="fade-quote-carousel" data-ride="carousel" data-interval="3000">
-                            <?php
-                                $msgs = News::model()->getBroadcastNews();
-                                if (empty($msgs)) {
-                                    echo '<div class="well">';
-                                    echo '<center><b>News not available</b></center>';
-
-                                    echo '</div>';
-                               } else {
-                            ?>
-
-
-                            <!-- Carousel items -->
-
-                            <div class="carousel-inner text-center" style="Color:white;">
+                        <div class="carousel slide" style="color:white;" id="fade-quote-carousel" data-ride="carousel" data-interval="3000">
+                            <!-- Carousel indicators -->
+                            <ol class="carousel-indicators text-center new" style="padding-top:50px;margin-left:100px!important;">
                                 <?php
-                                $count = 0;
+                                $msgs = News::model()->getBroadcastNews();
+                                $counter = 0;
                                 foreach ($msgs as $msg) {
 
-                                    if ($count == 0) {
-                                        echo '<div class="active item text-center">
-                                                    <blockquote>
-                                                        <p>' . $msg['message'] . '</p>
-                                                    </blockquote>
-                                                </div>';
+                                    if ($counter == 0) {
+                                        echo '<li data-target="#fade-quote-carousel text-center" style="margin-left:50px" data-slide-to="' . $counter . '" class="active"></li>';
                                     } else {
-                                        echo ' <div class="item">
-                                    <blockquote>
-                                     <p>' . $msg['message'] . '</p>
-                                    </blockquote>
-
-                                </div>';
+                                        echo '<li data-target="#fade-quote-carousel text-center" data-slide-to="' . $counter . '"></li>';
                                     }
-                                    ++$count;
-                                }
+                                    ++$counter;
                                 }
                                 ?>
 
-                            </div>
-                            <!-- Carousel indicators -->
+                            </ol>
+                            <!-- Carousel items -->
+                            <div class="carousel-inner"style="Color:white;">
 
-                                <ol class="carousel-indicators text-center" style="margin-top:150px;">
-                                    <?php
-                                    $counter = 0;
 
-                                    foreach ($msgs as $msg) {
+                                        <?php
+                                        $msgs = News::model()->getBroadcastNews();
+                                        $counter = 0;
+                                        $count = 0;
+                                foreach ($msgs as $msg)
+                                {
+                                    if ($count==0)
+                                    {
+                                        echo '
+                                       <div class="active item" style="padding-left: 50px">
+                                         <blockquote>
+                                           <div class="row">';
+                                            foreach ($msg as $item) {
+                                               echo '<div class="col col-lg-6" style="margin-bottom:10px;height:60px"><i class="zmdi-hc-li zmdi zmdi-dot-circle-alt"></i>'. $item['message'] .'</div>';
+                                            }
+                                        echo ' </div>
+                                         </blockquote>
+                                       </div>';
+                                    }else
+                                        {
+                                            echo '
+                                       <div class="item" style="padding-left: 50px">
+                                         <blockquote>
+                                           <div class="row">';
+                                            foreach ($msg as $item) {
+                                                echo '<div class="col col-lg-6" style="margin-bottom:10px;height:60px"><i class="zmdi-hc-li zmdi zmdi-dot-circle-alt"></i>'. $item['message'] .'</div>';
+                                            }
+                                            echo ' </div>
+                                         </blockquote>
+                                       </div>';
 
-                                        if ($counter == 0) {
-                                            echo '<li data-target="#fade-quote-carousel text-center" data-slide-to="' . $counter . '" class="active"></li>';
-                                        } else {
-                                            echo '<li data-target="#fade-quote-carousel text-center" data-slide-to="' . $counter . '"></li>';
                                         }
-                                        ++$counter;
-                                    }
+                                  ++$count;
+                                }
+                                        ?>
 
-                                    ?>
-                                </ol>
                             </div>
-
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </div>
 </div>
-<!--End of Event Area-->
-<br/><br/><br/>
+
+<br>
+<br>
+
+
 
 
 <!--Fun Factor Area Start-->

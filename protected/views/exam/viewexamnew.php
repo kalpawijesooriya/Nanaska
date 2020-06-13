@@ -99,7 +99,7 @@
                                  <div class="row text-center">
                                  <div class="col-lg-4 col-mg-4 col-sm-4"></div>
                                   <div class="col-lg-4 col-mg-4 col-sm-4 ">
-                                      <input type="text" class="form-control" placeholder="Enter the Number of Papers" class="button-bottom">
+                                      <input type="text" class="form-control" placeholder="Enter the Number of Papers" class="button-bottom" >
                                   </div>
                                  </div>
                                  <br>

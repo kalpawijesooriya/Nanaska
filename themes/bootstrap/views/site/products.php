@@ -13,7 +13,7 @@
             <div class="col-md-6 col-sm-6">
                 <div class="single-item">
                     <div class="single-item-image overlay-effect">
-                        <a href="#"><img src="themes/bootstrap/img/course/6.jpg" alt=""></a>
+                        <a href="#"><img src="themes/bootstrap/img/course/1.jpg" alt=""></a>
                     </div>
                     <div class="single-item-text">
                         <h4><a href="#">Strategic Level </a></h4>
@@ -69,7 +69,7 @@
             <div class="col-md-6 col-sm-6">
                 <div class="single-item">
                     <div class="single-item-image overlay-effect">
-                        <a href="#"><img src="themes/bootstrap/img/course/5.jpg" alt=""></a>
+                        <a href="#"><img src="themes/bootstrap/img/course/2.jpg" alt=""></a>
                     </div>
                     <div class="single-item-text">
                         <h4><a href="#">Management Level</a></h4>
@@ -133,7 +133,7 @@
             <div class="col-md-6 col-sm-6">
                 <div class="single-item">
                     <div class="single-item-image overlay-effect">
-                        <a href="#"><img src="themes/bootstrap/img/course/8.jpg" alt=""></a>
+                        <a href="#"><img src="themes/bootstrap/img/course/3.jpg" alt=""></a>
                     </div>
                     <div class="single-item-text">
                         <h4><a href="#">Operational Levlel </a></h4>
@@ -188,7 +188,7 @@
             <div class="col-md-6 col-sm-6">
                 <div class="single-item">
                     <div class="single-item-image overlay-effect">
-                        <a href="#"><img src="themes/bootstrap/img/course/7.jpg" alt=""></a>
+                        <a href="#"><img src="themes/bootstrap/img/course/4.jpg" alt=""></a>
                     </div>
                     <div class="single-item-text">
                         <h4><a href="#">Foundation Level  </a></h4>

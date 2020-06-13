@@ -12,7 +12,6 @@ return array(
 	'theme'=>'bootstrap',
 	// preloading 'log' component
 	'preload'=>array('log','bootstrap'),
-        'timeZone' => 'Asia/Colombo',
 
 	// autoloading model and component classes
 	'import'=>array(
@@ -68,22 +67,17 @@ return array(
 		// uncomment the following to use a MySQL database  mysql:host=192.168.10.8
 		
 		'db'=>array(
-                    'connectionString' => 'mysql:host=localhost;dbname=learncima',
-                    'emulatePrepare' => true,
-                    'username' => 'root',
-                    'password' => '',
-                    'charset' => 'utf8',
-//                    'initSQLs'=>array(
-//                        "SET time_zone = '+5:30'"
-//                     ),
+			//'connectionString' => 'mysql:host=localhost;dbname=learncima',
+                        'connectionString' => 'mysql:host=127.0.0.1;dbname=learncima',
+			'emulatePrepare' => true,
+			'username' => 'root',
+			'password' => '',
+			'charset' => 'utf8',
 		),
                 'browser' => array(
                     'class' => 'application.extensions.browser.CBrowserComponent',
                 ),
-                'session' => array(
-                    'class' => 'CDbHttpSession',
-                    'timeout' => 60*70,
-                 ),
+		
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
             'errorAction'=>'site/error',
