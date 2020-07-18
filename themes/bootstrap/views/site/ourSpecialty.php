@@ -2,14 +2,30 @@
 
 
 
-
+<div class="breadcrumb-banner-area" style="height:100px">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="breadcrumb-text">
+                    <h1 class="text-center">Our Specialty</h1>
+                    <!-- <div class="breadcrumb-bar">
+                        <ul class="breadcrumb text-center">
+                            <li><a href="index.html">Home</a></li>
+                            <li>About us</li>
+                        </ul>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 <div class="container">
 
     <div class="span2"></div>
     <div class="span12">
-        <h2 class="product-names-inside">Our Specialty </h2>
+      
         <br> <br>
         <div class="row">
             <div class="col-lg-6">

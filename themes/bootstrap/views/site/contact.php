@@ -29,25 +29,19 @@ $this->widget('bootstrap.widgets.TbAlert', array(
 
 <?php else: ?>
 <!--Breadcrumb Banner Area Start-->
-    <br> <br>
-<div class="breadcrumb-banner-area">
+<div class="breadcrumb-banner-area" style="height:100px">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <div class="breadcrumb-text">
                     <h1 class="text-center">CONTACT US</h1>
-                    <div class="breadcrumb-bar">
-                        <ul class="breadcrumb text-center">
-                            <li><a href="index.html">Home</a></li>
-                            <li>CONTACT Us</li>
-                        </ul>
-                    </div>
+                    
                 </div>
             </div>
         </div>
     </div>
 </div>
-    <br>
+<br>
 <!--End of Breadcrumb Banner Area-->
 
 <!--Contact Form Area Start-->
@@ -64,14 +58,14 @@ $this->widget('bootstrap.widgets.TbAlert', array(
                 </div>
                 <h4 class="contact-title">social media</h4>
                 <div class="link-social">
-                    <a href="https://www.facebook.com/LearnCIMA			"><i class="zmdi zmdi-facebook"></i></a>
-                    <a href="https://lk.linkedin.com/in/nanaska-learncima-92b430120					"><i class="zmdi zmdi-linkedin"></i></a>
-                    <a href="https://twitter.com/learn_cima"><i class="zmdi zmdi-twitter"></i></a>
-
+                    <a href="https://www.facebook.com/LearnCIMA" target="_blank"><i class="zmdi zmdi-facebook"></i></a>
+                    <a href="https://lk.linkedin.com/in/nanaska-learncima-92b430120" target="_blank"><i class="zmdi zmdi-linkedin"></i></a>
+                    <a href="https://twitter.com/learn_cima" target="_blank"><i class="zmdi zmdi-twitter"></i></a>
+                    <a href="https://www.instagram.com/nanaska__/" target="_blank"><i class="zmdi zmdi-instagram"></i></a>
                 </div>
             </div>
             <div class="col-md-7">
-                <h4 class="contact-title">Contact Us</h4>
+             <br>
 
 
 

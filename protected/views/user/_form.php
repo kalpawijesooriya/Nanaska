@@ -6,19 +6,19 @@
    height: 30px !important;
     }
 </style>
-<br> <br>
-<div class="breadcrumb-banner-area">
+
+<div class="breadcrumb-banner-area" style="height:100px">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <div class="breadcrumb-text">
-                    <h1 class="text-center">Registeration</h1>
-                    <div class="breadcrumb-bar">
+                    <h1 class="text-center">Registration</h1>
+                    <!-- <div class="breadcrumb-bar">
                         <ul class="breadcrumb text-center">
                             <li><a href="index.html">Home</a></li>
                             <li>Register</li>
                         </ul>
-                    </div>
+                    </div> -->
 
                 </div>
             </div>
@@ -52,7 +52,7 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 
 
         <?php //echo $form->errorSummary($model);  ?>
-        <h2 class="text-center">Student Registration</h2>
+    
         <br/>
 
         <div class="well transparent">
@@ -216,7 +216,7 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
         </div>
 
         <div class="control-group">
-            <div class="controls" style="margin-bottom: 10%">
+            <div class="controls">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <button type="submit" class="btn btn btn-primary text-center" id="register_for_exams">Register for exams</button>
             </div>
@@ -224,13 +224,9 @@ $form = $this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 
     </div>
 </div>
-<br/>
-<br/>
 
 <?php $this->endWidget(); ?>
-<br/>
 
-<br/>
 <script type="text/javascript">
 
     var digitsOnly = /[+1234567890]/g;

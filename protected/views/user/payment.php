@@ -6,20 +6,18 @@
  */
 ?>
 
-
-<br> <br>
-<div class="breadcrumb-banner-area">
+<div class="breadcrumb-banner-area" style="height:100px">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <div class="breadcrumb-text">
                     <h1 class="text-center">Payments</h1>
-                    <div class="breadcrumb-bar">
+                    <!-- <div class="breadcrumb-bar">
                         <ul class="breadcrumb text-center">
                             <li><a href="index.html">Home</a></li>
                             <li>Payments</li>
                         </ul>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -47,8 +45,7 @@
                 )
                     ));
             ?>
-
-            <h2 class="master_heading text-center" style="margin-bottom: 50px; margin-top: 50px">Payment</h2>
+            <br>
 
 
             <div class="well">

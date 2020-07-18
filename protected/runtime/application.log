@@ -1132,3 +1132,14 @@ Stack trace:
 REQUEST_URI=/nanaska-back/index.php?r=site/contact
 HTTP_REFERER=http://localhost/nanaska-back/index.php?r=user/payment
 ---
+2020/07/13 05:11:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "testimonials".' in C:\Users\wijesoor_im14052\yii\framework\web\CController.php:486
+Stack trace:
+#0 C:\Users\wijesoor_im14052\yii\framework\web\CController.php(270): CController->missingAction('testimonials')
+#1 C:\Users\wijesoor_im14052\yii\framework\web\CWebApplication.php(282): CController->run('testimonials')
+#2 C:\Users\wijesoor_im14052\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/testimonia...')
+#3 C:\Users\wijesoor_im14052\yii\framework\base\CApplication.php(185): CWebApplication->processRequest()
+#4 C:\wamp64\www\nanaska-backend\index.php(14): CApplication->run()
+#5 {main}
+REQUEST_URI=/nanaska-backend/index.php?r=site/testimonials
+HTTP_REFERER=http://localhost/nanaska-backend/index.php?r=site/viewAboutus
+---

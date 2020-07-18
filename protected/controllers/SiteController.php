@@ -291,5 +291,8 @@ class SiteController extends Controller {
     public function actionsyllabus() {
         $this->render('syllabus');
     }
+    public function actiontestimonials() {
+        $this->render('testimonials');
+    }
 
 }

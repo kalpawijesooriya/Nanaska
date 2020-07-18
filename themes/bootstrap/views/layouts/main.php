@@ -195,12 +195,54 @@ body {
             .hidden-for-desktopView {
                 display: none;
             }
+            .products{
+                display: none;
+            }
+            .logo{
+                margin-left: -20%;
+                margin-top:-8%!important;
+                width:140% !important;
+          
+            }
+            .slide1{
+                font-size:40px
+            }
+            .slide2{
+                font-size:30px
+            }
+           
         }
 
         @media (max-width:629px) {
             .hidden-for-mobileView {
                 display: none;
             }
+
+            .mobile{
+                margin-top:100px
+            }
+
+            .safe{
+                font-size:30px
+            }
+
+            .safe2{
+                font-size:40px
+            }
+            .o{
+                font-size:60px
+            }
+            .logo{
+                width:100% !important;
+                margin-top:-35px
+            }
+            .slide1{
+                font-size:20px
+            }
+            .slide2{
+                font-size:10px
+            }
+           
         }
     </style>
 
@@ -224,7 +266,7 @@ body {
                                     <div class="content"><a href="http://learncima.co.uk/nanaska/"><i class="zmdi zmdi-globe"></i> Our Forum</a></div>
                                     <?php
                                       if (Yii::app()->user->isGuest) {
-                                          echo '<div class="content"><a href="#"><i class="zmdi zmdi-account"></i>Exam Practice</a>
+                                          echo '<div class="content"><a href="#"><i class="zmdi zmdi-account"></i>Online Exams</a>
                                                   <ul class="account-dropdown">
                                                    <li>'.CHtml::link("Login", array("site/login")).'</li>
                                                    <li>'.CHtml::link("Register", array("user/create")).'</a></li>
@@ -284,20 +326,17 @@ body {
                     </div>
                 </div>
                 <div class="header-logo-menu sticker">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-3 col-sm-12">
-                                <div class="logo hidden-for-desktopView">
-                                    <a href="/nanaska-backend/index.php"><img  src="themes/bootstrap/img/logo/logoHedder.png" alt="EDUCAT" style="margin-left: -20%"></a>
+                    <div class="container" >
+                        <div class="row"  style="max-height:96px!important" >
+                            <div class="col-md-3 col-sm-12" style="max-height:96px!important">
+                                <div  style="max-height:96px!important">
+                                    <a href="/nanaska-backend/index.php"><img  src="themes/bootstrap/img/logo/logoHedder.png" alt="EDUCAT" class="logo logo2"></a>
 
                                 </div>
-                                <div class="logo hidden-for-mobileView">
-                                    <a href="/nanaska-backend/index.php"><img class="hedderLogo" src="themes/bootstrap/img/logo/logoHedder.png" alt="EDUCAT"></a>
-
-                                </div>
+                               
                             </div>
-                            <div class="col-md-9">
-                                <div class="mainmenu-area pull-right">
+                            <div class="col-md-9"  style="max-height:96px!important">
+                                <div class="mainmenu-area pull-right"  style="max-height:96px!important">
                                     <div class="mainmenu hidden-sm hidden-xs">
                                         <nav>
                                             <?php
@@ -313,6 +352,9 @@ body {
                                                 </li>
                                                 <li <?php echo ($route == 'site/viewOurProduct') ? 'class="active"' : '' ?>>
                                                     <?php echo CHtml::link('Our Products', array('site/viewOurProduct')) ?>
+                                                </li>
+                                                <li <?php echo ($route == 'site/testimonials') ? 'class="active"' : '' ?>>
+                                                    <?php echo CHtml::link('Testimonials', array('site/testimonials')) ?>
                                                 </li>
                                                 <li <?php echo ($route == 'user/create') ? 'class="active"' : '' ?>>
                                                     <?php echo CHtml::link('Registration', array('user/create')) ?>
@@ -377,6 +419,9 @@ body {
                                             <li class="current" <?php echo ($route == 'site/viewOurProduct') ? 'class="active"' : '' ?>>
                                                 <?php echo CHtml::link('Our Products', array('site/viewOurProduct')) ?>
                                             </li>
+                                            <li class="current" <?php echo ($route == 'site/testimonials') ? 'class="active"' : '' ?>>
+                                                <?php echo CHtml::link('Testimonials', array('site/testimonials')) ?>
+                                            </li>
                                             <li class="current" <?php echo ($route == 'user/create') ? 'class="active"' : '' ?>>
                                                 <?php echo CHtml::link('Registration', array('user/create')) ?>
                                             </li>
@@ -414,16 +459,16 @@ body {
               <?php echo $content; ?>
             <br>  <br>  <br>
             <!--Newsletter Area Start-->
-            <div class="newsletter-area">
+            <div class="newsletter-area" >
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-5 col-sm-5" style="height: 20px">
+                        <div class="col-md-5 col-sm-5" >
                             <div class="newsletter-content">
                                 <h3>SUBSCRIBE</h3>
                                 <h4>TO GET OUR NEW MATERIALS</h4>
                             </div>
                         </div>
-                        <div class="col-md-7 col-sm-7">
+                        <div class="col-md-7 col-sm-7 mobile">
                             <div class="newsletter-form angle">
                                 <form  class="footer-newsletter fix" id="subscribeForm">
                                     <div class="subscribe-form">
@@ -460,7 +505,7 @@ body {
                                 <div class="col-md-3 col-sm-4">
                                     <div class="single-footer-widget">
                                         <h3>GET IN TOUCH</h3>
-                                        <a href="tel:555-555-1212"><i class="fa fa-phone"></i>+94 - 777 - 739 - 8996</a>
+                                        <a href="tel:555-555-1212"><i class="fa fa-phone"></i>+94 - 777 - 39 - 8996</a>
                                         <span><i class="fa fa-envelope"></i><a href = "mailto: info@nanaska.com">info@nanaska.com</a></span>
 
                                     </div>
@@ -489,10 +534,10 @@ body {
 
 
                                 <div class="social-icons">
-                                    <a href="https://www.facebook.com/LearnCIMA"><i class="zmdi zmdi-facebook"></i></a>
-                                    <a href="https://lk.linkedin.com/in/nanaska-learncima-92b430120"><i class="zmdi zmdi-linkedin"></i></a>
-                                    <a href="https://twitter.com/learn_cima"><i class="zmdi zmdi-twitter"></i></a>
-
+                                    <a href="https://www.facebook.com/LearnCIMA" target="_blank"><i class="zmdi zmdi-facebook"></i></a>
+                                    <a href="https://lk.linkedin.com/in/nanaska-learncima-92b430120" target="_blank"><i class="zmdi zmdi-linkedin"></i></a>
+                                    <a href="https://twitter.com/learn_cima" target="_blank"><i class="zmdi zmdi-twitter"></i></a>
+                                    <a href="https://www.instagram.com/nanaska__/" target="_blank"><i class="zmdi zmdi-instagram"></i></a>
                                 </div>
                               </div>
                             </div>
