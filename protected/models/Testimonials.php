@@ -103,7 +103,8 @@ class Testimonials extends CActiveRecord
     public function getTestimonials() {
         $data = Yii::app()->db->createCommand()
             ->select('*')
-            ->from('testimonials')
+			->from('testimonials')
+			->order('testimonials_id DESC')
             ->queryAll();
 
         return $data;

@@ -1143,3 +1143,118 @@ Stack trace:
 REQUEST_URI=/nanaska-backend/index.php?r=site/testimonials
 HTTP_REFERER=http://localhost/nanaska-backend/index.php?r=site/viewAboutus
 ---
+2020/07/20 14:42:29 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[HY000]: General error: 1364 Field 'testimonials_id' doesn't have a default value. The SQL statement executed was: INSERT INTO `testimonials` (`testimonials_name`, `testimonials_description`, `image_url`) VALUES (:yp0, :yp1, :yp2).
+2020/07/20 14:42:29 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[HY000]: General error: 1364 Field 'testimonials_id' doesn't have a default value' in C:\Users\Kalpa Wijesooriya\yii\framework\db\CDbCommand.php:357
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(1023): CDbCommand->execute()
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 C:\wamp64\www\nanaska-backend\protected\modules\admin\controllers\TestimonialsController.php(82): CActiveRecord->save()
+#3 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CInlineAction.php(49): TestimonialsController->actionCreate()
+#4 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/testimoni...')
+#14 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\wamp64\www\nanaska-backend\index.php(14): CApplication->run()
+#16 {main}
+REQUEST_URI=/nanaska-backend/index.php?r=admin/testimonials/create
+HTTP_REFERER=http://localhost/nanaska-backend/index.php?r=admin/testimonials/create
+---
+2020/07/20 14:43:43 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'testimonials_description' at row 1. The SQL statement executed was: INSERT INTO `testimonials` (`testimonials_name`, `testimonials_description`, `image_url`) VALUES (:yp0, :yp1, :yp2).
+2020/07/20 14:43:43 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'testimonials_description' at row 1' in C:\Users\Kalpa Wijesooriya\yii\framework\db\CDbCommand.php:357
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(1023): CDbCommand->execute()
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 C:\wamp64\www\nanaska-backend\protected\modules\admin\controllers\TestimonialsController.php(82): CActiveRecord->save()
+#3 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CInlineAction.php(49): TestimonialsController->actionCreate()
+#4 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/testimoni...')
+#14 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\wamp64\www\nanaska-backend\index.php(14): CApplication->run()
+#16 {main}
+REQUEST_URI=/nanaska-backend/index.php?r=admin/testimonials/create
+HTTP_REFERER=http://localhost/nanaska-backend/index.php?r=admin/testimonials/create
+---
+2020/07/20 14:44:03 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'testimonials_description' at row 1. The SQL statement executed was: INSERT INTO `testimonials` (`testimonials_name`, `testimonials_description`, `image_url`) VALUES (:yp0, :yp1, :yp2).
+2020/07/20 14:44:03 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'testimonials_description' at row 1' in C:\Users\Kalpa Wijesooriya\yii\framework\db\CDbCommand.php:357
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(1023): CDbCommand->execute()
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 C:\wamp64\www\nanaska-backend\protected\modules\admin\controllers\TestimonialsController.php(82): CActiveRecord->save()
+#3 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CInlineAction.php(49): TestimonialsController->actionCreate()
+#4 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/testimoni...')
+#14 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\wamp64\www\nanaska-backend\index.php(14): CApplication->run()
+#16 {main}
+REQUEST_URI=/nanaska-backend/index.php?r=admin/testimonials/create
+HTTP_REFERER=http://localhost/nanaska-backend/index.php?r=admin/testimonials/create
+---
+2020/07/20 14:44:23 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'testimonials_description' at row 1. The SQL statement executed was: INSERT INTO `testimonials` (`testimonials_name`, `testimonials_description`, `image_url`) VALUES (:yp0, :yp1, :yp2).
+2020/07/20 14:44:23 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'testimonials_description' at row 1' in C:\Users\Kalpa Wijesooriya\yii\framework\db\CDbCommand.php:357
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(1023): CDbCommand->execute()
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 C:\wamp64\www\nanaska-backend\protected\modules\admin\controllers\TestimonialsController.php(82): CActiveRecord->save()
+#3 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CInlineAction.php(49): TestimonialsController->actionCreate()
+#4 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/testimoni...')
+#14 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\wamp64\www\nanaska-backend\index.php(14): CApplication->run()
+#16 {main}
+REQUEST_URI=/nanaska-backend/index.php?r=admin/testimonials/create
+HTTP_REFERER=http://localhost/nanaska-backend/index.php?r=admin/testimonials/create
+---
+2020/07/20 14:44:42 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'testimonials_description' at row 1. The SQL statement executed was: INSERT INTO `testimonials` (`testimonials_name`, `testimonials_description`, `image_url`) VALUES (:yp0, :yp1, :yp2).
+2020/07/20 14:44:42 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'testimonials_description' at row 1' in C:\Users\Kalpa Wijesooriya\yii\framework\db\CDbCommand.php:357
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(1023): CDbCommand->execute()
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#2 C:\wamp64\www\nanaska-backend\protected\modules\admin\controllers\TestimonialsController.php(82): CActiveRecord->save()
+#3 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CInlineAction.php(49): TestimonialsController->actionCreate()
+#4 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/testimoni...')
+#14 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\wamp64\www\nanaska-backend\index.php(14): CApplication->run()
+#16 {main}
+REQUEST_URI=/nanaska-backend/index.php?r=admin/testimonials/create
+HTTP_REFERER=http://localhost/nanaska-backend/index.php?r=admin/testimonials/create
+---
