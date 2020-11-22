@@ -13,8 +13,7 @@
     //array('label'=>'Manage User','url'=>array('admin')),
 //);
     ?>
-
-
+    <link rel="stylesheet" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/styles.css"/>
     <div class="span8"> 
         <h3 class="master_heading">Account Settings</h3>
         <br>

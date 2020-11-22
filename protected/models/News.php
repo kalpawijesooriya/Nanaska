@@ -117,7 +117,7 @@ class News extends CActiveRecord {
         $main_arry=array();
         $sub_arry=array();
 
-        foreach ( $data as $item)
+        foreach ($data as $item)
         {
             if ($count1<=3){
                 array_push($sub_arry, $item);
@@ -133,7 +133,7 @@ class News extends CActiveRecord {
             $count1= $count1+1;
         }
 
-        if ($count1<=3)
+        if ($count1<=3 ||$count1==4 )
             array_push($main_arry,$sub_arry);
 
         return $main_arry;

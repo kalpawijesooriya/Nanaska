@@ -33,11 +33,10 @@ foreach ($courses as $course) {
 ?>
 
 <div class="row-fluid text-center">
-
     <div class=" footer-stable">
         <div class="btn-group">
-            <div class="row" >
-            <ul class="hidden-for-phone dropdown-menu dr-breakout text-center nav-list" id="nav-list">
+            <div class="row"  >
+            <ul class="hidden-for-phone dropdown-menu dr-breakout text-center nav-list" id="nav-list" >
                 <?php
                 foreach ($courses as $key => $course) {
                     if ($key === 0) {
@@ -53,7 +52,7 @@ foreach ($courses as $course) {
         </div>
         <div class="row">
             <div class="col col-lg-2">
-                <div class="tab-content hidden-for-phone">
+                <div class="tab-content hidden-for-phone" style="overflow-x: hidden">
                     <?php
                     foreach ($courses as $key => $course) {
 

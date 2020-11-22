@@ -140,9 +140,9 @@ nav {
 
 
 #news_text_box{
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color:#fff;
     border: none;
-    color: #fff;
+    color: #999;
 }
 .copy_right {
     margin-top: 50px;
@@ -370,7 +370,6 @@ input.search-query {
 
 .button {
     display: inline-block;
-    padding: 6px 12px;
     margin-bottom: 0;
     font-size: 14px;
     font-weight: normal;
@@ -1231,7 +1230,6 @@ div.info {
     margin: 30px 0 0;
     padding: 0;
     background-color: #fff;
-    border: 1px solid #e5e5e5;
     border-top:0;
     border-radius: 0;
     /*  box-shadow: 4px 4px 5px #888888;*/

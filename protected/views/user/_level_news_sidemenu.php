@@ -2,7 +2,10 @@
 
 <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery.easing.min.js"></script>
 <script type="text/javascript" src="<?php echo Yii::app()->theme->baseUrl; ?>/js/jquery.easy-ticker.js"></script>
-
+<link rel="stylesheet" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/styles.css"/>
+<br>
+<br>
+<br>
 <div class="span3">
     <div class="master_heading"><center> Level News </center></div>
 

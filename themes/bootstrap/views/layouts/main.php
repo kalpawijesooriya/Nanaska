@@ -79,10 +79,15 @@
     <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
     <link rel="stylesheet" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/style2.css"/>
 
+
     <!-- Modernizr JS
     ============================================ -->
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/themes/bootstrap/js/vendor/modernizr-2.8.3.min.js"></script>
     <script src="<?php echo Yii::app()->request->baseUrl; ?>/themes/bootstrap/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="<?php echo Yii::app()->request->baseUrl; ?>/assets/65ed7007/jquery.min.js"></script>
+    <script src="<?php echo Yii::app()->request->baseUrl; ?>/assets/65ed7007/jquery.yii.js"></script>
+    <script src="<?php echo Yii::app()->request->baseUrl; ?>/themes/bootstrap/js/jquery.easing.min.js"></script>
+    <script src="<?php echo Yii::app()->request->baseUrl; ?>/themes/bootstrap/js/jquery.easing.min.js"></script>
     <?php Yii::app()->bootstrap->register(); ?>
 
     <script>
@@ -262,7 +267,7 @@ body {
                                 <span>Have any question? <a href = "mailto: info@nanaska.com">info@nanaska.com</a></span>
                             </div>
                             <div class="col-lg-5 col-md-6 col-sm-6 col-xs-12">
-                                <div class="header-top-right">
+                                <div class="header-top-right" style="width: 120%;margin-right: 20px">
                                     <div class="content"><a href="http://learncima.co.uk/nanaska/"><i class="zmdi zmdi-globe"></i> Our Forum</a></div>
                                     <?php
                                       if (Yii::app()->user->isGuest) {
@@ -286,14 +291,14 @@ body {
                                                  $status = Student::model()->getStudentStatusTypeByUserId(Yii::app()->user->loadUser()->user_id);
 
                                                  if ($status == 1) {
-                                                     echo '<div class="content"><a href="?r=user/detailLecturer"><i class="zmdi zmdi-account-o"></i> My Profile</a></div>';
+                                                     echo '<div class="content"><a href="?r=user/detail"><i class="zmdi zmdi-account-o"></i> My Profile</a></div>';
                                                  }
                                              } else {
-                                                 echo '<div class="content"><a href="?r=user/detailLecturer"><i class="zmdi zmdi-account-o"></i> My Profile</a></div>';
+                                                 echo '<div class="content"><a href="?r=user/detail"><i class="zmdi zmdi-account-o"></i> My Profile</a></div>';
                                              }
-                                             echo '<div class="content"><a href="?r=site/logout"><i class="icon-lock icon-white"></i> Log Out</a></div>';
-                                         }
 
+                                         }
+                                          echo '<div class="content"><a href="?r=site/logout"><i class="icon-lock icon-white"></i> Log Out</a></div>';
                                       }
 
                                       ?>
@@ -465,7 +470,7 @@ body {
                         <div class="col-md-5 col-sm-5" >
                             <div class="newsletter-content">
                                 <h3>SUBSCRIBE</h3>
-                                <h4>TO GET OUR NEW MATERIALS</h4>
+                                <h4>TO GET OUR FREE MATERIALS</h4>
                             </div>
                         </div>
                         <div class="col-md-7 col-sm-7 mobile">

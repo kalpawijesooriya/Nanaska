@@ -57,7 +57,7 @@
                             <div class="text-content-wrapper">
                                 <div class="text-content">
                                     <h1 class="title1 title wow fadeInUp slide1" data-wow-duration="1000ms" data-wow-delay="0s" >LEARN CIMA WITH<br>
-                                   <spain  class="slide2"> WORLD NO. 1 CASE STUDY PROVIDER </spain></h1>
+                                   <spain  class="slide2"> BEST ONLINE CASE STUDY PROVIDER </spain></h1>
                                     <p class="sub-title wow fadeInUp hidden-sm hidden-xs" data-wow-duration="1900ms" data-wow-delay=".5s"> Join with the best online provider for Case Study exams with inspirational individual support!<br>
                                       </p>
                                     <div class="banner-readmore wow fadeInUp" data-wow-duration="6600ms" data-wow-delay=".6s">

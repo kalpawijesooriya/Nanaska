@@ -761,7 +761,6 @@ body {
     margin-right: 8px;
 }
 .header-top-right {
-    float: right;
     padding-top: 23px
 }
 .header-top-right>.content:after {
@@ -1466,7 +1465,7 @@ body {
 }
 .preview-2 .nivo-directionNav a.nivo-prevNav::before,
 .preview-2 .nivo-directionNav a.nivo-nextNav::before {
-    background: ##3282B8;
+    background: #3282B8;
     border-radius: 50%;
     color: #ffffff;
     content: "";

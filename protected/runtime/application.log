@@ -1258,3 +1258,634 @@ Stack trace:
 REQUEST_URI=/nanaska-backend/index.php?r=admin/testimonials/create
 HTTP_REFERER=http://localhost/nanaska-backend/index.php?r=admin/testimonials/create
 ---
+2020/09/14 17:00:40 [error] [php] Function get_magic_quotes_gpc() is deprecated (C:\Users\Kalpa Wijesooriya\yii\framework\web\CHttpRequest.php:119)
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(501): CWebApplication->getComponent()
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(545): CWebApplication->getRequest()
+#2 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(154): CWebApplication->init()
+#3 C:\Users\Kalpa Wijesooriya\yii\framework\YiiBase.php(125): CWebApplication->__construct()
+#4 C:\Users\Kalpa Wijesooriya\yii\framework\YiiBase.php(98): createApplication()
+#5 C:\wamp64\www\nanaska-backend\index.php(14): createWebApplication()
+REQUEST_URI=/nanaska-backend/
+2020/10/18 09:53:53 [error] [php] Function get_magic_quotes_gpc() is deprecated (C:\Users\Kalpa Wijesooriya\yii\framework\web\CHttpRequest.php:119)
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(501): CWebApplication->getComponent()
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(545): CWebApplication->getRequest()
+#2 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(154): CWebApplication->init()
+#3 C:\Users\Kalpa Wijesooriya\yii\framework\YiiBase.php(125): CWebApplication->__construct()
+#4 C:\Users\Kalpa Wijesooriya\yii\framework\YiiBase.php(98): createApplication()
+#5 C:\wamp63\www\nanaska-backend\index.php(14): createWebApplication()
+REQUEST_URI=/nanaska-backend/
+2020/10/18 09:55:02 [error] [php] PDO::__construct(): Server sent charset (255) unknown to the client. Please, report to the developers (C:\Users\Kalpa Wijesooriya\yii\framework\db\CDbConnection.php:423)
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\db\CDbConnection.php(308): CDbConnection->setActive()
+#2 C:\Users\Kalpa Wijesooriya\yii\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(438): CWebApplication->getComponent()
+#4 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(623): CWebApplication->getDb()
+#5 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(2309): ProductCategories->getDbConnection()
+#6 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct()
+#7 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(402): model()
+#8 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(77): ProductCategories->getMetaData()
+#9 C:\wamp63\www\nanaska-backend\protected\controllers\SiteController.php(34): ProductCategories->__construct()
+#10 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#11 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(286): SiteController->runAction()
+#13 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#14 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#15 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#17 C:\wamp63\www\nanaska-backend\index.php(14): CWebApplication->run()
+REQUEST_URI=/nanaska-backend/
+2020/10/18 09:55:30 [error] [php] PDO::__construct(): Server sent charset (255) unknown to the client. Please, report to the developers (C:\Users\Kalpa Wijesooriya\yii\framework\db\CDbConnection.php:423)
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\db\CDbConnection.php(308): CDbConnection->setActive()
+#2 C:\Users\Kalpa Wijesooriya\yii\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(438): CWebApplication->getComponent()
+#4 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(623): CWebApplication->getDb()
+#5 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(2309): User->getDbConnection()
+#6 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct()
+#7 C:\wamp63\www\nanaska-backend\protected\models\User.php(45): model()
+#8 C:\wamp63\www\nanaska-backend\protected\components\UserIdentity.php(45): model()
+#9 C:\wamp63\www\nanaska-backend\protected\models\LoginForm.php(56): UserIdentity->authenticate()
+#10 C:\Users\Kalpa Wijesooriya\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate()
+#11 C:\Users\Kalpa Wijesooriya\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute()
+#12 C:\Users\Kalpa Wijesooriya\yii\framework\base\CModel.php(159): CInlineValidator->validate()
+#13 C:\wamp63\www\nanaska-backend\protected\controllers\SiteController.php(122): LoginForm->validate()
+#14 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#15 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#16 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(286): SiteController->runAction()
+#17 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#18 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#19 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#20 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#21 C:\wamp63\www\nanaska-backend\index.php(14): CWebApplication->run()
+REQUEST_URI=/nanaska-backend/index.php?r=site/login
+2020/10/18 10:00:30 [error] [php] PDO::__construct(): Server sent charset (255) unknown to the client. Please, report to the developers (C:\Users\Kalpa Wijesooriya\yii\framework\db\CDbConnection.php:423)
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\db\CDbConnection.php(308): CDbConnection->setActive()
+#2 C:\Users\Kalpa Wijesooriya\yii\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(438): CWebApplication->getComponent()
+#4 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(623): CWebApplication->getDb()
+#5 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(2309): User->getDbConnection()
+#6 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct()
+#7 C:\wamp63\www\nanaska-backend\protected\models\User.php(45): model()
+#8 C:\wamp63\www\nanaska-backend\protected\components\UserIdentity.php(45): model()
+#9 C:\wamp63\www\nanaska-backend\protected\models\LoginForm.php(56): UserIdentity->authenticate()
+#10 C:\Users\Kalpa Wijesooriya\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate()
+#11 C:\Users\Kalpa Wijesooriya\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute()
+#12 C:\Users\Kalpa Wijesooriya\yii\framework\base\CModel.php(159): CInlineValidator->validate()
+#13 C:\wamp63\www\nanaska-backend\protected\controllers\SiteController.php(122): LoginForm->validate()
+#14 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#15 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#16 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(286): SiteController->runAction()
+#17 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#18 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#19 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#20 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#21 C:\wamp63\www\nanaska-backend\index.php(14): CWebApplication->run()
+REQUEST_URI=/nanaska-backend/index.php?r=site/login
+2020/10/18 10:05:05 [error] [php] PDO::__construct(): Server sent charset (255) unknown to the client. Please, report to the developers (C:\Users\Kalpa Wijesooriya\yii\framework\db\CDbConnection.php:423)
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\db\CDbConnection.php(308): CDbConnection->setActive()
+#2 C:\Users\Kalpa Wijesooriya\yii\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(438): CWebApplication->getComponent()
+#4 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(623): CWebApplication->getDb()
+#5 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(2309): User->getDbConnection()
+#6 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct()
+#7 C:\wamp63\www\nanaska-backend\protected\models\User.php(45): model()
+#8 C:\wamp63\www\nanaska-backend\protected\components\UserIdentity.php(45): model()
+#9 C:\wamp63\www\nanaska-backend\protected\models\LoginForm.php(56): UserIdentity->authenticate()
+#10 C:\Users\Kalpa Wijesooriya\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate()
+#11 C:\Users\Kalpa Wijesooriya\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute()
+#12 C:\Users\Kalpa Wijesooriya\yii\framework\base\CModel.php(159): CInlineValidator->validate()
+#13 C:\wamp63\www\nanaska-backend\protected\controllers\SiteController.php(122): LoginForm->validate()
+#14 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#15 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#16 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(286): SiteController->runAction()
+#17 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#18 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#19 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#20 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#21 C:\wamp63\www\nanaska-backend\index.php(14): CWebApplication->run()
+REQUEST_URI=/nanaska-backend/index.php?r=site/login
+2020/10/18 10:05:14 [error] [php] PDO::__construct(): Server sent charset (255) unknown to the client. Please, report to the developers (C:\Users\Kalpa Wijesooriya\yii\framework\db\CDbConnection.php:423)
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\db\CDbConnection.php(330): CDbConnection->open()
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\db\CDbConnection.php(308): CDbConnection->setActive()
+#2 C:\Users\Kalpa Wijesooriya\yii\framework\base\CModule.php(387): CDbConnection->init()
+#3 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(438): CWebApplication->getComponent()
+#4 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(623): CWebApplication->getDb()
+#5 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(2309): User->getDbConnection()
+#6 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct()
+#7 C:\wamp63\www\nanaska-backend\protected\models\User.php(45): model()
+#8 C:\wamp63\www\nanaska-backend\protected\components\UserIdentity.php(45): model()
+#9 C:\wamp63\www\nanaska-backend\protected\models\LoginForm.php(56): UserIdentity->authenticate()
+#10 C:\Users\Kalpa Wijesooriya\yii\framework\validators\CInlineValidator.php(42): LoginForm->authenticate()
+#11 C:\Users\Kalpa Wijesooriya\yii\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute()
+#12 C:\Users\Kalpa Wijesooriya\yii\framework\base\CModel.php(159): CInlineValidator->validate()
+#13 C:\wamp63\www\nanaska-backend\protected\controllers\SiteController.php(122): LoginForm->validate()
+#14 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionLogin()
+#15 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#16 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(286): SiteController->runAction()
+#17 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#18 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#19 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#20 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#21 C:\wamp63\www\nanaska-backend\index.php(14): CWebApplication->run()
+REQUEST_URI=/nanaska-backend/index.php?r=site/login
+2020/10/18 10:26:16 [error] [php] Trying to get property of non-object (C:\wamp63\www\nanaska-backend\protected\modules\admin\views\exam\_viewQuestionDialog.php:6)
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(869): ExamController->renderFile()
+#1 C:\wamp63\www\nanaska-backend\protected\modules\admin\controllers\ExamController.php(858): ExamController->renderPartial()
+#2 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CInlineAction.php(49): ExamController->actionRenderDialogBoc()
+#3 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(133): ExamController->runAction()
+#5 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#7 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CInlineFilter.php(58): ExamController->filterAccessControl()
+#8 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#9 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(265): ExamController->runActionWithFilters()
+#11 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): ExamController->run()
+#12 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#13 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 C:\wamp63\www\nanaska-backend\index.php(14): CWebApplication->run()
+REQUEST_URI=/nanaska-backend/index.php?r=admin/Exam/renderDialogBoc
+2020/10/18 11:47:23 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'learncima.testimonials' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `testimonials`.
+2020/10/18 11:47:23 [error] [exception.CDbException] exception 'CDbException' with message 'The table "testimonials" for active record class "Testimonials" cannot be found in the database.' in C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php:2310
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Testimonials))
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(402): CActiveRecord::model('Testimonials')
+#2 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(77): CActiveRecord->getMetaData()
+#3 C:\wamp63\www\nanaska-backend\themes\bootstrap\views\site\index.php(297): CActiveRecord->__construct()
+#4 C:\Users\Kalpa Wijesooriya\yii\framework\web\CBaseController.php(126): require('C:\\wamp63\\www\\n...')
+#5 C:\Users\Kalpa Wijesooriya\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp63\\www\\n...', Array, true)
+#6 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp63\\www\\n...', Array, true)
+#7 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#8 C:\wamp63\www\nanaska-backend\protected\controllers\SiteController.php(52): CController->render('index', Array)
+#9 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#10 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): CController->run('')
+#14 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#15 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp63\www\nanaska-backend\index.php(14): CApplication->run()
+#17 {main}
+REQUEST_URI=/nanaska-backend/
+---
+2020/10/18 11:48:12 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'learncima.testimonials' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `testimonials`.
+2020/10/18 11:48:12 [error] [exception.CDbException] exception 'CDbException' with message 'The table "testimonials" for active record class "Testimonials" cannot be found in the database.' in C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php:2310
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Testimonials))
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(402): CActiveRecord::model('Testimonials')
+#2 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(77): CActiveRecord->getMetaData()
+#3 C:\wamp63\www\nanaska-backend\themes\bootstrap\views\site\index.php(297): CActiveRecord->__construct()
+#4 C:\Users\Kalpa Wijesooriya\yii\framework\web\CBaseController.php(126): require('C:\\wamp63\\www\\n...')
+#5 C:\Users\Kalpa Wijesooriya\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp63\\www\\n...', Array, true)
+#6 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp63\\www\\n...', Array, true)
+#7 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#8 C:\wamp63\www\nanaska-backend\protected\controllers\SiteController.php(52): CController->render('index', Array)
+#9 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#10 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): CController->run('')
+#14 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#15 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp63\www\nanaska-backend\index.php(14): CApplication->run()
+#17 {main}
+REQUEST_URI=/nanaska-backend/index.php
+HTTP_REFERER=http://localhost/nanaska-backend/?r=admin
+---
+2020/10/18 11:49:11 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'learncima.testimonials' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `testimonials`.
+2020/10/18 11:49:11 [error] [exception.CDbException] exception 'CDbException' with message 'The table "testimonials" for active record class "Testimonials" cannot be found in the database.' in C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php:2310
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Testimonials))
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(402): CActiveRecord::model('Testimonials')
+#2 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(77): CActiveRecord->getMetaData()
+#3 C:\wamp63\www\nanaska-backend\themes\bootstrap\views\site\index.php(297): CActiveRecord->__construct()
+#4 C:\Users\Kalpa Wijesooriya\yii\framework\web\CBaseController.php(126): require('C:\\wamp63\\www\\n...')
+#5 C:\Users\Kalpa Wijesooriya\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp63\\www\\n...', Array, true)
+#6 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp63\\www\\n...', Array, true)
+#7 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#8 C:\wamp63\www\nanaska-backend\protected\controllers\SiteController.php(52): CController->render('index', Array)
+#9 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#10 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): CController->run('')
+#14 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#15 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp63\www\nanaska-backend\index.php(14): CApplication->run()
+#17 {main}
+REQUEST_URI=/nanaska-backend/index.php
+HTTP_REFERER=http://localhost/nanaska-backend/index.php
+---
+2020/10/18 11:50:31 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'learncima.testimonials' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `testimonials`.
+2020/10/18 11:50:31 [error] [exception.CDbException] exception 'CDbException' with message 'The table "testimonials" for active record class "Testimonials" cannot be found in the database.' in C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php:2310
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Testimonials))
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(402): CActiveRecord::model('Testimonials')
+#2 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(77): CActiveRecord->getMetaData()
+#3 C:\wamp63\www\nanaska-backend\themes\bootstrap\views\site\index.php(297): CActiveRecord->__construct()
+#4 C:\Users\Kalpa Wijesooriya\yii\framework\web\CBaseController.php(126): require('C:\\wamp63\\www\\n...')
+#5 C:\Users\Kalpa Wijesooriya\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp63\\www\\n...', Array, true)
+#6 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp63\\www\\n...', Array, true)
+#7 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#8 C:\wamp63\www\nanaska-backend\protected\controllers\SiteController.php(52): CController->render('index', Array)
+#9 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#10 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): CController->run('')
+#14 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#15 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp63\www\nanaska-backend\index.php(14): CApplication->run()
+#17 {main}
+REQUEST_URI=/nanaska-backend/index.php
+HTTP_REFERER=http://localhost/nanaska-backend/index.php?r=site/login
+---
+2020/11/21 18:35:37 [error] [php] Function get_magic_quotes_gpc() is deprecated (C:\Users\Kalpa Wijesooriya\yii\framework\web\CHttpRequest.php:119)
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(501): CWebApplication->getComponent()
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(545): CWebApplication->getRequest()
+#2 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(154): CWebApplication->init()
+#3 C:\Users\Kalpa Wijesooriya\yii\framework\YiiBase.php(125): CWebApplication->__construct()
+#4 C:\Users\Kalpa Wijesooriya\yii\framework\YiiBase.php(98): createApplication()
+#5 C:\wamp63\www\nanaska-backend\index.php(14): createWebApplication()
+REQUEST_URI=/nanaska-backend/
+2020/11/21 18:36:10 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'learncima.testimonials' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `testimonials`.
+2020/11/21 18:36:10 [error] [exception.CDbException] exception 'CDbException' with message 'The table "testimonials" for active record class "Testimonials" cannot be found in the database.' in C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php:2310
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Testimonials))
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(402): CActiveRecord::model('Testimonials')
+#2 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(77): CActiveRecord->getMetaData()
+#3 C:\wamp63\www\nanaska-backend\themes\bootstrap\views\site\index.php(297): CActiveRecord->__construct()
+#4 C:\Users\Kalpa Wijesooriya\yii\framework\web\CBaseController.php(126): require('C:\\wamp63\\www\\n...')
+#5 C:\Users\Kalpa Wijesooriya\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp63\\www\\n...', Array, true)
+#6 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp63\\www\\n...', Array, true)
+#7 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#8 C:\wamp63\www\nanaska-backend\protected\controllers\SiteController.php(52): CController->render('index', Array)
+#9 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#10 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): CController->run('')
+#14 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#15 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp63\www\nanaska-backend\index.php(14): CApplication->run()
+#17 {main}
+REQUEST_URI=/nanaska-backend/
+---
+2020/11/21 18:42:58 [error] [php] Function get_magic_quotes_gpc() is deprecated (C:\Users\Kalpa Wijesooriya\yii\framework\web\CHttpRequest.php:119)
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(501): CWebApplication->getComponent()
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(545): CWebApplication->getRequest()
+#2 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(154): CWebApplication->init()
+#3 C:\Users\Kalpa Wijesooriya\yii\framework\YiiBase.php(125): CWebApplication->__construct()
+#4 C:\Users\Kalpa Wijesooriya\yii\framework\YiiBase.php(98): createApplication()
+#5 C:\wamp63\www\nanaska-backend\index.php(14): createWebApplication()
+REQUEST_URI=/nanaska-backend/index.php?r=site/login
+2020/11/21 18:48:36 [error] [php] Function get_magic_quotes_gpc() is deprecated (C:\Users\Kalpa Wijesooriya\yii\framework\web\CHttpRequest.php:119)
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(501): CWebApplication->getComponent()
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(545): CWebApplication->getRequest()
+#2 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(154): CWebApplication->init()
+#3 C:\Users\Kalpa Wijesooriya\yii\framework\YiiBase.php(125): CWebApplication->__construct()
+#4 C:\Users\Kalpa Wijesooriya\yii\framework\YiiBase.php(98): createApplication()
+#5 C:\wamp63\www\nanaska-backend\index.php(14): createWebApplication()
+REQUEST_URI=/nanaska-backend/index.php?r=site/login
+2020/11/21 18:49:07 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'learncima.testimonials' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `testimonials`.
+2020/11/21 18:49:07 [error] [exception.CDbException] exception 'CDbException' with message 'The table "testimonials" for active record class "Testimonials" cannot be found in the database.' in C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php:2310
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Testimonials))
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(402): CActiveRecord::model('Testimonials')
+#2 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(77): CActiveRecord->getMetaData()
+#3 C:\wamp63\www\nanaska-backend\themes\bootstrap\views\site\index.php(297): CActiveRecord->__construct()
+#4 C:\Users\Kalpa Wijesooriya\yii\framework\web\CBaseController.php(126): require('C:\\wamp63\\www\\n...')
+#5 C:\Users\Kalpa Wijesooriya\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp63\\www\\n...', Array, true)
+#6 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp63\\www\\n...', Array, true)
+#7 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#8 C:\wamp63\www\nanaska-backend\protected\controllers\SiteController.php(52): CController->render('index', Array)
+#9 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#10 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): CController->run('')
+#14 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#15 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp63\www\nanaska-backend\index.php(14): CApplication->run()
+#17 {main}
+REQUEST_URI=/nanaska-backend/index.php
+HTTP_REFERER=http://localhost/nanaska-backend/index.php?r=admin
+---
+2020/11/21 19:15:36 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'learncima.testimonials' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `testimonials`.
+2020/11/21 19:15:36 [error] [exception.CDbException] exception 'CDbException' with message 'The table "testimonials" for active record class "Testimonials" cannot be found in the database.' in C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php:2310
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Testimonials))
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(402): CActiveRecord::model('Testimonials')
+#2 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(77): CActiveRecord->getMetaData()
+#3 C:\wamp63\www\nanaska-backend\themes\bootstrap\views\site\index.php(297): CActiveRecord->__construct()
+#4 C:\Users\Kalpa Wijesooriya\yii\framework\web\CBaseController.php(126): require('C:\\wamp63\\www\\n...')
+#5 C:\Users\Kalpa Wijesooriya\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp63\\www\\n...', Array, true)
+#6 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp63\\www\\n...', Array, true)
+#7 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#8 C:\wamp63\www\nanaska-backend\protected\controllers\SiteController.php(52): CController->render('index', Array)
+#9 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#10 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): CController->run('')
+#14 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#15 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp63\www\nanaska-backend\index.php(14): CApplication->run()
+#17 {main}
+REQUEST_URI=/nanaska-backend/
+---
+2020/11/22 04:13:15 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'learncima.testimonials' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `testimonials`.
+2020/11/22 04:13:15 [error] [exception.CDbException] exception 'CDbException' with message 'The table "testimonials" for active record class "Testimonials" cannot be found in the database.' in C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php:2310
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Testimonials))
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(402): CActiveRecord::model('Testimonials')
+#2 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(77): CActiveRecord->getMetaData()
+#3 C:\wamp63\www\nanaska-backend\themes\bootstrap\views\site\index.php(297): CActiveRecord->__construct()
+#4 C:\Users\Kalpa Wijesooriya\yii\framework\web\CBaseController.php(126): require('C:\\wamp63\\www\\n...')
+#5 C:\Users\Kalpa Wijesooriya\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp63\\www\\n...', Array, true)
+#6 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp63\\www\\n...', Array, true)
+#7 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#8 C:\wamp63\www\nanaska-backend\protected\controllers\SiteController.php(52): CController->render('index', Array)
+#9 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#10 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): CController->run('')
+#14 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#15 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp63\www\nanaska-backend\index.php(14): CApplication->run()
+#17 {main}
+REQUEST_URI=/nanaska-backend/index.php
+HTTP_REFERER=http://localhost/nanaska-backend/index.php?r=user/detail
+---
+2020/11/22 04:15:21 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'learncima.testimonials' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `testimonials`.
+2020/11/22 04:15:21 [error] [exception.CDbException] exception 'CDbException' with message 'The table "testimonials" for active record class "Testimonials" cannot be found in the database.' in C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php:2310
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Testimonials))
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(402): CActiveRecord::model('Testimonials')
+#2 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(77): CActiveRecord->getMetaData()
+#3 C:\wamp63\www\nanaska-backend\themes\bootstrap\views\site\index.php(297): CActiveRecord->__construct()
+#4 C:\Users\Kalpa Wijesooriya\yii\framework\web\CBaseController.php(126): require('C:\\wamp63\\www\\n...')
+#5 C:\Users\Kalpa Wijesooriya\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp63\\www\\n...', Array, true)
+#6 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp63\\www\\n...', Array, true)
+#7 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#8 C:\wamp63\www\nanaska-backend\protected\controllers\SiteController.php(52): CController->render('index', Array)
+#9 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#10 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): CController->run('')
+#14 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#15 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp63\www\nanaska-backend\index.php(14): CApplication->run()
+#17 {main}
+REQUEST_URI=/nanaska-backend/index.php?
+HTTP_REFERER=http://localhost/nanaska-backend/index.php?r=exam/viewexam
+---
+2020/11/22 04:15:35 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'learncima.testimonials' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `testimonials`.
+2020/11/22 04:15:35 [error] [exception.CDbException] exception 'CDbException' with message 'The table "testimonials" for active record class "Testimonials" cannot be found in the database.' in C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php:2310
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Testimonials))
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(402): CActiveRecord::model('Testimonials')
+#2 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(77): CActiveRecord->getMetaData()
+#3 C:\wamp63\www\nanaska-backend\themes\bootstrap\views\site\index.php(297): CActiveRecord->__construct()
+#4 C:\Users\Kalpa Wijesooriya\yii\framework\web\CBaseController.php(126): require('C:\\wamp63\\www\\n...')
+#5 C:\Users\Kalpa Wijesooriya\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp63\\www\\n...', Array, true)
+#6 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp63\\www\\n...', Array, true)
+#7 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#8 C:\wamp63\www\nanaska-backend\protected\controllers\SiteController.php(52): CController->render('index', Array)
+#9 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#10 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): CController->run('')
+#14 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#15 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp63\www\nanaska-backend\index.php(14): CApplication->run()
+#17 {main}
+REQUEST_URI=/nanaska-backend/index.php?
+HTTP_REFERER=http://localhost/nanaska-backend/index.php?r=exam/viewexam
+---
+2020/11/22 04:29:20 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'learncima.testimonials' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `testimonials`.
+2020/11/22 04:29:20 [error] [exception.CDbException] exception 'CDbException' with message 'The table "testimonials" for active record class "Testimonials" cannot be found in the database.' in C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php:2310
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Testimonials))
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(402): CActiveRecord::model('Testimonials')
+#2 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(77): CActiveRecord->getMetaData()
+#3 C:\wamp63\www\nanaska-backend\themes\bootstrap\views\site\index.php(297): CActiveRecord->__construct()
+#4 C:\Users\Kalpa Wijesooriya\yii\framework\web\CBaseController.php(126): require('C:\\wamp63\\www\\n...')
+#5 C:\Users\Kalpa Wijesooriya\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp63\\www\\n...', Array, true)
+#6 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp63\\www\\n...', Array, true)
+#7 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#8 C:\wamp63\www\nanaska-backend\protected\controllers\SiteController.php(52): CController->render('index', Array)
+#9 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#10 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): CController->run('')
+#14 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#15 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp63\www\nanaska-backend\index.php(14): CApplication->run()
+#17 {main}
+REQUEST_URI=/nanaska-backend/index.php?
+HTTP_REFERER=http://localhost/nanaska-backend/index.php?r=exam/viewexam
+---
+2020/11/22 04:32:16 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'learncima.testimonials' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `testimonials`.
+2020/11/22 04:32:16 [error] [exception.CDbException] exception 'CDbException' with message 'The table "testimonials" for active record class "Testimonials" cannot be found in the database.' in C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php:2310
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(Testimonials))
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(402): CActiveRecord::model('Testimonials')
+#2 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(77): CActiveRecord->getMetaData()
+#3 C:\wamp63\www\nanaska-backend\themes\bootstrap\views\site\index.php(297): CActiveRecord->__construct()
+#4 C:\Users\Kalpa Wijesooriya\yii\framework\web\CBaseController.php(126): require('C:\\wamp63\\www\\n...')
+#5 C:\Users\Kalpa Wijesooriya\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp63\\www\\n...', Array, true)
+#6 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp63\\www\\n...', Array, true)
+#7 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#8 C:\wamp63\www\nanaska-backend\protected\controllers\SiteController.php(52): CController->render('index', Array)
+#9 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#10 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): CController->run('')
+#14 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#15 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp63\www\nanaska-backend\index.php(14): CApplication->run()
+#17 {main}
+REQUEST_URI=/nanaska-backend/index.php
+HTTP_REFERER=http://localhost/nanaska-backend/index.php?r=exam/viewexam
+---
+2020/11/22 04:43:09 [error] [exception.CException] exception 'CException' with message 'Property "Testimonials.testimonials_name" is not defined.' in C:\Users\Kalpa Wijesooriya\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(143): CComponent->__get('testimonials_na...')
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\web\helpers\CHtml.php(2255): CActiveRecord->__get('testimonials_na...')
+#2 C:\Users\Kalpa Wijesooriya\yii\framework\web\helpers\CHtml.php(1980): CHtml::resolveValue(Object(Testimonials), 'testimonials_na...')
+#3 C:\Users\Kalpa Wijesooriya\yii\framework\web\helpers\CHtml.php(1257): CHtml::activeInputField('text', Object(Testimonials), 'testimonials_na...', Array)
+#4 C:\Users\Kalpa Wijesooriya\yii\framework\web\widgets\CActiveForm.php(657): CHtml::activeTextField(Object(Testimonials), 'testimonials_na...', Array)
+#5 C:\wamp63\www\nanaska-backend\protected\modules\admin\views\testimonials\_form.php(27): CActiveForm->textField(Object(Testimonials), 'testimonials_na...', Array)
+#6 C:\Users\Kalpa Wijesooriya\yii\framework\web\CBaseController.php(126): require('C:\\wamp63\\www\\n...')
+#7 C:\Users\Kalpa Wijesooriya\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp63\\www\\n...', Array, true)
+#8 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp63\\www\\n...', Array, true)
+#9 C:\wamp63\www\nanaska-backend\protected\modules\admin\views\testimonials\create.php(18): CController->renderPartial('_form', Array)
+#10 C:\Users\Kalpa Wijesooriya\yii\framework\web\CBaseController.php(126): require('C:\\wamp63\\www\\n...')
+#11 C:\Users\Kalpa Wijesooriya\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\wamp63\\www\\n...', Array, true)
+#12 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\wamp63\\www\\n...', Array, true)
+#13 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#14 C:\wamp63\www\nanaska-backend\protected\modules\admin\controllers\TestimonialsController.php(92): CController->render('create', Array)
+#15 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CInlineAction.php(49): TestimonialsController->actionCreate()
+#16 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#18 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#19 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#20 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#21 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(291): CFilterChain->run()
+#23 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#24 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#25 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/testimoni...')
+#26 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#27 C:\wamp63\www\nanaska-backend\index.php(14): CApplication->run()
+#28 {main}
+REQUEST_URI=/nanaska-backend/index.php?r=admin/testimonials/create
+HTTP_REFERER=http://localhost/nanaska-backend/index.php?r=admin/testimonials
+---
+2020/11/22 04:45:11 [error] [exception.CDbException] exception 'CDbException' with message 'Column name must be either a string or an array.' in C:\Users\Kalpa Wijesooriya\yii\framework\db\schema\CDbCommandBuilder.php:722
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\db\schema\CDbCommandBuilder.php(519): CDbCommandBuilder->createInCondition(Object(CMysqlTableSchema), NULL, Array, '`t`.')
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(1431): CDbCommandBuilder->createPkCriteria(Object(CMysqlTableSchema), '', '', Array, '`t`.')
+#2 C:\wamp63\www\nanaska-backend\protected\modules\admin\controllers\TestimonialsController.php(187): CActiveRecord->findByPk('')
+#3 C:\wamp63\www\nanaska-backend\protected\modules\admin\controllers\TestimonialsController.php(56): TestimonialsController->loadModel('')
+#4 [internal function]: TestimonialsController->actionView('')
+#5 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(TestimonialsController), Array)
+#6 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(TestimonialsController), Object(ReflectionMethod), Array)
+#7 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#16 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/testimoni...')
+#17 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#18 C:\wamp63\www\nanaska-backend\index.php(14): CApplication->run()
+#19 {main}
+REQUEST_URI=/nanaska-backend/index.php?r=admin/testimonials/view&id=
+HTTP_REFERER=http://localhost/nanaska-backend/index.php?r=admin/testimonials/create
+---
+2020/11/22 04:48:46 [error] [exception.CDbException] exception 'CDbException' with message 'Column name must be either a string or an array.' in C:\Users\Kalpa Wijesooriya\yii\framework\db\schema\CDbCommandBuilder.php:722
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\db\schema\CDbCommandBuilder.php(519): CDbCommandBuilder->createInCondition(Object(CMysqlTableSchema), NULL, Array, '`t`.')
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\db\ar\CActiveRecord.php(1431): CDbCommandBuilder->createPkCriteria(Object(CMysqlTableSchema), '', '', Array, '`t`.')
+#2 C:\wamp63\www\nanaska-backend\protected\modules\admin\controllers\TestimonialsController.php(187): CActiveRecord->findByPk('')
+#3 C:\wamp63\www\nanaska-backend\protected\modules\admin\controllers\TestimonialsController.php(56): TestimonialsController->loadModel('')
+#4 [internal function]: TestimonialsController->actionView('')
+#5 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(TestimonialsController), Array)
+#6 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(TestimonialsController), Object(ReflectionMethod), Array)
+#7 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#16 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/testimoni...')
+#17 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#18 C:\wamp63\www\nanaska-backend\index.php(14): CApplication->run()
+#19 {main}
+REQUEST_URI=/nanaska-backend/index.php?r=admin/testimonials/view&id=
+HTTP_REFERER=http://localhost/nanaska-backend/index.php?r=admin/testimonials/create
+---
+2020/11/22 06:27:52 [error] [php] Trying to get property of non-object (C:\wamp63\www\nanaska-backend\protected\modules\admin\views\exam\_viewQuestionDialog.php:6)
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(869): ExamController->renderFile()
+#1 C:\wamp63\www\nanaska-backend\protected\modules\admin\controllers\ExamController.php(858): ExamController->renderPartial()
+#2 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CInlineAction.php(49): ExamController->actionRenderDialogBoc()
+#3 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(133): ExamController->runAction()
+#5 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#7 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CInlineFilter.php(58): ExamController->filterAccessControl()
+#8 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#9 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(265): ExamController->runActionWithFilters()
+#11 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): ExamController->run()
+#12 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#13 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 C:\wamp63\www\nanaska-backend\index.php(14): CWebApplication->run()
+REQUEST_URI=/nanaska-backend/index.php?r=admin/Exam/renderDialogBoc
+2020/11/22 06:39:09 [error] [php] Undefined offset: 0 (C:\wamp63\www\nanaska-backend\protected\models\Lecturer.php:106)
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\web\CBaseController.php(95): UserController->renderInternal()
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(869): UserController->renderFile()
+#2 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(782): UserController->renderPartial()
+#3 C:\wamp63\www\nanaska-backend\protected\controllers\UserController.php(702): UserController->render()
+#4 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CInlineAction.php(49): UserController->actionViewLecturerDetails()
+#5 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#7 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#9 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#10 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#11 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#13 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): UserController->run()
+#14 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#15 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp63\www\nanaska-backend\index.php(14): CWebApplication->run()
+REQUEST_URI=/nanaska-backend/index.php?r=user/viewLecturerDetails&id=4
+2020/11/22 06:39:21 [error] [php] Undefined offset: 0 (C:\wamp63\www\nanaska-backend\protected\models\Lecturer.php:106)
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\web\CBaseController.php(95): UserController->renderInternal()
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(869): UserController->renderFile()
+#2 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(782): UserController->renderPartial()
+#3 C:\wamp63\www\nanaska-backend\protected\controllers\UserController.php(702): UserController->render()
+#4 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CInlineAction.php(49): UserController->actionViewLecturerDetails()
+#5 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#7 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#9 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#10 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#11 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#13 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): UserController->run()
+#14 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#15 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp63\www\nanaska-backend\index.php(14): CWebApplication->run()
+REQUEST_URI=/nanaska-backend/index.php?r=user/viewLecturerDetails&id=4
+2020/11/22 06:42:47 [error] [php] Undefined offset: 0 (C:\wamp63\www\nanaska-backend\protected\models\Lecturer.php:106)
+Stack trace:
+#0 C:\Users\Kalpa Wijesooriya\yii\framework\web\CBaseController.php(95): UserController->renderInternal()
+#1 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(869): UserController->renderFile()
+#2 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(782): UserController->renderPartial()
+#3 C:\wamp63\www\nanaska-backend\protected\controllers\UserController.php(702): UserController->render()
+#4 C:\Users\Kalpa Wijesooriya\yii\framework\web\actions\CInlineAction.php(49): UserController->actionViewLecturerDetails()
+#5 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(133): UserController->runAction()
+#7 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#9 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CInlineFilter.php(58): UserController->filterAccessControl()
+#10 C:\Users\Kalpa Wijesooriya\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#11 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 C:\Users\Kalpa Wijesooriya\yii\framework\web\CController.php(265): UserController->runActionWithFilters()
+#13 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(282): UserController->run()
+#14 C:\Users\Kalpa Wijesooriya\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#15 C:\Users\Kalpa Wijesooriya\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 C:\wamp63\www\nanaska-backend\index.php(14): CWebApplication->run()
+REQUEST_URI=/nanaska-backend/index.php?r=user/viewLecturerDetails&id=4

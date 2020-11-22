@@ -1,9 +1,9 @@
+
 <div class="container">
-  
+    <link rel="stylesheet" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/styles.css"/>
     <?php
         $this->renderpartial('_level_news_sidemenu');
     ?>
-    
     <div class="span8">
         <div class="widget stacked">
 					

@@ -2,7 +2,7 @@
     <div class="span3">
 
     </div>
-
+    <link rel="stylesheet" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/styles.css"/>
     <div class="span8">
         <div class="widget stacked">
             <div class="widget-header">
