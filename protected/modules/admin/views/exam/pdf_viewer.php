@@ -1,0 +1,1 @@
+<iframe id="cru-frame-RefNew"src="<?php echo $location;?>"width="100%" height="100%" frameBorder="0" scrolling="yes" ></iframe>
