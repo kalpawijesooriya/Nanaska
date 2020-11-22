@@ -30,16 +30,29 @@ foreach ($courses as $course) {
     <div class="row" >
     <ul class="dropdown-menu dr-breakout text-center">
         <?php
-        foreach ($courses as $key => $course)
-        {
-            echo ' <li class="button text-center col col-lg-4" style="margin-top:20px"><a href="#" onclick="showFoo('.$course->course_id .')" >' . $course->course_name . '</a></li>';
-            if ($key===0){
-                echo '<script>
+        if (sizeof($courses)==2) {
+            foreach ($courses as $key => $course) {
+                echo ' <li class="button text-center col col-lg-4" style="margin-top:20px;margin-right: 80px"><a href="#" onclick="showFoo(' . $course->course_id . ')" >' . $course->course_name . '</a></li>';
+                if ($key === 0) {
+                    echo '<script>
                        $(window).on(\'load\', function() {
-                            showFoo('.$course->course_id .')
+                            showFoo(' . $course->course_id . ')
                         });
                       </script>';
+                }
             }
+        }else{
+            foreach ($courses as $key => $course) {
+                echo ' <li class="button text-center col col-lg-4" style="margin-top:20px"><a href="#" onclick="showFoo(' . $course->course_id . ')" >' . $course->course_name . '</a></li>';
+                if ($key === 0) {
+                    echo '<script>
+                       $(window).on(\'load\', function() {
+                            showFoo(' . $course->course_id . ')
+                        });
+                      </script>';
+                }
+            }
+
         }
         ?>
     </ul>
