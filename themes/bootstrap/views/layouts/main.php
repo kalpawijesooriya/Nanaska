@@ -268,7 +268,7 @@ body {
                             </div>
                             <div class="col-lg-5 col-md-6 col-sm-6 col-xs-12">
                                 <div class="header-top-right" style="width: 120%;margin-right: 20px">
-                                    <div class="content"><a href="http://learncima.co.uk/nanaska/"><i class="zmdi zmdi-globe"></i> Our Forum</a></div>
+                                    <div class="content"><a href="https://learncima.co.uk"><i class="zmdi zmdi-globe"></i> Our Forum</a></div>
                                     <?php
                                       if (Yii::app()->user->isGuest) {
                                           echo '<div class="content"><a href="#"><i class="zmdi zmdi-account"></i>Online Exams</a>

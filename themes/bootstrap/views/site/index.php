@@ -384,7 +384,7 @@
                     <div class="single-latest-text">
                         <h3><a >OUR FORUM</a></h3>
                         <p style="margin-bottom: -7px"> Virtual space to access all study materials, videos & clarify doubts. <br> <br> <br>  </p>
-                        <a href="http://learncima.co.uk/nanaska/" class="button-default" target="_blank">See More</a>
+                        <a href="https://learncima.co.uk" class="button-default" target="_blank">See More</a>
                     </div>
                 </div>
             </div>

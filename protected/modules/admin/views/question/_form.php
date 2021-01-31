@@ -22,6 +22,8 @@ $cs->scriptMap = array(
 <script src="<?php echo Yii::app()->request->baseUrl; ?>/themes/bootstrap/js/vendor/jquery-1.12.4.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.8.0.js"></script>
+
 <?php
 //Yii::app()->session['drag_drop_typeb_session'] = array();
 $user_id = Yii::app()->user->getId();
