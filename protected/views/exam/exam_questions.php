@@ -79,21 +79,23 @@ foreach ($exam_question_session as $key => $question) {
                         echo '</div>';
                         echo '</div>';
                     } else {
+                        $answer_text=new AnswerText();
                         echo '<div class="control-group">';
                         echo '<div class="control-label">';
                         if (is_array($question['answer_id']) && in_array($answers['answer_id'], $question['answer_id'])) {
-                            echo '<input type="checkbox" name="answer_id" value="' . $answers['answer_id'] . '" class="answer_text" style="margin-right:5px" checked="checked" />' . AnswerText::getAnswertextByAnswerId($answers['answer_text_id']);
+                            echo '<input type="checkbox" name="answer_id" value="' . $answers['answer_id'] . '" class="answer_text" style="margin-right:5px" checked="checked" />' .    $answer_text->getAnswertextByAnswerId($answers['answer_text_id']);
                         } else {
-                            echo '<input type="checkbox" name="answer_id" value="' . $answers['answer_id'] . '" class="answer_text" style="margin-right:5px" />' . AnswerText::getAnswertextByAnswerId($answers['answer_text_id']);
+                            echo '<input type="checkbox" name="answer_id" value="' . $answers['answer_id'] . '" class="answer_text" style="margin-right:5px" />' .    $answer_text->getAnswertextByAnswerId($answers['answer_text_id']);
                         }
                         echo '</div>';
                         echo '</div>';
                     }
                 }
             } else if ($questions['question_type'] == "SHORT_WRITTEN") {
-                $answer_details = Answer::model()->getAnswersOfQuestion($question['question_id']);
+              
+                 $answer_details = Answer::model()->getAnswersOfQuestion($question['question_id']);
 
-                $headings = Heading::model()->getHeadingsOfQuestion($question['question_id']);
+                 $headings = Heading::model()->getHeadingsOfQuestion($question['question_id']);
 
                 echo '<input type="hidden" id="question_count_key" name="question_count_key" value="' . $key . '">';
                 $count = 0;
@@ -145,7 +147,7 @@ foreach ($exam_question_session as $key => $question) {
 
                         echo '<td>';
                         echo '<input type="text" name="answer_id" id="' . $answers['answer_id'] . '" '
-                        . 'class="answer_text" style="margin-right:5px" value="' . $question['answer_id'][$count] . '" placeholder="Enter Answer"/>';
+                        . 'class="answer_text" style="margin-right:5px"  placeholder="Enter Answer"/>';
                         echo '</td>';
                     } else {
                         echo '<td>';

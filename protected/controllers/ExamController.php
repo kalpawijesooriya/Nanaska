@@ -369,7 +369,7 @@ class ExamController extends Controller {
     }
 
     public function actionViewNextQuestions() {
-
+      //  echo "sssssssss";
         $question_number = $_POST['question_number_count'];
         $time = '';
         $session = Yii::app()->session['exam_question_session'];
@@ -621,10 +621,10 @@ class ExamController extends Controller {
     }
 
     public function actionViewPreviousQuestions() {
-        $previous_question_number = $_POST['previous_question_number_count'];
-
-        $exam_question = $this->renderpartial('exam_questions', array('question_number' => $previous_question_number), true, false);
-
+     
+         $previous_question_number = $_POST['previous_question_number_count'];
+         
+         $exam_question = $this->renderpartial('exam_questions', array('question_number' => $previous_question_number), true, false);
         $session = Yii::app()->session['exam_question_session'];
         $question_id = $this->getIdOfQuestionNo($previous_question_number);
 

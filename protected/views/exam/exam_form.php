@@ -835,12 +835,12 @@
                 drop: function(ev, ui) {
                     var id = ui.draggable.attr('id');
                     var selected = false;
-                    $('input[name=answer_id]').each(function() {
-                        if($(this).val() == id) {
-                            bootbox.alert('Already used!');
-                            selected = true;
-                        }
-                    });
+                    // $('input[name=answer_id]').each(function() {
+                    //     if($(this).val() == id) {
+                    //         bootbox.alert('Already used!');
+                    //         selected = true;
+                    //     }
+                    // });
                     
                     if(selected == false) {
                         this.value = $(ui.draggable).text();
