@@ -113,11 +113,11 @@ if ($image_count > 0 && $text_count > 0) {
     var ccount = <?php echo count($single_answer_data); ?>;
     $(document).ready(function(){    
             
-        $('.del').live('click',function(){
+        $('.del').on('click',function(){
             $(this).parent().parent().remove();
         });
 
-        $('.add').live('click',function(){
+        $('.add').on('click',function(){
             $("#first_tr").hide();
             $(this).val('Delete Answer');
             $(this).attr('class','del');

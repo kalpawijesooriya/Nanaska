@@ -8,7 +8,7 @@ package-lock.json
 
 protected/runtime/application.log
 protected/runtime/session-1.1.22.db
-
+learncima.sql
 # Created by https://www.gitignore.io/api/phpstorm
 # Edit at https://www.gitignore.io/?templates=phpstorm
 
