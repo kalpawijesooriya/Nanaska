@@ -659,8 +659,6 @@ if (Yii::app()->user->loadUser()->user_type == "SUPERADMIN" || Yii::app()->user-
        
 
         $questionPart = QuestionPart::model()->getQuestionPartOfQuestion($model->question_id);
-        
-        var_dump($answers);
 
         $operators = QuestionPartText::model()->getOperatorsOfQuestion($questionPart['question_part_id']);
         ?>
