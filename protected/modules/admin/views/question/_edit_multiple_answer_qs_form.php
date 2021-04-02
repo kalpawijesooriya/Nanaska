@@ -121,11 +121,11 @@ if ($image_count > 0 && $text_count > 0) {
             a++;
         });
 
-        $('.delimg').live('click',function(){
+        $('.delimg').on('click',function(){
             $(this).parent().parent().remove();
         });
 
-        $('.addimg').live('click',function(){
+        $('.addimg').on('click',function(){
             $("#first_trimg").hide();
             $(this).val('Delete Answer');
             $(this).attr('class','delimg');
