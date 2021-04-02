@@ -38,11 +38,21 @@ foreach ($courses as $course) {
             <div class="row"  >
             <ul class="hidden-for-phone dropdown-menu dr-breakout text-center nav-list" id="nav-list" >
                 <?php
+                if (sizeof($courses)==2){
                 foreach ($courses as $key => $course) {
                     if ($key === 0) {
-                        echo '<li class="button active col col-lg-4" style="margin-top:20px" ><a href="#' . $course->course_id . '"  data-toggle="tab" id="ttt" onclick="clearFunction()">' . $course->course_name . '</a></li>';
+                        echo '<li class="button active col col-lg-4" style="margin-top:20px;margin-right:80px" ><a href="#' . $course->course_id . '"  data-toggle="tab" id="ttt" onclick="clearFunction()">' . $course->course_name . '</a></li>';
                     } else {
                         echo '<li class="button col col-lg-4" style="margin-top:20px"><a href="#' . $course->course_id . '"  data-toggle="tab" id="ttt" onclick="clearFunction()">' . $course->course_name . '</a></li>';
+                    }
+                }
+                }else{
+                    foreach ($courses as $key => $course) {
+                        if ($key === 0) {
+                            echo '<li class="button active col col-lg-4" style="margin-top:20px" ><a href="#' . $course->course_id . '"  data-toggle="tab" id="ttt" onclick="clearFunction()">' . $course->course_name . '</a></li>';
+                        } else {
+                            echo '<li class="button col col-lg-4" style="margin-top:20px"><a href="#' . $course->course_id . '"  data-toggle="tab" id="ttt" onclick="clearFunction()">' . $course->course_name . '</a></li>';
+                        }
                     }
                 }
                 ?>
