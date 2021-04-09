@@ -4,7 +4,7 @@
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
  * @link http://www.yiiframework.com/
- * @copyright 2008-2013 Yii Software LLC
+ * @copyright Copyright &copy; 2008-2011 Yii Software LLC
  * @license http://www.yiiframework.com/license/
  */
 
@@ -62,7 +62,6 @@ class CGettextMoFile extends CGettextFile
 	 * @param string $file file path
 	 * @param string $context message context
 	 * @return array message translations (source message => translated message)
-	 * @throws CException
 	 */
 	public function load($file,$context)
 	{
@@ -74,8 +73,7 @@ class CGettextMoFile extends CGettextFile
 			throw new CException(Yii::t('yii','Unable to lock file "{file}" for reading.',
 				array('{file}'=>$file)));
 
-		$array=unpack('c',$this->readByte($fr,4));
-		$magic=current($array);
+		$magic=current($array=unpack('c',$this->readByte($fr,4)));
 		if($magic==-34)
 			$this->useBigEndian=false;
 		elseif($magic==-107)
@@ -138,7 +136,6 @@ class CGettextMoFile extends CGettextFile
 	 * @param array $messages message translations (message id => translated message).
 	 * Note if the message has a context, the message id must be prefixed with
 	 * the context with chr(4) as the separator.
-	 * @throws CException
 	 */
 	public function save($file,$messages)
 	{
@@ -234,8 +231,7 @@ class CGettextMoFile extends CGettextFile
 	 */
 	protected function readInteger($fr)
 	{
-		$array=unpack($this->useBigEndian ? 'N' : 'V', $this->readByte($fr,4));
-		return current($array);
+		return current($array=unpack($this->useBigEndian ? 'N' : 'V', $this->readByte($fr,4)));
 	}
 
 	/**

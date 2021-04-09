@@ -4,7 +4,7 @@
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
  * @link http://www.yiiframework.com/
- * @copyright 2008-2013 Yii Software LLC
+ * @copyright Copyright &copy; 2008-2011 Yii Software LLC
  * @license http://www.yiiframework.com/license/
  */
 
@@ -92,18 +92,12 @@ class CCacheHttpSession extends CHttpSession
 	/**
 	 * Session destroy handler.
 	 * Do not call this method directly.
-	 *
-	 * Since 1.1.18 release, this method always returns true.
-	 * Please refer to the following issue for more details:
-	 * {@link https://github.com/yiisoft/yii/issues/4020}
-	 *
 	 * @param string $id session ID
-	 * @return boolean true if no error happens during deletion
+	 * @return boolean whether session is destroyed successfully
 	 */
 	public function destroySession($id)
 	{
-		$this->_cache->delete($this->calculateKey($id));
-		return true;
+	    return $this->_cache->delete($this->calculateKey($id));
 	}
 
 	/**
@@ -113,6 +107,6 @@ class CCacheHttpSession extends CHttpSession
 	 */
 	protected function calculateKey($id)
 	{
-		return self::CACHE_KEY_PREFIX.$id;
+	    return self::CACHE_KEY_PREFIX.$id;
 	}
 }

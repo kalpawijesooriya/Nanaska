@@ -4,7 +4,7 @@
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
  * @link http://www.yiiframework.com/
- * @copyright 2008-2013 Yii Software LLC
+ * @copyright Copyright &copy; 2008-2011 Yii Software LLC
  * @license http://www.yiiframework.com/license/
  */
 
@@ -27,14 +27,10 @@ class CJavaScript
 	 */
 	public static function quote($js,$forUrl=false)
 	{
-		$js = (string)$js;
-
-		Yii::import('system.vendors.zend-escaper.Escaper');
-		$escaper=new Escaper(Yii::app()->charset);
 		if($forUrl)
-			return $escaper->escapeUrl($js);
+			return strtr($js,array('%'=>'%25',"\t"=>'\t',"\n"=>'\n',"\r"=>'\r','"'=>'\"','\''=>'\\\'','\\'=>'\\\\','</'=>'<\/'));
 		else
-			return $escaper->escapeJs($js);
+			return strtr($js,array("\t"=>'\t',"\n"=>'\n',"\r"=>'\r','"'=>'\"','\''=>'\\\'','\\'=>'\\\\','</'=>'<\/'));
 	}
 
 	/**
@@ -82,7 +78,7 @@ class CJavaScript
 			elseif($value===INF)
 				return 'Number.POSITIVE_INFINITY';
 			else
-				return str_replace(',','.',(float)$value);  // locale-independent representation
+				return rtrim(sprintf('%.16F',$value),'0');  // locale-independent representation
 		}
 		elseif($value instanceof CJavaScriptExpression)
 			return $value->__toString();

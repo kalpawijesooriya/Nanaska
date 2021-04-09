@@ -4,7 +4,7 @@
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
  * @link http://www.yiiframework.com/
- * @copyright 2008-2013 Yii Software LLC
+ * @copyright Copyright &copy; 2008-2011 Yii Software LLC
  * @license http://www.yiiframework.com/license/
  */
 
@@ -55,7 +55,7 @@
  * @property boolean $isStarted Whether the session has started.
  * @property string $sessionID The current session ID.
  * @property string $sessionName The current session name.
- * @property string $savePath The current session save path, defaults to {@link http://php.net/session.save_path}.
+ * @property string $savePath The current session save path, defaults to '/tmp'.
  * @property array $cookieParams The session cookie parameters.
  * @property string $cookieMode How to use cookie to store session ID. Defaults to 'Allow'.
  * @property float $gCProbability The probability (percentage) that the gc (garbage collection) process is started on every session initialization, defaults to 1 meaning 1% chance.
@@ -77,18 +77,16 @@ class CHttpSession extends CApplicationComponent implements IteratorAggregate,Ar
 	public $autoStart=true;
 
 	/**
-	 * @var array Frozen session data
-	 * @since 1.1.20
-	 */
-	private $_frozenData;
-
-	/**
 	 * Initializes the application component.
 	 * This method is required by IApplicationComponent and is invoked by application.
 	 */
 	public function init()
 	{
 		parent::init();
+
+		// default session gc probability is 1%
+		ini_set('session.gc_probability',1);
+		ini_set('session.gc_divisor',100);
 
 		if($this->autoStart)
 			$this->open();
@@ -97,7 +95,7 @@ class CHttpSession extends CApplicationComponent implements IteratorAggregate,Ar
 
 	/**
 	 * Returns a value indicating whether to use custom session storage.
-	 * This method should be overridden to return true if custom session storage handler should be used.
+	 * This method should be overriden to return true if custom session storage handler should be used.
 	 * If returning true, make sure the methods {@link openSession}, {@link closeSession}, {@link readSession},
 	 * {@link writeSession}, {@link destroySession}, and {@link gcSession} are overridden in child
 	 * class, because they will be used as the callback handlers.
@@ -157,8 +155,6 @@ class CHttpSession extends CApplicationComponent implements IteratorAggregate,Ar
 	 */
 	public function getIsStarted()
 	{
-		if(function_exists('session_status'))
-			return session_status()===PHP_SESSION_ACTIVE;
 		return session_id()!=='';
 	}
 
@@ -186,8 +182,7 @@ class CHttpSession extends CApplicationComponent implements IteratorAggregate,Ar
 	 */
 	public function regenerateID($deleteOldSession=false)
 	{
-		if($this->getIsStarted())
-			session_regenerate_id($deleteOldSession);
+		session_regenerate_id($deleteOldSession);
 	}
 
 	/**
@@ -207,7 +202,7 @@ class CHttpSession extends CApplicationComponent implements IteratorAggregate,Ar
 	}
 
 	/**
-	 * @return string the current session save path, defaults to {@link http://php.net/session.save_path}.
+	 * @return string the current session save path, defaults to '/tmp'.
 	 */
 	public function getSavePath()
 	{
@@ -240,8 +235,7 @@ class CHttpSession extends CApplicationComponent implements IteratorAggregate,Ar
 	 * Sets the session cookie parameters.
 	 * The effect of this method only lasts for the duration of the script.
 	 * Call this method before the session starts.
-	 * @param array $value cookie parameters, valid keys include: lifetime, path,
-	 * domain, secure, httponly. Note that httponly is all lowercase.
+	 * @param array $value cookie parameters, valid keys include: lifetime, path, domain, secure.
 	 * @see http://us2.php.net/manual/en/function.session-set-cookie-params.php
 	 */
 	public function setCookieParams($value)
@@ -249,12 +243,10 @@ class CHttpSession extends CApplicationComponent implements IteratorAggregate,Ar
 		$data=session_get_cookie_params();
 		extract($data);
 		extract($value);
-		$this->freeze();
 		if(isset($httponly))
 			session_set_cookie_params($lifetime,$path,$domain,$secure,$httponly);
 		else
 			session_set_cookie_params($lifetime,$path,$domain,$secure);
-		$this->unfreeze();
 	}
 
 	/**
@@ -272,30 +264,23 @@ class CHttpSession extends CApplicationComponent implements IteratorAggregate,Ar
 
 	/**
 	 * @param string $value how to use cookie to store session ID. Valid values include 'none', 'allow' and 'only'.
-	 * @throws CException
 	 */
 	public function setCookieMode($value)
 	{
 		if($value==='none')
 		{
-			$this->freeze();
 			ini_set('session.use_cookies','0');
 			ini_set('session.use_only_cookies','0');
-			$this->unfreeze();
 		}
 		elseif($value==='allow')
 		{
-			$this->freeze();
 			ini_set('session.use_cookies','1');
 			ini_set('session.use_only_cookies','0');
-			$this->unfreeze();
 		}
 		elseif($value==='only')
 		{
-			$this->freeze();
 			ini_set('session.use_cookies','1');
 			ini_set('session.use_only_cookies','1');
-			$this->unfreeze();
 		}
 		else
 			throw new CException(Yii::t('yii','CHttpSession.cookieMode can only be "none", "allow" or "only".'));
@@ -317,11 +302,9 @@ class CHttpSession extends CApplicationComponent implements IteratorAggregate,Ar
 	{
 		if($value>=0 && $value<=100)
 		{
-			$this->freeze();
 			// percent * 21474837 / 2147483647 ≈ percent * 0.01
 			ini_set('session.gc_probability',floor($value*21474836.47));
 			ini_set('session.gc_divisor',2147483647);
-			$this->unfreeze();
 		}
 		else
 			throw new CException(Yii::t('yii','CHttpSession.gcProbability "{value}" is invalid. It must be a float between 0 and 100.',
@@ -341,9 +324,7 @@ class CHttpSession extends CApplicationComponent implements IteratorAggregate,Ar
 	 */
 	public function setUseTransparentSessionID($value)
 	{
-		$this->freeze();
 		ini_set('session.use_trans_sid',$value?'1':'0');
-		$this->unfreeze();
 	}
 
 	/**
@@ -359,9 +340,7 @@ class CHttpSession extends CApplicationComponent implements IteratorAggregate,Ar
 	 */
 	public function setTimeout($value)
 	{
-		$this->freeze();
 		ini_set('session.gc_maxlifetime',$value);
-		$this->unfreeze();
 	}
 
 	/**
@@ -592,50 +571,5 @@ class CHttpSession extends CApplicationComponent implements IteratorAggregate,Ar
 	public function offsetUnset($offset)
 	{
 		unset($_SESSION[$offset]);
-	}
-
-	/**
-	 * If session is started we cannot edit session ini settings.
-	 * This function save session data to temporary variable and stop session.
-	 *
-	 * @see CHttpSession::unfreeze();
-	 * @since 1.1.20
-	 */
-	protected function freeze()
-	{
-		if (isset($_SESSION) && $this->getIsStarted())
-		{
-			$this->_frozenData = $_SESSION;
-			$this->close();
-		}
-	}
-
-	/**
-	 * Start session and restore data from temporary variable
-	 *
-	 * @see CHttpSession::freeze();
-	 * @since 1.1.20
-	 */
-	protected function unfreeze()
-	{
-		if ($this->_frozenData !== null)
-		{
-			@session_start();
-			$_SESSION = $this->_frozenData;
-			$this->_frozenData = null;
-		}
-	}
-
-	/**
-	 * Set cache limiter
-	 *
-	 * @param string $cacheLimiter
-	 * @since 1.1.20
-	 */
-	public function setCacheLimiter($cacheLimiter)
-	{
-		$this->freeze();
-		session_cache_limiter($cacheLimiter);
-		$this->unfreeze();
 	}
 }

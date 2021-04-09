@@ -3,13 +3,12 @@
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
  * @link http://www.yiiframework.com/
- * @copyright 2008-2010 Yii Software LLC
+ * @copyright Copyright &copy; 2008-2010 Yii Software LLC
  * @license http://www.yiiframework.com/license/
  */
 
 (function ($) {
-	var selectCheckedRows, methods, 
-	 	yiiXHR={},
+	var selectCheckedRows, methods,
 		gridSettings = [];
 	/**
 	 * 1. Selects rows that have checkbox checked (only checkbox that is connected with selecting a row)
@@ -18,7 +17,7 @@
 	 */
 	selectCheckedRows = function (gridId) {
 		var settings = gridSettings[gridId],
-			table = $('#' + gridId).find('.' + settings.tableClass);
+			table = $('#' + gridId).children('.' + settings.tableClass);
 
 		table.children('tbody').find('input.select-on-check').filter(':checked').each(function () {
 			$(this).closest('tr').addClass('selected');
@@ -37,8 +36,7 @@
 		 * yiiGridView set function.
 		 * @param options map settings for the grid view. Available options are as follows:
 		 * - ajaxUpdate: array, IDs of the containers whose content may be updated by ajax response
-		 * - ajaxVar: string, the name of the request variable indicating the ID of the element triggering the AJAX request
-		 * - ajaxType: string, the type (GET or POST) of the AJAX request
+		 * - ajaxVar: string, the name of the GET variable indicating the ID of the element triggering the AJAX request
 		 * - pagerClass: string, the CSS class for the pager container
 		 * - tableClass: string, the CSS class for the table
 		 * - selectableRows: integer, the number of rows that can be selected
@@ -53,9 +51,6 @@
 			var settings = $.extend({
 					ajaxUpdate: [],
 					ajaxVar: 'ajax',
-					ajaxType: 'GET',
-					csrfTokenName: null,
-					csrfToken: null,
 					pagerClass: 'pager',
 					loadingClass: 'loading',
 					filterClass: 'filters',
@@ -72,7 +67,6 @@
 
 			return this.each(function () {
 				var eventType,
-					eventTarget,
 					$grid = $(this),
 					id = $grid.attr('id'),
 					pagerSelector = '#' + id + ' .' + settings.pagerClass.replace(/\s+/g, '.') + ' a',
@@ -92,16 +86,11 @@
 						// Check to see if History.js is enabled for our Browser
 						if (settings.enableHistory && window.History.enabled) {
 							// Ajaxify this link
-							var href = $(this).attr('href');
-							if(href){
-								var url = href.split('?'),
-									params = $.deparam.querystring('?'+ (url[1] || ''));
+							var url = $(this).attr('href').split('?'),
+								params = $.deparam.querystring('?'+url[1]);
 
-								delete params[settings.ajaxVar];
-
-								var updateUrl = $.param.querystring(url[0], params);
-								window.History.pushState({url: updateUrl}, document.title, updateUrl);
-							}
+							delete params[settings.ajaxVar];
+							window.History.pushState(null, document.title, decodeURIComponent($.param.querystring(url[0], params)));
 						} else {
 							$('#' + id).yiiGridView('update', {url: $(this).attr('href')});
 						}
@@ -111,17 +100,15 @@
 
 				$(document).on('change.yiiGridView keydown.yiiGridView', settings.filterSelector, function (event) {
 					if (event.type === 'keydown') {
-						if (event.keyCode !== 13) {
+						if( event.keyCode !== 13) {
 							return; // only react to enter key
 						} else {
 							eventType = 'keydown';
-							eventTarget = event.target;
 						}
 					} else {
-						// prevent processing for both keydown and change events on the same element
-						if (eventType === 'keydown' && eventTarget === event.target) {
+						// prevent processing for both keydown and change events
+						if (eventType === 'keydown') {
 							eventType = '';
-							eventTarget = null;
 							return;
 						}
 					}
@@ -135,22 +122,16 @@
 							params = $.deparam.querystring($.param.querystring(url, data));
 
 						delete params[settings.ajaxVar];
-
-						var updateUrl = $.param.querystring(url.substr(0, url.indexOf('?')), params);
-						window.History.pushState({url: updateUrl}, document.title, updateUrl);
+						window.History.pushState(null, document.title, decodeURIComponent($.param.querystring(url.substr(0, url.indexOf('?')), params)));
 					} else {
 						$('#' + id).yiiGridView('update', {data: data});
 					}
-					return false;
 				});
 
 				if (settings.enableHistory && settings.ajaxUpdate !== false && window.History.enabled) {
 					$(window).bind('statechange', function() { // Note: We are using statechange instead of popstate
 						var State = window.History.getState(); // Note: We are using History.getState() instead of event.state
-						if (State.data.url === undefined) {
-							State.data.url = State.url;
-						}
-						$('#' + id).yiiGridView('update', State.data);
+						$('#' + id).yiiGridView('update', {url: State.url});
 					});
 				}
 
@@ -185,7 +166,7 @@
 							var $currentGrid = $('#' + id),
 								$checks = $('input.select-on-check', $currentGrid),
 								$checksAll = $('input.select-on-check-all', $currentGrid),
-								$rows = $currentGrid.find('.' + settings.tableClass).children('tbody').children();
+								$rows = $currentGrid.children('.' + settings.tableClass).children('tbody').children();
 							if (this.checked) {
 								$rows.addClass('selected');
 								$checks.prop('checked', true);
@@ -231,7 +212,7 @@
 		 */
 		getRow: function (row) {
 			var sClass = gridSettings[this.attr('id')].tableClass;
-			return this.find('.' + sClass).children('tbody').children('tr').eq(row).children();
+			return this.children('.' + sClass).children('tbody').children('tr').eq(row).children();
 		},
 
 		/**
@@ -241,7 +222,7 @@
 		 */
 		getColumn: function (column) {
 			var sClass = gridSettings[this.attr('id')].tableClass;
-			return this.find('.' + sClass).children('tbody').children('tr').children('td:nth-child(' + (column + 1) + ')');
+			return this.children('.' + sClass).children('tbody').children('tr').children('td:nth-child(' + (column + 1) + ')');
 		},
 
 		/**
@@ -262,12 +243,14 @@
 					$grid = $(this),
 					id = $grid.attr('id'),
 					settings = gridSettings[id];
+				$grid.addClass(settings.loadingClass);
 
 				options = $.extend({
-					type: settings.ajaxType,
+					type: 'GET',
 					url: $grid.yiiGridView('getUrl'),
 					success: function (data) {
 						var $data = $('<div>' + data + '</div>');
+						$grid.removeClass(settings.loadingClass);
 						$.each(settings.ajaxUpdate, function (i, el) {
 							var updateId = '#' + el;
 							$(updateId).replaceWith($(updateId, $data));
@@ -279,12 +262,9 @@
 							selectCheckedRows(id);
 						}
 					},
-					complete: function () {
-						yiiXHR[id] = null;
-						$grid.removeClass(settings.loadingClass);
-					},
 					error: function (XHR, textStatus, errorThrown) {
 						var ret, err;
+						$grid.removeClass(settings.loadingClass);
 						if (XHR.readyState === 0 || XHR.status === 0) {
 							return;
 						}
@@ -314,45 +294,23 @@
 						}
 
 						if (settings.ajaxUpdateError !== undefined) {
-							settings.ajaxUpdateError(XHR, textStatus, errorThrown, err, id);
+							settings.ajaxUpdateError(XHR, textStatus, errorThrown, err);
 						} else if (err) {
 							alert(err);
 						}
 					}
 				}, options || {});
-				if (options.type === 'GET') {
-					if (options.data !== undefined) {
-						options.url = $.param.querystring(options.url, options.data);
-						options.data = {};
-					}
-				} else {
-					if (options.data === undefined) {
-						options.data = {};
-						$.each($(settings.filterSelector).serializeArray(), function () {
-							options.data[this.name] = this.value;
-						});
-					}
+				if (options.data !== undefined && options.type === 'GET') {
+					options.url = $.param.querystring(options.url, options.data);
+					options.data = {};
 				}
-				if (settings.csrfTokenName && settings.csrfToken) {
-					if (typeof options.data=='string')
-						options.data+='&'+settings.csrfTokenName+'='+settings.csrfToken;
-					else
-						options.data[settings.csrfTokenName] = settings.csrfToken;
-				}
-				if(yiiXHR[id] != null){
-					yiiXHR[id].abort();
-				}
-				//class must be added after yiiXHR.abort otherwise ajax.error will remove it
-				$grid.addClass(settings.loadingClass);
-				
+
 				if (settings.ajaxUpdate !== false) {
-					if(settings.ajaxVar) {
-						options.url = $.param.querystring(options.url, settings.ajaxVar + '=' + id);
-					}
+					options.url = $.param.querystring(options.url, settings.ajaxVar + '=' + id);
 					if (settings.beforeAjaxUpdate !== undefined) {
 						settings.beforeAjaxUpdate(id, options);
 					}
-					yiiXHR[id] = $.ajax(options);
+					$.ajax(options);
 				} else {  // non-ajax mode
 					if (options.type === 'GET') {
 						window.location.href = options.url;

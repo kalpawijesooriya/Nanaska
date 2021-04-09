@@ -4,7 +4,7 @@
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
  * @link http://www.yiiframework.com/
- * @copyright 2008-2013 Yii Software LLC
+ * @copyright Copyright &copy; 2008-2011 Yii Software LLC
  * @license http://www.yiiframework.com/license/
  */
 
@@ -94,14 +94,11 @@ class CPropertyValue
 	}
 
 	/**
-	 * Converts a value to array type.
-	 * 
-	 * If the value is a string and it is in the form (a,b,c) then an array 
-	 * consisting of each of the elements will be returned. If the value is a string 
-	 * and it is not in this form then an array consisting of just the string will be returned,
-	 * if the string is empty an empty array will be returned. 
-	 * If the value is not a string then it will return an array containing that value or
-	 * the same value in case it is already an array.
+	 * Converts a value to array type. If the value is a string and it is
+	 * in the form (a,b,c) then an array consisting of each of the elements
+	 * will be returned. If the value is a string and it is not in this form
+	 * then an array consisting of just the string will be returned. If the value
+	 * is not a string then
 	 * @param mixed $value the value to be converted.
 	 * @return array
 	 */
@@ -113,14 +110,8 @@ class CPropertyValue
 			$len = strlen($value);
 			if ($len >= 2 && $value[0] == '(' && $value[$len-1] == ')')
 			{
-				try
-				{
-					return eval('return array' . $value . ';');
-				}
-				catch (ParseError $e)
-				{
-					return array();
-				}
+				eval('$array=array'.$value.';');
+				return $array;
 			}
 			else
 				return $len>0?array($value):array();

@@ -4,7 +4,7 @@
  *
  * @author Qiang Xue <qiang.xue@gmail.com>
  * @link http://www.yiiframework.com/
- * @copyright 2008-2013 Yii Software LLC
+ * @copyright Copyright &copy; 2008-2011 Yii Software LLC
  * @license http://www.yiiframework.com/license/
  */
 
@@ -61,7 +61,6 @@ class CWebUser extends CApplicationComponent implements IWebUser
 	const FLASH_COUNTERS='Yii.CWebUser.flashcounters';
 	const STATES_VAR='__states';
 	const AUTH_TIMEOUT_VAR='__timeout';
-	const AUTH_ABSOLUTE_TIMEOUT_VAR='__absolute_timeout';
 
 	/**
 	 * @var boolean whether to enable cookie-based login. Defaults to false.
@@ -93,11 +92,6 @@ class CWebUser extends CApplicationComponent implements IWebUser
 	 * @since 1.1.7
 	 */
 	public $authTimeout;
-	/**
-	 * @var integer timeout in seconds after which user is logged out regardless of activity.
-	 * @since 1.1.14
-	 */
-	public $absoluteAuthTimeout;
 	/**
 	 * @var boolean whether to automatically renew the identity cookie each time a page is requested.
 	 * Defaults to false. This property is effective only when {@link allowAutoLogin} is true.
@@ -134,7 +128,7 @@ class CWebUser extends CApplicationComponent implements IWebUser
 
 	/**
 	 * PHP magic method.
-	 * This method is overridden so that persistent states can be accessed like properties.
+	 * This method is overriden so that persistent states can be accessed like properties.
 	 * @param string $name property name
 	 * @return mixed property value
 	 */
@@ -148,10 +142,9 @@ class CWebUser extends CApplicationComponent implements IWebUser
 
 	/**
 	 * PHP magic method.
-	 * This method is overridden so that persistent states can be set like properties.
+	 * This method is overriden so that persistent states can be set like properties.
 	 * @param string $name property name
 	 * @param mixed $value property value
-	 * @throws CException
 	 */
 	public function __set($name,$value)
 	{
@@ -163,7 +156,7 @@ class CWebUser extends CApplicationComponent implements IWebUser
 
 	/**
 	 * PHP magic method.
-	 * This method is overridden so that persistent states can also be checked for null value.
+	 * This method is overriden so that persistent states can also be checked for null value.
 	 * @param string $name property name
 	 * @return boolean
 	 */
@@ -177,7 +170,7 @@ class CWebUser extends CApplicationComponent implements IWebUser
 
 	/**
 	 * PHP magic method.
-	 * This method is overridden so that persistent states can also be unset.
+	 * This method is overriden so that persistent states can also be unset.
 	 * @param string $name property name
 	 * @throws CException if the property is read only.
 	 */
@@ -224,7 +217,6 @@ class CWebUser extends CApplicationComponent implements IWebUser
 	 * If greater than 0, cookie-based login will be used. In this case, {@link allowAutoLogin}
 	 * must be set true, otherwise an exception will be thrown.
 	 * @return boolean whether the user is logged in
-	 * @throws CException
 	 */
 	public function login($identity,$duration=0)
 	{
@@ -243,8 +235,6 @@ class CWebUser extends CApplicationComponent implements IWebUser
 						array('{class}'=>get_class($this))));
 			}
 
-			if ($this->absoluteAuthTimeout)
-				$this->setState(self::AUTH_ABSOLUTE_TIMEOUT_VAR, time()+$this->absoluteAuthTimeout);
 			$this->afterLogin(false);
 		}
 		return !$this->getIsGuest();
@@ -375,25 +365,24 @@ class CWebUser extends CApplicationComponent implements IWebUser
 		$request=$app->getRequest();
 
 		if(!$request->getIsAjaxRequest())
-		{
 			$this->setReturnUrl($request->getUrl());
-			if(($url=$this->loginUrl)!==null)
-			{
-				if(is_array($url))
-				{
-					$route=isset($url[0]) ? $url[0] : $app->defaultController;
-					$url=$app->createUrl($route,array_splice($url,1));
-				}
-				$request->redirect($url);
-			}
-		}
 		elseif(isset($this->loginRequiredAjaxResponse))
 		{
 			echo $this->loginRequiredAjaxResponse;
 			Yii::app()->end();
 		}
 
-		throw new CHttpException(403,Yii::t('yii','Login Required'));
+		if(($url=$this->loginUrl)!==null)
+		{
+			if(is_array($url))
+			{
+				$route=isset($url[0]) ? $url[0] : $app->defaultController;
+				$url=$app->createUrl($route,array_splice($url,1));
+			}
+			$request->redirect($url);
+		}
+		else
+			throw new CHttpException(403,Yii::t('yii','Login Required'));
 	}
 
 	/**
@@ -470,7 +459,8 @@ class CWebUser extends CApplicationComponent implements IWebUser
 					$this->changeIdentity($id,$name,$states);
 					if($this->autoRenewCookie)
 					{
-						$this->saveToCookie($duration);
+						$cookie->expire=time()+$duration;
+						$request->getCookies()->add($cookie->name,$cookie);
 					}
 					$this->afterLogin(true);
 				}
@@ -494,7 +484,8 @@ class CWebUser extends CApplicationComponent implements IWebUser
 			$data=@unserialize($data);
 			if(is_array($data) && isset($data[0],$data[1],$data[2],$data[3]))
 			{
-				$this->saveToCookie($data[2]);
+				$cookie->expire=time()+$data[2];
+				$cookies->add($cookie->name,$cookie);
 			}
 		}
 	}
@@ -775,18 +766,16 @@ class CWebUser extends CApplicationComponent implements IWebUser
 
 	/**
 	 * Updates the authentication status according to {@link authTimeout}.
-	 * If the user has been inactive for {@link authTimeout} seconds, or {link absoluteAuthTimeout} has passed,
+	 * If the user has been inactive for {@link authTimeout} seconds,
 	 * he will be automatically logged out.
 	 * @since 1.1.7
 	 */
 	protected function updateAuthStatus()
 	{
-		if(($this->authTimeout!==null || $this->absoluteAuthTimeout!==null) && !$this->getIsGuest())
+		if($this->authTimeout!==null && !$this->getIsGuest())
 		{
 			$expires=$this->getState(self::AUTH_TIMEOUT_VAR);
-			$expiresAbsolute=$this->getState(self::AUTH_ABSOLUTE_TIMEOUT_VAR);
-
-			if ($expires!==null && $expires < time() || $expiresAbsolute!==null && $expiresAbsolute < time())
+			if ($expires!==null && $expires < time())
 				$this->logout(false);
 			else
 				$this->setState(self::AUTH_TIMEOUT_VAR,time()+$this->authTimeout);
