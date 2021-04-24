@@ -67,11 +67,10 @@ return array(
 		// uncomment the following to use a MySQL database  mysql:host=192.168.10.8
 		
 		'db'=>array(
-			//'connectionString' => 'mysql:host=localhost;dbname=learncima',
-                        'connectionString' => 'mysql:host=127.0.0.1;dbname=learncima',
+			'connectionString' => 'mysql:host=localhost;dbname=learncima',
 			'emulatePrepare' => true,
-			'username' => 'root',
-			'password' => '',
+			'username' => 'learncima',
+			'password' => 'q5quDRGdh@ceeWC',
 			'charset' => 'utf8',
 		),
                 'browser' => array(
