@@ -94,9 +94,9 @@ if ($edit == null) {
                     'success' => 'function(data){ 
                                 
                                 if(data[0].status=="success" || data[0].status=="success2"){
-                                    alert("Question Added")
+                                
                                     // document.getElementById("short_written_answer_form_' . $nextcount . '").style.display = "block";
-                                    // document.getElementById("part_count").value = parseFloat(document.getElementById("part_count").value)+1;   
+                                     document.getElementById("part_count").value = parseFloat(document.getElementById("part_count").value)+1;   
                                     // removeHighlight("question_part_' . $count . '");
                                     // removeHighlight("answer_' . $count . '");
   
@@ -144,7 +144,7 @@ if ($edit == null) {
                                 
                                 if(data.status=="success"){
                                      //document.getElementById("short_written_answer_form_' . $count . '").style.display="none";                                                                        
-                                   // document.getElementById("part_count").value = parseFloat(document.getElementById("part_count").value)-1; 
+                                     document.getElementById("part_count").value = parseFloat(document.getElementById("part_count").value)-1; 
                                   //  document.getElementById("shortWrittenErrorDisplay_' . $count . '").innerHTML="";
                                    // document.getElementById("shortWrittenErrorDisplayRow_' . $count . '").style.display="none";
                                     document.getElementById("question_part_' . $count . '").value="";
