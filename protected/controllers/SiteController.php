@@ -44,12 +44,14 @@ class SiteController extends Controller {
         $foundationcommenceDate = $model->getCommencement(4);
         $foundationcommenceString = (strlen($foundationcommenceDate['commencement']) > 1 ? '('.$foundationcommenceDate['commencement'].')' : '(Coming Soon...)');
 
-        $this->render('index',array(
-            'strategicCommencement'=> $strategiccommenceString,
-            'managerialCommencement'=> $managerialcommenceString,
-            'operationalCommencement'=> $operationalcommenceString,
-            'foundationCommencement'=> $foundationcommenceString,
-        ));
+//        $this->render('index',array(
+//            'strategicCommencement'=> $strategiccommenceString,
+//            'managerialCommencement'=> $managerialcommenceString,
+//            'operationalCommencement'=> $operationalcommenceString,
+//            'foundationCommencement'=> $foundationcommenceString,
+//        ));
+
+        return $this->redirect(['user/create']);
 
     }
 
