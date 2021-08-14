@@ -396,9 +396,13 @@ class ExamController extends Controller {
                 $flagged = 1;
             }
         }
-
+        $question_type = Question::model()->getQuestionType($question_id);
         if ($_POST['question_count_key'] > -1) {
             $session[$_POST['question_count_key']]['answer_id'] = $_POST['answer_id'];
+            if ($_POST['answer_id']==null && $question_type=="SHORT_WRITTEN")
+            {
+                $session[$_POST['question_count_key']]['answer_id'] =[0=>" "];
+            }
             $session[$_POST['question_count_key']]['flag'] = $flagged;
             $session[$_POST['question_count_key']]['time_taken'] = $time;
         }
@@ -407,7 +411,7 @@ class ExamController extends Controller {
         if ($_POST['question_count_key'] >= -1) {
             $flag_value = isset($session[$_POST['question_count_key'] + 1]['flag']) ? $session[$_POST['question_count_key'] + 1]['flag'] : 0;
         }
-        $question_type = Question::model()->getQuestionType($question_id);
+
 
         Yii::app()->session['exam_question_session'] = $session;
 
@@ -624,7 +628,7 @@ class ExamController extends Controller {
      
          $previous_question_number = $_POST['previous_question_number_count'];
          
-         $exam_question = $this->renderpartial('exam_questions', array('question_number' => $previous_question_number), true, false);
+       //  $exam_question = $this->renderpartial('exam_questions', array('question_number' => $previous_question_number), true, false);
         $session = Yii::app()->session['exam_question_session'];
         $question_id = $this->getIdOfQuestionNo($previous_question_number);
 
@@ -646,18 +650,25 @@ class ExamController extends Controller {
                 $flagged = 1;
             }
         }
-
+        $question_type = Question::model()->getQuestionType($question_id);
         if ($_POST['question_count_key'] > -1) {
+
             $session[$_POST['question_count_key']]['answer_id'] = $_POST['answer_id'];
+            if ($_POST['answer_id']==null && $question_type=="SHORT_WRITTEN")
+            {
+                $session[$_POST['question_count_key']]['answer_id'] =[0=>" "];
+            }
             $session[$_POST['question_count_key']]['flag'] = $flagged;
             $session[$_POST['question_count_key']]['time_taken'] = $time;
+
+
         }
 
         $flag_value = 0;
         if ($_POST['question_count_key'] > 0) {
             $flag_value = $session[$_POST['question_count_key'] - 1]['flag'];
         }
-        $question_type = Question::model()->getQuestionType($question_id);
+
 
         Yii::app()->session['exam_question_session'] = $session;
 
