@@ -1196,6 +1196,7 @@ class ExamController extends Controller {
             $model_take->student_id = $student_id;
             $model_take->date = date("Y/m/d");
             $model_take->total_time = $_POST['total_exam_time'];
+            $model_take->status=0;
             if ($model_take->save()) {
                 $take_id = $model_take->getPrimaryKey();
 
