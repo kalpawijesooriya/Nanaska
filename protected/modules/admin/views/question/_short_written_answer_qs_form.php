@@ -94,19 +94,20 @@ if ($edit == null) {
                     'success' => 'function(data){ 
                                 
                                 if(data[0].status=="success" || data[0].status=="success2"){
-                                    document.getElementById("short_written_answer_form_' . $nextcount . '").style.display = "block";
-                                    document.getElementById("part_count").value = parseFloat(document.getElementById("part_count").value)+1;   
-                                    removeHighlight("question_part_' . $count . '");
-                                    removeHighlight("answer_' . $count . '");
+                                
+                                    // document.getElementById("short_written_answer_form_' . $nextcount . '").style.display = "block";
+                                     document.getElementById("part_count").value = parseFloat(document.getElementById("part_count").value)+1;   
+                                    // removeHighlight("question_part_' . $count . '");
+                                    // removeHighlight("answer_' . $count . '");
   
-                                    document.getElementById("shortWrittenErrorDisplay_' . $count . '").innerHTML="";
-                                    document.getElementById("shortWrittenErrorDisplayRow_' . $count . '").style.display="none";
-                                    document.getElementById("remove_question_part_' . $count . '").disabled = false;
-                                    document.getElementById("remove_question_part_' . $count . '").value = "Remove Question Part";
+                                    // document.getElementById("shortWrittenErrorDisplay_' . $count . '").innerHTML="";
+                                    // document.getElementById("shortWrittenErrorDisplayRow_' . $count . '").style.display="none";
+                                     document.getElementById("remove_question_part_' . $count . '").disabled = false;
+                                    // document.getElementById("remove_question_part_' . $count . '").value = "Remove Question Part";
                                     
-                                    document.getElementById("add_question_part_' . $count . '").value = "Question Part Added";
-                                    document.getElementById("add_question_part_' . $count . '").className = "greybtn";
-                                    document.getElementById("remove_question_part_' . $count . '").className = "bluebtn";
+                                    // document.getElementById("add_question_part_' . $count . '").value = "Question Part Added";
+                                     document.getElementById("add_question_part_' . $count . '").className = "greybtn";
+                                     document.getElementById("remove_question_part_' . $count . '").className = "bluebtn";
                                     document.getElementById("add_question_part_' . $count . '").disabled = true;
                                }else{
                                     removeHighlight("question_part_' . $count . '");
@@ -142,14 +143,14 @@ if ($edit == null) {
                     'success' => 'function(data){ 
                                 
                                 if(data.status=="success"){
-                                     document.getElementById("short_written_answer_form_' . $count . '").style.display="none";                                                                             
-                                    document.getElementById("part_count").value = parseFloat(document.getElementById("part_count").value)-1; 
-                                    document.getElementById("shortWrittenErrorDisplay_' . $count . '").innerHTML="";
-                                    document.getElementById("shortWrittenErrorDisplayRow_' . $count . '").style.display="none";
+                                     //document.getElementById("short_written_answer_form_' . $count . '").style.display="none";                                                                        
+                                     document.getElementById("part_count").value = parseFloat(document.getElementById("part_count").value)-1; 
+                                  //  document.getElementById("shortWrittenErrorDisplay_' . $count . '").innerHTML="";
+                                   // document.getElementById("shortWrittenErrorDisplayRow_' . $count . '").style.display="none";
                                     document.getElementById("question_part_' . $count . '").value="";
                                     document.getElementById("answer_' . $count . '").value=""; 
-                                    document.getElementById("remove_question_part_' . $count . '").disabled = true;
-                                    document.getElementById("remove_question_part_' . $count . '").value = "Question Part Removed";
+                                   // document.getElementById("remove_question_part_' . $count . '").disabled = true;
+                                   // document.getElementById("remove_question_part_' . $count . '").value = "Question Part Removed";
                                     document.getElementById("add_question_part_' . $count . '").disabled = false;
                                     document.getElementById("add_question_part_' . $count . '").value = "Add Question Part";
                                     document.getElementById("add_question_part_' . $count . '").className = "bluebtn";

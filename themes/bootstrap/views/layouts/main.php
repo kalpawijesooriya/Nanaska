@@ -268,7 +268,7 @@ body {
                             </div>
                             <div class="col-lg-5 col-md-6 col-sm-6 col-xs-12">
                                 <div class="header-top-right" style="width: 120%;margin-right: 20px">
-                                    <div class="content"><a href="https://learncima.co.uk"><i class="zmdi zmdi-globe"></i> Our Forum</a></div>
+                                    <div class="content"><a href="https://nanaska.webcolms.com/login" target="_blank"><i class="zmdi zmdi-globe"></i> Our Forum</a></div>
                                     <?php
                                       if (Yii::app()->user->isGuest) {
                                           echo '<div class="content"><a href="#"><i class="zmdi zmdi-account"></i>Online Exams</a>
@@ -304,27 +304,27 @@ body {
                                       ?>
 
 
-                                    <div class="content"><a href="?r=shoppingcart/viewcart" class="notification"><i class="zmdi zmdi-shopping-basket"></i> Checkout<span class="badge" id="quantityWidget">
-                                            <?php
-
-                                            $totalProductQty = Util::getShoppingCartQuantity();
-                                            if ($totalProductQty==0)
-                                            {
-                                                echo '<script>
-                                              document.getElementById("quantityWidget").style.visibility = "hidden";
-                                                 
-                                                  </script>';
-
-                                            }else{
-                                                echo '<script>
-                                               document.getElementById("quantityWidget").style.visibility = "visible";
-                                         
-                                                  </script>';
-                                                echo $totalProductQty;
-                                            }
-
-                                            ?>
-                                        </span></a></div>
+<!--                                    <div class="content"><a href="?r=shoppingcart/viewcart" class="notification"><i class="zmdi zmdi-shopping-basket"></i> Checkout<span class="badge" id="quantityWidget">-->
+<!--                                            --><?php
+//
+//                                            $totalProductQty = Util::getShoppingCartQuantity();
+//                                            if ($totalProductQty==0)
+//                                            {
+//                                                echo '<script>
+//                                              document.getElementById("quantityWidget").style.visibility = "hidden";
+//
+//                                                  </script>';
+//
+//                                            }else{
+//                                                echo '<script>
+//                                               document.getElementById("quantityWidget").style.visibility = "visible";
+//
+//                                                  </script>';
+//                                                echo $totalProductQty;
+//                                            }
+//
+//                                            ?>
+<!--                                        </span></a></div>-->
                                 </div>
                             </div>
                         </div>
@@ -349,38 +349,38 @@ body {
                                             $route = Yii::app()->controller->id . '/' . Yii::app()->controller->action->id;
                                             ?>
                                             <ul id="nav">
-                                                <li <?php echo ($route == 'site/index') ? 'class="active"' : '' ?>>
-                                                    <?php echo CHtml::link('Home', Yii::app()->homeUrl) ?>
-                                                </li>
-                                                <li <?php echo ($route == 'site/viewAboutus') ? 'class="active"' : '' ?>>
-                                                    <?php echo CHtml::link('About Us', array('site/viewAboutus')) ?>
-                                                </li>
-                                                <li <?php echo ($route == 'site/viewOurProduct') ? 'class="active"' : '' ?>>
-                                                    <?php echo CHtml::link('Our Products', array('site/viewOurProduct')) ?>
-                                                </li>
+<!--                                                <li --><?php //echo ($route == 'site/index') ? 'class="active"' : '' ?>
+<!--                                                    --><?php //echo CHtml::link('Home', Yii::app()->homeUrl) ?>
+<!--                                                </li>-->
+<!--                                                <li --><?php //echo ($route == 'site/viewAboutus') ? 'class="active"' : '' ?>
+<!--                                                    --><?php //echo CHtml::link('About Us', array('site/viewAboutus')) ?>
+<!--                                                </li>-->
+<!--                                                <li --><?php //echo ($route == 'site/viewOurProduct') ? 'class="active"' : '' ?>
+<!--                                                    --><?php //echo CHtml::link('Our Products', array('site/viewOurProduct')) ?>
+<!--                                                </li>-->
                                                 <li <?php echo ($route == 'site/testimonials') ? 'class="active"' : '' ?>>
                                                     <?php echo CHtml::link('Testimonials', array('site/testimonials')) ?>
                                                 </li>
                                                 <li <?php echo ($route == 'user/create') ? 'class="active"' : '' ?>>
                                                     <?php echo CHtml::link('Registration', array('user/create')) ?>
                                                 </li>
-                                                <li <?php echo ($route == 'user/payment') ? 'class="active"' : '' ?>>
-                                                    <?php echo CHtml::link('Payments', array('user/payment')) ?>
-                                                </li>
+<!--                                                <li --><?php //echo ($route == 'user/payment') ? 'class="active"' : '' ?>
+<!--                                                    <?php //echo CHtml::link('Payments', array('user/payment')) ?>
+                                                </li>-->
                                                 <li <?php echo ($route == 'site/contact') ? 'class="active"' : '' ?>>
                                                     <?php echo CHtml::link('Contact Us', array('site/contact')) ?>
                                                 </li>
-                                                <?php if (Yii::app()->user->getId() == NULL) { ?>
-                                                    <li <?php echo ($route == 'exam/notLoggedinViewExam') ? 'class="active"' : '' ?>>
-                                                        <?php echo CHtml::link('Exams', array('exam/notLoggedinViewExam')) ?>
-                                                    </li>
-
-                                                <?php } else { ?>
-                                                    <li <?php echo ($route == 'exam/viewexam') ? 'class="active"' : '' ?>>
-                                                        <?php echo CHtml::link('Exams', array('exam/viewexam')) ?>
-                                                    </li>
-
-                                                <?php } ?>
+                                                    <?php //if (Yii::app()->user->getId() == NULL) { ?>
+<!--                                                    <li --> <?php //echo ($route == 'exam/notLoggedinViewExam') ? 'class="active"' : '' ?>
+                                                       <?php //echo CHtml::link('Exams', array('exam/notLoggedinViewExam')) ?>
+<!--                                                    </li>-->
+<!---->
+                                                   <?php //} else { ?>
+<!--                                                    <li --><?php //echo ($route == 'exam/viewexam') ? 'class="active"' : '' ?>
+                                                          <?php //echo CHtml::link('Exams', array('exam/viewexam')) ?>
+<!--                                                    </li>-->
+<!---->
+                                                    <?php //} ?>
 
 
                                         </nav>
@@ -415,15 +415,15 @@ body {
                                         $route = Yii::app()->controller->id . '/' . Yii::app()->controller->action->id;
                                         ?>
                                         <ul>
-                                            <li class="current" <?php echo ($route == 'site/index') ? 'class="active"' : '' ?>>
-                                                <?php echo CHtml::link('Home', Yii::app()->homeUrl) ?>
-                                            </li>
-                                            <li class="current" <?php echo ($route == 'site/viewAboutus') ? 'class="active"' : '' ?>>
-                                                <?php echo CHtml::link('About Us', array('site/viewAboutus')) ?>
-                                            </li>
-                                            <li class="current" <?php echo ($route == 'site/viewOurProduct') ? 'class="active"' : '' ?>>
-                                                <?php echo CHtml::link('Our Products', array('site/viewOurProduct')) ?>
-                                            </li>
+<!--                                            <li class="current" --><?php //echo ($route == 'site/index') ? 'class="active"' : '' ?>
+<!--                                                --><?php //echo CHtml::link('Home', Yii::app()->homeUrl) ?>
+<!--                                            </li>-->
+<!--                                            <li class="current" --><?php //echo ($route == 'site/viewAboutus') ? 'class="active"' : '' ?>
+<!--                                                --><?php //echo CHtml::link('About Us', array('site/viewAboutus')) ?>
+<!--                                            </li>-->
+<!--                                            <li class="current" --><?php //echo ($route == 'site/viewOurProduct') ? 'class="active"' : '' ?>
+<!--                                                --><?php //echo CHtml::link('Our Products', array('site/viewOurProduct')) ?>
+<!--                                            </li>-->
                                             <li class="current" <?php echo ($route == 'site/testimonials') ? 'class="active"' : '' ?>>
                                                 <?php echo CHtml::link('Testimonials', array('site/testimonials')) ?>
                                             </li>
@@ -431,20 +431,20 @@ body {
                                                 <?php echo CHtml::link('Registration', array('user/create')) ?>
                                             </li>
 
-                                            <li class="current" <?php echo ($route == 'user/payment') ? 'class="active"' : '' ?>>
-                                                <?php echo CHtml::link('Payments', array('user/payment')) ?>
-                                            </li>
-                                            <?php if (Yii::app()->user->getId() == NULL) { ?>
-                                                <li class="current" <?php echo ($route == 'exam/notLoggedinViewExam') ? 'class="active"' : '' ?>>
-                                                    <?php echo CHtml::link('Exams', array('exam/notLoggedinViewExam')) ?>
-                                                </li>
+<!--                                            <li class="current" --><?php //echo ($route == 'user/payment') ? 'class="active"' : '' ?>
+<!--                                                --><?php //echo CHtml::link('Payments', array('user/payment')) ?>
+<!--                                            </li>-->
+<!--                                            --><?php //if (Yii::app()->user->getId() == NULL) { ?>
+<!--                                                <li class="current" --><?php //echo ($route == 'exam/notLoggedinViewExam') ? 'class="active"' : '' ?>
+                                                    <?php //echo CHtml::link('Exams', array('exam/notLoggedinViewExam')) ?>
+<!--                                                </li>-->
+<!---->
+                                                    <?php //} else { ?>
+<!--                                                <li class="current" --><?php //echo ($route == 'exam/viewexam') ? 'class="active"' : '' ?>
+                                                       <?php //echo CHtml::link('Exams', array('exam/viewexam')) ?>
+<!--                                                </li>-->
 
-                                            <?php } else { ?>
-                                                <li class="current" <?php echo ($route == 'exam/viewexam') ? 'class="active"' : '' ?>>
-                                                    <?php echo CHtml::link('Exams', array('exam/viewexam')) ?>
-                                                </li>
-
-                                            <?php } ?>
+                                                <?php //} ?>
 
                                             <li class="current" <?php echo ($route == 'site/contact') ? 'class="active"' : '' ?>>
                                                 <?php echo CHtml::link('Contact Us', array('site/contact')) ?>
