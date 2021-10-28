@@ -133,21 +133,19 @@ foreach ($exam_question_session as $key => $question) {
                 }
 
                 echo '</tr>';
-                foreach ($answer_details as $answers) {
+                foreach ($answer_details as  $keyShort =>$answers) {
                     echo '<tr>';
                     echo '<div class="control-group">';
                     echo '<div class="control-label">';
 //                    if (is_array($question['answer_id']) && in_array($answers['answer_id'], $question['answer_id'])) {
-                    if (isset($question['answer_id'])) {
-
-
+                    if ($question['answer_id'][$keyShort] !=='') {
                         echo '<td>';
                         echo QuestionPart::model()->getQuestionPartText($answers['question_part_id']);
                         echo '</td>';
 
                         echo '<td>';
                         echo '<input type="text" name="answer_id" id="' . $answers['answer_id'] . '" '
-                        . 'class="answer_text" style="margin-right:5px"  placeholder="Enter Answer"/>';
+                        . 'class="answer_text" style="margin-right:5px" value="'.$question['answer_id'][$keyShort].'"  placeholder="Enter Answer"/>';
                         echo '</td>';
                     } else {
                         echo '<td>';
@@ -265,7 +263,7 @@ foreach ($exam_question_session as $key => $question) {
                                     <?php
                                 } else {
                                     ?>  
-                                    <option id="<?php echo $answer['answer_id']; ?>" value="<?php echo $answer['answer_id'] ?>"><?php echo $answer_text->answer_text; ?></option>
+                                    <optioFn id="<?php echo $answer['answer_id']; ?>" value="<?php echo $answer['answer_id'] ?>"><?php echo $answer_text->answer_text; ?></optioFn>
                                     <?php
                                 }
                             }

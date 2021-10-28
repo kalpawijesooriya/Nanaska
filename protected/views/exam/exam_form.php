@@ -747,7 +747,7 @@ if ($Session == null) {
                                 'answer_id' => 'js:getAnswerId()',
                                 'question_count_key' => 'js:getQuestionCountKey()',
                                 'flag' => 'js:flag.checked',
-                                'timetaken' => 'js:timerForEachQuestion()'
+                                'timetaken' => 'js:timerForEachQuestion()',
                             ),
                             'beforeSend' => 'function(jqXHR, settings){
                                                     var wet = document.getElementById("panel-body");

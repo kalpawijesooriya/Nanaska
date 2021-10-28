@@ -396,9 +396,13 @@ class ExamController extends Controller {
                 $flagged = 1;
             }
         }
-
+        $question_type = Question::model()->getQuestionType($question_id);
         if ($_POST['question_count_key'] > -1) {
             $session[$_POST['question_count_key']]['answer_id'] = $_POST['answer_id'];
+            if ($_POST['answer_id']==null && $question_type=="SHORT_WRITTEN")
+            {
+                $session[$_POST['question_count_key']]['answer_id'] =[0=>" "];
+            }
             $session[$_POST['question_count_key']]['flag'] = $flagged;
             $session[$_POST['question_count_key']]['time_taken'] = $time;
         }
@@ -407,7 +411,7 @@ class ExamController extends Controller {
         if ($_POST['question_count_key'] >= -1) {
             $flag_value = isset($session[$_POST['question_count_key'] + 1]['flag']) ? $session[$_POST['question_count_key'] + 1]['flag'] : 0;
         }
-        $question_type = Question::model()->getQuestionType($question_id);
+
 
         Yii::app()->session['exam_question_session'] = $session;
 
@@ -624,7 +628,7 @@ class ExamController extends Controller {
      
          $previous_question_number = $_POST['previous_question_number_count'];
          
-         $exam_question = $this->renderpartial('exam_questions', array('question_number' => $previous_question_number), true, false);
+       //  $exam_question = $this->renderpartial('exam_questions', array('question_number' => $previous_question_number), true, false);
         $session = Yii::app()->session['exam_question_session'];
         $question_id = $this->getIdOfQuestionNo($previous_question_number);
 
@@ -646,18 +650,25 @@ class ExamController extends Controller {
                 $flagged = 1;
             }
         }
-
+        $question_type = Question::model()->getQuestionType($question_id);
         if ($_POST['question_count_key'] > -1) {
+
             $session[$_POST['question_count_key']]['answer_id'] = $_POST['answer_id'];
+            if ($_POST['answer_id']==null && $question_type=="SHORT_WRITTEN")
+            {
+                $session[$_POST['question_count_key']]['answer_id'] =[0=>" "];
+            }
             $session[$_POST['question_count_key']]['flag'] = $flagged;
             $session[$_POST['question_count_key']]['time_taken'] = $time;
+
+
         }
 
         $flag_value = 0;
         if ($_POST['question_count_key'] > 0) {
             $flag_value = $session[$_POST['question_count_key'] - 1]['flag'];
         }
-        $question_type = Question::model()->getQuestionType($question_id);
+
 
         Yii::app()->session['exam_question_session'] = $session;
 
@@ -1185,6 +1196,7 @@ class ExamController extends Controller {
             $model_take->student_id = $student_id;
             $model_take->date = date("Y/m/d");
             $model_take->total_time = $_POST['total_exam_time'];
+            $model_take->status=0;
             if ($model_take->save()) {
                 $take_id = $model_take->getPrimaryKey();
 
@@ -1208,7 +1220,7 @@ class ExamController extends Controller {
                         if ($model_paper_question->save()) {
                             
                         } else {
-                            print_r($model_paper_question->errors);
+                           // print_r($model_paper_question->errors);
                             die();
                         }
 
@@ -1250,7 +1262,7 @@ class ExamController extends Controller {
                         if ($model_final_result->save()) {
                             
                         } else {
-                            print_r($model_final_result->errors);
+                           // print_r($model_final_result->errors);
                             die();
                         }
                     } else if ($question_type == "MULTIPLE_ANSWER") {
@@ -1272,7 +1284,7 @@ class ExamController extends Controller {
                                 if ($model_paper_question->save()) {
                                     
                                 } else {
-                                    print_r($model_paper_question->errors);
+                                   // print_r($model_paper_question->errors);
                                     die();
                                 }
 
@@ -1312,7 +1324,7 @@ class ExamController extends Controller {
                         if ($model_final_result->save()) {
                             
                         } else {
-                            print_r($model_final_result->errors);
+                           // print_r($model_final_result->errors);
                             die();
                         }
                     } else if ($question_type == "SHORT_WRITTEN") {
@@ -1336,7 +1348,7 @@ class ExamController extends Controller {
                                 if ($model_paper_question->save()) {
                                     
                                 } else {
-                                    print_r($model_paper_question->errors);
+                                  //  print_r($model_paper_question->errors);
                                     die();
                                 }
                                 $index++;
@@ -1369,7 +1381,7 @@ class ExamController extends Controller {
                         if ($model_final_result->save()) {
                             
                         } else {
-                            print_r($model_final_result->errors);
+                           // print_r($model_final_result->errors);
                             die();
                         }
                     } else if ($question_type == "DRAG_DROP_TYPEA_ANSWER") {
@@ -1403,7 +1415,7 @@ class ExamController extends Controller {
                                 if ($model_paper_question->save()) {
                                     
                                 } else {
-                                    print_r($model_paper_question->errors);
+                                   // print_r($model_paper_question->errors);
                                     die();
                                 }
                                 $index++;
@@ -1449,7 +1461,7 @@ class ExamController extends Controller {
                         if ($model_final_result->save()) {
                             
                         } else {
-                            print_r($model_final_result->errors);
+                           // print_r($model_final_result->errors);
                             die();
                         }
                     } else if ($question_type == "DRAG_DROP_TYPEB_ANSWER") {
@@ -1478,7 +1490,7 @@ class ExamController extends Controller {
                                     if ($model_paper_question->save()) {
                                         
                                     } else {
-                                        print_r($model_paper_question->errors);
+                                       // print_r($model_paper_question->errors);
                                         die();
                                     }
                                 }
@@ -1514,7 +1526,7 @@ class ExamController extends Controller {
                         if ($model_final_result->save()) {
                             
                         } else {
-                            print_r($model_final_result->errors);
+                           // print_r($model_final_result->errors);
                             die();
                         }
                     } else if ($question_type == "DRAG_DROP_TYPEC_ANSWER") {
@@ -1546,7 +1558,7 @@ class ExamController extends Controller {
                                 if ($model_paper_question->save()) {
                                     
                                 } else {
-                                    print_r($model_paper_question->errors);
+                                  //  print_r($model_paper_question->errors);
                                     die();
                                 }
                                 $index++;
@@ -1601,7 +1613,7 @@ class ExamController extends Controller {
                         if ($model_final_result->save()) {
                             
                         } else {
-                            print_r($model_final_result->errors);
+                            //print_r($model_final_result->errors);
                             die();
                         }
                     } else if ($question_type == "DRAG_DROP_TYPED_ANSWER") {
@@ -1629,7 +1641,7 @@ class ExamController extends Controller {
                                 if ($model_paper_question->save()) {
                                     
                                 } else {
-                                    print_r($model_paper_question->errors);
+                                   // print_r($model_paper_question->errors);
                                     die();
                                 }
 
@@ -1662,7 +1674,7 @@ class ExamController extends Controller {
                         if ($model_final_result->save()) {
                             
                         } else {
-                            print_r($model_final_result->errors);
+                          //  print_r($model_final_result->errors);
                             die();
                         }
                     } else if ($question_type == "DRAG_DROP_TYPEE_ANSWER") {
@@ -1692,7 +1704,7 @@ class ExamController extends Controller {
                                 if ($model_paper_question->save()) {
                                     
                                 } else {
-                                    print_r($model_paper_question->errors);
+                                   // print_r($model_paper_question->errors);
                                     die();
                                 }
                                 $index++;
@@ -1745,7 +1757,7 @@ class ExamController extends Controller {
                         if ($model_final_result->save()) {
                             
                         } else {
-                            print_r($model_final_result->errors);
+                           // print_r($model_final_result->errors);
                             die();
                         }
                     } else if ($question_type == "MULTIPLE_CHOICE_ANSWER") {
@@ -1775,7 +1787,7 @@ class ExamController extends Controller {
                                 if ($model_paper_question->save()) {
                                     
                                 } else {
-                                    print_r($model_paper_question->errors);
+                                    //print_r($model_paper_question->errors);
                                     die();
                                 }
                                 $index++;
@@ -1828,7 +1840,7 @@ class ExamController extends Controller {
                         if ($model_final_result->save()) {
                             
                         } else {
-                            print_r($model_final_result->errors);
+                            //print_r($model_final_result->errors);
                             die();
                         }
                     } else if ($question_type == "TRUE_OR_FALSE_ANSWER") {
@@ -1844,7 +1856,7 @@ class ExamController extends Controller {
                         if ($model_paper_question->save()) {
                             
                         } else {
-                            print_r($model_paper_question->errors);
+                           // print_r($model_paper_question->errors);
                             die();
                         }
 
@@ -1892,7 +1904,7 @@ class ExamController extends Controller {
                         if ($model_final_result->save()) {
                             
                         } else {
-                            print_r($model_final_result->errors);
+                           // print_r($model_final_result->errors);
                             die();
                         }
                     } else if ($question_type == "HOT_SPOT_ANSWER") {
@@ -1916,7 +1928,7 @@ class ExamController extends Controller {
                         if ($model_paper_question->save()) {
                             
                         } else {
-                            print_r($model_paper_question->errors);
+                           // print_r($model_paper_question->errors);
                             die();
                         }
 
@@ -1958,7 +1970,7 @@ class ExamController extends Controller {
                         if ($model_final_result->save()) {
                             
                         } else {
-                            print_r($model_final_result->errors);
+                           // print_r($model_final_result->errors);
                             die();
                         }
                     }
@@ -1966,7 +1978,7 @@ class ExamController extends Controller {
                     $question_number++;
                 }
             } else {
-                print_r($model_take->errors);
+               // print_r($model_take->errors);
                 die();
             }
 
@@ -1991,7 +2003,7 @@ class ExamController extends Controller {
             if ($model_past_exam->save()) {
                 
             } else {
-                print_r($model_past_exam->errors);
+               // print_r($model_past_exam->errors);
                 die();
             }
 
@@ -2653,7 +2665,7 @@ class ExamController extends Controller {
                     if ($model_paper_question->save()) {
                         
                     } else {
-                        print_r($model_paper_question->errors);
+                       // print_r($model_paper_question->errors);
                         die();
                     }
                     $section_no = ExamQuestion::model()->getSectionNo($exam_id, $exam_question['question_id']);
@@ -2667,7 +2679,7 @@ class ExamController extends Controller {
                     if ($model_essay_answer->save()) {
                         
                     } else {
-                        print_r($model_essay_answer->errors);
+                      //  print_r($model_essay_answer->errors);
                         die();
                     }
                 }
@@ -2692,13 +2704,13 @@ class ExamController extends Controller {
                 if ($model_past_exam->save()) {
                     
                 } else {
-                    print_r($model_past_exam->errors);
+                 //  print_r($model_past_exam->errors);
                     die();
                 }
 
                 $redirect_url = CController::createUrl('exam/viewExamSummary&id=' . $take_id);
             } else {
-                print_r($model_take->errors);
+                //print_r($model_take->errors);
                 die();
             }
         }
