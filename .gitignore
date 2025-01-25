@@ -105,3 +105,6 @@ fabric.properties
 
 protected/runtime/application.log
 protected/runtime/session-1.1.22.db
+
+images/question_images/
+images/reference_material/
